@@ -51,7 +51,13 @@ trait PageActions
 
             // actually move the page on disk
             if ($oldPage->exists() === true) {
-                Dir::move($oldPage->root(), $newPage->root());
+                if (Dir::move($oldPage->root(), $newPage->root()) === true) {
+                    // Updates the root path of the old page with the root path
+                    // of the moved new page to use fly actions on old page in loop
+                    $oldPage->setRoot($newPage->root());
+                } else {
+                    throw new LogicException('The page directory cannot be moved');
+                }
             }
 
             // overwrite the child in the parent page
@@ -160,7 +166,7 @@ trait PageActions
      * to either draft, listed or unlisted
      *
      * @param string $status "draft", "listed" or "unlisted"
-     * @param integer $position Optional sorting number
+     * @param int $position Optional sorting number
      * @return self
      */
     public function changeStatus(string $status, int $position = null)
@@ -462,8 +468,8 @@ trait PageActions
      * Create the sorting number for the page
      * depending on the blueprint settings
      *
-     * @param integer $num
-     * @return integer
+     * @param int $num
+     * @return int
      */
     public function createNum(int $num = null): int
     {
@@ -506,10 +512,14 @@ trait PageActions
 
                 return $num;
             default:
+                // get instance with default language
+                $app = $this->kirby()->clone();
+                $app->setCurrentLanguage();
+
                 $template = Str::template($mode, [
-                    'kirby' => $this->kirby(),
-                    'page'  => $this,
-                    'site'  => $this->site(),
+                    'kirby' => $app,
+                    'page'  => $app->page($this->id()),
+                    'site'  => $app->site(),
                 ]);
 
                 return (int)$template;
@@ -631,12 +641,13 @@ trait PageActions
      */
     public function purge()
     {
-        $this->children  = null;
-        $this->blueprint = null;
-        $this->drafts    = null;
-        $this->files     = null;
-        $this->content   = null;
-        $this->inventory = null;
+        $this->blueprint    = null;
+        $this->children     = null;
+        $this->content      = null;
+        $this->drafts       = null;
+        $this->files        = null;
+        $this->inventory    = null;
+        $this->translations = null;
 
         return $this;
     }
@@ -705,7 +716,7 @@ trait PageActions
                 $sibling->changeNum($index);
             }
 
-            $parent->children = $siblings->sortBy('num', 'desc');
+            $parent->children = $siblings->sortBy('num', 'asc');
         }
 
         return true;
@@ -756,7 +767,7 @@ trait PageActions
      *
      * @param array $input
      * @param string $language
-     * @param boolean $validate
+     * @param bool $validate
      * @return self
      */
     public function update(array $input = null, string $language = null, bool $validate = false)

@@ -165,7 +165,7 @@ class Auth
      * Check if logins are blocked for the current ip or email
      *
      * @param string $email
-     * @return boolean
+     * @return bool
      */
     public function isBlocked(string $email): bool
     {
@@ -195,12 +195,12 @@ class Auth
      *
      * @param string $email
      * @param string $password
-     * @param boolean $long
+     * @param bool $long
      * @return \Kirby\Cms\User
      *
-     * @throws PermissionException If the rate limit was exceeded or if any other error occured with debug mode off
-     * @throws NotFoundException If the email was invalid
-     * @throws InvalidArgumentException If the password is not valid (via `$user->login()`)
+     * @throws \Kirby\Exception\PermissionException If the rate limit was exceeded or if any other error occured with debug mode off
+     * @throws \Kirby\Exception\NotFoundException If the email was invalid
+     * @throws \Kirby\Exception\InvalidArgumentException If the password is not valid (via `$user->login()`)
      */
     public function login(string $email, string $password, bool $long = false)
     {
@@ -214,10 +214,22 @@ class Auth
         $user = $this->validatePassword($email, $password);
         $user->loginPasswordless($options);
 
+        return $user;
+    }
+
+    /**
+     * Sets a user object as the current user in the cache
+     * @internal
+     *
+     * @param \Kirby\Cms\User $user
+     * @return void
+     */
+    public function setUser(User $user): void
+    {
         // stop impersonating
         $this->impersonate = null;
 
-        return $this->user = $user;
+        $this->user = $user;
     }
 
     /**
@@ -228,9 +240,9 @@ class Auth
      * @param string $password
      * @return \Kirby\Cms\User
      *
-     * @throws PermissionException If the rate limit was exceeded or if any other error occured with debug mode off
-     * @throws NotFoundException If the email was invalid
-     * @throws InvalidArgumentException If the password is not valid (via `$user->login()`)
+     * @throws \Kirby\Exception\PermissionException If the rate limit was exceeded or if any other error occured with debug mode off
+     * @throws \Kirby\Exception\NotFoundException If the email was invalid
+     * @throws \Kirby\Exception\InvalidArgumentException If the password is not valid (via `$user->login()`)
      */
     public function validatePassword(string $email, string $password)
     {
@@ -243,7 +255,7 @@ class Auth
                 $message = 'Invalid email or password';
             }
 
-            throw new PermissionException($message, 403);
+            throw new PermissionException($message);
         }
 
         // validate the user
@@ -307,6 +319,9 @@ class Auth
         $log['by-ip']    = $log['by-ip'] ?? [];
         $log['by-email'] = $log['by-email'] ?? [];
 
+        // remove all elements on the top level with different keys (old structure)
+        $log = array_intersect_key($log, array_flip(['by-ip', 'by-email']));
+
         // remove entries that are no longer needed
         $originalLog = $log;
         $time = time() - $this->kirby->option('auth.timeout', 3600);
@@ -315,9 +330,6 @@ class Auth
                 return $entry['time'] > $time;
             });
         }
-
-        // remove all elements on the top level with different keys (old structure)
-        $log = array_intersect_key($log, array_flip(['by-ip', 'by-email']));
 
         // write new log to the file system if it changed
         if ($read === false || $log !== $originalLog) {
@@ -334,27 +346,37 @@ class Auth
     /**
      * Logout the current user
      *
-     * @return boolean
+     * @return void
      */
-    public function logout(): bool
+    public function logout(): void
     {
-        // stop impersonating
+        // stop impersonating;
+        // ensures that we log out the actually logged in user
         $this->impersonate = null;
 
         // logout the current user if it exists
         if ($user = $this->user()) {
             $user->logout();
         }
+    }
 
+    /**
+     * Clears the cached user data after logout
+     * @internal
+     *
+     * @return void
+     */
+    public function flush(): void
+    {
+        $this->impersonate = null;
         $this->user = null;
-        return true;
     }
 
     /**
      * Tracks a login
      *
      * @param string $email
-     * @return boolean
+     * @return bool
      */
     public function track(string $email): bool
     {
@@ -415,7 +437,8 @@ class Auth
      *
      * @param \Kirby\Session\Session|array|null $session
      * @return \Kirby\Cms\User
-     * @throws
+     *
+     * @throws \Throwable If an authentication error occured
      */
     public function user($session = null)
     {

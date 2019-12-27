@@ -8,6 +8,7 @@ use Kirby\Exception\NotFoundException;
 use Kirby\Http\Response;
 use Kirby\Http\Router;
 use Kirby\Toolkit\F;
+use Kirby\Toolkit\Pagination;
 use Kirby\Toolkit\Properties;
 use Kirby\Toolkit\Str;
 use Throwable;
@@ -38,7 +39,7 @@ class Api
     /**
      * Debugging flag
      *
-     * @var boolean
+     * @var bool
      */
     protected $debug = false;
 
@@ -173,21 +174,19 @@ class Api
             // set PHP locales based on *user* language
             // so that e.g. strftime() gets formatted correctly
             if (is_a($user, 'Kirby\Cms\User') === true) {
-                $locale = $language = $user->language();
+                $language = $user->language();
 
-                // if it's not already a full locale, "fake" one
-                // and assume that the country equals the language
-                if (Str::contains($locale, '_') !== true) {
-                    $locale .= '_' . strtoupper($locale);
-                }
+                // get the locale from the translation
+                $translation = $user->kirby()->translation($language);
+                $locale = ($translation !== null)? $translation->locale() : $language;
 
                 // provide some variants as fallbacks to be
                 // compatible with as many systems as possible
                 $locales = [
-                    $locale,
                     $locale . '.UTF-8',
                     $locale . '.UTF8',
                     $locale . '.ISO8859-1',
+                    $locale,
                     $language,
                     setlocale(LC_ALL, 0) // fall back to the previously defined locale
                 ];
@@ -200,7 +199,15 @@ class Api
             }
         }
 
+        // don't throw pagination errors if pagination
+        // page is out of bounds
+        $validate = Pagination::$validate;
+        Pagination::$validate = false;
+
         $output = $this->route->action()->call($this, ...$this->route->arguments());
+
+        // restore old pagination validation mode
+        Pagination::$validate = $validate;
 
         if (is_object($output) === true && is_a($output, 'Kirby\\Http\\Response') !== true) {
             return $this->resolve($output)->toResponse();
@@ -216,7 +223,7 @@ class Api
      * @param array|null $collection
      * @return \Kirby\Api\Collection
      *
-     * @throws NotFoundException If no collection for `$name` exists
+     * @throws \Kirby\Exception\NotFoundException If no collection for `$name` exists
      */
     public function collection(string $name, $collection = null)
     {
@@ -245,7 +252,7 @@ class Api
      * @param mixed ...$args
      * @return mixed
      *
-     * @throws NotFoundException If no data for `$key` exists
+     * @throws \Kirby\Exception\NotFoundException If no data for `$key` exists
      */
     public function data($key = null, ...$args)
     {
@@ -268,7 +275,7 @@ class Api
     /**
      * Returns the debugging flag
      *
-     * @return boolean
+     * @return bool
      */
     public function debug(): bool
     {
@@ -279,7 +286,7 @@ class Api
      * Checks if injected data exists for the given key
      *
      * @param string $key
-     * @return boolean
+     * @return bool
      */
     public function hasData(string $key): bool
     {
@@ -293,7 +300,7 @@ class Api
      * @param mixed $object
      * @return \Kirby\Api\Model
      *
-     * @throws NotFoundException If no model for `$name` exists
+     * @throws \Kirby\Exception\NotFoundException If no model for `$name` exists
      */
     public function model(string $name, $object = null)
     {
@@ -405,7 +412,7 @@ class Api
      * @param mixed $object
      * @return \Kirby\Api\Model|\Kirby\Api\Collection
      *
-     * @throws NotFoundException If `$object` cannot be resolved
+     * @throws \Kirby\Exception\NotFoundException If `$object` cannot be resolved
      */
     public function resolve($object)
     {
@@ -489,7 +496,7 @@ class Api
     /**
      * Setter for the debug flag
      *
-     * @param boolean $debug
+     * @param bool $debug
      * @return self
      */
     protected function setDebug(bool $debug = false)
@@ -693,11 +700,11 @@ class Api
      * Upload helper method
      *
      * @param Closure $callback
-     * @param boolean $single
+     * @param bool $single
      * @return array
      *
-     * @throws Exception If request has no files
-     * @throws Exception If there was an error with the upload
+     * @throws \Exception If request has no files
+     * @throws \Exception If there was an error with the upload
      */
     public function upload(Closure $callback, $single = false): array
     {

@@ -5,7 +5,6 @@ namespace Kirby\Cms;
 use Exception;
 use Kirby\Exception\InvalidArgumentException;
 use Kirby\Exception\NotFoundException;
-use Kirby\Exception\PermissionException;
 use Kirby\Session\Session;
 use Kirby\Toolkit\F;
 use Kirby\Toolkit\Str;
@@ -248,7 +247,7 @@ class User extends ModelWithContent
     /**
      * Checks if the user exists
      *
-     * @return boolean
+     * @return bool
      */
     public function exists(): bool
     {
@@ -273,7 +272,8 @@ class User extends ModelWithContent
     }
 
     /**
-     * Hashes user password
+     * Hashes the user's password unless it is `null`,
+     * which will leave it as `null`
      *
      * @internal
      * @param string|null $password
@@ -282,11 +282,7 @@ class User extends ModelWithContent
     public static function hashPassword($password): ?string
     {
         if ($password !== null) {
-            $info = password_get_info($password);
-
-            if ($info['algo'] === 0) {
-                $password = password_hash($password, PASSWORD_DEFAULT);
-            }
+            $password = password_hash($password, PASSWORD_DEFAULT);
         }
 
         return $password;
@@ -342,7 +338,7 @@ class User extends ModelWithContent
     /**
      * Checks if this user has the admin role
      *
-     * @return boolean
+     * @return bool
      */
     public function isAdmin(): bool
     {
@@ -353,7 +349,7 @@ class User extends ModelWithContent
      * Checks if the current user is the virtual
      * Kirby user
      *
-     * @return boolean
+     * @return bool
      */
     public function isKirby(): bool
     {
@@ -363,7 +359,7 @@ class User extends ModelWithContent
     /**
      * Checks if the current user is this user
      *
-     * @return boolean
+     * @return bool
      */
     public function isLoggedIn(): bool
     {
@@ -374,7 +370,7 @@ class User extends ModelWithContent
      * Checks if the user is the last one
      * with the admin role
      *
-     * @return boolean
+     * @return bool
      */
     public function isLastAdmin(): bool
     {
@@ -384,7 +380,7 @@ class User extends ModelWithContent
     /**
      * Checks if the user is the last user
      *
-     * @return boolean
+     * @return bool
      */
     public function isLastUser(): bool
     {
@@ -408,7 +404,7 @@ class User extends ModelWithContent
      * @param \Kirby\Session\Session|array $session Session options or session object to set the user in
      * @return bool
      *
-     * @throws PermissionException If the password is not valid
+     * @throws \Kirby\Exception\PermissionException If the password is not valid
      */
     public function login(string $password, $session = null): bool
     {
@@ -426,10 +422,17 @@ class User extends ModelWithContent
      */
     public function loginPasswordless($session = null): void
     {
+        $kirby = $this->kirby();
+
         $session = $this->sessionFromOptions($session);
+
+        $kirby->trigger('user.login:before', $this, $session);
 
         $session->regenerateToken(); // privilege change
         $session->data()->set('user.id', $this->id());
+        $this->kirby()->auth()->setUser($this);
+
+        $kirby->trigger('user.login:after', $this, $session);
     }
 
     /**
@@ -440,16 +443,27 @@ class User extends ModelWithContent
      */
     public function logout($session = null): void
     {
+        $kirby   = $this->kirby();
         $session = $this->sessionFromOptions($session);
 
+        $kirby->trigger('user.logout:before', $this, $session);
+
+        // remove the user from the session for future requests
         $session->data()->remove('user.id');
+
+        // clear the cached user object from the app state of the current request
+        $this->kirby()->auth()->flush();
 
         if ($session->data()->get() === []) {
             // session is now empty, we might as well destroy it
             $session->destroy();
+
+            $kirby->trigger('user.logout:after', $this, null);
         } else {
             // privilege change
             $session->regenerateToken();
+
+            $kirby->trigger('user.logout:after', $this, $session);
         }
     }
 
@@ -756,7 +770,7 @@ class User extends ModelWithContent
     }
 
     /**
-     * Sets and hashes a new user password
+     * Sets the user's password hash
      *
      * @param string $password
      * @return self
@@ -857,11 +871,11 @@ class User extends ModelWithContent
      * Compares the given password with the stored one
      *
      * @param string $password
-     * @return boolean
+     * @return bool
      *
-     * @throws NotFoundException If the user has no password
-     * @throws InvalidArgumentException If the entered password is not valid
-     * @throws InvalidArgumentException If the entered password does not match the user password
+     * @throws \Kirby\Exception\NotFoundException If the user has no password
+     * @throws \Kirby\Exception\InvalidArgumentException If the entered password is not valid
+     * @throws \Kirby\Exception\InvalidArgumentException If the entered password does not match the user password
      */
     public function validatePassword(string $password = null): bool
     {
