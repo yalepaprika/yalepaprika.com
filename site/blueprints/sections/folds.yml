@@ -1,0 +1,7 @@
+headline: Folds
+type: pages
+parent: site.find("folds")
+layout: cards
+size: medium
+template: fold
+empty: No folds yet

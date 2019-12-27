@@ -1,0 +1,9 @@
+title: Contributors
+
+options:
+  changeSlug: false
+  changeStatus: false
+  delete: false
+
+sections:
+  contributors: sections/contributors

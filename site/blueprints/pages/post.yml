@@ -1,0 +1,23 @@
+title: Post
+
+columns:
+  - width: 2/3
+    fields:
+      text:
+        type: textarea
+        size: huge
+  - width: 1/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          contributors:
+            type: pages
+            query: site.find("contributors")
+      gallery:
+        type: files
+        layout: cards
+        size: medium
+        headline: Gallery
+        template: image
+        empty: No images yet

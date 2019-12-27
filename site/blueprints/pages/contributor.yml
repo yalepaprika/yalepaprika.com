@@ -1,0 +1,23 @@
+title: Contributor
+
+options:
+  changeStatus: false
+
+fields:
+  degree:
+    label: Degree (Yale Student) or Title (Yale Faculty)
+    info: (Yale Student) e.g. M.Arch I, M.Arch II, M.F.A., BA etc. (Yale Faculty) e.g. Dean, Assistant Dean, Critic
+    type: text
+  graduation-year:
+    label: Graduation Year
+    info: (Optional) Full graduation year, if student, e.g. 2017
+    type: number
+    step: 1
+    min: 0
+  dual-degree:
+    label: Dual-Degree
+    info: (Optional) Use only if student is pursuing a dual-degree, e.g. M.B.A.
+    type: toggle
+    text: Contributor is an organization?
+  organization:
+    info: Check if contributor is an organization rather than an individual person. If so, organization name will be sorted as complete line item.

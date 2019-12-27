@@ -1,0 +1,6 @@
+headline: Contributors
+type: pages
+parent: site.find("contributors")
+layout: list
+template: contributor
+empty: No contributors yet

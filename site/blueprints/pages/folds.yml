@@ -1,0 +1,17 @@
+title: Folds
+
+options:
+  changeSlug: false
+  changeStatus: false
+  delete: false
+
+sections:
+  drafts:
+    extends: sections/folds
+    headline: Draft Folds
+    status: draft
+
+  listed:
+    extends: sections/folds
+    headline: Published Folds
+    status: listed
