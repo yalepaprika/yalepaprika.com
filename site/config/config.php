@@ -1,6 +1,8 @@
 <?php
 
 return [
-    'debug'  => true,
-    'url' => 'https://admin.yalepaprika.com/'
+    'panel' =>[
+	    'install' => true
+	  ],
+    'url' => 'http://paprika.test/'
 ];

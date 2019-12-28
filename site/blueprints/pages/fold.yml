@@ -1,13 +1,13 @@
 title: Fold
 
 columns:
-  - width: 1/3
+  - width: 1/1
     sections:
       posts:
         type: pages
         template: post
         empty: No posts yet
-  - width: 1/3
+  - width: 2/3
     fields:
       volume:
         type: number
@@ -15,61 +15,76 @@ columns:
         step: 1
       number:
         type: number
-        info: (Leave blank if issue is a bulletin.)
+        help: Leave blank if issue is a bulletin.
         width: 1/2
         step: 1
-      bulletin:
-        width: 1/2
-        type: toggle
-        text: Issue is an bulletin?
       publication-date:
+        label: Publication Date
         width: 1/2
         type: date
-      text:
-        info: Editor's Statement
+      bulletin:
+        type: toggle
+        width: 1/2
+        text: Issue is an bulletin?
+      content:
+        label: Editor's Statement
         type: textarea
         size: large
   - width: 1/3
     sections:
       fold-front:
+        headline: Front
         type: files
         layout: cards
         size: medium
         template: image
         empty: No image yet
-        min: 1
         max: 1
       fold-back:
+        headline: Back
         type: files
         layout: cards
         size: medium
         template: image
         empty: No image yet
-        min: 1
         max: 1
       pdf:
+        headline: PDF
         type: files
         template: pdf
-        min: 1
         max: 1
       meta:
         type: fields
         fields:
           website:
+            label: Custom Website
             type: url
-            info: Use only if a custom website was developed for the fold.
-          fold-editors:
-            type: pages
-            query: site.find("contributors")
-          coordinating-editors:
-            type: pages
-            query: site.find("contributors")
-          graphic-designer:
-            type: pages
-            query: site.find("contributors")
-          web-editor:
-            type: pages
-            query: site.find("contributors")
-          publishers:
-            type: pages
-            query: site.find("contributors")
+            help: Use only if a custom website was developed for the fold.
+  - width: 1/4
+    fields:
+      fold-editors:
+        label: Fold Editors
+        type: pages
+        query: site.find("contributors")
+  - width: 1/4
+    fields:
+      coordinating-editors:
+        label: Contributing Editors
+        type: pages
+        query: site.find("contributors")
+  - width: 1/4
+    fields:
+      graphic-designers:
+        label: Graphic Designers
+        type: pages
+        query: site.find("contributors")
+  - width: 1/4
+    fields:
+      web-editors:
+        label: Web Editors
+        type: pages
+        query: site.find("contributors")
+      publishers:
+        label: Publishers
+        type: pages
+        query: site.find("contributors")

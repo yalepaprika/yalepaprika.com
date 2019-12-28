@@ -7,7 +7,7 @@ fields:
     type: text
   alt:
     label: Alternative Text
-    info: The Alternative Text is shown if an image cannot be displayed or if the user uses a screen reader.
+    help: The Alternative Text is shown if an image cannot be displayed or if the user uses a screen reader.
     type: text
   credits:
     type: text

@@ -3,7 +3,8 @@ title: Post
 columns:
   - width: 2/3
     fields:
-      text:
+      content:
+        label: Text
         type: textarea
         size: huge
   - width: 1/3
