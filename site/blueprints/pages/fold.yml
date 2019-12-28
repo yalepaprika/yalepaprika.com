@@ -1,4 +1,5 @@
 title: Fold
+icon: book
 
 columns:
   - width: 1/1
@@ -11,21 +12,20 @@ columns:
     fields:
       volume:
         type: number
-        width: 1/2
+        width: 1/4
         step: 1
       number:
         type: number
         help: Leave blank if issue is a bulletin.
-        width: 1/2
+        width: 1/4
         step: 1
-      publication-date:
-        label: Publication Date
-        width: 1/2
-        type: date
       bulletin:
         type: toggle
+        text: Issue is a bulletin?
         width: 1/2
-        text: Issue is an bulletin?
+      publication-date:
+        label: Publication Date
+        type: date
       content:
         label: Editor's Statement
         type: textarea

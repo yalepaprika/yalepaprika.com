@@ -2,6 +2,6 @@ headline: Folds
 type: pages
 parent: site.find("folds")
 layout: cards
-size: medium
+size: small
 template: fold
 empty: No folds yet

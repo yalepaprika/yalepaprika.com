@@ -6,12 +6,4 @@ options:
   delete: false
 
 sections:
-  drafts:
-    extends: sections/folds
-    headline: Draft Folds
-    status: draft
-
-  listed:
-    extends: sections/folds
-    headline: Published Folds
-    status: listed
+  folds: sections/folds
