@@ -2,7 +2,7 @@
 
 return [
     'panel' =>[
-	    'install' => true
-	  ],
+        'install' => true
+      ],
     'url' => 'http://paprika.test/'
 ];

@@ -37,7 +37,7 @@ columns:
         type: files
         layout: cards
         size: medium
-        template: image
+        template: fold-front
         empty: No image yet
         max: 1
       fold_back:
@@ -45,7 +45,7 @@ columns:
         type: files
         layout: cards
         size: medium
-        template: image
+        template: fold-back
         empty: No image yet
         max: 1
       pdf:
