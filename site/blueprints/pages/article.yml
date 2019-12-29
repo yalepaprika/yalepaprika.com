@@ -1,5 +1,13 @@
 title: Article
 
+status:
+  draft:
+    label: Draft
+    text: The article is in draft mode and only visible for logged in editors
+  listed:
+    label: Public
+    text: The article is visible to the public
+
 columns:
   - width: 2/3
     fields:

@@ -1,6 +1,14 @@
 title: Contributor
 icon: user
 
+status:
+  draft:
+    label: Draft
+    text: The contributor is in draft mode and only visible for logged in editors
+  unlisted:
+    label: Public
+    text: The contributor is visible to the public
+
 fields:
   degree:
     label: Degree or Title
