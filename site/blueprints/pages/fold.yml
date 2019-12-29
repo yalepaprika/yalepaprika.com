@@ -5,9 +5,19 @@ columns:
   - width: 1/1
     sections:
       articles:
-        type: pages
+        type: pagetable
         template: article
         empty: No articles yet
+        limit: 25
+        columns:
+          title:
+            label: Title
+            text: '{{ page.title }}'
+            width: 1/3
+          contributors:
+            label: Contributors
+            text: '{{ page.contributors.toPages.sortedTitles }}'
+            width: 1/3
   - width: 2/3
     fields:
       volume:
