@@ -7,13 +7,13 @@ fields:
     help: (Yale Student) e.g. M.Arch I, M.Arch II, M.F.A., BA (Yale Faculty) e.g. Dean, Assistant Dean, Critic
     type: text
     width: 1/2
-  graduation-year:
+  graduation_year:
     label: Graduation Year
     type: number
     step: 1
     min: 1000
     width: 1/2
-  dual-degree:
+  dual_degree:
     label: Dual Degree
     help: (Optional) Use only if student is pursuing a dual degree, e.g. M.B.A.
     type: text

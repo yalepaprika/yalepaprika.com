@@ -4,10 +4,10 @@ icon: book
 columns:
   - width: 1/1
     sections:
-      posts:
+      articles:
         type: pages
-        template: post
-        empty: No posts yet
+        template: article
+        empty: No articles yet
   - width: 2/3
     fields:
       volume:
@@ -23,7 +23,7 @@ columns:
         type: toggle
         text: Issue is a bulletin?
         width: 1/2
-      publication-date:
+      publication_date:
         label: Publication Date
         type: date
       content:
@@ -32,7 +32,7 @@ columns:
         size: large
   - width: 1/3
     sections:
-      fold-front:
+      fold_front:
         headline: Front
         type: files
         layout: cards
@@ -40,7 +40,7 @@ columns:
         template: image
         empty: No image yet
         max: 1
-      fold-back:
+      fold_back:
         headline: Back
         type: files
         layout: cards
@@ -62,25 +62,25 @@ columns:
             help: Use only if a custom website was developed for the fold.
   - width: 1/4
     fields:
-      fold-editors:
+      fold_editors:
         label: Fold Editors
         type: pages
         query: site.find("contributors")
   - width: 1/4
     fields:
-      coordinating-editors:
+      coordinating_editors:
         label: Contributing Editors
         type: pages
         query: site.find("contributors")
   - width: 1/4
     fields:
-      graphic-designers:
+      graphic_designers:
         label: Graphic Designers
         type: pages
         query: site.find("contributors")
   - width: 1/4
     fields:
-      web-editors:
+      web_editors:
         label: Web Editors
         type: pages
         query: site.find("contributors")
