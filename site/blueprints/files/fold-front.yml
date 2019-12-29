@@ -1,3 +1,5 @@
 title: Fold Front
 
-accept: image/*
+accept: 
+  mime: image/*
+  maxsize: 10000000

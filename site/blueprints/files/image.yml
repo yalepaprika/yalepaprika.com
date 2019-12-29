@@ -1,6 +1,8 @@
 title: Image
 
-accept: image/*
+accept: 
+  mime: image/*
+  maxsize: 10000000
 
 fields:
   caption:

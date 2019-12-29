@@ -1,3 +1,5 @@
 title: Fold Back
 
-accept: image/*
+accept: 
+  mime: image/*
+  maxsize: 10000000
