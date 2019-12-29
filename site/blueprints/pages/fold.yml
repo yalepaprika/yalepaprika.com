@@ -26,7 +26,6 @@ columns:
         step: 1
       number:
         type: number
-        help: Leave blank if issue is a bulletin.
         width: 1/4
         step: 1
       bulletin:
