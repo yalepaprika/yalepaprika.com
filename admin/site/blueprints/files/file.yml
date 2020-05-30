@@ -1,0 +1,17 @@
+title: File
+
+accept: 
+  maxsize: 10000000
+
+fields:
+  caption:
+    type: text
+  alt:
+    label: Alternative Text
+    help: The Alternative Text is shown if an image cannot be displayed or if the user uses a screen reader.
+    type: text
+    width: 1/2
+  credits:
+    type: text
+    width: 1/2
+

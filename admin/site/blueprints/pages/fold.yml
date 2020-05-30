@@ -1,0 +1,115 @@
+title: Fold
+icon: book
+
+status:
+  draft:
+    label: Draft
+    text: The fold is in draft mode and only visible for logged in editors
+  unlisted:
+    label: Public
+    text: The fold is visible to the public
+
+columns:
+  - width: 1/1
+    sections:
+      articles:
+        type: pages
+        template: article
+        empty: No articles yet
+        info: '{{ page.contributors.toPages.sortedTitles }}'
+  - width: 1/1
+    fields:
+      line-a:
+        type: line
+  - width: 2/3
+    fields:
+      volume:
+        type: number
+        step: 1
+        width: 1/4
+      number:
+        type: number
+        step: 1
+        width: 1/4
+      publication_date:
+        label: Publication Date
+        type: date
+        width: 1/2
+      bulletin:
+        type: toggle
+        text: Issue is a bulletin?
+        width: 1/2
+      website:
+        label: Custom Website
+        type: url
+        help: Use only if a custom website was developed for the fold.
+  - width: 1/3
+    sections:
+      pdf:
+        headline: PDF
+        type: files
+        template: fold-pdf
+        max: 1
+      fold_front:
+        headline: Front
+        type: files
+        layout: cards
+        size: medium
+        template: fold-front
+        empty: No image yet
+        max: 1
+      fold_back:
+        headline: Back
+        type: files
+        layout: cards
+        size: medium
+        template: fold-back
+        empty: No image yet
+        max: 1
+  - width: 1/1
+    fields:
+      line-b:
+        type: line
+  - width: 2/3
+    fields:
+      content:
+        label: Editor's Statement
+        type: textarea
+        size: large
+        files: page.files.template("file")
+        uploads: file
+  - width: 1/3
+    sections:
+      files:
+        type: files
+        layout: cards
+        size: medium
+        template: file
+  - width: 1/1
+    fields:
+      line-c:
+        type: line
+  - width: 1/2
+    fields:
+      fold_editors:
+        label: Fold Editors
+        type: pages
+        query: site.find("contributors")
+      graphic_designers:
+        label: Graphic Designers
+        type: pages
+        query: site.find("contributors")
+  - width: 1/2
+    fields:
+      coordinating_editors:
+        label: Contributing Editors
+        type: pages
+        query: site.find("contributors")
+      web_editors:
+        label: Web Editors
+        type: pages
+        query: site.find("contributors")
+      publishers:
+        label: Publishers
+        type: pages
+        query: site.find("contributors")

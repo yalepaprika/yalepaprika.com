@@ -1,0 +1,27 @@
+{
+    "name": "yalepaprika/kirby",
+    "description": "Paprika! Kirby",
+    "type": "project",
+    "keywords": ["kirby", "cms", "starterkit"],
+    "homepage": "https://yalepaprika.com",
+    "authors": [
+        {
+            "name": "Seth Thompson",
+            "email": "s3th.thompson@gmail.com",
+            "homepage": "https://seththompson.org"
+        }
+    ],
+    "support": {
+        "email": "s3th.thompson@gmail.com",
+        "issues": "https://github.com/yalepaprika/yalepaprika.com/issues",
+        "forum": "https://forum.getkirby.com",
+        "source": "https://github.com/yalepaprika/yalepaprika.com"
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "getkirby/cms": "^3.0"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

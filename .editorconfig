@@ -1,21 +1,28 @@
-[*.{css,scss,less,js,json,ts,sass,html,hbs,mustache,phtml,html.twig,md,yml}]
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
 charset = utf-8
-indent_style = space
-indent_size = 2
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.{html,css,js}]
+indent_style = space
+indent_size = 2
+
+[*.php]
+charset = utf-8
+end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
 
 [*.md]
-indent_size = 4
 trim_trailing_whitespace = false
-
-[site/templates/**.php]
-indent_size = 2
-
-[site/snippets/**.php]
-indent_size = 2
+indent_style = tab
+indent_size = 4
 
 [package.json,.{babelrc,editorconfig,eslintrc,lintstagedrc,stylelintrc}]
 indent_style = space
