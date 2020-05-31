@@ -3,3 +3,6 @@
 
 # Ignore content folder until Git LFS is set up
 /content/*
+
+# ignore vagrant directory
+.vagrant/

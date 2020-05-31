@@ -1,0 +1,10 @@
+# This playbook saves the trouble of running each of the following playbooks
+# individually, and is provided for convenience. After "vagrant up", this
+# playbook will be run on the new Vagrant box.
+
+- import_playbook: provision.yml
+- import_playbook: configure.yml
+
+# Because this playbook targets the "vagrant" inventory host, it will only be
+# run for the Vagrant box, and skipped otherwise.
+- import_playbook: vagrant-link.yml

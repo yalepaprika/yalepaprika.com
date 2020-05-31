@@ -1,0 +1,17 @@
+# Configure server. This playbook is run after a server is provisioned but
+# before a project is deployed, to configure the system, add user accounts,
+# and setup long-running processes like caddy, postgres, etc.
+
+- hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+    - configure
+    - users
+    - caddy
+    - pm2
+  handlers:
+    - name: reload caddy
+      service: name=caddy state=reloaded
+    - name: restart sshd
+      service: name=ssh state=restarted

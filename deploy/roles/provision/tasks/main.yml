@@ -1,0 +1,37 @@
+# Get the box up and running. These tasks run before the box is configured
+# or the project is cloned or built. All system dependencies should be
+# installed here.
+
+- name: add keys to apt
+  apt_key:
+    url: "{{item}}"
+    state: present
+  with_items: "{{ apt_keys }}"
+
+- name: add ppas to apt
+  apt_repository:
+    repo: "{{item}}"
+    state: present
+  with_items: "{{ apt_ppas }}"
+
+- name: ensure apt cache is updated
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: install apt packages
+  apt:
+    name: "{{ apt_packages }}"
+    state: latest
+
+- name: ensure all packages are upgraded safely
+  apt:
+    upgrade: safe
+  when: env != "development"
+
+- name: update npm to latest
+  npm: name=npm state=latest global=yes
+
+- name: install global npm modules
+  npm:
+    name: "{{item}}"
+    global: yes
+  with_items: "{{ npm_global_modules }}"
