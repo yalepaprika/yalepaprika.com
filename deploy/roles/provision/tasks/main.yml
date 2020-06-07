@@ -35,3 +35,9 @@
     name: "{{item}}"
     global: yes
   with_items: "{{ npm_global_modules }}"
+
+- name: ensure install directory exists
+  file:
+    path: "{{base_path}}"
+    state: directory
+    mode: '0755'

@@ -1,0 +1,14 @@
+{
+  "name": "yalepaprika.com",
+  "version": "1.0.0",
+  "description": "yalepaprika.com",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo \"Error: no test specified\" && exit 1",
+    "watch": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+  "author": "",
+  "license": "MIT"
+}

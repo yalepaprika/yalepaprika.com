@@ -15,7 +15,7 @@ elsif LINUX
 end
 
 # use (faster) nfs sharing on osx only
-SHARING = OSX ? { nfs: true } : nil
+SHARING = OSX ? { create: true, type: "nfs" } : { create: true }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = 'ubuntu/bionic64'

@@ -8,5 +8,5 @@ return [
         'extra' => true
     ],
     "smartypants" => true,
-    'url' => 'http://paprika.test/'
+    'url' => 'https://yalepaprika.loc/'
 ];

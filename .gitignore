@@ -14,12 +14,10 @@ Icon
 # Temporary files
 # ---------------
 
-/media/*
-!/media/index.html
-
-# Lock files
-# ---------------
-.lock
+/public/media/*
+!/public/media/index.html
+/kirby
+/vendor
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

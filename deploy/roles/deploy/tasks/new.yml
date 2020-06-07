@@ -1,8 +1,2 @@
-# install npm + build
 # kirby post-install configuration (????)
 # set permissions
-# change link
-# startorrestart pm2 from /srv/www/
-# pm2 save
-
-# maybe startorrestart in vagrant-link.yml

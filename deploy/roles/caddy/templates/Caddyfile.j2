@@ -9,11 +9,20 @@
 # domain name.
 {{site_fqdn}}
 
+log {
+	output file /var/log/caddy.log
+}
+
+{{'tls internal' if env == 'development'}} 
+
+encode gzip
+
 # Set this path to your site's directory.
-root * {{site_path}}
+root * {{site_path}}/public
 
 # serve a PHP site through php-fpm:
 php_fastcgi unix//run/php/php-fpm.sock
+file_server
 
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
