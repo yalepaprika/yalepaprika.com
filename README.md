@@ -7,6 +7,7 @@
 - Vagrant
 - vagrant-hostsupdater
 - vagrant-vbguest
+- vagrant-bindfs
 - Node
 - Compser
 

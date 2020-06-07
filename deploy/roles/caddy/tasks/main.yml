@@ -1,4 +1,9 @@
 # caddy user already available
+- name: ensure caddy user is member of syslog group
+  user:
+    name: caddy
+    groups: syslog,www-data
+    append: yes
 
 # set up caddyfile /etc/caddy/Caddyfile
 - name: Configure Caddy

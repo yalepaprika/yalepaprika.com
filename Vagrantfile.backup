@@ -8,21 +8,11 @@ OSX = RUBY_PLATFORM =~ /darwin/
 SHARING = OSX ? { create: true, type: "nfs" } : { create: true }
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vagrant.plugins = [
-    "vagrant-hostsupdater",
-    "vagrant-vbguest",
-    "vagrant-bindfs"
-  ]
-
   config.vm.box = 'ubuntu/bionic64'
 
-  # Allow the project directory to be accessible inside the Vagrant box.
-  # This should match the Ansible host_vars/vagrant synced_folder value.
-  config.vm.synced_folder '.', '/mnt/vagrant', SHARING
-
-  config.bindfs.bind_folder "/mnt/vagrant", "/srv/www/vagrant",
-    force_user:   'www-data',
-    force_group:  'www-data'
+  # # Allow the project directory to be accessible inside the Vagrant box.
+  # # This should match the Ansible host_vars/vagrant synced_folder value.
+  # config.vm.synced_folder '.', '/srv/www/vagrant', SHARING
 
   # Ideally, this IP will be unique, so the entry added to /etc/hosts won't
   # conflict with that of another project.
@@ -40,8 +30,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # # the following code, the Vagrant box may be provisioned manually with
   # # ansible-playbook (like in production), but adding this code saves the
   # # trouble of having to run ansible-playbook manually after "vagrant up".
-  config.vm.provision 'ansible' do |ansible|
-    # Run init playbook (which runs base, configure, vagrant-link playbooks).
-    ansible.playbook = 'deploy/init.yml'
-  end
+  # config.vm.provision 'ansible' do |ansible|
+  #   # Run init playbook (which runs base, configure, vagrant-link playbooks).
+  #   ansible.playbook = 'deploy/init.yml'
+  # end
 end
