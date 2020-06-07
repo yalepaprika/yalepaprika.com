@@ -2,27 +2,19 @@
 # specified commit if the commit hasn't been deployed before or if "force"
 # is true.
 
+# install npm packages
+# install composer packages
+
 # Modify as-needed!
 
-# - name: compare package.json of current deploy with previous deploy
-#   command: diff {{site_path}}/package.json {{clone_path}}/package.json
-#   register: package_diff
-#   ignore_errors: true
-#   no_log: true
+- name: install npm modules
+  npm: path="{{clone_path}}"
 
-# - name: copy existing npm modules
-#   command: cp -R {{site_path}}/node_modules {{clone_path}}
-#   when: package_diff.rc == 0
+- name: build production version
+  shell: npm run build
+  args:
+    chdir: "{{clone_path}}"
 
-# - name: install npm modules
-#   npm: path="{{clone_path}}"
-#   when: package_diff.rc != 0
-
-# - name: build production version
-#   shell: npm run build
-#   args:
-#     chdir: "{{clone_path}}"
-
-# - name: generate build info file
-#   template: src=build_info.txt.j2 dest={{clone_path}}/{{build_info_path}}
-#   when: build_info_path is defined
+- name: generate build info file
+  template: src=build_info.txt.j2 dest={{clone_path}}/{{build_info_path}}
+  when: build_info_path is defined

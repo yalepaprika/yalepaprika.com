@@ -27,14 +27,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Allow the project directory to be accessible inside the Vagrant box.
   # This should match the Ansible host_vars/vagrant synced_folder value.
-  config.vm.synced_folder '.', '/mnt/vagrant', SHARING
+  config.vm.synced_folder '.', '/srv/www/vagrant', SHARING
 
   # Ideally, this IP will be unique, so the entry added to /etc/hosts won't
   # conflict with that of another project.
   config.vm.network :private_network, ip: '192.168.33.99'
 
   # Automatically add an entry to /etc/hosts for this Vagrant box (requires
-  # sudo). This should match the Ansible host_vars/vagrant site_fqdn value.
+  # sudo). This should match the Ansible host_vars/vagrant site_fqdn
   config.hostsupdater.aliases = ['yalepaprika.loc']
 
   # give vm access to 1/4 total system memory and all cpu

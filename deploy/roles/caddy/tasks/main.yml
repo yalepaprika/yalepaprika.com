@@ -1,9 +1,8 @@
-# set up users
+# caddy user already available
 
-# set up caddyfile
-
-# install service
-
-# start service running
-
-# set up handlers
+# set up caddyfile /etc/caddy/Caddyfile
+- name: Configure Caddy
+  template:
+    src: ../templates/Caddyfile.j2
+    dest: /etc/caddy/Caddyfile
+  notify: restart caddy

@@ -1,9 +1,8 @@
-# copy existing src to temp folder
-# checkout commit in temp folder
-# move src to new folder
-# vacuum old srces
 # install npm + build
 # kirby post-install configuration (????)
 # set permissions
 # change link
-# restart pm2 (do i need to?)
+# startorrestart pm2 from /srv/www/
+# pm2 save
+
+# maybe startorrestart in vagrant-link.yml
