@@ -12,6 +12,3 @@
   handlers:
     - name: restart sshd
       service: name=ssh state=restarted
-  handlers:
-    - name: restart php-fpm
-      service: name=php7.4-fpm state=restarted

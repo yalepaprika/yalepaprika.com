@@ -8,3 +8,5 @@
   become_user: www-data
   roles:
     - deploy
+  handlers:
+    - include: roles/caddy/handlers/main.yml
