@@ -13,7 +13,11 @@ log {
 	output file /var/log/caddy.log
 }
 
-{{'tls internal' if env == 'development'}} 
+{% if env == 'development' %}
+    tls internal
+{% else %}
+    tls {{letsencrypt_email}}
+{% endif %}
 
 encode gzip
 

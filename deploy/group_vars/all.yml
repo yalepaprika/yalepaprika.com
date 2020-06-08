@@ -54,6 +54,8 @@ apt_packages:
   - nodejs
   - php7.4
   - php7.4-fpm
+  - php7.4-mbstring
+  - php7.4-curl
 
 # Any global npm modules to install. App-specific modules are installed in deploy tasks
 npm_global_modules: []

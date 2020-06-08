@@ -7,6 +7,11 @@
 
 # Modify as-needed!
 
+- name: install php modules
+  composer:
+    command: install
+    working_dir: "{{clone_path}}"
+
 - name: install npm modules
   npm: path="{{clone_path}}"
 
