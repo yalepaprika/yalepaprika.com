@@ -36,10 +36,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # A specific name looks much better than "default" in ansible output.
   config.vm.define 'vagrant'
 
-  # # The Vagrant ansible provisioner is used here for convenience. Instead of
-  # # the following code, the Vagrant box may be provisioned manually with
-  # # ansible-playbook (like in production), but adding this code saves the
-  # # trouble of having to run ansible-playbook manually after "vagrant up".
+  # The Vagrant ansible provisioner is used here for convenience. Instead of
+  # the following code, the Vagrant box may be provisioned manually with
+  # ansible-playbook (like in production), but adding this code saves the
+  # trouble of having to run ansible-playbook manually after "vagrant up".
   config.vm.provision 'ansible' do |ansible|
     # Run init playbook (which runs base, configure, vagrant-link playbooks).
     ansible.playbook = 'deploy/init.yml'

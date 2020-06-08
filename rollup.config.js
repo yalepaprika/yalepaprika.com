@@ -6,17 +6,28 @@ import { terser } from 'rollup-plugin-terser';
 import sizes from 'rollup-plugin-sizes';
 import visualizer from 'rollup-plugin-visualizer';
 import glob from 'fast-glob';
-
+import path from 'path';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 
+function generateInputMap(filenames, base) {
+  const inputMap = {}
+  for (let filename of filenames) {
+    const relativeFile = path.relative(base, filename)
+    const parsed = path.parse(relativeFile)
+    const name = path.join(parsed.dir, parsed.name);
+    inputMap[name] = filename
+  }
+  return inputMap
+}
+
 export default async ({ configVisualize }) => {
   return {
-    input: await glob('src/js/templates/*.js'),
+    input: generateInputMap(await glob('src/js/**/*.js'), 'src/js'),
     output: [
       {
-        dir: "public/assets/js/templates/",
+        dir: "public/assets/js/",
         format: "es",
         sourcemap: true
       }
