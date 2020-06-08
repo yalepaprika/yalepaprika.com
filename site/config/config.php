@@ -7,6 +7,5 @@ return [
     'markdown' => [
         'extra' => true
     ],
-    "smartypants" => true,
-    'url' => 'https://yalepaprika.loc/'
+    "smartypants" => true
 ];
