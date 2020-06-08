@@ -2,7 +2,7 @@
 
 ### Dependencies
 
-- Ansible 2.4.x
+- Ansible 2.8.x
 - Virtualbox
 - Vagrant
 - vagrant-hostsupdater
@@ -14,13 +14,17 @@
 - ~/.ssh/config
 - add-key -K
 
+### Deploy
+
+- `ansible-playbook deploy/init.yml --inventory deploy/inventory/staging`
+- `ansible-playbook deploy/deploy.yml --inventory deploy/inventory/staging`
 
 ### TODO
 
-- logs / erros, unified
-- rework cloning strategy
-- pm2
-- caddy
+- logs / errors, unified
+- ~~rework cloning strategy~~
+- ~~pm2~~
+- ~~caddy~~
 - thumbor / imgix
 - meilisearch
 - redis
