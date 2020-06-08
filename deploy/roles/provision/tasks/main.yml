@@ -36,6 +36,19 @@
     global: yes
   with_items: "{{ npm_global_modules }}"
 
+- name: check if composer is installed.
+  stat: path=/usr/local/bin/composer
+  register: composer_bin
+
+- include: composer.yml
+  when: not composer_bin.stat.exists
+
+- name: update composer to latest version
+  command: >
+    php /usr/local/bin/composer self-update
+  register: composer_update
+  changed_when: "'Updating to version' in composer_update.stdout"
+
 - name: ensure install directory exists
   file:
     path: "{{base_path}}"

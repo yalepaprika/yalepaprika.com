@@ -10,7 +10,9 @@
     password: "{{ item.shadow_pass | default(omit) }}"
     state: "{{ item.state | default(omit) }}"
     shell: "{{ item.shell | default('/bin/bash') }}"
-    groups: "{{ item.groups | default('sudo') }}"
+    groups: "{{ item.groups | default('sudo, wheel') }}"
+    append: yes
+    create_home: yes
   with_items: "{{ users }}"
 
 - name: ensure user public keys are synced

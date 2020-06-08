@@ -11,12 +11,50 @@
     dest: "{{clone_path}}"
   when: site_dir.stat.exists
 
+# https://serverfault.com/a/442099
+# https://github.com/ansible/ansible/issues/7235#issuecomment-45842303
+- name: grant www-data access to SSH_AUTH_SOCK for ssh forwarding
+  become: yes
+  become_user: root
+  acl:
+    path: "{{item.path}}"
+    etype: user
+    entity: www-data
+    permissions: "{{item.permissions}}"
+    state: present
+  with_items:
+    - path: "{{ ansible_env.SSH_AUTH_SOCK|dirname }}"
+      permissions: x
+    - path: "{{ ansible_env.SSH_AUTH_SOCK }}"
+      permissions: rw
+
+- name: test git authentication
+  command: ssh -T -v git@github.com
+  register: exit
+  failed_when: exit.rc not in [0, 1] # return code is 255 when not recognized
+  environment:
+    SSH_AUTH_SOCK: "{{ ansible_env.SSH_AUTH_SOCK }}"
+
 - name: clone git repo into temp directory
   git:
     repo: "{{synced_folder if local else git_repo}}"
     dest: "{{clone_path}}"
     version: "{{commit}}"
     force: yes
+  environment:
+    SSH_AUTH_SOCK: "{{ ansible_env.SSH_AUTH_SOCK }}"
+
+- name: ungrant www-data access to SSH_AUTH_SOCK for ssh forwarding
+  become: yes
+  become_user: root
+  acl:
+    path: "{{item.path}}"
+    etype: user
+    entity: www-data
+    state: absent
+  with_items:
+    - path: "{{ ansible_env.SSH_AUTH_SOCK|dirname }}"
+    - path: "{{ ansible_env.SSH_AUTH_SOCK }}"
 
 - name: get sha of cloned repo
   command: git rev-parse HEAD

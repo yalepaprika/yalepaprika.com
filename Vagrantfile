@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # This should match the Ansible host_vars/vagrant synced_folder value.
   config.vm.synced_folder '.', '/mnt/vagrant', SHARING
 
-  config.bindfs.bind_folder "/mnt/vagrant", "/srv/www/vagrant",
+  config.bindfs.bind_folder "/mnt/vagrant", "/var/www/vagrant",
     force_user:   'www-data',
     force_group:  'www-data'
 

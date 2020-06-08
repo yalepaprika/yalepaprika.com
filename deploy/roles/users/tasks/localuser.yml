@@ -7,7 +7,9 @@
     state: present
     name: "{{ lookup('env', 'USER') }}"
     shell: /bin/bash
-    groups: sudo
+    groups: sudo, wheel
+    append: yes
+    createhome: yes
   register: user
 
 - name: ensure the local user's public key is synced
