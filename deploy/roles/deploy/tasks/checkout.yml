@@ -7,8 +7,9 @@
 
 - name: copy current checkout into temp directory, if it exists
   copy:
-    src: "{{site_path}}"
+    src: "{{site_path}}/"
     dest: "{{clone_path}}"
+    remote_src: yes
   when: site_dir.stat.exists
 
 # https://serverfault.com/a/442099

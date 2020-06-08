@@ -20,6 +20,9 @@
     state: link
     src: "{{base_path}}/{{ sha.stdout | default(commit) }}"
     force: yes
+  notify:
+    - restart php-fpm
+    - restart caddy
 
 - name: update last-modification time of sha-named clone
   file: path={{base_path}}/{{ sha.stdout | default(commit) }} state=touch
