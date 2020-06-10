@@ -19,11 +19,21 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
+[site/templates/**.php]
+indent_size = 2
+
+[site/snippets/**.php]
+indent_size = 2
+
 [*.md]
 trim_trailing_whitespace = false
 indent_style = tab
 indent_size = 4
 
-[package.json,.{babelrc,editorconfig,eslintrc,lintstagedrc,stylelintrc}]
+[*.json]
+indent_style = space
+indent_size = 2
+
+[.{babelrc,editorconfig,eslintrc,lintstagedrc,stylelintrc}]
 indent_style = space
 indent_size = 2

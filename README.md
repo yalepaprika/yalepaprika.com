@@ -21,6 +21,8 @@
 
 ### TODO
 
+- kirby-git-content, cron
+- git lfs
 - logs / errors, unified
 - ~~rework cloning strategy~~
 - ~~pm2~~
@@ -28,6 +30,5 @@
 - thumbor / imgix
 - meilisearch
 - redis
-- kirby-git-content, cron
 - netdata
 - fathom

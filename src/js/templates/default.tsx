@@ -1,9 +1,17 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-class Timer extends Component {
-  constructor(props) {
+export interface Props {}
+
+interface State {
+  seconds: number;
+}
+
+class Timer extends Component<Props, State> {
+  private interval: ReturnType<typeof setTimeout> | null
+  constructor(props: Props) {
     super(props);
+    this.interval = null;
     this.state = { seconds: 0 };
   }
 
@@ -18,7 +26,9 @@ class Timer extends Component {
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    if (this.interval) {
+      clearInterval(this.interval);
+    }
   }
 
   render() {

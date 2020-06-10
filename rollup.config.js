@@ -1,15 +1,18 @@
+import jsx from 'acorn-jsx';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
-import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
+import babel from '@rollup/plugin-babel';
+import { DEFAULT_EXTENSIONS } from '@babel/core';
 import { terser } from 'rollup-plugin-terser';
 import sizes from 'rollup-plugin-sizes';
 import visualizer from 'rollup-plugin-visualizer';
 import glob from 'fast-glob';
 import path from 'path';
 
-const mode = process.env.NODE_ENV;
-const dev = mode === 'development';
+const mode = (process.env.NODE_ENV === 'production') ? 'production' : 'development';
+const dev = (mode === 'development')
 
 function generateInputMap(filenames, base) {
   const inputMap = {}
@@ -24,7 +27,7 @@ function generateInputMap(filenames, base) {
 
 export default async ({ configVisualize }) => {
   return {
-    input: generateInputMap(await glob('src/js/**/*.js'), 'src/js'),
+    input: generateInputMap(await glob('src/js/**/*.{ts,tsx}'), 'src/js'),
     output: [
       {
         dir: "public/assets/js/",
@@ -32,6 +35,7 @@ export default async ({ configVisualize }) => {
         sourcemap: true
       }
     ],
+    acornInjectPlugins: [jsx()],
     plugins: [
       replace({
         'process.browser': true,
@@ -40,11 +44,20 @@ export default async ({ configVisualize }) => {
       resolve({
         browser: true
       }),
+      typescript({
+        module: 'CommonJS',
+        noEmitOnError: !dev
+      }),
+      commonjs({ extensions: ['.js', '.ts', '.jsx', '.tsx'] }),
       babel({
         exclude: 'node_modules/**',
-        babelHelpers: 'bundled'
+        babelHelpers: 'bundled',
+        extensions: [
+          ...DEFAULT_EXTENSIONS,
+          '.ts',
+          '.tsx'
+        ]
       }),
-      commonjs(),
       !dev && terser({
         module: true
       }),
