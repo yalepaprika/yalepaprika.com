@@ -57,16 +57,12 @@ export default async ({ configVisualize }) => {
           '.ts',
           '.tsx'
         ]
-      }),
-      !dev && terser({
-        module: true
-      }),
-      sizes(),
-      configVisualize && visualizer({
-        sourcemap: true,
-        open: true
       })
     ],
-    treeshake: { moduleSideEffects: false }
+    treeshake: { moduleSideEffects: false },
+    watch: {
+      clearScreen: false,
+      exclude: ['node_modules/**']
+    }
   }
 };

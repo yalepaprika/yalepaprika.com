@@ -9,10 +9,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "pretty": true,
-    "sourceMap": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "strict": true,
-    "jsx": "preserve"
+    "jsx": "react"
   },
   "exclude": ["node_modules"],
   "include": [
