@@ -46,6 +46,8 @@ export default async ({ configVisualize }) => {
       }),
       typescript({
         module: 'CommonJS',
+        // still emit files even when there's an error in order to
+        // not break rollup watch
         noEmitOnError: !dev
       }),
       commonjs({ extensions: ['.js', '.ts', '.jsx', '.tsx'] }),
@@ -57,12 +59,23 @@ export default async ({ configVisualize }) => {
           '.ts',
           '.tsx'
         ]
+      }),
+      !dev && terser({
+        module: true
+      }),
+      sizes(),
+      configVisualize && visualizer({
+        sourcemap: true,
+        open: true
       })
     ],
     treeshake: { moduleSideEffects: false },
     watch: {
       clearScreen: false,
-      exclude: ['node_modules/**']
+      exclude: ['node_modules/**'],
+      chokidar: {
+        usePolling: true
+      }
     }
   }
 };

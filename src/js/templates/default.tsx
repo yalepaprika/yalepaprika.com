@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface Props {}
 
 interface State {
@@ -8,7 +9,7 @@ interface State {
 }
 
 class Timer extends Component<Props, State> {
-  private interval: ReturnType<typeof setTimeout> | null
+  private interval: ReturnType<typeof setTimeout> | null;
   constructor(props: Props) {
     super(props);
     this.interval = null;
@@ -16,8 +17,8 @@ class Timer extends Component<Props, State> {
   }
 
   tick() {
-    this.setState(state => ({
-      seconds: state.seconds + 1
+    this.setState((state) => ({
+      seconds: state.seconds + 1,
     }));
   }
 
@@ -32,15 +33,8 @@ class Timer extends Component<Props, State> {
   }
 
   render() {
-    return (
-      <div>
-        Seconds: {this.state.seconds}
-      </div>
-    );
+    return <div>Seconds: {this.state.seconds}</div>;
   }
 }
 
-render(
-  <Timer />,
-  document.getElementById('timer-placeholder')
-);
+render(<Timer />, document.getElementById('timer-placeholder'));
