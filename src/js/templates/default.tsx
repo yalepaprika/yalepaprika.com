@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface Props {}
 
 interface State {

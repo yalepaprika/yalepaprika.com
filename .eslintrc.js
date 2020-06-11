@@ -1,31 +1,28 @@
 module.exports = {
-  "settings": {
-    "react": {
-      "version": "16.13.1"
-    }
-  },
-  "env": {
-    "browser": true,
-    "es2020": true
-  },
-  "extends": [
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  settings: {
+    react: {
+      version: 'latest',
     },
-    "ecmaVersion": 11,
-    "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
+  env: {
+    browser: true,
+    es2020: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
   ],
-  "rules": {
-  }
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
+  },
+  rules: {
+    '@typescript-eslint/no-empty-interface': 'off',
+  },
 };

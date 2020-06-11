@@ -13,6 +13,9 @@
 - https://gist.github.com/arbabnazar/6b9909cfba52ac066512ba5d1c1a1080
 - ~/.ssh/config
 - add-key -K
+- npm scripts
+- document python venv
+- ansible-lint
 
 ### Deploy
 
