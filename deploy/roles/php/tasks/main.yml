@@ -1,0 +1,2 @@
+- include: xdebug.yml
+  when: env == "development"

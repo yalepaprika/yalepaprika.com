@@ -5,11 +5,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Frontend",
+      "name": "Debug JS",
       "type": "chrome",
       "request": "launch",
       "url": "https://yalepaprika.loc",
       "webRoot": "${workspaceFolder}/src"
+    },
+    {
+      "name": "Debug PHP",
+      "type": "php",
+      "port": 9000,
+      "request": "launch",
+      "pathMappings": {
+        "/var/www/vagrant": "${workspaceFolder}" // xdebug does not handle symlinks, so the file path can't be /var/www/current
+      }
     }
   ]
 }

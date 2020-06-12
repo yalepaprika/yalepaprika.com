@@ -1,7 +1,6 @@
-# handlers file for caddy
-- name: restart caddy
+- name: restart php-fpm
   become: yes
   become_user: root
   service:
-    name: caddy
+    name: php7.4-fpm
     state: restarted

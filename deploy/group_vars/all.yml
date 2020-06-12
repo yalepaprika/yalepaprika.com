@@ -2,7 +2,7 @@
 # PROJECT
 #########
 
-# Tell Ansible to use python3 
+# Tell Ansible to use python3
 ansible_python_interpreter: /usr/bin/python3
 
 # Certain tasks may operate in a less secure (but more convenient) manner, eg.
@@ -57,6 +57,7 @@ apt_packages:
   - php7.4-mbstring
   - php7.4-curl
   - php7.4-gd
+  - php-xdebug
 
 # Any global npm modules to install. App-specific modules are installed in deploy tasks
 npm_global_modules: []

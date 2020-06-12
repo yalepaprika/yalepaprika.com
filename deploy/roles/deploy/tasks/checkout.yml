@@ -3,12 +3,12 @@
 # clone the repo and build it.
 
 - name: ensure pre-existing temp directory is removed
-  file: path={{clone_path}} state=absent
+  file: path={{ clone_path }} state=absent
 
 - name: copy current checkout into temp directory, if it exists
   copy:
-    src: "{{site_path}}/"
-    dest: "{{clone_path}}"
+    src: "{{ site_path }}/"
+    dest: "{{ clone_path }}"
     remote_src: yes
   when: site_dir.stat.exists
 
@@ -18,10 +18,10 @@
   become: yes
   become_user: root
   acl:
-    path: "{{item.path}}"
+    path: "{{ item.path }}"
     etype: user
     entity: www-data
-    permissions: "{{item.permissions}}"
+    permissions: "{{ item.permissions }}"
     state: present
   with_items:
     - path: "{{ ansible_env.SSH_AUTH_SOCK|dirname }}"
@@ -38,9 +38,9 @@
 
 - name: clone git repo into temp directory
   git:
-    repo: "{{synced_folder if local else git_repo}}"
-    dest: "{{clone_path}}"
-    version: "{{commit}}"
+    repo: "{{ synced_folder if local else git_repo }}"
+    dest: "{{ clone_path }}"
+    version: "{{ commit }}"
     force: yes
   environment:
     SSH_AUTH_SOCK: "{{ ansible_env.SSH_AUTH_SOCK }}"
@@ -49,7 +49,7 @@
   become: yes
   become_user: root
   acl:
-    path: "{{item.path}}"
+    path: "{{ item.path }}"
     etype: user
     entity: www-data
     state: absent
@@ -60,24 +60,24 @@
 - name: get sha of cloned repo
   command: git rev-parse HEAD
   args:
-    chdir: "{{clone_path}}"
+    chdir: "{{ clone_path }}"
   register: sha
   changed_when: false
 
 - name: check if specified commit sha has already been deployed
-  stat: path={{base_path}}/{{sha.stdout}} get_checksum=no get_md5=no
+  stat: path={{ base_path }}/{{ sha.stdout }} get_checksum=no get_md5=no
   register: sha_dir
 
 - include: build.yml
   when: force or not sha_dir.stat.exists
 
 - name: delete pre-existing sha-named directory
-  file: path={{base_path}}/{{sha.stdout}} state=absent
+  file: path={{ base_path }}/{{ sha.stdout }} state=absent
   when: force and sha_dir.stat.exists
 
 - name: move cloned repo to sha-named directory
-  command: mv {{clone_path}} {{base_path}}/{{sha.stdout}}
+  command: mv {{ clone_path }} {{ base_path }}/{{ sha.stdout }}
   when: force or not sha_dir.stat.exists
 
 - name: ensure just-created temp directory is removed
-  file: path={{clone_path}} state=absent
+  file: path={{ clone_path }} state=absent

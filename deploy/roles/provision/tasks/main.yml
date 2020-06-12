@@ -4,13 +4,13 @@
 
 - name: add keys to apt
   apt_key:
-    url: "{{item}}"
+    url: "{{ item }}"
     state: present
   with_items: "{{ apt_keys }}"
 
 - name: add ppas to apt
   apt_repository:
-    repo: "{{item}}"
+    repo: "{{ item }}"
     state: present
   with_items: "{{ apt_ppas }}"
 
@@ -32,7 +32,7 @@
 
 - name: install global npm modules
   npm:
-    name: "{{item}}"
+    name: "{{ item }}"
     global: yes
   with_items: "{{ npm_global_modules }}"
 
@@ -51,7 +51,7 @@
 
 - name: ensure install directory exists
   file:
-    path: "{{base_path}}"
+    path: "{{ base_path }}"
     state: directory
     mode: "0755"
     owner: "www-data"

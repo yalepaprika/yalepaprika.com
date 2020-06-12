@@ -1,0 +1,27 @@
+- name: get php.ini
+  shell: locate php.ini | grep fpm
+  register: php_ini_location
+
+- name: register xdebug options in php.ini
+  ini_file:
+    path: "{{ php_ini_location.stdout }}"
+    section: "XDebug"
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+    mode: 0644
+    backup: yes
+  with_items:
+    - option: "xdebug.remote_enable"
+      value: 1
+    - option: "xdebug.remote_autostart"
+      value: 1
+    - option: "xdebug.remote_host"
+      value: "10.0.2.2"
+    - option: "xdebug.remote_port"
+      value: 9000
+    - option: "xdebug.max_nesting_level"
+      value: 1000
+    - option: "xdebug.idekey"
+      value: "VSCODE"
+  notify:
+    - restart php-fpm

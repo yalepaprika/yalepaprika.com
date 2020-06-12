@@ -2,7 +2,7 @@
 # the project is cloned or built.
 
 - name: set hostname
-  hostname: name={{hostname}}
+  hostname: name={{ hostname }}
 
 - name: ensure unattended upgrades are running
   copy:
@@ -17,7 +17,7 @@
   lineinfile:
     dest: /etc/hosts
     state: present
-    line: "127.0.0.1 {{hostname}} {{site_fqdn}}"
+    line: "127.0.0.1 {{ hostname }} {{ site_fqdn }}"
 
 - name: disallow password authentication
   lineinfile:
@@ -42,4 +42,3 @@
     create: yes
     regexp: "^github\\.com"
     line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
-    

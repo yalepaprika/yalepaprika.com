@@ -10,16 +10,16 @@
 - name: install php modules
   composer:
     command: install
-    working_dir: "{{clone_path}}"
+    working_dir: "{{ clone_path }}"
 
 - name: install npm modules
-  npm: path="{{clone_path}}"
+  npm: path="{{ clone_path }}"
 
 - name: build production version
   shell: npm run build
   args:
-    chdir: "{{clone_path}}"
+    chdir: "{{ clone_path }}"
 
 - name: generate build info file
-  template: src=build_info.txt.j2 dest={{clone_path}}/{{build_info_path}}
+  template: src=build_info.txt.j2 dest={{ clone_path }}/{{ build_info_path }}
   when: build_info_path is defined
