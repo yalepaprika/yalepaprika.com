@@ -21,6 +21,11 @@ Icon
 /vendor
 stats.html
 
+# Composer-managed plugins
+# ------------------------
+
+/site/plugins/pagetable
+
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
