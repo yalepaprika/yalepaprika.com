@@ -17,6 +17,7 @@
 - document python venv
 - ansible-lint
 - intelliphense, disable php built-in language services
+- install git lfs
 
 ### Deploy
 

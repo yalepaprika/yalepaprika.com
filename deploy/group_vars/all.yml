@@ -28,6 +28,7 @@ site_fqdn: "yalepaprika.com"
 
 # Keys to be added to apt.
 apt_keys:
+  - "https://packagecloud.io/github/git-lfs/gpgkey"
   - "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
 
 # Ppas to be added to apt. Useful ppas (replace trusty with your Ubuntu
@@ -41,6 +42,8 @@ apt_ppas:
   - "deb https://deb.nodesource.com/node_14.x bionic main"
   - "deb [trusted=yes] https://apt.fury.io/caddy/ /"
   - "ppa:git-core/ppa"
+  - "deb https://packagecloud.io/github/git-lfs/{{ansible_distribution|lower}}/ {{ansible_distribution_release}} main"
+  - "deb-src https://packagecloud.io/github/git-lfs/{{ansible_distribution|lower}}/ {{ansible_distribution_release}} main"
   - "ppa:ondrej/php"
 
 # Any apt packages to install. Apt package versions may be specified like
@@ -51,6 +54,7 @@ apt_packages:
   - build-essential
   - caddy
   - git
+  - git-lfs
   - nodejs
   - php7.4
   - php7.4-fpm
