@@ -10,4 +10,4 @@ content/**/*.m4a filter=lfs diff=lfs merge=lfs -text
 content/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
 content/**/*.m4v filter=lfs diff=lfs merge=lfs -text
 content/**/*.mkv filter=lfs diff=lfs merge=lfs -text
-content/**/*.mpdf filter=lfs diff=lfs merge=lfs -text
+content/**/*.pdf filter=lfs diff=lfs merge=lfs -text
