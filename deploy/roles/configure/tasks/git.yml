@@ -1,0 +1,44 @@
+- name: ensure github.com is a known host
+  lineinfile:
+    dest: /etc/ssh/ssh_known_hosts
+    state: present
+    create: yes
+    regexp: "^github\\.com"
+    line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
+
+- name: generate ssh key to push to github.com
+  become: yes
+  become_user: www-data
+  openssh_keypair:
+    path: /var/www/.ssh/id_rsa
+    comment: "{{ git_author_email }}"
+  register: ssh_key
+
+  # TODO: add better error messages to assist others setting this up
+- name: upload ssh key to github.com
+  uri:
+    url: https://api.github.com/user/keys
+    method: POST
+    body: "{{ item | to_json }}"
+    body_format: json
+    status_code:
+      - 201 # successfully added
+      - 422 # already exists
+    headers:
+      Authorization: "token {{ github_user_access_token }}"
+  with_items:
+    - title: "Paprika! Server ({{ site_fqdn }})"
+      key: "{{ ssh_key.public_key }}"
+  register: result
+  changed_when: result.status == 201
+
+- name: configure git user
+  git_config:
+    name: "{{ item.name }}"
+    scope: global
+    value: "{{ item.value }}"
+  with_items:
+    - name: "user.name"
+      value: "{{ git_author_name }}"
+    - name: "user.email"
+      value: "{{ git_author_email }}"

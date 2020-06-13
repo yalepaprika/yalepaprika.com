@@ -139,6 +139,14 @@ commit: master
 # For public: https://github.com/{{remote}}/{{project_name}}
 git_repo: git@github.com:{{remote}}/{{repo}}.git
 
+github_user: "{{ lookup('env', 'GITHUB_USER') }}"
+
+github_user_access_token: "{{ lookup('env', 'GITHUB_USER_ACCESS_TOKEN') }}"
+
+git_author_name: "Paprika!"
+
+git_author_email: "infrastructure@yalepaprika.com"
+
 # Uncomment this if if you are checking out a private repo
 ansible_ssh_common_args: "-o ForwardAgent=yes"
 

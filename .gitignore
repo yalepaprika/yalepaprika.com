@@ -1,3 +1,7 @@
+# Secret files
+# ------------
+*.env
+
 # System files
 # ------------
 
@@ -25,6 +29,7 @@ stats.html
 # ------------------------
 
 /site/plugins/pagetable
+/site/plugins/git-content
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

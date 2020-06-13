@@ -35,10 +35,4 @@
     line: "ChallengeResponseAuthentication no"
   notify: restart sshd
 
-- name: ensure github.com is a known host
-  lineinfile:
-    dest: /etc/ssh/ssh_known_hosts
-    state: present
-    create: yes
-    regexp: "^github\\.com"
-    line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
+- include: git.yml

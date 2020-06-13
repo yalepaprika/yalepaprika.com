@@ -62,3 +62,11 @@
     mode: "0755"
     owner: "www-data"
     group: "www-data"
+
+- name: ensure ssh directory exists
+  file:
+    path: "{{ base_path }}/.ssh"
+    state: directory
+    mode: "0700"
+    owner: "www-data"
+    group: "www-data"

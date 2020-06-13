@@ -18,11 +18,13 @@
 - ansible-lint
 - intelliphense, disable php built-in language services
 - install git lfs
+- set up .env
 
 ### Deploy
 
-- `ansible-playbook deploy/init.yml --inventory deploy/inventory/staging`
-- `ansible-playbook deploy/deploy.yml --inventory deploy/inventory/staging`
+- `export $(cat .env | xargs) && vagrant provision`
+- `export $(cat .env | xargs) && ansible-playbook deploy/init.yml --inventory deploy/inventory/staging`
+- `export $(cat .env | xargs) && ansible-playbook deploy/deploy.yml --inventory deploy/inventory/staging`
 
 ### TODO
 

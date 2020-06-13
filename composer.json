@@ -17,11 +17,17 @@
     "forum": "https://forum.getkirby.com",
     "source": "https://github.com/yalepaprika/yalepaprika.com"
   },
+  "repositories": [
+    {
+        "type": "git",
+        "url": "https://github.com/s3ththompson/kirby-git-content"
+    }
+  ],
   "require": {
     "php": ">=7.1.0",
     "getkirby/cms": "^3.0",
     "sylvainjule/pagetable": "^1.0",
-    "thathoff/kirby-git-content": "^3.0"
+    "thathoff/kirby-git-content": "dev-update-composer"
   },
   "config": {
     "optimize-autoloader": true

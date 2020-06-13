@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "848edd2b046ff818878e25938f49f057",
+    "content-hash": "a1f8a88af7045f19c75513e597eba1f7",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -709,24 +709,20 @@
         },
         {
             "name": "thathoff/kirby-git-content",
-            "version": "v3.0.2",
+            "version": "dev-update-composer",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thathoff/kirby-git-content.git",
-                "reference": "7bdb60e902176fac2dfd2203e82e5d400c7802f6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thathoff/kirby-git-content/zipball/7bdb60e902176fac2dfd2203e82e5d400c7802f6",
-                "reference": "7bdb60e902176fac2dfd2203e82e5d400c7802f6",
-                "shasum": ""
+                "url": "https://github.com/s3ththompson/kirby-git-content",
+                "reference": "82eb317d602e7ccbe309cc13215975c0fb70447f"
             },
             "require": {
-                "getkirby/cms": "^3.0.0",
-                "pascalmh/git.php": "^1.0",
-                "php": ">=7.1.0"
+                "getkirby/composer-installer": "^1.1",
+                "pascalmh/git.php": "^1.0"
             },
             "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "git-content"
+            },
             "autoload": {
                 "files": [
                     "config.php"
@@ -735,12 +731,11 @@
                     "Blanko\\Kirby\\GCAPC\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Plugin to track changes to content in a git repository.",
-            "time": "2020-05-24T10:30:52+00:00"
+            "time": "2020-06-13T06:17:17+00:00"
         },
         {
             "name": "true/punycode",
@@ -792,7 +787,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "thathoff/kirby-git-content": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
