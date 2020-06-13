@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bb9bfdf709dd76e014f4872bae7422e",
+    "content-hash": "848edd2b046ff818878e25938f49f057",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -465,6 +465,29 @@
             "time": "2017-02-24T16:06:33+00:00"
         },
         {
+            "name": "pascalmh/git.php",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pascalmh/git.php.git",
+                "reference": "cff17628c5cf8f5373bf76ba9d9164d17cde7050"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pascalmh/git.php/zipball/cff17628c5cf8f5373bf76ba9d9164d17cde7050",
+                "reference": "cff17628c5cf8f5373bf76ba9d9164d17cde7050",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Git.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2017-02-09T16:55:55+00:00"
+        },
+        {
             "name": "phpmailer/phpmailer",
             "version": "v6.0.7",
             "source": {
@@ -683,6 +706,41 @@
                 }
             ],
             "time": "2020-05-12T16:47:27+00:00"
+        },
+        {
+            "name": "thathoff/kirby-git-content",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thathoff/kirby-git-content.git",
+                "reference": "7bdb60e902176fac2dfd2203e82e5d400c7802f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thathoff/kirby-git-content/zipball/7bdb60e902176fac2dfd2203e82e5d400c7802f6",
+                "reference": "7bdb60e902176fac2dfd2203e82e5d400c7802f6",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^3.0.0",
+                "pascalmh/git.php": "^1.0",
+                "php": ">=7.1.0"
+            },
+            "type": "kirby-plugin",
+            "autoload": {
+                "files": [
+                    "config.php"
+                ],
+                "psr-4": {
+                    "Blanko\\Kirby\\GCAPC\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Plugin to track changes to content in a git repository.",
+            "time": "2020-05-24T10:30:52+00:00"
         },
         {
             "name": "true/punycode",
