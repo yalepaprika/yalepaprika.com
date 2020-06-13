@@ -1,6 +1,3 @@
-# Ignore content folder until Git LFS is set up
-/content/*
-
 # System files
 # ------------
 
