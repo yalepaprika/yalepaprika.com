@@ -1,0 +1,13 @@
+content/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+content/**/*.png filter=lfs diff=lfs merge=lfs -text
+content/**/*.gif filter=lfs diff=lfs merge=lfs -text
+content/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+content/**/*.ogg filter=lfs diff=lfs merge=lfs -text
+content/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+content/**/*.wma filter=lfs diff=lfs merge=lfs -text
+content/**/*.wmv filter=lfs diff=lfs merge=lfs -text
+content/**/*.m4a filter=lfs diff=lfs merge=lfs -text
+content/**/*.mp3 filter=lfs diff=lfs merge=lfs -text
+content/**/*.m4v filter=lfs diff=lfs merge=lfs -text
+content/**/*.mkv filter=lfs diff=lfs merge=lfs -text
+content/**/*.mpdf filter=lfs diff=lfs merge=lfs -text
