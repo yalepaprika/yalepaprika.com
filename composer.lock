@@ -713,7 +713,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/s3ththompson/kirby-git-content",
-                "reference": "82eb317d602e7ccbe309cc13215975c0fb70447f"
+                "reference": "d4691d172c422485a7bbcc9cafc402e6c58fd2cc"
             },
             "require": {
                 "getkirby/composer-installer": "^1.1",
@@ -735,7 +735,7 @@
                 "MIT"
             ],
             "description": "Plugin to track changes to content in a git repository.",
-            "time": "2020-06-13T06:17:17+00:00"
+            "time": "2020-06-14T01:23:32+00:00"
         },
         {
             "name": "true/punycode",
