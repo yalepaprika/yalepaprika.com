@@ -6,5 +6,6 @@
   },
   "files.associations": {
     "deploy/**/*.yml": "ansible"
-  }
+  },
+  "ansible.validation": false,
 }

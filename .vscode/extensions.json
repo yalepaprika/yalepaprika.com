@@ -1,7 +1,12 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
     "bmewburn.vscode-intelephense-client",
-    "felixfbecker.php-debug"
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "felixfbecker.php-debug",
+    "marcostazi.vs-code-vagrantfile",
+    "msjsdiag.debugger-for-chrome",
+    "samuelcolvin.jinjahtml",
+    "vscoss.vscode-ansible"
   ]
 }
