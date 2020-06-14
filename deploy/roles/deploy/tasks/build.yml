@@ -16,9 +16,11 @@
   npm: path="{{ clone_path }}"
 
 - name: build production version
-  shell: npm run build
+  command: npm run build # noqa 301
   args:
     chdir: "{{ clone_path }}"
+  environment:
+    NODE_ENV: production
 
 - name: generate build info file
   template: src=build_info.txt.j2 dest={{ clone_path }}/{{ build_info_path }}
