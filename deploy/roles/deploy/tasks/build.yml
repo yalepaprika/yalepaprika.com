@@ -35,7 +35,7 @@
 - name: ensure admin account files are populated from templates
   template:
     src: "{{ item.src }}"
-    dest: "{{ clone_path }}/site/accounts/{{ item.path | regex_replace('\.j2$', '') }}"
+    dest: "{{ clone_path }}/site/accounts/{{ item.path | regex_replace('\\.j2$', '') }}"
     owner: www-data
     group: www-data
   with_filetree: "../templates/accounts/"
