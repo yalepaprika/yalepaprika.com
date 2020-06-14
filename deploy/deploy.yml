@@ -10,3 +10,4 @@
     - deploy
   handlers:
     - include: roles/caddy/handlers/main.yml
+    - include: roles/php/handlers/main.yml

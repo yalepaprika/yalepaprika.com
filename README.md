@@ -19,12 +19,13 @@
 - intelliphense, disable php built-in language services
 - install git lfs
 - set up .env
+- set up .vault_pass
 
 ### Deploy
 
 - `export $(cat .env | xargs) && vagrant provision`
-- `export $(cat .env | xargs) && ansible-playbook deploy/init.yml --inventory deploy/inventory/staging`
-- `export $(cat .env | xargs) && ansible-playbook deploy/deploy.yml --inventory deploy/inventory/staging`
+- `export $(cat .env | xargs) && ansible-playbook deploy/init.yml --inventory deploy/inventory/staging --vault-password-file .vault_pass`
+- `export $(cat .env | xargs) && ansible-playbook deploy/deploy.yml --inventory deploy/inventory/staging --vault-password-file .vault_pass`
 
 ### TODO
 

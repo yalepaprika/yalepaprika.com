@@ -43,5 +43,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision 'ansible' do |ansible|
     # Run init playbook (which runs base, configure, vagrant-link playbooks).
     ansible.playbook = 'deploy/init.yml'
+    ansible.vault_password_file = ".vault_pass"
   end
 end
