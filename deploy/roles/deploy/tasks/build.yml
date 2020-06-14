@@ -23,6 +23,20 @@
     NODE_ENV: production
   when: force or not sha_dir.stat.exists
 
+- name: ensure admin account directory structure exists
+  file:
+    path: "{{ clone_path }}/site/accounts/{{ item.path }}"
+    state: directory
+  with_filetree: "../templates/accounts/"
+  when: item.state == 'directory'
+
+- name: ensure admin account files are populated from templates
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ clone_path }}/site/accounts/{{ item.path }}"
+  with_filetree: "../templates/accounts/"
+  when: item.state == 'file'
+
 - name: generate build info file
   template: src=build_info.txt.j2 dest={{ clone_path }}/{{ build_info_path }}
   when: build_info_path is defined
