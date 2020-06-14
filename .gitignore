@@ -1,6 +1,7 @@
 # Secret files
 # ------------
 *.env
+.vault_pass
 
 # System files
 # ------------

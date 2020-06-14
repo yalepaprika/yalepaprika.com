@@ -63,6 +63,8 @@ apt_packages:
   - php7.4-gd
   - php-xdebug
 
+php_version: 7.4
+
 # Any global npm modules to install. App-specific modules are installed in deploy tasks
 npm_global_modules: []
 # npm_global_modules:

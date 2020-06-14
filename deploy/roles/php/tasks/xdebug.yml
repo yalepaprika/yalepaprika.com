@@ -1,10 +1,6 @@
-- name: get php.ini
-  shell: locate php.ini | grep fpm
-  register: php_ini_location
-
 - name: register xdebug options in php.ini
   ini_file:
-    path: "{{ php_ini_location.stdout }}"
+    path: "/etc/php/{{ php_version }}/fpm/php.ini"
     section: "XDebug"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
