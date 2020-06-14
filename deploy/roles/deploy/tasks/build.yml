@@ -16,11 +16,12 @@
   npm: path="{{ clone_path }}"
 
 - name: build production version
-  command: npm run build # noqa 301
+  command: npm run build
   args:
     chdir: "{{ clone_path }}"
   environment:
     NODE_ENV: production
+  when: force or not sha_dir.stat.exists
 
 - name: generate build info file
   template: src=build_info.txt.j2 dest={{ clone_path }}/{{ build_info_path }}

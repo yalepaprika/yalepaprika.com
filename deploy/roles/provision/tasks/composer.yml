@@ -11,12 +11,14 @@
     mode: 0755
     checksum: "sha384:{{ composer_installer_signature.content }}"
 
-- name: run composer installer # noqa 301
+- name: run composer installer
   command: >
     php composer-installer.php
     chdir=/tmp
+  when: not composer_bin.stat.exists
 
-- name: move composer into globally-accessible location # noqa 301
+- name: move composer into globally-accessible location
   command: >
     mv /tmp/composer.phar /usr/local/bin/composer
     creates=/usr/local/bin/composer
+  when: not composer_bin.stat.exists
