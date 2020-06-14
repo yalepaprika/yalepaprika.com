@@ -30,7 +30,7 @@
       permissions: rw
 
 - name: test git authentication
-  command: ssh -T -v git@github.com
+  command: ssh -T git@github.com
   register: exit
   failed_when: exit.rc not in [0, 1] # return code is 255 when not recognized
   environment:
@@ -67,11 +67,11 @@
   when: force or not sha_dir.stat.exists
 
 - name: delete pre-existing sha-named directory
-  file: path={{ base_path }}/{{ sha.stdout }} state=absent
+  file: path={{ base_path }}/{{ git_sha.after }} state=absent
   when: force and sha_dir.stat.exists
 
 - name: move cloned repo to sha-named directory
-  command: mv {{ clone_path }} {{ base_path }}/{{ sha.stdout }}
+  command: mv {{ clone_path }} {{ base_path }}/{{ git_sha.after }}
   when: force or not sha_dir.stat.exists
 
 - name: ensure just-created temp directory is removed

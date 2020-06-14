@@ -27,6 +27,8 @@
   file:
     path: "{{ clone_path }}/site/accounts/{{ item.path }}"
     state: directory
+    owner: www-data
+    group: www-data
   with_filetree: "../templates/accounts/"
   when: item.state == 'directory'
 
@@ -34,6 +36,8 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ clone_path }}/site/accounts/{{ item.path }}"
+    owner: www-data
+    group: www-data
   with_filetree: "../templates/accounts/"
   when: item.state == 'file'
 

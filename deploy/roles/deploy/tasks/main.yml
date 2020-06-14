@@ -18,14 +18,14 @@
   file:
     path: "{{ site_path }}"
     state: link
-    src: "{{ base_path }}/{{ sha.stdout | default(commit) }}"
+    src: "{{ base_path }}/{{ git_sha.after | default(commit) }}"
     force: yes
   notify:
     - restart php-fpm
     - restart caddy
 
 - name: update last-modification time of sha-named clone
-  file: path={{ base_path }}/{{ sha.stdout | default(commit) }} state=touch
+  file: path={{ base_path }}/{{ git_sha.after | default(commit) }} state=touch
 
 - name: remove old clones to free up disk space
   shell: |
