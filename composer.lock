@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1f8a88af7045f19c75513e597eba1f7",
+    "content-hash": "71cca97cf2da206705ef975dcafad2ed",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -44,6 +44,49 @@
             ],
             "description": "A PHP class that makes working with images as simple as possible.",
             "time": "2017-09-12T09:03:56+00:00"
+        },
+        {
+            "name": "coyl/git",
+            "version": "0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coyl/git.git",
+                "reference": "bc9893d096fab1bdd0fac8ee2f30b8b1dcbf8d63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coyl/git/zipball/bc9893d096fab1bdd0fac8ee2f30b8b1dcbf8d63",
+                "reference": "bc9893d096fab1bdd0fac8ee2f30b8b1dcbf8d63",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Vasil coylOne Kulakov",
+                    "email": "iam@vasiliy.pro",
+                    "homepage": "http://github.com/coyl"
+                }
+            ],
+            "description": "PHP library for manipulations on git repository. Based on kbjr/Git.php and it's forks",
+            "homepage": "https://github.com/coyl/Git.php",
+            "keywords": [
+                "git",
+                "git-client",
+                "php-git"
+            ],
+            "time": "2017-09-12T08:37:07+00:00"
         },
         {
             "name": "filp/whoops",
@@ -254,23 +297,23 @@
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.0.4",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "fcd87520e4943d968557803919523772475e8ea3"
+                "reference": "4939c81f63a8a4968c108c440275c94955753b19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/fcd87520e4943d968557803919523772475e8ea3",
-                "reference": "fcd87520e4943d968557803919523772475e8ea3",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/4939c81f63a8a4968c108c440275c94955753b19",
+                "reference": "4939c81f63a8a4968c108c440275c94955753b19",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^5.6 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.1",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.1 || ^9.3",
                 "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
@@ -308,7 +351,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2020-05-20T16:45:56+00:00"
+            "time": "2020-08-18T16:34:51+00:00"
         },
         {
             "name": "league/color-extractor",
@@ -465,29 +508,6 @@
             "time": "2017-02-24T16:06:33+00:00"
         },
         {
-            "name": "pascalmh/git.php",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Pascalmh/git.php.git",
-                "reference": "cff17628c5cf8f5373bf76ba9d9164d17cde7050"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Pascalmh/git.php/zipball/cff17628c5cf8f5373bf76ba9d9164d17cde7050",
-                "reference": "cff17628c5cf8f5373bf76ba9d9164d17cde7050",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "Git.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2017-02-09T16:55:55+00:00"
-        },
-        {
             "name": "phpmailer/phpmailer",
             "version": "v6.0.7",
             "source": {
@@ -636,16 +656,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.17.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c"
+                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fa79b11539418b02fc5e1897267673ba2c19419c",
-                "reference": "fa79b11539418b02fc5e1897267673ba2c19419c",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/a6977d63bf9a0ad4c65cd352709e230876f9904a",
+                "reference": "a6977d63bf9a0ad4c65cd352709e230876f9904a",
                 "shasum": ""
             },
             "require": {
@@ -657,7 +677,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17-dev"
+                    "dev-master": "1.18-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
                 }
             },
             "autoload": {
@@ -705,37 +729,34 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-12T16:47:27+00:00"
+            "time": "2020-07-14T12:35:20+00:00"
         },
         {
             "name": "thathoff/kirby-git-content",
-            "version": "dev-update-composer",
+            "version": "dev-release-4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/s3ththompson/kirby-git-content",
-                "reference": "d4691d172c422485a7bbcc9cafc402e6c58fd2cc"
+                "url": "https://github.com/thathoff/kirby-git-content",
+                "reference": "221dfe0d6cc25693d988cfc3f1cf51449016de25"
             },
             "require": {
-                "getkirby/composer-installer": "^1.1",
-                "pascalmh/git.php": "^1.0"
+                "coyl/git": "^0.1.7",
+                "getkirby/composer-installer": "^1.1"
             },
             "type": "kirby-plugin",
             "extra": {
                 "installer-name": "git-content"
             },
             "autoload": {
-                "files": [
-                    "config.php"
-                ],
                 "psr-4": {
-                    "Blanko\\Kirby\\GCAPC\\": "src/"
+                    "Thathoff\\GitContent\\": "src/"
                 }
             },
             "license": [
                 "MIT"
             ],
             "description": "Plugin to track changes to content in a git repository.",
-            "time": "2020-06-14T01:23:32+00:00"
+            "time": "2020-07-13T06:47:33+00:00"
         },
         {
             "name": "true/punycode",
