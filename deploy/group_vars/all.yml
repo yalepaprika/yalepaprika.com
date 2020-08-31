@@ -122,7 +122,9 @@ keep_n_most_recent: 2
 # If this variable is defined, a file containing build information, including
 # the timestamp, commit, sha, and a few other useful values will be generated
 # after the build has completed. This file is relative to your project root.
-build_info_path: "public/build.txt"
+# build_info_path: "public/build.txt"
+
+kirby_admin_name: "Paprika! Editors"
 
 kirby_admin_email: !vault |
           $ANSIBLE_VAULT;1.1;AES256
