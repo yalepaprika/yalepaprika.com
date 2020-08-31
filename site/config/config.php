@@ -5,8 +5,8 @@ return [
         'extra' => true
     ],
     'smartypants' => true,
-    'blankogmbh' => [
-        'gcapc' => [
+    'thathoff' => [
+        'git-content' => [
             'commit' => true,
             'path' => __DIR__ . '/../../',
             'displayErrors' => true, # TODO: turn off
