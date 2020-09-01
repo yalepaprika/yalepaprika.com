@@ -61,6 +61,7 @@ apt_packages:
   - php7.4-mbstring
   - php7.4-curl
   - php7.4-gd
+  - php7.4-xml
   - php-xdebug
 
 php_version: 7.4
