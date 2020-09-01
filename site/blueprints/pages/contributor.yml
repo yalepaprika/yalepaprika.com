@@ -9,6 +9,9 @@ status:
     label: Public
     text: The contributor is visible to the public
 
+options:
+  duplicate: false
+
 fields:
   degree:
     label: Degree or Title
