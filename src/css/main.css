@@ -1,8 +1,101 @@
 @import "ress";
 
-html {
+:root {
 	font-family: -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 1.2;
+  font-size: calc(1rem + 0.5vw);
+}
+
+.stack,
+.stack-recursive {
+  --space: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > *,
+.stack-recursive > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.stack-recursive * + * {
+  margin-top: var(--space);
+}
+
+.cluster {
+  --space: 1rem;
+  overflow: hidden;
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.cluster > * > * {
+  margin: calc(var(--space) / 2);
+}
+
+.center,
+.content figure {
+  box-sizing: content-box;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content figure img {
+  max-width: 100%;
+}
+
+.columns {
+  --space: 1rem;
+  display: flex;
+}
+
+.columns .column-left,
+.columns .column-right {
+  width: 30%;
+}
+
+.columns .column-content {
+  width: 40%;
+}
+
+.columns .column-left > * {
+  margin-right: var(--space);
+}
+
+.columns .column-right > * {
+  margin-left: var(--space);
+}
+
+body {
+  padding: 0.5rem 1rem;
+}
+
+.menu.cluster > * {
+  justify-content: space-between;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.admin-edit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
 }
