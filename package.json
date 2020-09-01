@@ -9,7 +9,7 @@
     "build:css": "NODE_ENV=production postcss src/css/* --verbose --base src/css --dir public/assets/css",
     "watch": "npm-run-all --parallel watch:*",
     "watch:js": "rollup -c -w",
-    "watch:css": "postcss src/css/**/*.css --base src/css --dir public/assets/css -w",
+    "watch:css": "postcss src/css/* --base src/css --dir public/assets/css -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "eslint  --ignore-path .gitignore \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "lint": "eslint  --ignore-path .gitignore \"src/**/*.{js,jsx,ts,tsx}\""
