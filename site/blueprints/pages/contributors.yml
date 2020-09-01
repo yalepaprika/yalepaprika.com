@@ -1,8 +1,10 @@
 title: Contributors
 
 options:
-  changeSlug: false
-  changeStatus: false
+  title: false
+  duplicate: false
+  status: false
+  url: false
   delete: false
 
 sections:

@@ -1,0 +1,26 @@
+title: Blank Page
+
+status:
+  draft:
+    label: Draft
+    text: The page is in draft mode and only visible for logged in editors
+  listed:
+    label: Public
+    text: The page is visible to the public
+
+columns:
+  - width: 2/3
+    fields:
+      content:
+        label: Text
+        type: textarea
+        size: huge
+        files: page.files.template("file")
+        uploads: file
+  - width: 1/3
+    sections:
+      files:
+        type: files
+        layout: cards
+        size: medium
+        template: file

@@ -102,14 +102,14 @@ columns:
   - width: 1/2
     fields:
       coordinating_editors:
-        label: Contributing Editors
-        type: pages
-        query: site.find("contributors")
-      web_editors:
-        label: Web Editors
+        label: Coordinating Editors
         type: pages
         query: site.find("contributors")
       publishers:
         label: Publishers
+        type: pages
+        query: site.find("contributors")
+      web_editors:
+        label: Web Editors
         type: pages
         query: site.find("contributors")

@@ -1,0 +1,14 @@
+title: Search Page
+
+options:
+  title: false
+  duplicate: false
+  status: false
+  url: false
+  delete: false
+
+fields:
+  info:
+    label: Info
+    type: info
+    text: The search page is a placeholder for full site search functionality.

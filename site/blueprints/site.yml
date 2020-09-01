@@ -7,3 +7,12 @@ columns:
   - width: 1/2
     sections:
       contributors: sections/contributors
+  - width: 1/2
+    sections:
+      pages:
+        type: pages
+        layout: list
+        template:
+          - page-blank
+          - page-about
+          - page-search
