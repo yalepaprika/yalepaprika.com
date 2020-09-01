@@ -1,0 +1,9 @@
+headline: Banners
+type: pages
+empty: No banners yet
+layout: list
+parent: site.find("banners")
+template:
+  - banner-blank
+  - banner-subscribe
+  - banner-website

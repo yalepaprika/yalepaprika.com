@@ -12,7 +12,9 @@ columns:
       pages:
         type: pages
         layout: list
+        empty: No pages yet
         template:
           - page-blank
           - page-about
           - page-search
+      banners: sections/banners

@@ -1,0 +1,38 @@
+title: Website Link Banner
+icon: url
+
+status:
+  draft:
+    label: Draft
+    text: The page is in draft mode and only visible for logged in editors
+  listed:
+    label: Public
+    text: The page is visible to the public
+
+columns:
+  - width: 1/2
+    fields:
+      website:
+        label: Website Link
+        type: url
+      description:
+        label: Website Description
+        type: text
+      external:
+        type: toggle
+        text: External Link?
+        help: Check if link should open in a new tab.
+        default: True
+  - width: 1/2
+    sections:
+      meta:
+        type: fields
+        fields:
+          banner_width:
+            label: Banner Width
+            type: radio
+            columns: 2
+            options:
+              - "Half"
+              - "Full"
+            default: Half

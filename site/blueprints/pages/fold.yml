@@ -19,7 +19,7 @@ columns:
         info: '{{ page.contributors.toPages.sortedTitles }}'
   - width: 1/1
     fields:
-      line-a:
+      line_a:
         type: line
   - width: 2/3
     fields:
@@ -68,7 +68,7 @@ columns:
         max: 1
   - width: 1/1
     fields:
-      line-b:
+      line_b:
         type: line
   - width: 2/3
     fields:
@@ -87,7 +87,7 @@ columns:
         template: file
   - width: 1/1
     fields:
-      line-c:
+      line_c:
         type: line
   - width: 1/2
     fields:

@@ -1,0 +1,33 @@
+title: Blank Banner
+icon: star
+
+status:
+  draft:
+    label: Draft
+    text: The page is in draft mode and only visible for logged in editors
+  listed:
+    label: Public
+    text: The page is visible to the public
+
+columns:
+  - width: 1/2
+    fields:
+      content:
+        label: Text
+        type: textarea
+        size: huge
+        files: page.files.template("file")
+        uploads: file
+  - width: 1/2
+    sections:
+      meta:
+        type: fields
+        fields:
+          banner_width:
+            label: Banner Width
+            type: radio
+            columns: 2
+            options:
+              - "Half"
+              - "Full"
+            default: Half

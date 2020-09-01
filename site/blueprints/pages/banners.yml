@@ -1,4 +1,4 @@
-title: Contributors
+title: Banners
 
 status:
   draft:
@@ -16,4 +16,4 @@ options:
   delete: false
 
 sections:
-  contributors: sections/contributors
+  banners: sections/banners
