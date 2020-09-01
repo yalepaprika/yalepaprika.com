@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
+<?php snippet('menu', ['items' => collection('menu')->add(collection('submenu'))]) ?>
 
 <h1><?= $page->title() ?></h1>
-<div id="timer-placeholder"></div>
 
 <?php snippet('footer') ?>
