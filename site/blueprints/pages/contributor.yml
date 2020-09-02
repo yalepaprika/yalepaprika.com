@@ -11,6 +11,7 @@ status:
 
 options:
   duplicate: false
+  autoPublish: unlisted
 
 fields:
   degree:

@@ -1,11 +1,12 @@
 <?php
 
-Kirby::plugin('yalepaprika/auto-list-contributors', [
+Kirby::plugin('yalepaprika/auto-publish', [
   'hooks' => [
     'page.create:after' => function ($page) {
-        if($page->blueprint()->name() == 'pages/contributor') {
+        $autoPublish = $page->blueprint()->options()['autoPublish'] ?? false;
+        if($autoPublish) {
             try {
-                $page->changeStatus("unlisted");
+                $page->changeStatus($autoPublish);
             } catch (Exception $e) {
                 error_log("Error automatically listing " .  $page->id());
             }
