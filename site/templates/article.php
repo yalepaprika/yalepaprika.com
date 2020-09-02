@@ -14,7 +14,7 @@
         </div>
         <div class="column-content">
           <div class="content stack-recursive">
-            <?= $page->content()->get('content')->kirbytext() ?>
+            <?= $page->content()->get('content')->footnotes() ?>
           </div>
         </div>
       </div>

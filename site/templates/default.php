@@ -5,7 +5,7 @@
     <article class="stack">
       <h1><?= $page->title() ?></h1>
       <div class="content stack-recursive">
-        <?= $page->content()->get('content')->kirbytext() ?>
+        <?= $page->content()->get('content')->footnotes() ?>
       </div>
     </article>
   </main>
