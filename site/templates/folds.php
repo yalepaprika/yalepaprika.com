@@ -2,7 +2,7 @@
 <div class="stack">
   <?php snippet('menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
   <main class="stack">
-    <?php foreach($folds = $page->children()->flip()->paginate(20) as $fold): ?>
+    <?php foreach($folds = collection('folds')->paginate(20) as $fold): ?>
       <article>
         <a href="<?= $fold->url() ?>"><h1><?= $fold->title()->widont() ?></h1></a>
       </article>
