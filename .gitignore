@@ -29,8 +29,9 @@ stats.html
 # Composer-managed plugins
 # ------------------------
 
-/site/plugins/pagetable
-/site/plugins/git-content
+/site/plugins/*
+!/site/plugins/auto-list-contributors
+!/site/plugins/pages-sorted-titles
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

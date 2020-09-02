@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71cca97cf2da206705ef975dcafad2ed",
+    "content-hash": "d34643a8733c1a2272678da1eaf90562",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -619,6 +619,40 @@
                 "psr-3"
             ],
             "time": "2020-03-23T09:12:05+00:00"
+        },
+        {
+            "name": "sylvainjule/footnotes",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sylvainjule/kirby-footnotes.git",
+                "reference": "5241340e9422f10fbb1f5f611b634fffc44b2c3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-footnotes/zipball/5241340e9422f10fbb1f5f611b634fffc44b2c3b",
+                "reference": "5241340e9422f10fbb1f5f611b634fffc44b2c3b",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "installer-name": "footnotes"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sylvain Julé",
+                    "email": "contact@sylvain-jule.fr"
+                }
+            ],
+            "description": "Footnotes plugin for Kirby 3",
+            "time": "2020-04-06T15:41:55+00:00"
         },
         {
             "name": "sylvainjule/pagetable",

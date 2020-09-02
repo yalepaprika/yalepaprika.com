@@ -27,7 +27,8 @@
     "php": ">=7.1.0",
     "getkirby/cms": "^3.0",
     "sylvainjule/pagetable": "^1.0",
-    "thathoff/kirby-git-content": "dev-release-4"
+    "thathoff/kirby-git-content": "dev-release-4",
+    "sylvainjule/footnotes": "^1.0"
   },
   "config": {
     "optimize-autoloader": true
