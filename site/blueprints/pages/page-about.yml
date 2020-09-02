@@ -30,24 +30,6 @@ columns:
         type: line
   - width: 1/2
     fields:
-      coordinating_editors:
-        label: Coordinating Editors
-        type: pages
-        query: site.find("contributors")
-      publishers:
-        label: Publishers
-        type: pages
-        query: site.find("contributors")
-      web_editors:
-        label: Web Editors
-        type: pages
-        query: site.find("contributors")
-  - width: 1/2
-    fields:
-      graphic_design_liasons:
-        label: Graphic Designer Liasons
-        type: pages
-        query: site.find("contributors")
       site_design_development:
         label: Site Design & Development
         type: pages
