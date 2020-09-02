@@ -2,6 +2,7 @@
 <div class="stack">
   <?php snippet('menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
   <main class="stack">
+    <h1><?= $page->title() ?></h1>
     <?php foreach($folds = collection('folds')->paginate(20) as $fold): ?>
       <article>
         <a href="<?= $fold->url() ?>"><h1><?= $fold->title()->widont() ?></h1></a>

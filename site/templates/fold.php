@@ -27,6 +27,19 @@
         </div>
       </div>
     </article>
+    <nav class="siblings">
+      <?php if ($prev = $page->prev(collection('folds'))): ?>
+      <a class="next" href="<?= $prev->url() ?>">
+        ‹ <?= $prev->title() ?>
+      </a>
+      <?php endif ?>
+
+      <?php if ($next = $page->next(collection('folds'))): ?>
+      <a class="prev" href="<?= $next->url() ?>">
+        <?= $next->title() ?> ›
+      </a>
+      <?php endif ?>
+    </nav>
   </main>
 </div>
 <?php snippet('footer') ?>
