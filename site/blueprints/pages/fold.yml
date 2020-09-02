@@ -14,7 +14,10 @@ columns:
     sections:
       articles:
         type: pages
-        template: article
+        template:
+          - article
+          - article-interview
+          - article-on-the-ground
         empty: No articles yet
         info: '{{ page.contributors.toPages.sortedTitles }}'
   - width: 1/1
