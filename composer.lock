@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d34643a8733c1a2272678da1eaf90562",
+    "content-hash": "5b5cfdff4ef7c511acbf8a15e55acde7",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -506,6 +506,61 @@
                 "yml"
             ],
             "time": "2017-02-24T16:06:33+00:00"
+        },
+        {
+            "name": "omz13/kirby3-wellknown",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/omz13/kirby3-wellknown.git",
+                "reference": "276b3a05cab1ca76e2710486c4d66682547f71d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/omz13/kirby3-wellknown/zipball/276b3a05cab1ca76e2710486c4d66682547f71d3",
+                "reference": "276b3a05cab1ca76e2710486c4d66682547f71d3",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "getkirby/cms": "^3.0.1",
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "localheinz/composer-normalize": "^1.0.0",
+                "omz13/omz13-coding-standard": "dev-master",
+                "phpcompatibility/php-compatibility": "^8.2",
+                "phpmd/phpmd": "^2.6",
+                "phpstan/phpstan": "^0.10.3",
+                "phpstan/phpstan-strict-rules": "^0.10.1",
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "kirby-plugin",
+            "autoload": {
+                "psr-4": {
+                    "omz13\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Somers",
+                    "email": "dsomers@omz13.com",
+                    "homepage": "https://meldingstuff.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "kirby3 plugin to suport well-known files",
+            "keywords": [
+                "kirby3",
+                "plugin",
+                "well-known"
+            ],
+            "time": "2019-04-15T12:18:06+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
