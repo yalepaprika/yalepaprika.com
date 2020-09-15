@@ -7,6 +7,5 @@
 
   <title><?= $site->title()->html() ?></title>
   <?= css('assets/css/main.css') ?>
-  <?= css('@auto') ?>
 </head>
 <body>

@@ -1,0 +1,37 @@
+.fold-article-list {
+  --space: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.fold-article-list a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fold-article-list a .fold-article-list-number {
+  width: 4em;
+  flex-shrink: 0;
+  font-size: 0.8em;
+}
+
+.fold-article-list a .fold-article-list-title-block {
+  flex: 1;
+}
+
+.fold-article-list a .fold-article-list-arrow {
+  width: 2em;
+  text-align: right;
+}
+
+.fold-article-list > * {
+  margin-top: 0;
+  margin-bottom: calc(var(--space) / 2);
+}
+
+.fold-article-list > * + * {
+  padding-top: calc(var(--space) / 2);
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+}

@@ -7,9 +7,9 @@
       <div class="columns">
         <div class="column-left">
           <div class="stack">
-            <?php snippet('detail-list/pages', ['title' => 'Editors', 'pages' => $page->fold_editors()->toPages()]) ?>
-            <?php snippet('detail-list/value', ['title' => 'Date', 'value' => $page->publication_date()->toDate('F j, Y')]) ?>
-            <?php snippet('detail-list/pages', ['title' => 'Articles', 'pages' => $page->children()]) ?>
+            <?php snippet('utilities/detail-list/pages', ['title' => 'Editors', 'pages' => $page->fold_editors()->toPages()]) ?>
+            <?php snippet('utilities/detail-list/value', ['title' => 'Date', 'value' => $page->formattedDate()]) ?>
+            <?php snippet('utilities/detail-list/pages', ['title' => 'Articles', 'pages' => $page->children()]) ?>
           </div>
         </div>
         <div class="column-content">
@@ -19,10 +19,10 @@
         </div>
         <div class="column-right">
           <div class="stack">
-            <?php snippet('detail-list/pages', ['title' => 'Graphic Designers', 'pages' => $page->graphic_designers()->toPages()]) ?>
-            <?php snippet('detail-list/pages', ['title' => 'Contributing Editors', 'pages' => $page->contributing_editors()->toPages()]) ?>
-            <?php snippet('detail-list/pages', ['title' => 'Web Editors', 'pages' => $page->web_editors()->toPages()]) ?>
-            <?php snippet('detail-list/pages', ['title' => 'Publishers', 'pages' => $page->publishers()->toPages()]) ?>
+            <?php snippet('utilities/detail-list/pages', ['title' => 'Graphic Designers', 'pages' => $page->graphic_designers()->toPages()]) ?>
+            <?php snippet('utilities/detail-list/pages', ['title' => 'Contributing Editors', 'pages' => $page->contributing_editors()->toPages()]) ?>
+            <?php snippet('utilities/detail-list/pages', ['title' => 'Web Editors', 'pages' => $page->web_editors()->toPages()]) ?>
+            <?php snippet('utilities/detail-list/pages', ['title' => 'Publishers', 'pages' => $page->publishers()->toPages()]) ?>
           </div>
         </div>
       </div>

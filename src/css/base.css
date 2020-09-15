@@ -1,0 +1,154 @@
+:root {
+  --primary-font-family: "Söhne", -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --primary-font-size: calc(0.8rem + 0.4vw);
+  --primary-font-thickness: 0.1em;
+  --primary-line-height: 1.2rem;
+
+  --body-padding-x: 1rem;
+  --body-padding-y: 0.5rem;
+
+  --color-paprika: #FF5722;
+  --color-light-paprika: #FF755F;
+  --color-white: #FFF;
+  --color-black: #0F0F0F;
+  --color-light-gray: #d9d9d9;
+
+  --primary-color:  var(--color-black);
+  --secondary-color: var(--color-paprika);
+  --background-color:  var(--color-white);
+  --faded-color: var(--color-light-gray);
+
+	font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
+  color: var(--primary-color);
+}
+
+
+body {
+  padding: var(--body-padding-y) var(--body-padding-x);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+a:not(.no-link-animation) {
+  color: var(--secondary-color);
+  text-decoration: none;
+  display: inline;
+  background-image: linear-gradient(to bottom, transparent 20%, currentColor 21%);
+
+  background-position: 0 calc(var(--primary-line-height) - var(--primary-font-thickness));
+  background-repeat: no-repeat;
+  background-size: 0% var(--primary-font-thickness);
+
+  transition: background-size 0.2s ease-in-out 0.2s;
+}
+
+a:not(.no-link-animation):hover,
+a:not(.no-link-animation):focus {
+  background-size: 100% var(--primary-font-thickness);
+  transition-delay: 0s;
+}
+
+a.no-link-animation {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.stack,
+.stack-recursive {
+  --space: var(--primary-line-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > *,
+.stack-recursive > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space);
+}
+
+.stack-recursive * + * {
+  margin-top: var(--space);
+}
+
+.cluster {
+  --space: 1rem;
+  /* overflow: hidden; */
+}
+
+.cluster > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: calc(var(--space) / 2 * -1);
+}
+
+.cluster > * > * {
+  margin: calc(var(--space) / 2);
+}
+
+.center,
+.content figure {
+  box-sizing: content-box;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content figure img {
+  max-width: 100%;
+}
+
+.columns {
+  --space: 1rem;
+  display: flex;
+}
+
+.columns .column-left,
+.columns .column-right {
+  width: 30%;
+}
+
+.columns .column-content {
+  width: 40%;
+}
+
+.columns .column-left > * {
+  margin-right: var(--space);
+}
+
+.columns .column-right > * {
+  margin-left: var(--space);
+}

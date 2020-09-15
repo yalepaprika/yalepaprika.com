@@ -1,0 +1,6 @@
+.admin-edit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: var(--body-padding-y) var(--body-padding-x);
+}

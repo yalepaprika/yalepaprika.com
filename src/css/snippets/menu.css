@@ -1,0 +1,12 @@
+.menu {
+  position: sticky;
+  top: var(--body-padding-y);
+}
+
+.menu.cluster > * {
+  justify-content: space-between;
+}
+
+.menu ul {
+  list-style: none;
+}
