@@ -102,21 +102,25 @@ columns:
         label: Graphic Designers
         type: pages
         query: site.find("contributors")
-  - width: 1/2
-    fields:
       coordinating_editors:
         label: Coordinating Editors
         type: pages
         query: site.find("contributors")
+  - width: 1/2
+    fields:
       publishers:
         label: Publishers
         type: pages
         query: site.find("contributors")
-      web_editors:
-        label: Web Editors
+      archivists:
+        label: Archivists
         type: pages
         query: site.find("contributors")
       graphic_design_liaisons:
         label: Graphic Design Liaisons
+        type: pages
+        query: site.find("contributors")
+      web_editors:
+        label: Web Editors
         type: pages
         query: site.find("contributors")
