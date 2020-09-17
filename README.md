@@ -27,6 +27,8 @@
 - `export (cat .env | xargs -L 1) && vagrant provision` (fish)
 - `export $(cat .env | xargs) && ansible-playbook deploy/init.yml --inventory deploy/inventory/staging --vault-password-file .vault_pass`
 - `export $(cat .env | xargs) && ansible-playbook deploy/deploy.yml --inventory deploy/inventory/staging --vault-password-file .vault_pass`
+- `export $(cat .env | xargs) && ansible-playbook deploy/provision.yml --inventory deploy/inventory/production --vault-password-file .vault_pass --user=root`
+
 
 ### TODO
 

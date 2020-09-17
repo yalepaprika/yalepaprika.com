@@ -10,7 +10,7 @@
   <?php else: ?>
     <title><?= $page->title() . ' | ' . $site->title() ?></title>
   <?php endif ?>
-  <meta name="description" content="Paprika! is a window into emerging discourse from Yale School of Architecture and Yale School of Art."/>
+  <meta name="description" content="Paprika! is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art."/>
   <?= css('assets/css/main.css') ?>
 </head>
 <body>
