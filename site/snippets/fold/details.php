@@ -1,7 +1,7 @@
 <div class="fold-details cluster">
   <div class="_cluster">
     <?php snippet('utilities/detail-list/value-x', ['title' => 'Publication Date', 'value' => $fold->formattedDate()]) ?>
-    <div class="fold-details-double cluster">
+    <div class="fold-details-numbers cluster">
       <div class="_cluster">
         <?php snippet('utilities/detail-list/value-x', ['title' => 'Volume', 'value' => $fold->volume()]) ?>
         <?php snippet('utilities/detail-list/value-x', ['title' => 'Number', 'value' => $fold->number()]) ?>

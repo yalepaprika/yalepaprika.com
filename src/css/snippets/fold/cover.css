@@ -1,5 +1,5 @@
 .fullscreen {
-  --space: 0.5rem;
+  --space: var(--small-space);
   height: calc(100vh - 2 * var(--body-padding-y) - var(--space));
   display: flex;
   flex-direction: column;

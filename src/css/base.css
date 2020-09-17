@@ -1,25 +1,33 @@
 :root {
   --primary-font-family: "Söhne", -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --primary-font-size: calc(0.8rem + 0.4vw);
-  --primary-font-thickness: 0.1em;
+  --primary-font-thickness: 0.1rem;
   --primary-line-height: 1.2rem;
+  --emphasis-font-size: 1.5rem;
+  --detail-font-size: 0.85rem;
+
+  --default-space: 1rem;
+  --small-space: 0.5rem;
 
   --body-padding-x: 1rem;
   --body-padding-y: 0.5rem;
+  --inset-padding-x: calc(var(--body-padding-x) * 4);
+  --inset-padding-y: calc(var(--body-padding-y) * 8);
 
   --color-paprika: #FF5722;
   --color-light-paprika: rgba(255, 255, 255, 0.5);
   --color-lightest-paprika: rgba(255, 255, 255, 0.2);
   --color-white: #efefef; /* #f0eae6?? */
   --color-black: #0F0F0F;
-  --color-light-gray: rgba(0, 0, 0, 0.4);
-  --color-lightest-gray: rgba(0, 0, 0, 0.2);
+  --color-medium-gray: rgba(0, 0, 0, 0.6);
+  --color-light-gray: rgba(0, 0, 0, 0.1);
+  --color-lightest-gray: rgba(0, 0, 0, 0.05);
 
   --primary-color:  var(--color-black);
   --highlight-color: var(--color-paprika);
   --secondary-color: var(--color-light-gray);
   --background-color:  var(--color-white);
-  --faded-color: var(--color-lightest-gray);
+  --faded-color: var(--color-light-gray);
 
 	font-family: var(--primary-font-family);
   font-size: var(--primary-font-size);
@@ -108,7 +116,7 @@ a.no-link-animation {
 }
 
 .cluster {
-  --space: 1rem;
+  --space: var(--default-space);
   /* overflow: hidden; */
 }
 

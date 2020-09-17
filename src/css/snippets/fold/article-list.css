@@ -1,5 +1,5 @@
 .fold-article-list {
-  --space: 1rem;
+  --space: var(--default-space);
   list-style: none;
   display: flex;
   flex-direction: column;

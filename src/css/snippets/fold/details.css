@@ -1,0 +1,48 @@
+.fold-details {
+  padding: var(--inset-padding-y) var(--inset-padding-x);
+  background: var(--color-lightest-gray);
+}
+
+.fold-details.cluster > * {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+}
+
+.fold-details.cluster > * > * {
+  align-self: start;
+}
+
+.fold-details-numbers.cluster > * {
+  justify-content: space-between;
+}
+
+.fold-details-numbers.cluster > * > * {
+  align-self: start;
+  flex: 1;
+}
+
+.fold-details-numbers dd {
+  font-size: 1.5rem;
+}
+
+.fold-details dl {
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: var(--small-space);
+  display: flex;
+  align-items: start;
+}
+
+.fold-details dt {
+  font-size: var(--detail-font-size);
+}
+
+.fold-details dl.cluster > * {
+  width: 100%;
+}
+
+.fold-details dl.cluster > * > * {
+  align-self: start;
+  flex: 1;
+}
