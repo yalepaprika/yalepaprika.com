@@ -7,7 +7,7 @@
       <div class="columns">
         <div class="column-left">
           <div class="stack">
-            <?php snippet('utilities/detail-list/pages', ['title' => 'Articles', 'pages' => $articles]) ?>
+            <?php snippet('utilities/detail-list/pages-y', ['title' => 'Articles', 'pages' => $articles]) ?>
           </div>
         </div>
       </div>

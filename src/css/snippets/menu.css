@@ -4,7 +4,11 @@
 }
 
 .menu.cluster {
-  --space: 0.5rem
+  --space: 0.5rem;
+}
+
+.menu.cluster > * {
+  justify-content: space-between;
 }
 
 .menu ul {

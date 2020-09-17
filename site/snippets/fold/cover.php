@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="fold-cover-details">
-          <?php snippet('fold/article-list', ['articles' => $fold->children()]) ?>
+          <?php snippet('fold/fold-article-list', ['articles' => $fold->children()]) ?>
         </div>
       </div>
     </div>

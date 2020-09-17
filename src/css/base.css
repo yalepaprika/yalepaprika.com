@@ -109,12 +109,12 @@ a.no-link-animation {
 
 .cluster {
   --space: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .cluster > * {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   margin: calc(var(--space) / 2 * -1);

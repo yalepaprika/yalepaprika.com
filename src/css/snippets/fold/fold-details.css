@@ -1,10 +1,27 @@
-.fold-details.cluster {
+.fold-details.cluster > * {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-auto-flow: column;
 }
 
-.fold-details > * {
+.fold-details.cluster > * > * {
+  align-self: start;
+}
+
+.fold-details-double.cluster > * {
+  justify-content: space-between;
+}
+
+.fold-details-double.cluster > * > * {
+  flex: 1;
+}
+
+.fold-details dl {
+  display: flex;
+  align-items: start;
+}
+
+.fold-details dl.cluster > * > * {
   align-self: start;
 }

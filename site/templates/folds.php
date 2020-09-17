@@ -4,7 +4,7 @@
   <main class="stack">
     <?php foreach($folds = collection('folds')->paginate(20) as $fold): ?>
       <article>
-        <?php snippet('fold/fold-cover', ['fold' => $fold, 'summary' => True]) ?>
+        <?php snippet('fold/cover', ['fold' => $fold, 'summary' => True]) ?>
       </article>
     <?php endforeach ?>
     <?php if ($folds->pagination()->hasPages()): ?>
