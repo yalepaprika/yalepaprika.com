@@ -25,7 +25,7 @@
 
   --primary-color:  var(--color-black);
   --highlight-color: var(--color-paprika);
-  --secondary-color: var(--color-light-gray);
+  --secondary-color: var(--color-medium-gray);
   --background-color:  var(--color-white);
   --faded-color: var(--color-light-gray);
 
@@ -37,6 +37,7 @@
 body {
   padding: var(--body-padding-y) var(--body-padding-x);
   background: var(--color-white);
+  overflow-x: hidden;
 }
 
 .content {
@@ -50,6 +51,11 @@ body {
   hyphens: auto;
 }
 
+.content #footnotes {
+  color: var(--secondary-color);
+  font-size: var(--detail-font-size);
+}
+
 h1, h2, h3, h4, h5 {
   font-size: unset;
   font-weight: unset;
@@ -58,7 +64,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 4.5rem;
-  line-height: 1.1;
+  line-height: 0.9;
   font-style: italic;
   font-weight: 800;
 }
@@ -69,6 +75,10 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+}
+
+b, strong {
+  font-weight: 500;
 }
 
 a:not(.no-link-animation) {

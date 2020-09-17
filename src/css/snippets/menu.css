@@ -1,6 +1,5 @@
 .menu {
-  position: sticky;
-  top: var(--body-padding-y);
+  margin-bottom: calc(var(--small-space) * -1);
 }
 
 .menu.cluster {

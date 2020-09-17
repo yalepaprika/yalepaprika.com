@@ -1,17 +1,5 @@
-.fullscreen {
-  --space: var(--small-space);
-  height: calc(100vh - 2 * var(--body-padding-y) - var(--space));
-  display: flex;
-  flex-direction: column;
-}
-
-.fullscreen-content {
-  margin-top: var(--space);
-  flex: 1;
-  overflow: hidden;
-}
-
 .fold-cover {
+  height: calc(100vh - 2 * var(--body-padding-y) - 2.5 * var(--space));
   --background-color: var(--color-paprika);
   --primary-color: var(--color-white);
   --secondary-color: var(--color-light-paprika);
@@ -19,10 +7,14 @@
   color: var(--primary-color);
   background: url('/assets/images/nook.jpg');
   background-size: cover;
-  height: 100%;
   padding: var(--body-padding-y) var(--body-padding-x);
   display: flex;
   justify-content: space-between;
+}
+
+.fold-cover .fold-cover-details,
+.fold-cover .fold-cover-info {
+  --space: var(--small-space);
 }
 
 .fold-cover a {
@@ -38,4 +30,12 @@
 
 .fold-cover-details {
   width: 40%;
+}
+
+.fold-cover-publication-info {
+  width: 75%;
+}
+
+.fold-cover-publication-text {
+  color: var(--secondary-color);
 }

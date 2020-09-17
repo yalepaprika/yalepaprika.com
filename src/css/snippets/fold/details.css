@@ -3,14 +3,18 @@
   background: var(--color-lightest-gray);
 }
 
-.fold-details.cluster > * {
+.fold-details-context {
+  margin-bottom: 2rem;
+}
+
+.fold-details-main.cluster > * {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   grid-auto-flow: column;
 }
 
-.fold-details.cluster > * > * {
+.fold-details-main.cluster > * > * {
   align-self: start;
 }
 

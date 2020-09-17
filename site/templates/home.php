@@ -1,5 +1,6 @@
 <?php snippet('header') ?>
 <div class="stack">
-  <?php snippet('fold/cover', ['fold' => collection('folds')->first(), 'menu' => collection('menu'), 'submenu' => collection('submenu'), 'home' => $site]) ?>
+  <?php snippet('menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
+  <?php snippet('fold/cover', ['fold' => collection('folds')->first()]) ?>
 </div>
 <?php snippet('footer') ?>
