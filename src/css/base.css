@@ -59,14 +59,16 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-size: 4.5rem;
   line-height: 1.1;
-  letter-spacing: -0.02em;
   font-style: italic;
   font-weight: 800;
 }
 
 h2 {
+  font-size: 2rem;
+}
+
+h3 {
   font-size: 1.5rem;
-  letter-spacing: -0.01em;
 }
 
 a:not(.no-link-animation) {
@@ -145,26 +147,4 @@ a.no-link-animation {
 
 .content figure img {
   max-width: 100%;
-}
-
-.columns {
-  --space: 1rem;
-  display: flex;
-}
-
-.columns .column-left,
-.columns .column-right {
-  width: 30%;
-}
-
-.columns .column-content {
-  width: 40%;
-}
-
-.columns .column-left > * {
-  margin-right: var(--space);
-}
-
-.columns .column-right > * {
-  margin-left: var(--space);
 }

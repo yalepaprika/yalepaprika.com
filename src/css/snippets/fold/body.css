@@ -1,0 +1,17 @@
+.fold-body-main {
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: 1rem;
+  margin-top: 4rem;
+}
+
+.fold-body-main.cluster > * {
+  align-items: start;
+}
+
+.fold-body-content {
+  width: calc((100% - 3 * var(--space)) * 4 / 10);
+}
+
+.fold-body-details {
+  width: calc((100% - 3 * var(--space)) * 3 / 10);
+}

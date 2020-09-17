@@ -4,7 +4,7 @@
     <div class="fold-details-numbers cluster">
       <div class="_cluster">
         <?php snippet('utilities/detail-list/value-x', ['title' => 'Volume', 'value' => $fold->volume()]) ?>
-        <?php snippet('utilities/detail-list/value-x', ['title' => 'Number', 'value' => $fold->number()]) ?>
+        <?php snippet('utilities/detail-list/value-x', ['title' => 'Number', 'value' => sprintf('%02d', $fold->number()->value())]) ?>
       </div>
     </div>
     <?php snippet('utilities/detail-list/pages-x', ['title' => 'Editors', 'pages' => $fold->fold_editors()->toPages()]) ?>

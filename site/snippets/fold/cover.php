@@ -7,7 +7,7 @@
         <div class="fold-cover-info">
           <div class="fold-cover-title-block stack">
             <a class="no-link-animation" href="<?= $fold->url() ?>"><h1><?= $fold->title()->widont() ?></h1></a>
-            <h2><?= $fold->formattedNumber() ?></h2>
+            <h3><?= $fold->formattedNumber() ?></h3>
           </div>
           <div class="fold-cover-publication-date">
             <p><?= $fold->formattedDate() ?><p>

@@ -16,7 +16,6 @@
   --primary-color: var(--color-white);
   --secondary-color: var(--color-light-paprika);
   --faded-color: var(--color-lightest-paprika);
-  /* border: var(--primary-font-thickness) solid var(--primary-color); */
   color: var(--primary-color);
   background: url('/assets/images/nook.jpg');
   background-size: cover;
