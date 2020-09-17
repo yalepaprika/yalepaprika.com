@@ -1,0 +1,48 @@
+.about-details {
+  padding: var(--inset-padding-y) var(--inset-padding-x);
+  background: var(--color-lightest-gray);
+}
+
+.about-details-main.cluster > * {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+}
+
+.about-details-main.cluster > * > * {
+  align-self: start;
+}
+
+.about-details-numbers.cluster > * {
+  justify-content: space-between;
+}
+
+.about-details-numbers.cluster > * > * {
+  align-self: start;
+  flex: 1;
+}
+
+.about-details-numbers dd {
+  font-size: 1.5rem;
+}
+
+.about-details dl {
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: var(--small-space);
+  display: flex;
+  align-items: start;
+}
+
+.about-details dt {
+  font-size: var(--detail-font-size);
+}
+
+.about-details dl.cluster > * {
+  width: 100%;
+}
+
+.about-details dl.cluster > * > * {
+  align-self: start;
+  flex: 1;
+}

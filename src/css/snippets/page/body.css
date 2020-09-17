@@ -1,0 +1,11 @@
+.page-body-main.cluster > * {
+  align-items: start;
+}
+
+.page-body-content {
+  width: calc((100% - 3 * var(--space)) * 4 / 10);
+}
+
+.page-body-details {
+  width: calc((100% - 3 * var(--space)) * 3 / 10);
+}

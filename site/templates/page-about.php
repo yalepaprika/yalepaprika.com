@@ -2,7 +2,7 @@
 <div class="stack">
   <?php snippet('menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
   <main class="stack">
-    <?php snippet('page/body', ['page' => $page]) ?>
+    <?php snippet('about/body', ['page' => $page]) ?>
   </main>
 </div>
 <?php snippet('footer') ?>

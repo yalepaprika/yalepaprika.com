@@ -1,18 +1,14 @@
-<article class="article-body stack">
-  <h1><?= $article->title()->widont() ?></h1>
-  <div class="article-body-main cluster">
+<article class="page-body stack">
+  <?php snippet('page/title', ['page' => $page]) ?>
+  <div class="page-body-main cluster">
     <div class="_cluster">
-      <div class="article-body-details">
-        <div class="stack">
-            <?php snippet('utilities/detail-list/pages-y', ['title' => 'Contributors', 'pages' => $article->contributors()->toPages()]) ?>
-            <?php snippet('utilities/detail-list/value-y', ['title' => 'Publication Date', 'value' => $article->parent()->formattedDate()]) ?>
-        </div>
-      </div>
-      <div class="article-body-content">
+      <div class="page-body-details"></div>
+      <div class="page-body-content">
         <div class="content stack-recursive">
-          <?= $article->content()->get('content')->footnotes() ?>
+          <?= $page->content()->get('content')->footnotes() ?>
         </div>
       </div>
     </div>
   </div>
+  <?php snippet('about/details', ['about' => $page]) ?>
 </article>

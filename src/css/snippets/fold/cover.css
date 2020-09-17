@@ -5,11 +5,16 @@
   --secondary-color: var(--color-light-paprika);
   --faded-color: var(--color-lightest-paprika);
   color: var(--primary-color);
-  background: url('/assets/images/nook.jpg');
-  background-size: cover;
   padding: var(--body-padding-y) var(--body-padding-x);
+  background: var(--background-color);
   display: flex;
   justify-content: space-between;
+}
+
+.fold-cover.fold-cover-default {
+  background: url('/assets/images/default-background.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .fold-cover .fold-cover-details,
