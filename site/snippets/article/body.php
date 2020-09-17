@@ -1,5 +1,5 @@
 <article class="article-body stack">
-  <h1><?= $article->title()->widont() ?></h1>
+  <?php snippet('page/title', ['page' => $article]) ?>
   <div class="article-body-main cluster">
     <div class="_cluster">
       <div class="article-body-details">

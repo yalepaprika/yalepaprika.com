@@ -3,7 +3,7 @@
   <?php snippet('menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
   <main>
     <article class="stack">
-      <h1><?= $page->title()->widont() ?></h1>
+      <?php snippet('page/title', ['page' => $page]) ?>
       <div class="columns">
         <div class="column-left">
           <div class="stack">

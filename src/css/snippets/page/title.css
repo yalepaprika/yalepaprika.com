@@ -1,0 +1,4 @@
+h1.page-title {
+  border-bottom: var(--primary-font-thickness) solid var(--faded-color);
+  padding-bottom: 4rem;
+}
