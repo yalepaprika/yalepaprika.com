@@ -6,7 +6,7 @@
     </div>
     <div class="fold-cover-publication-info">
       <p><?= $fold->formattedDate() ?><p>
-      <p class="fold-cover-publication-text">Paprika! is a window into emerging discourse from Yale School of Architecture and Yale School of Art.</p>
+      <p class="fold-cover-publication-text"><em>Paprika!</em> is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art.</p>
     </div>
   </div>
   <div class="fold-cover-details">
