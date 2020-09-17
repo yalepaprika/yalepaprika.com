@@ -8,24 +8,30 @@
   --body-padding-y: 0.5rem;
 
   --color-paprika: #FF5722;
-  --color-light-paprika: #FF755F;
-  --color-white: #FFF;
+  --color-light-paprika: rgba(255, 255, 255, 0.5);
+  --color-lightest-paprika: rgba(255, 255, 255, 0.2);
+  --color-white: #efefef; /* #f0eae6?? */
   --color-black: #0F0F0F;
-  --color-light-gray: #d9d9d9;
+  --color-light-gray: rgba(0, 0, 0, 0.4);
+  --color-lightest-gray: rgba(0, 0, 0, 0.2);
 
   --primary-color:  var(--color-black);
-  --secondary-color: var(--color-paprika);
+  --highlight-color: var(--color-paprika);
+  --secondary-color: var(--color-light-gray);
   --background-color:  var(--color-white);
-  --faded-color: var(--color-light-gray);
+  --faded-color: var(--color-lightest-gray);
 
 	font-family: var(--primary-font-family);
   font-size: var(--primary-font-size);
   color: var(--primary-color);
 }
 
-
 body {
   padding: var(--body-padding-y) var(--body-padding-x);
+  background: var(--color-white);
+}
+
+.content {
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
@@ -43,9 +49,11 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4.5rem;
   line-height: 1.1;
   letter-spacing: -0.02em;
+  font-style: italic;
+  font-weight: 800;
 }
 
 h2 {
@@ -54,7 +62,7 @@ h2 {
 }
 
 a:not(.no-link-animation) {
-  color: var(--secondary-color);
+  color: var(--highlight-color);
   text-decoration: none;
   display: inline;
   background-image: linear-gradient(to bottom, transparent 20%, currentColor 21%);
@@ -73,7 +81,7 @@ a:not(.no-link-animation):focus {
 }
 
 a.no-link-animation {
-  color: var(--secondary-color);
+  color: var(--highlight-color);
   text-decoration: none;
 }
 
@@ -101,12 +109,12 @@ a.no-link-animation {
 
 .cluster {
   --space: 1rem;
-  /* overflow: hidden; */
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .cluster > * {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   margin: calc(var(--space) / 2 * -1);

@@ -14,10 +14,12 @@
 .fold-cover {
   --background-color: var(--color-paprika);
   --primary-color: var(--color-white);
-  --faded-color: var(--color-light-paprika);
+  --secondary-color: var(--color-light-paprika);
+  --faded-color: var(--color-lightest-paprika);
   /* border: var(--primary-font-thickness) solid var(--primary-color); */
   color: var(--primary-color);
-  background: var(--background-color);
+  background: url('/assets/nook.jpg');
+  background-size: cover;
   height: 100%;
   padding: var(--body-padding-y) var(--body-padding-x);
   display: flex;

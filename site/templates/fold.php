@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <div class="stack">
-  <?php snippet('menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
-  <main>
+    <?php snippet('fold/fold-cover', ['fold' => $page, 'menu' => collection('menu'), 'submenu' => collection('submenu'), 'home' => $site]) ?>
+    <?php snippet('fold/fold-details', ['fold' => $page]) ?>
     <article class="stack">
       <h1><?= $page->title()->widont() ?></h1>
       <div class="columns">

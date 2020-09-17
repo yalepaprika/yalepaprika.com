@@ -1,0 +1,10 @@
+.fold-details.cluster {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+.fold-details > * {
+  align-self: start;
+}

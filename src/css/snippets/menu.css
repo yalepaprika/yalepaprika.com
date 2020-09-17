@@ -3,8 +3,8 @@
   top: var(--body-padding-y);
 }
 
-.menu.cluster > * {
-  justify-content: space-between;
+.menu.cluster {
+  --space: 0.5rem
 }
 
 .menu ul {
