@@ -35,4 +35,10 @@
     line: "ChallengeResponseAuthentication no"
   notify: restart sshd
 
+- name: enable SSH forwarding for sudo
+  lineinfile:
+    dest: /etc/sudoers
+    insertafter: '^#?\s*Defaults\s+env_keep\b'
+    line: 'Defaults    env_keep += "SSH_AUTH_SOCK"'
+
 - include: git.yml

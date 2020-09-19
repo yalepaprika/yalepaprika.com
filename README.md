@@ -23,6 +23,12 @@
 
 ### Deploy
 
+- provision, first time with user=root
+- configure, first time with user=root
+- add ForwardAgent to ~/.ssh/config
+- run deploy (no user=root needed from here on out)
+
+
 - `export $(cat .env | xargs) && vagrant provision` (zsh)
 - `export (cat .env | xargs -L 1) && vagrant provision` (fish)
 - `export $(cat .env | xargs) && ansible-playbook deploy/init.yml --inventory deploy/inventory/staging --vault-password-file .vault_pass`
