@@ -159,7 +159,8 @@ a.no-link-animation {
   max-width: 100%;
 }
 
-button, a.button {
+button,
+a.button {
   display: inline-block;
   text-align: center;
   white-space: nowrap;
