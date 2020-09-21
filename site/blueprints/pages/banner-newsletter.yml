@@ -1,4 +1,4 @@
-title: Subscribe Banner
+title: Newsletter Banner
 icon: email
 
 status:
@@ -22,7 +22,7 @@ columns:
       info:
         label: Info
         type: info
-        text: The subscribe banner is a placeholder for a mailchimp subscribe form.
+        text: The newsletter banner is a placeholder for a mailchimp subscribe form.
   - width: 1/2
     sections:
       meta:

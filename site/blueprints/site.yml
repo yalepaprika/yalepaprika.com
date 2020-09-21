@@ -17,4 +17,5 @@ columns:
           - page-blank
           - page-about
           - page-search
+          - page-subscribe
       banners: sections/banners

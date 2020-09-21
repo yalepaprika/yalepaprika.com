@@ -3,9 +3,9 @@
 }
 
 .page-body-content {
-  width: calc((100% - 3 * var(--space)) * 4 / 10);
+  width: calc((100% - 3 * var(--space)) * 5 / 10);
 }
 
 .page-body-details {
-  width: calc((100% - 3 * var(--space)) * 3 / 10);
+  width: calc((100% - 3 * var(--space)) * 2 / 10);
 }

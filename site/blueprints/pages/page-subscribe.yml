@@ -1,0 +1,65 @@
+title: Subscribe Page
+icon: cart
+
+options:
+  title: false
+  duplicate: false
+  status: false
+  url: false
+  delete: false
+
+columns:
+  - width: 2/3
+    fields:
+      intro:
+        label: Introduction
+        type: textarea
+        maxlength: 1000
+        buttons:
+          - italic
+          - bold
+          - "|"
+          - link
+          - email
+      content:
+        label: Text
+        type: textarea
+        size: huge
+        files: page.files.template("file")
+        uploads: file
+  - width: 1/3
+    sections:
+      files:
+        type: files
+        layout: cards
+        size: medium
+        template: file
+  - width: 1/1
+    fields:
+      line:
+        type: line
+      subscriptions:
+        label: Subscriptions
+        type: structure
+        fields:
+          title:
+            type: text
+          subtitle:
+            type: text
+          description:
+            type: text
+          button_link:
+            label: Button Link
+            type: url
+          total_cost:
+            label: Total Cost
+            type: number
+            step: .01
+            min: 0
+            before: $
+          cost_per_issue:
+            label: Cost Per Issue
+            type: number
+            step: .01
+            min: 0
+            before: $

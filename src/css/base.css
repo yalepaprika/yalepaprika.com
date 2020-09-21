@@ -158,3 +158,39 @@ a.no-link-animation {
 .content figure img {
   max-width: 100%;
 }
+
+button, a.button {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: var(--primary-font-thickness) solid transparent;
+  padding: .325rem .75rem .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  background: var(--highlight-color);
+  color: var(--background-color);
+}
+
+button:not(:disabled):not(.disabled),
+a.button:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+button.focus, button:focus,
+a.button.focus, a.button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 var(--primary-font-thickness) var(--faded-color);
+}
+
+button:hover,
+a.button:hover {
+  background: var(--background-color);
+  border: var(--primary-font-thickness) solid var(--highlight-color);
+  color: var(--primary-color);
+}

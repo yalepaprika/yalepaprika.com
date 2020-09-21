@@ -1,0 +1,10 @@
+.page-intro {
+  border-bottom: var(--primary-font-thickness) solid var(--faded-color);
+  padding-bottom: 4rem;
+  font-size: var(--emphasis-font-size);
+  width: 100%;
+}
+
+.page-intro-content {
+  width: 90%;
+}
