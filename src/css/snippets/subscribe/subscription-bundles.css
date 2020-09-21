@@ -14,7 +14,7 @@
   --secondary-color: var(--color-light-paprika);
   --faded-color: var(--color-lightest-paprika);
   color: var(--primary-color);
-  padding: var(--body-padding-y) var(--body-padding-x) calc(2 * var(--body-padding-y)) var(--body-padding-x);
+  padding: var(--padding-y) var(--padding-x);
   background: var(--background-color);
 }
 
