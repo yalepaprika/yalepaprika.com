@@ -26,6 +26,10 @@
   color: var(--primary-color);
 }
 
+.fold-cover-separator {
+  color: var(--secondary-color);
+}
+
 .fold-cover-info {
   width: 40%;
   display: flex;

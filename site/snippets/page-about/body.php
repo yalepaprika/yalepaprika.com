@@ -10,5 +10,5 @@
       </div>
     </div>
   </div>
-  <?php snippet('about/details', ['about' => $page]) ?>
+  <?php snippet('page-about/details', ['about' => $page]) ?>
 </article>

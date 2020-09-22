@@ -1,3 +1,8 @@
+.page-body-main {
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: var(--space);
+}
+
 .page-body-main.cluster > * {
   align-items: start;
 }

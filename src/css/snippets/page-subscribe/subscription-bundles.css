@@ -1,5 +1,6 @@
 .subscription-bundles {
-  margin-bottom: calc(var(--space) * 2);
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: var(--space);
 }
 
 .subscription-bundles.cluster > * > * {

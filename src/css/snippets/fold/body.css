@@ -1,6 +1,10 @@
 .fold-body h2 {
-  border-bottom: var(--primary-font-thickness) solid var(--faded-color);
   padding-bottom: 4rem;
+}
+
+.fold-body-main {
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: var(--space);
 }
 
 .fold-body-main.cluster > * {

@@ -1,6 +1,7 @@
 .page-intro {
-  border-bottom: var(--primary-font-thickness) solid var(--faded-color);
-  padding-bottom: 4rem;
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: var(--space);
+  padding-bottom: 3rem;
   font-size: var(--emphasis-font-size);
   width: 100%;
 }

@@ -13,8 +13,8 @@
   --body-padding-y: var(--small-space);
   --padding-x: var(--default-space);
   --padding-y: var(--default-space);
-  --inset-padding-x: calc(var(--body-padding-x) * 4);
-  --inset-padding-y: calc(var(--body-padding-y) * 8);
+  --inset-padding-x: calc(var(--padding-x) * 4);
+  --inset-padding-y: calc(var(--padding-y) * 3);
 
   --color-paprika: #FF5722;
   --color-light-paprika: rgba(255, 255, 255, 0.5);
@@ -138,7 +138,7 @@ a.no-link-animation {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: start;
   margin: calc(var(--space) / 2 * -1);
 }
 
@@ -171,7 +171,7 @@ a.button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: var(--primary-font-thickness) solid transparent;
+  border: calc(var(--primary-font-thickness) * 1.5) solid transparent;
   padding: .375rem .75rem .375rem .75rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -194,6 +194,6 @@ a.button.focus, a.button:focus {
 button:hover,
 a.button:hover {
   background: var(--background-color);
-  border: var(--primary-font-thickness) solid var(--highlight-color);
+  border: calc(var(--primary-font-thickness) * 1.5) dashed var(--highlight-color);
   color: var(--primary-color);
 }
