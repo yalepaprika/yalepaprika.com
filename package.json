@@ -19,9 +19,11 @@
   "dependencies": {
     "@types/react": "^16.9.36",
     "@types/react-dom": "^16.9.8",
+    "@types/simplebar": "^5.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "ress": "^2.0.4"
+    "ress": "^2.0.4",
+    "simplebar": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

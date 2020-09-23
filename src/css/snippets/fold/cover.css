@@ -5,6 +5,11 @@
   justify-content: space-between;
 }
 
+.fold-cover.box-card {
+  /* make space for article-list scrollbar */
+  padding-right: calc(var(--box-card-padding-x) / 4);
+}
+
 .fold-cover.fold-cover-default {
   background: url('/assets/images/default-background.jpg');
   background-size: cover;

@@ -17,7 +17,7 @@ const dev = mode === 'development';
 
 // necessary to make multiple entries in different directory levels work.
 // instead of an array of filenames, rollup can take a map where the key
-// is the fdestination ilename which is appended to the output directory
+// is the destination filename which is appended to the output directory
 // and the value is the source filename
 /*
 {

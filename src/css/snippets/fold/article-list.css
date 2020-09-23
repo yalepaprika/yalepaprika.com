@@ -1,7 +1,14 @@
 .fold-article-list {
-  list-style: none;
-  overflow-y: auto;
+  overflow-x: hidden;
   height: 100%;
+}
+
+.fold-article-list-scrollbar-space {
+  padding-right: calc(3 * var(--box-card-padding-x) / 4);
+}
+
+.fold-article-list ol {
+  list-style: none;
 }
 
 .fold-article-list a {
