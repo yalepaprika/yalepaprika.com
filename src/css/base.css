@@ -282,7 +282,7 @@ a.button:hover {
 }
 
 .simplebar-scrollbar:before {
-  background: var(--highlight-text-color);
+  background: var(--secondary-text-color);
 }
 
 .simplebar-scrollbar.simplebar-visible:before {
