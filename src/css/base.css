@@ -113,16 +113,14 @@ a.no-link-animation {
   text-decoration: none;
 }
 
-.stack,
-.stack-recursive {
+.stack {
   --stack-space: var(--line-height-space);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.stack > *,
-.stack-recursive > * {
+.stack > * {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -131,8 +129,17 @@ a.no-link-animation {
   margin-top: var(--stack-space);
 }
 
-.stack-recursive * + * {
+.stack.stack-recursive * + * {
   margin-top: var(--stack-space);
+}
+
+.stack.stack-ruled {
+  --stack-space: calc(var(--line-height-space) / 2);
+}
+
+.stack.stack-ruled > * + * {
+  border-top: var(--primary-font-thickness) solid var(--faded-color);
+  padding-top: var(--stack-space);
 }
 
 .cluster {
@@ -176,7 +183,6 @@ a.no-link-animation {
   padding: var(--box-card-large-inset-padding-y) var(--box-card-large-inset-padding-x);
 }
 
-
 .box-block {
   --box-block-space: var(--box-block-padding-bottom);
   padding-bottom: var(--box-block-space);
@@ -186,6 +192,10 @@ a.no-link-animation {
   --ruled-space: var(--line-height-space);
   border-top: var(--primary-font-thickness) solid var(--faded-color);
   padding-top: var(--ruled-space);
+}
+
+.h100 {
+  height: 100%;
 }
 
 .center,

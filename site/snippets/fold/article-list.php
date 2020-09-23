@@ -1,4 +1,4 @@
-<ol class="fold-article-list">
+<ol class="fold-article-list stack stack-ruled">
   <?php $i = 0; ?>
   <?php foreach ($articles as $article): ?>
     <li>

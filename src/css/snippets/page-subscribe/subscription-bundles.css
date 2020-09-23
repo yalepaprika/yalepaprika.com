@@ -13,8 +13,6 @@
 
 .subscription-bundle h2 {
   font-size: 1.2rem;
-  padding-bottom: var(--small-space);
-  border-bottom: var(--primary-font-thickness) solid var(--faded-color);
 }
 
 .subscription-bundle .description {
