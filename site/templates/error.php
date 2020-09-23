@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 <div class="stack">
   <?php snippet('menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
-  <main class="stack">
+  <main>
     <article class="article-body stack">
       <?php snippet('page/title', ['title' => $page->title()->widont()]) ?>
     </article>
