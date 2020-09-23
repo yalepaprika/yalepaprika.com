@@ -93,18 +93,18 @@ a:not(.no-link-animation) {
   color: var(--highlight-text-color);
   text-decoration: none;
   display: inline;
-  background-image: linear-gradient(to bottom, transparent 20%, currentColor 21%);
+  background-image: linear-gradient(to bottom, transparent 20%, var(--faded-color) 21%);
 
-  background-position: 0 calc(var(--primary-line-height) - var(--primary-font-thickness));
+  background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: 0% var(--primary-font-thickness);
+  background-size: 0% 100%;
 
   transition: background-size 0.2s ease-in-out 0.2s;
 }
 
 a:not(.no-link-animation):hover,
 a:not(.no-link-animation):focus {
-  background-size: 100% var(--primary-font-thickness);
+  background-size: 100% 100%;
   transition-delay: 0s;
 }
 
