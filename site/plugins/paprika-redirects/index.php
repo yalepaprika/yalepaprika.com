@@ -14,6 +14,24 @@ Kirby::plugin('yalepaprika/paprika-redirects', [
                     }
                     $this->next();
                 }
+            ],
+            [
+                'pattern' => 'archive/folds',
+                'action' => function () {
+                    go(site()->find('folds')->url());
+                }
+            ],
+            [
+                'pattern' => 'archive/articles',
+                'action' => function () {
+                    go('/articles');
+                }
+            ],
+            [
+                'pattern' => 'archive/contributors',
+                'action' => function () {
+                    go(site()->find('contributors')->url());
+                }
             ]
         ]
 ]);
