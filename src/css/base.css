@@ -1,6 +1,6 @@
 :root {
   --primary-font-family: "Söhne", -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --primary-font-size: calc(0.8rem + 0.4vw);
+  --primary-font-size: calc(0.4rem + 0.7vw);
   --primary-font-thickness: 0.1rem;
   --primary-line-height: 1.2rem;
   --emphasis-font-size: 1.5rem;
@@ -40,6 +40,13 @@
 	font-family: var(--primary-font-family);
   font-size: var(--primary-font-size);
   color: var(--primary-text-color);
+}
+
+/* 0.9rem = 0.4rem + 0.7vw when width is 1143px */
+@media (max-width: 1143px) {
+  :root {
+    --primary-font-size: 0.9rem;
+  }
 }
 
 body {
