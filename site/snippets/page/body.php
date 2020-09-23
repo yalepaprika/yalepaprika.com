@@ -4,7 +4,7 @@
       <?= $details ?? '' ?>
     </div>
     <div class="page-body-content">
-      <div class="content stack-recursive">
+      <div class="content stack stack-recursive">
         <?= $page->content()->get('content')->footnotes() ?>
       </div>
     </div>
