@@ -33,6 +33,7 @@ stats.html
 !/site/plugins/auto-publish
 !/site/plugins/pages-sorted-titles
 !/site/plugins/paprika-redirects
+!/site/plugins/logout-route
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

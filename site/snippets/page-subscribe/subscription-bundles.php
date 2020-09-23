@@ -5,7 +5,7 @@
           <h2><?= $subscription->title() ?></h2>
           <div class="h100">
             <div class="stack h100">
-              <div class="subscription-bundle-content stack">
+              <div class="subscription-bundle-content stack stack-small">
                 <h3><?= $subscription->subtitle() ?></h3>
                 <div class="description">
                   <p><?= $subscription->description() ?></p>

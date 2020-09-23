@@ -7,10 +7,6 @@
   flex: 1;
 }
 
-.subscription-bundle-content.stack {
-  --stack-space: var(--small-space);
-}
-
 .subscription-bundle h2 {
   font-size: 1.2rem;
 }

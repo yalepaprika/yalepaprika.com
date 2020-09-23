@@ -4,3 +4,8 @@
   right: 0;
   padding: var(--body-padding-y) var(--body-padding-x);
 }
+
+.admin-edit .box-card {
+  background: var(--color-pure-white);
+  border-radius: .25rem;
+}

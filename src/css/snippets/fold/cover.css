@@ -11,10 +11,6 @@
   background-position: center;
 }
 
-.fold-cover-separator {
-  color: var(--secondary-text-color);
-}
-
 .fold-cover-info {
   width: 40%;
   display: flex;

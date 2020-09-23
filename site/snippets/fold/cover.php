@@ -2,7 +2,7 @@
   <div class="fold-cover-info">
     <div class="fold-cover-title-block stack">
       <a class="no-link-animation" href="<?= $fold->url() ?>"><h1><?= $fold->title()->widont() ?></h1></a>
-      <h3>Volume <?= $fold->volume() ?> <span class="fold-cover-separator">•</span> Issue <?= sprintf('%02d', $fold->number()->value()) ?></h3>
+      <h3>Volume <?= $fold->volume() ?> <span class="separator">•</span> Issue <?= sprintf('%02d', $fold->number()->value()) ?></h3>
     </div>
     <div class="fold-cover-publication-info">
       <p><?= $fold->formattedDate() ?><p>
