@@ -1,4 +1,4 @@
-<div class="about-details stack">
+<div class="about-details box-card box-card-large-inset stack">
   <div class="about-details-main cluster">
     <div class="_cluster">
       <?php snippet('utilities/detail-list/pages-x', ['title' => 'Coordinating Editors', 'pages' => $about->coordinating_editors()->toPages()]) ?>

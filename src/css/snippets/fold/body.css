@@ -1,20 +1,11 @@
-.fold-body h2 {
-  padding-bottom: 4rem;
-}
-
-.fold-body-main {
-  border-top: var(--primary-font-thickness) solid var(--faded-color);
-  padding-top: var(--space);
-}
-
 .fold-body-main.cluster > * {
   align-items: start;
 }
 
 .fold-body-content {
-  width: calc((100% - 3 * var(--space)) * 5 / 10);
+  width: calc((100% - 3 * var(--cluster-space)) * 5 / 10);
 }
 
 .fold-body-details {
-  width: calc((100% - 3 * var(--space)) * 2 / 10);
+  width: calc((100% - 3 * var(--cluster-space)) * 2 / 10);
 }

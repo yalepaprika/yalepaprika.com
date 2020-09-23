@@ -1,6 +1,6 @@
 <article class="fold-body stack">
-  <h2>Editor's Statement</h2>
-  <div class="fold-body-main cluster">
+  <h2 class="box-block">Editor's Statement</h2>
+  <div class="fold-body-main box-block box-block-ruled cluster">
     <div class="_cluster">
       <div class="fold-body-details">
         <div class="stack">

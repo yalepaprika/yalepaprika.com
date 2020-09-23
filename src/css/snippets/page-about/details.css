@@ -1,8 +1,3 @@
-.about-details {
-  padding: var(--inset-padding-y) var(--inset-padding-x);
-  background: var(--color-lightest-gray);
-}
-
 .about-details-main.cluster > * {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;

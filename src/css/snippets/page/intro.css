@@ -1,7 +1,4 @@
 .page-intro {
-  border-top: var(--primary-font-thickness) solid var(--faded-color);
-  padding-top: var(--space);
-  padding-bottom: 3rem;
   font-size: var(--emphasis-font-size);
   width: 100%;
 }

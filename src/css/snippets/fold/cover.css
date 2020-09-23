@@ -1,12 +1,6 @@
 .fold-cover {
-  height: calc(100vh - 2 * var(--body-padding-y) - 2.5 * var(--space));
-  --background-color: var(--color-paprika);
-  --primary-color: var(--color-white);
-  --secondary-color: var(--color-light-paprika);
-  --faded-color: var(--color-lightest-paprika);
-  color: var(--primary-color);
-  padding: var(--padding-y) var(--padding-x);
-  background: var(--background-color);
+  /* TODO: s3ththompson I don't know why 1.5 works here */
+  height: calc(100vh - 2 * var(--body-padding-y) - 1.5 * var(--primary-line-height) - var(--stack-space));
   display: flex;
   justify-content: space-between;
 }
@@ -17,17 +11,8 @@
   background-position: center;
 }
 
-.fold-cover .fold-cover-details,
-.fold-cover .fold-cover-info {
-  --space: var(--small-space);
-}
-
-.fold-cover a {
-  color: var(--primary-color);
-}
-
 .fold-cover-separator {
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
 }
 
 .fold-cover-info {
@@ -46,5 +31,5 @@
 }
 
 .fold-cover-publication-text {
-  color: var(--secondary-color);
+  color: var(--secondary-text-color);
 }

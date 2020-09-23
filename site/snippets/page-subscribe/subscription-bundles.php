@@ -1,7 +1,7 @@
-<div class="subscription-bundles cluster">
+<div class="subscription-bundles box-block box-block-ruled cluster">
     <div class="_cluster">
       <?php foreach ($subscriptions as $subscription): ?>
-        <div class="subscription-bundle stack">
+        <div class="subscription-bundle box-card box-card-inverted stack">
           <div class="subscription-bundle-content stack">
             <h2><?= $subscription->title() ?></h2>
             <h3><?= $subscription->subtitle() ?></h3>

@@ -1,8 +1,3 @@
-.banner-subscribe {
-  padding: calc(var(--inset-padding-y) / 2) calc(var(--inset-padding-x) / 2);
-  background: var(--color-lightest-gray);
-}
-
 .banner-subscribe-input {
   flex: 1;
 }
@@ -16,5 +11,5 @@
 }
 
 .banner-subscribe-input input.email {
-  background: var(--color-light-gray);
+  background: var(--faded-color);
 }

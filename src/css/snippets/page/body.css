@@ -1,16 +1,11 @@
-.page-body-main {
-  border-top: var(--primary-font-thickness) solid var(--faded-color);
-  padding-top: var(--space);
-}
-
 .page-body-main.cluster > * {
   align-items: start;
 }
 
 .page-body-content {
-  width: calc((100% - 3 * var(--space)) * 5 / 10);
+  width: calc((100% - 3 * var(--cluster-space)) * 5 / 10);
 }
 
 .page-body-details {
-  width: calc((100% - 3 * var(--space)) * 2 / 10);
+  width: calc((100% - 3 * var(--cluster-space)) * 2 / 10);
 }

@@ -4,6 +4,5 @@
   <?php snippet('fold/cover', ['fold' => $page]) ?>
   <?php snippet('fold/details', ['fold' => $page]) ?>
   <?php snippet('fold/body', ['fold' => $page]) ?>
-  <?php snippet('fold/preview', ['fold' => $page]) ?>
 </main>
 <?php snippet('footer') ?>

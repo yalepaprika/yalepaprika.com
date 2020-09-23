@@ -1,4 +1,4 @@
-<div class="banner-subscribe">
+<div class="banner-subscribe box-card box-card-inset">
   <form action="https://yalepaprika.us1.list-manage.com/subscribe/post?u=4ca966a132d110cd3f44a5d47&amp;id=5281aa2685" class="validate cluster" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
     <div class="_cluster" id="mc_embed_signup_scroll">
       <label for="mce-EMAIL">Sign up to receive new <em>Paprika!</em> issues by email →</label>

@@ -1,4 +1,4 @@
-<div class="fold-cover fold-cover-<?= $fold->slug() ?>">
+<div class="fold-cover fold-cover-<?= $fold->slug() ?> box-card box-card-inverted">
   <div class="fold-cover-info">
     <div class="fold-cover-title-block stack">
       <a class="no-link-animation" href="<?= $fold->url() ?>"><h1><?= $fold->title()->widont() ?></h1></a>

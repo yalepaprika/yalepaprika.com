@@ -1,8 +1,0 @@
-.banner-website {
-  padding: calc(var(--inset-padding-y) / 2) calc(var(--inset-padding-x) / 2);
-  background: var(--color-lightest-gray);
-}
-
-.banner-website-preamble {
-  flex: 1;
-}

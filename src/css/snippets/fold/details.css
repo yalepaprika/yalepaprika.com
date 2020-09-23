@@ -1,8 +1,3 @@
-.fold-details {
-  padding: var(--inset-padding-y) var(--inset-padding-x);
-  background: var(--color-lightest-gray);
-}
-
 .fold-details-context {
   margin-bottom: 2rem;
 }

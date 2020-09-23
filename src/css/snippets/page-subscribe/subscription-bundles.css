@@ -1,22 +1,6 @@
-.subscription-bundles {
-  border-top: var(--primary-font-thickness) solid var(--faded-color);
-  padding-top: var(--space);
-}
-
 .subscription-bundles.cluster > * > * {
   align-self: stretch;
   flex: 1;
-}
-
-.subscription-bundle {
-  --background-color: var(--color-paprika);
-  --primary-color: var(--color-white);
-  --highlight-color: var(--color-white);
-  --secondary-color: var(--color-light-paprika);
-  --faded-color: var(--color-lightest-paprika);
-  color: var(--primary-color);
-  padding: var(--padding-y) var(--padding-x);
-  background: var(--background-color);
 }
 
 .subscription-bundle-content {
@@ -24,7 +8,7 @@
 }
 
 .subscription-bundle-content.stack {
-  --space: var(--small-space);
+  --stack-space: var(--small-space);
 }
 
 .subscription-bundle h2 {

@@ -3,7 +3,7 @@
 }
 
 .menu.cluster {
-  --space: var(--small-space);
+  --cluster-space: var(--small-space);
 }
 
 .menu.cluster > * {
