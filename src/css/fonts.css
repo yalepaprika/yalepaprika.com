@@ -2,40 +2,46 @@
   font-family:"Söhne";
   font-style: normal;
   font-weight: 400;
-  src: url(/assets/fonts/soehne-web-buch.woff) format("woff")
+  src: url(/assets/fonts/soehne-web-buch.woff2) format("woff2"),
+    url(/assets/fonts/soehne-web-buch.woff) format("woff")
 }
 
 @font-face{
   font-family:"Söhne";
   font-style: italic;
   font-weight: 400;
-  src: url(/assets/fonts/soehne-web-buch-kursiv.woff) format("woff")
+  src: url(/assets/fonts/soehne-web-buch-kursiv.woff2) format("woff2"),
+    url(/assets/fonts/soehne-web-buch-kursiv.woff) format("woff")
 }
 
 @font-face{
   font-family:"Söhne";
   font-style: normal;
   font-weight: 500;
-  src: url(/assets/fonts/soehne-web-kraftig.woff) format("woff")
+  src: url(/assets/fonts/soehne-web-kraftig.woff2) format("woff2"),
+    url(/assets/fonts/soehne-web-kraftig.woff) format("woff")
 }
 
 @font-face{
   font-family:"Söhne";
   font-style: italic;
   font-weight: 500;
-  src: url(/assets/fonts/soehne-web-kraftig-kursiv.woff) format("woff")
+  src: url(/assets/fonts/soehne-web-kraftig-kursiv.woff2) format("woff2"),
+    url(/assets/fonts/soehne-web-kraftig-kursiv.woff) format("woff")
 }
 
 @font-face{
   font-family:"Söhne";
   font-style: normal;
   font-weight: 800;
-  src: url(/assets/fonts/soehne-web-fett.woff) format("woff")
+  src: url(/assets/fonts/soehne-web-fett.woff2) format("woff2"),
+    url(/assets/fonts/soehne-web-fett.woff) format("woff")
 }
 
 @font-face{
   font-family:"Söhne";
   font-style: italic;
   font-weight: 800;
-  src: url(/assets/fonts/soehne-web-fett-kursiv.woff) format("woff")
+  src: url(/assets/fonts/soehne-web-fett-kursiv.woff2) format("woff2"),
+    url(/assets/fonts/soehne-web-fett-kursiv.woff) format("woff")
 }
