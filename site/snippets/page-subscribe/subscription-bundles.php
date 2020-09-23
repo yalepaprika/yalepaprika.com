@@ -16,7 +16,7 @@
               </div>
               <div class="prices">
                 <h4>$<?= $subscription->total_cost() ?></h4>
-                <?php if ($subscription->cost_per_issue()): ?>
+                <?php if ($subscription->cost_per_issue()->isNotEmpty()): ?>
                   <h4>($<?= $subscription->cost_per_issue() ?> per copy)</h4>
                 <?php endif ?>
               </div>
