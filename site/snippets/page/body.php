@@ -1,4 +1,4 @@
-<div class="page-body box-block box-block-ruled cluster">
+<div class="page-body box-block box-block-ruled cluster cluster-ruled">
   <div class="_cluster">
     <div class="page-body-details">
       <?= $details ?? '' ?>
