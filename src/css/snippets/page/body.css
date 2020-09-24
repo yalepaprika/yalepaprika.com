@@ -3,9 +3,29 @@
 }
 
 .page-body-content {
-  width: calc((100% - 3 * var(--cluster-space)) * 5 / 10);
+  width: 100%;
 }
 
 .page-body-details {
-  width: calc((100% - 3 * var(--cluster-space)) * 2 / 10);
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .page-body-content {
+    width: calc((100% - 3 * var(--cluster-space)) * 7 / 10);
+  }
+
+  .page-body-details {
+    width: calc((100% - 3 * var(--cluster-space)) * 3 / 10);
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-body-content {
+    width: calc((100% - 3 * var(--cluster-space)) * 5 / 10);
+  }
+
+  .page-body-details {
+    width: calc((100% - 3 * var(--cluster-space)) * 2 / 10);
+  }
 }
