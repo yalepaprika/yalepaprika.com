@@ -11,7 +11,9 @@
             <p class="fold-cover-contributors-summary">Articles contributed by <?= $summary ?>, and others.</p>
           <?php endif ?>
           <div>
-            <a class="button" href="<?= $fold->url() ?>">Read fold →</a>
+            <?php if ($page->url() != $fold->url() ): ?>
+              <a class="button" href="<?= $fold->url() ?>">Read fold →</a>
+            <?php endif ?>
           </div>
         </div>
       </div>
@@ -22,6 +24,8 @@
   </div>
   <div class="fold-cover-publication-info">
     <p>Published <?= $fold->formattedDate() ?><p>
-    <p class="fold-cover-publication-text"><em>Paprika!</em> is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art.</p>
+    <?php if ($page->isHomePage()): ?>
+      <p class="fold-cover-publication-text"><em>Paprika!</em> is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art.</p>
+    <?php endif ?>
   </div>
 </div>
