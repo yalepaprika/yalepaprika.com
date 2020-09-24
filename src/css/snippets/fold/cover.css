@@ -17,12 +17,6 @@
   margin: 0;
 }
 
-.fold-cover.fold-cover-default {
-  background: url('/assets/images/default-background.jpg');
-  background-size: cover;
-  background-position: left center;
-}
-
 .fold-cover-info {
   display: flex;
   flex-direction: column;

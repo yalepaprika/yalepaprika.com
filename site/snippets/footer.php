@@ -12,5 +12,7 @@
       }
       shimport('/assets/js/main.js');
     </script>
+    <script src="https://unpkg.com/lazysizes@5.2.2/lazysizes.min.js"></script>
+    <script src="https://unpkg.com/lazysizes@5.2.2/plugins/unveilhooks/ls.unveilhooks.min.js"></script>
 </body>
 </html>
