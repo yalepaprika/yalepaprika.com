@@ -1,10 +1,12 @@
 :root {
   --primary-font-family: "Söhne", -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --primary-font-size: calc(0.4rem + 0.7vw);
+  --primary-font-size: 0.9rem;
   --primary-font-thickness: 0.1rem;
   --primary-line-height: 1.2rem;
-  --emphasis-font-size: 1.5rem;
   --detail-font-size: 0.85rem;
+  --emphasis-font-size: 1.2rem;
+  --big-font-size: 1.8rem;
+  --huge-font-size: 3.2rem;
 
   --default-space: 1rem;
   --small-space: calc(var(--default-space) / 2);
@@ -38,15 +40,24 @@
   --background-color:  var(--color-white);
   --card-background-color: var(--color-lightest-gray);
 
+  --mobile-breakpoint: 700px;
+
 	font-family: var(--primary-font-family);
   font-size: var(--primary-font-size);
   color: var(--primary-text-color);
 }
 
 /* 0.9rem = 0.4rem + 0.7vw when width is 1143px */
-@media (max-width: 1143px) {
+@media (min-width: 1143px) {
   :root {
-    --primary-font-size: 0.9rem;
+    --primary-font-size: calc(0.4rem + 0.7vw);
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --big-font-size: 1.8rem;
+    --huge-font-size: 4.5rem;
   }
 }
 
@@ -79,18 +90,18 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: var(--huge-font-size);
   line-height: 0.9;
   font-style: italic;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--big-font-size);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: var(--emphasis-font-size);
 }
 
 b, strong {
@@ -184,6 +195,25 @@ a.no-link-animation {
 
 .cluster > * > * {
   margin: calc(var(--cluster-space) / 2);
+}
+
+.switcher {
+  --threshold: var(--mobile-breakpoint);
+  --switcher-space: var(--default-space);
+}
+
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+  /* ↓ Multiply by -1 to make negative */
+  margin: calc(var(--switcher-space) / 2 * -1);
+}
+
+.switcher > * > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--threshold) - (100% - var(--switcher-space))) * 999);
+  /* ↓ Half the value to each element, combining to make the whole */
+  margin: calc(var(--switcher-space) / 2);
 }
 
 .box-card {
