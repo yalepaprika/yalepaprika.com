@@ -13,15 +13,15 @@ function init(): void {
   );
 }
 
-function unload(): void {
-  Array.prototype.forEach.call(
-    document.querySelectorAll('[data-simplebar]'),
-    (el) => {
-      if (SimpleBar.instances.has(el))
-        (<any>SimpleBar.instances.get(el)).unMount();
-    },
-  );
-}
+// function unload(): void {
+//   Array.prototype.forEach.call(
+//     document.querySelectorAll('[data-simplebar]'),
+//     (el) => {
+//       if (SimpleBar.instances.has(el))
+//         (<any>SimpleBar.instances.get(el)).unMount();
+//     },
+//   );
+// }
 
 window.addEventListener('DOMContentLoaded', () => {
   init();
