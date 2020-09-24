@@ -1,16 +1,11 @@
-.fold-details-context {
-  margin-bottom: 2rem;
-}
-
 .fold-details-main.cluster > * {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .fold-details-main.cluster > * > * {
   align-self: start;
+  width: 100%;
 }
 
 .fold-details-numbers.cluster > * {
@@ -44,4 +39,25 @@
 .fold-details dl.cluster > * > * {
   align-self: start;
   flex: 1;
+}
+
+.fold-details .fold-details-numbers dl.cluster > * {
+  justify-content: space-between;
+}
+
+.fold-details .fold-details-numbers dl.cluster > * > * {
+  flex: unset;
+}
+
+@media (--md-viewport) {
+  .fold-details-main.cluster > * {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+  }
+
+  .fold-details-main.cluster > * > * {
+    width: unset;
+  }
 }

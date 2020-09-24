@@ -1,13 +1,20 @@
 .fold-cover {
-  /* TODO: s3ththompson I don't know why 1.5 works here */
-  height: calc(100vh - 2 * var(--body-padding-y) - 1.5 * var(--primary-line-height) - var(--stack-space));
-  display: flex;
-  justify-content: space-between;
+  height: calc(100vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
+  position: relative;
 }
 
-.fold-cover.box-card {
-  /* make space for article-list scrollbar */
-  padding-right: calc(var(--box-card-padding-x) / 4);
+.fold-cover-main {
+  height: 100%;
+  width: 100%;
+}
+
+.fold-cover-main.cluster > * {
+  flex-direction: column;
+  flex-wrap: unset;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  margin: 0;
 }
 
 .fold-cover.fold-cover-default {
@@ -17,20 +24,65 @@
 }
 
 .fold-cover-info {
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
 }
 
 .fold-cover-details {
-  width: 40%;
+  display: none;
+  width: 100%;
+  min-height: 0;
 }
 
 .fold-cover-publication-info {
-  width: 75%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  padding: var(--box-card-padding-x) var(--box-card-padding-y);
 }
 
 .fold-cover-publication-text {
   color: var(--secondary-text-color);
+}
+
+@media (--md-viewport) {
+  .fold-cover.box-card {
+    /* make space for article-list scrollbar */
+    padding-right: calc(var(--box-card-padding-x) / 4);
+  }
+
+  .fold-cover-details {
+    display: unset;
+  }
+
+  .fold-cover-contributors-summary {
+    display: none;
+  }
+
+  .fold-cover-publication-info {
+    width: 33.33%;
+  }
+}
+
+@media (--lg-viewport) {
+  .fold-cover-main.cluster > * {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: unset;
+  }
+
+  .fold-cover-main.cluster > * > * {
+    height: 100%;
+  }
+
+  .fold-cover-info {
+    flex: 1;
+  }
+
+  .fold-cover-details {
+    width: 40%;
+  }
 }

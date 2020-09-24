@@ -1,9 +1,4 @@
 <div class="fold-details box-card box-card-large-inset stack">
-  <?php if (isset($context)): ?>
-    <div class="fold-details-context">
-      <a class="no-link-animation" href="<?= $fold->url() ?>"><h2><?= $fold->title()->widont() ?></h2></a>
-    </div>
-  <?php endif ?>
   <div class="fold-details-main cluster">
     <div class="_cluster">
       <?php snippet('utilities/detail-list/value-x', ['title' => 'Publication Date', 'value' => $fold->formattedDate()]) ?>

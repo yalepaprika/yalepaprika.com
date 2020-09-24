@@ -1,0 +1,5 @@
+@media (--md-viewport) {
+  .fold-body-article-list {
+    display: none;
+  }
+}

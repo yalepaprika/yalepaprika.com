@@ -17,10 +17,10 @@
   --body-padding-y: var(--small-space);
   --box-card-padding-x: var(--default-space);
   --box-card-padding-y: var(--default-space);
-  --box-card-inset-padding-x: calc(var(--default-space) * 2);
-  --box-card-inset-padding-y: calc(var(--default-space) * 2);
-  --box-card-large-inset-padding-x: calc(var(--default-space) * 4);
-  --box-card-large-inset-padding-y: calc(var(--default-space) * 3);
+  --box-card-inset-padding-x: calc(var(--default-space) * 1.5);
+  --box-card-inset-padding-y: calc(var(--default-space) * 1.5);
+  --box-card-large-inset-padding-x: calc(var(--default-space) * 2);
+  --box-card-large-inset-padding-y: calc(var(--default-space) * 2);
   --box-block-padding-bottom: var(--large-space);
 
   --color-paprika: #FF5722;
@@ -39,6 +39,8 @@
   --faded-color: var(--color-lighter-gray);
   --background-color:  var(--color-white);
   --card-background-color: var(--color-lightest-gray);
+
+  --animation-duration: 0.2s;
 
 	font-family: var(--primary-font-family);
   font-size: var(--primary-font-size);
@@ -61,6 +63,11 @@
   :root {
     --big-font-size: 1.8rem;
     --huge-font-size: 4.5rem;
+
+    --box-card-inset-padding-x: calc(var(--default-space) * 2);
+    --box-card-inset-padding-y: calc(var(--default-space) * 2);
+    --box-card-large-inset-padding-x: calc(var(--default-space) * 4);
+    --box-card-large-inset-padding-y: calc(var(--default-space) * 3);
   }
 }
 
@@ -68,17 +75,10 @@ body {
   padding: var(--body-padding-y) var(--body-padding-x);
   background: var(--background-color);
   overflow-x: hidden;
-}
-
-.content {
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
 
 .content #footnotes {
@@ -111,6 +111,10 @@ b, strong {
   font-weight: 500;
 }
 
+address {
+  font-style: unset;
+}
+
 a:not(.no-link-animation) {
   color: var(--highlight-text-color);
   text-decoration: none;
@@ -121,7 +125,7 @@ a:not(.no-link-animation) {
   background-repeat: no-repeat;
   background-size: 0% 100%;
 
-  transition: background-size 0.2s ease-in-out 0.2s;
+  transition: background-size var(--animation-duration) ease-in-out var(--animation-duration);
 }
 
 a:not(.no-link-animation):hover,
@@ -311,7 +315,7 @@ a.button.focus, a.button:focus {
 
 button:hover,
 a.button:hover {
-  background: var(--background-color);
+  background: none;
   border: calc(var(--primary-font-thickness) * 1.5) dashed var(--highlight-text-color);
   color: var(--highlight-text-color);
 }

@@ -1,9 +1,10 @@
-.fold-article-list {
+.fold-cover .fold-article-list {
   overflow-x: hidden;
   height: 100%;
+  margin-left: 50%;
 }
 
-.fold-article-list-scrollbar-space {
+.fold-cover .fold-article-list-scrollbar-space {
   padding-right: calc(3 * var(--box-card-padding-x) / 4);
 }
 
@@ -24,14 +25,34 @@
 
 .fold-article-list-title-block {
   flex: 1;
+  transform: translateX(0);
+  transition: transform var(--animation-duration) ease-in-out;
+}
+
+.fold-article-list a:hover .fold-article-list-title-block {
+  transform: translateX(1rem);
 }
 
 .fold-article-list-title-block h5 {
   color: var(--secondary-text-color);
 }
 
+.fold-cover .fold-article-list-title-block h5 {
+  display: none;
+}
+
 .fold-article-list-arrow {
   width: 3em;
   text-align: right;
   margin-right: 1em;
+}
+
+@media (--lg-viewport) {
+  .fold-cover .fold-article-list {
+    margin-left: unset;
+  }
+
+  .fold-cover .fold-article-list-title-block h5 {
+    display: unset;
+  }
 }

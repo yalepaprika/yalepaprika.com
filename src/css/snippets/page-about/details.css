@@ -1,12 +1,11 @@
 .about-details-main.cluster > * {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-auto-flow: column;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .about-details-main.cluster > * > * {
   align-self: start;
+  width: 100%;
 }
 
 .about-details-numbers.cluster > * {
@@ -40,4 +39,21 @@
 .about-details dl.cluster > * > * {
   align-self: start;
   flex: 1;
+}
+
+.about-details-colophon {
+  font-size: var(--detail-font-size);
+}
+
+@media (--md-viewport) {
+  .about-details-main.cluster > * {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+  }
+
+  .about-details-main.cluster > * > * {
+    width: unset;
+  }
 }

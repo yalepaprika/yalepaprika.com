@@ -7,23 +7,7 @@
         <?php snippet('fold/cover', ['fold' => $fold]) ?>
       </article>
     <?php endforeach ?>
-    <?php if ($folds->pagination()->hasPages()): ?>
-      <nav class="pagination">
-
-        <?php if ($folds->pagination()->hasNextPage()): ?>
-        <a class="next" href="<?= $folds->pagination()->nextPageURL() ?>">
-          ‹ Older Folds
-        </a>
-        <?php endif ?>
-
-        <?php if ($folds->pagination()->hasPrevPage()): ?>
-        <a class="prev" href="<?= $folds->pagination()->prevPageURL() ?>">
-          Newer Folds ›
-        </a>
-        <?php endif ?>
-
-      </nav>
-    <?php endif ?>
+    <?php snippet('folds/pagination', ['folds' => $folds]) ?>
   </main>
 </div>
 <?php snippet('footer') ?>
