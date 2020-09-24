@@ -1,6 +1,5 @@
 .subscription-bundles.cluster > * > * {
   align-self: stretch;
-  flex: 1;
 }
 
 .subscription-bundle-content {
@@ -27,4 +26,10 @@
 .subscription-bundle-details.cluster > * > * {
   align-self: start;
   flex: 1;
+}
+
+@media (--md-viewport) {
+  .subscription-bundles.cluster > * > * {
+    flex: 1;
+  }
 }

@@ -40,21 +40,24 @@
   --background-color:  var(--color-white);
   --card-background-color: var(--color-lightest-gray);
 
-  --mobile-breakpoint: 700px;
-
 	font-family: var(--primary-font-family);
   font-size: var(--primary-font-size);
   color: var(--primary-text-color);
 }
 
 /* 0.9rem = 0.4rem + 0.7vw when width is 1143px */
-@media (min-width: 1143px) {
+@custom-media --dynamic-text-cutoff (min-width: 1143px);
+@custom-media --md-viewport (min-width: 700px);
+@custom-media --lg-viewport (min-width: 1000px);
+
+
+@media (--dynamic-text-cutoff) {
   :root {
     --primary-font-size: calc(0.4rem + 0.7vw);
   }
 }
 
-@media (min-width: 700px) {
+@media (--md-viewport) {
   :root {
     --big-font-size: 1.8rem;
     --huge-font-size: 4.5rem;
@@ -198,43 +201,24 @@ a.no-link-animation {
   margin: calc(var(--cluster-space-y) / 2) calc(var(--cluster-space-x) / 2);
 }
 
-.cluster.cluster-ruled > * > * {
+.cluster.cluster-switcher > * > * {
   width: 100%;
 }
 
-.cluster.cluster-ruled > * > * + * {
+.cluster.cluster-switcher.cluster-ruled > * > * + * {
   border-top: var(--primary-font-thickness) solid var(--faded-color);
   padding-top: var(--cluster-space-y);
 }
 
-@media (min-width: 700px) {
-  .cluster.cluster-ruled > * > * {
+
+@media (--md-viewport) {
+  .cluster.cluster-switcher > * > * {
     width: unset;
   }
-  .cluster.cluster-ruled > * > * + * {
+  .cluster.cluster-switcher.cluster-ruled > * > * + * {
     border-top: unset;
     padding-top: unset;
   }
-}
-
-
-.switcher {
-  --threshold: var(--mobile-breakpoint);
-  --switcher-space: var(--default-space);
-}
-
-.switcher > * {
-  display: flex;
-  flex-wrap: wrap;
-  /* ↓ Multiply by -1 to make negative */
-  margin: calc(var(--switcher-space) / 2 * -1);
-}
-
-.switcher > * > * {
-  flex-grow: 1;
-  flex-basis: calc((var(--threshold) - (100% - var(--switcher-space))) * 999);
-  /* ↓ Half the value to each element, combining to make the whole */
-  margin: calc(var(--switcher-space) / 2);
 }
 
 .box-card {
