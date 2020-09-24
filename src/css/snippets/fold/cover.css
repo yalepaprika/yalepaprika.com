@@ -13,7 +13,7 @@
 .fold-cover.fold-cover-default {
   background: url('/assets/images/default-background.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: left center;
 }
 
 .fold-cover-info {
