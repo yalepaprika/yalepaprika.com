@@ -198,12 +198,19 @@ a.no-link-animation {
   margin: calc(var(--cluster-space-y) / 2) calc(var(--cluster-space-x) / 2);
 }
 
+.cluster.cluster-ruled > * > * {
+  width: 100%;
+}
+
 .cluster.cluster-ruled > * > * + * {
   border-top: var(--primary-font-thickness) solid var(--faded-color);
   padding-top: var(--cluster-space-y);
 }
 
 @media (min-width: 700px) {
+  .cluster.cluster-ruled > * > * {
+    width: unset;
+  }
   .cluster.cluster-ruled > * > * + * {
     border-top: unset;
     padding-top: unset;

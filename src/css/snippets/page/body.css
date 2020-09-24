@@ -2,30 +2,22 @@
   align-items: start;
 }
 
-.page-body-content {
-  width: 100%;
-}
-
-.page-body-details {
-  width: 100%;
-}
-
 @media (min-width: 700px) {
-  .page-body-content {
+  .cluster.cluster-ruled > * > .page-body-content {
     width: calc((100% - 2 * var(--cluster-space-x)) * 7 / 10);
   }
 
-  .page-body-details {
+  .cluster.cluster-ruled > * > .page-body-details {
     width: calc((100% - 2 * var(--cluster-space-x)) * 3 / 10);
   }
 }
 
 @media (min-width: 1000px) {
-  .page-body-content {
+  .cluster.cluster-ruled > * > .page-body-content {
     width: calc((100% - 2 * var(--cluster-space-x)) * 5 / 10);
   }
 
-  .page-body-details {
+  .cluster.cluster-ruled > * > .page-body-details {
     width: calc((100% - 2 * var(--cluster-space-x)) * 2 / 10);
   }
 }
