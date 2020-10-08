@@ -1,4 +1,4 @@
-<div class="fold-cover fold-cover-<?= $fold->slug() ?> box-card box-card-inverted lazyload" data-bg="/assets/images/<?= $fold->slug() ?>-background.jpg" style="background-size: cover; background-position: left center;">
+<div class="fold-cover fold-cover-<?= $fold->slug() ?> box-card box-card-inverted lazyload" data-bg="/assets/images/<?= $fold->slug() ?>-background-new.jpg" style="background-size: cover; background-position: left center;">
   <div class="fold-cover-main cluster">
     <div class="_cluster">
       <div class="fold-cover-info">
