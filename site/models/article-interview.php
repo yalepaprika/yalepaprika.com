@@ -7,4 +7,7 @@ class ArticleInterviewPage extends Page {
     public function formattedDate() {
         return $this->parent()->formattedDate();
     }
+    public function templateName() {
+        return 'Interview';
+    }
 }

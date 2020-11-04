@@ -1,8 +1,8 @@
 <div class="fold-details box-card box-card-large-inset stack">
-  <div class="fold-details-main cluster">
+  <div class="fold-details-main cluster cluster-stack">
     <div class="_cluster">
       <?php snippet('utilities/detail-list/value-x', ['title' => 'Publication Date', 'value' => $fold->formattedDate()]) ?>
-      <div class="fold-details-numbers cluster">
+      <div class="fold-details-numbers cluster cluster-stack">
         <div class="_cluster">
           <?php snippet('utilities/detail-list/value-x', ['title' => 'Volume', 'value' => $fold->volume()]) ?>
           <?php snippet('utilities/detail-list/value-x', ['title' => 'Number', 'value' => sprintf('%02d', $fold->number()->value())]) ?>

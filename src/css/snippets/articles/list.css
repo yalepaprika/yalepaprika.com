@@ -1,0 +1,24 @@
+.articles-list-article-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.articles-list-number {
+  width: 3em;
+  flex-shrink: 0;
+}
+
+.articles-list-article-info {
+  flex: 1;
+}
+
+.articles-list-article-details {
+  color: var(--secondary-text-color);
+}
+
+@media (--md-viewport) {
+  .articles-list-article-details {
+    text-align: right;
+  }
+}

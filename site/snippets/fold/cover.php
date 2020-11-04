@@ -17,15 +17,9 @@
           </div>
         </div>
       </div>
-      <div class="fold-cover-details">
-        <?php snippet('fold/article-list', ['articles' => $fold->children()]) ?>
-      </div>
     </div>
   </div>
   <div class="fold-cover-publication-info">
     <p>Published <?= $fold->formattedDate() ?><p>
-    <?php if ($page->isHomePage()): ?>
-      <p class="fold-cover-publication-text"><em>Paprika!</em> is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art.</p>
-    <?php endif ?>
   </div>
 </div>

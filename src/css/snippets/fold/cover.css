@@ -1,5 +1,5 @@
 .fold-cover {
-  height: calc(100vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
+  height: calc(80vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
   position: relative;
 }
 

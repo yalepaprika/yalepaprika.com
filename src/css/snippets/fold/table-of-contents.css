@@ -1,0 +1,15 @@
+.fold-toc-article-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.fold-toc-number {
+  width: 2em;
+  flex-shrink: 0;
+  font-size: .8em;
+}
+
+.fold-toc-article-title {
+  flex: 1;
+}

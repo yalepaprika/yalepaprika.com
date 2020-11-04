@@ -1,5 +1,5 @@
 <?php if ($pages->isNotEmpty()): ?>
-  <dl class="cluster">
+  <dl class="cluster cluster-stack">
     <div class="_cluster">
       <dt class="detail-title"><?= $title ?></dt>
       <div class="detail-group">
