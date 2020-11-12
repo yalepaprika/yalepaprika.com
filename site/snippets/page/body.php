@@ -1,7 +1,7 @@
 <div class="page-body box-block box-block-ruled cluster cluster-switcher cluster-ruled cluster-3-column">
   <div class="_cluster">
     <div class="page-body-details box-block-small">
-      <?php if ($detailsIsSet = isset($details)): ?>
+      <?php if (isset($details)): ?>
         <?= $details ?? '' ?>
       <?php endif ?>
     </div>

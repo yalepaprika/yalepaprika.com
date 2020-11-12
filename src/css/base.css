@@ -135,6 +135,12 @@ h4 {
   font-size: var(--emphasis-font-size);
 }
 
+h6 {
+  font-size: var(--tiny-font-size);
+  color: var(--secondary-text-color);
+  font-weight: 500;
+}
+
 b, strong {
   font-weight: 500;
 }
@@ -285,7 +291,8 @@ input[type="submit"].button-primary:hover {
   /* overflow: hidden; */
 }
 
-.cluster.cluster-stack-small {
+.cluster.cluster-small {
+  --cluster-space-x: calc(var(--default-space) / 2);
   --cluster-space-y: calc(var(--line-height-space) / 2);
 }
 

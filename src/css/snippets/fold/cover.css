@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.fold-cover:hover {
+  box-shadow: 0 0 20px var(--background-color);
+}
+
 .fold-cover-main {
   height: 100%;
   width: 100%;

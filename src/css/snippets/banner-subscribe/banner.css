@@ -1,15 +1,11 @@
-.banner-subscribe-input {
+.banner-subscribe input.email {
   flex: 1;
 }
 
-.banner-subscribe-input.cluster > * {
-  justify-content: flex-end;
+.banner-subscribe-description {
+  flex: 1;
 }
 
-.banner-subscribe-input input {
-  font-size: 2rem;
-}
-
-.banner-subscribe-input input.email {
-  background: var(--faded-color);
+.banner-subscribe-icon {
+  color: var(--secondary-text-color);
 }

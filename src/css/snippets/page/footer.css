@@ -36,9 +36,18 @@ footer input.email {
   width: calc(var(--tiny-font-size) * 2);
   height: calc(var(--tiny-font-size));
   background: url('/assets/images/circles.svg');
+  background-repeat: no-repeat;
 }
 
 .dots {
   height: var(--tiny-font-size);
   background: url('/assets/images/dots.svg');
+}
+
+.footer-connect {
+  color: var(--secondary-text-color);
+}
+
+.footer-connect-icons a {
+  color: var(--secondary-text-color);
 }

@@ -1,7 +1,11 @@
 <div class="articles-list box-block box-block-ruled cluster cluster-stack cluster-1-3-column cluster-switcher">
   <div class="_cluster">
     <div class="articles-list-title box-block box-block-md-bottom-ruled">
-      <h2>Articles</h2>
+      <?php if (isset($header)): ?>
+        <h2><?= $header ?? 'Articles' ?></h2>
+      <?php else: ?>
+        <h2>Articles</h2>
+      <?php endif ?>
     </div>
     <div class="articles-list-articles">
       <ol class="stack stack-ruled">
