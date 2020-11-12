@@ -2,6 +2,11 @@
   align-items: start;
 }
 
+.content #footnotes {
+  color: var(--secondary-text-color);
+  font-size: var(--detail-font-size);
+}
+
 @media (--md-viewport) {
   .page-body.cluster > * > .page-body-details {
     width: calc((100% - 3 * var(--cluster-space-x)) / 4);

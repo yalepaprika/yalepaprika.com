@@ -4,6 +4,7 @@
   --primary-font-thickness: 0.1rem;
   --primary-line-height: 1.2rem;
   --primary-relative-line-height: 1.2;
+  --tiny-font-size: 0.75rem;
   --detail-font-size: 0.85rem;
   --emphasis-font-size: 1.2rem;
   --big-font-size: 1.8rem;
@@ -25,6 +26,7 @@
   --box-card-large-inset-padding-y: calc(var(--default-space) * 2);
   --box-block-padding-bottom: var(--large-space);
   --box-block-small-padding-bottom: var(--medium-space);
+  --box-narrower-padding-right: var(--large-space);
 
   --color-paprika: #FF5722;
   --color-light-paprika: rgba(255, 255, 255, 0.5);
@@ -74,6 +76,10 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
   padding: var(--body-padding-y) var(--body-padding-x);
   background: var(--background-color);
@@ -82,11 +88,24 @@ body {
   word-wrap: break-word;
   -ms-word-break: break-all;
   word-break: break-word;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.content #footnotes {
-  color: var(--secondary-text-color);
-  font-size: var(--detail-font-size);
+.container {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 h1, h2, h3, h4, h5 {
@@ -323,6 +342,12 @@ a.no-link-animation {
   .box-block.box-block-md-bottom-ruled {
     border-bottom: unset;
     padding-bottom: unset;
+  }
+}
+
+@media (--md-viewport) {
+  .box-narrower {
+    padding-right: var(--box-narrower-padding-right);
   }
 }
 
