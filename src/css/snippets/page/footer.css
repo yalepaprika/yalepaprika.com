@@ -1,4 +1,4 @@
-.footer-about {
+footer {
   font-size: var(--detail-font-size);
 }
 
@@ -11,6 +11,10 @@
   font-weight: 800;
   font-style: italic;
   line-height: 0.9;
+}
+
+footer input.email {
+  flex: 1;
 }
 
 .footer-furniture {

@@ -14,7 +14,7 @@
               <div class="subscription-bundle-details cluster">
                 <div class="_cluster">
                   <div>
-                    <a class="button" href="<?= $subscription->button_link() ?>" target="_blank">Subscribe</a>
+                    <a class="button button-primary" href="<?= $subscription->button_link() ?>" target="_blank">Subscribe</a>
                   </div>
                   <div class="prices">
                     <h4>$<?= $subscription->total_cost() ?></h4>

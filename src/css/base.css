@@ -27,6 +27,8 @@
   --box-block-padding-bottom: var(--large-space);
   --box-block-small-padding-bottom: var(--medium-space);
   --box-narrower-padding-right: var(--large-space);
+  --input-padding-x: 0.75em;
+  --input-padding-y: 0.375em;
 
   --color-paprika: #FF5722;
   --color-light-paprika: rgba(255, 255, 255, 0.5);
@@ -145,6 +147,11 @@ ul, ol {
   list-style: none;
 }
 
+input {
+  padding: var(--input-padding-y) var(--input-padding-x);
+  border: var(--primary-font-thickness) solid var(--faded-color);
+}
+
 a:not(.no-link-animation) {
   color: var(--highlight-text-color);
   text-decoration: none;
@@ -167,6 +174,61 @@ a:not(.no-link-animation):focus {
 a.no-link-animation {
   color: var(--highlight-text-color);
   text-decoration: none;
+}
+
+button,
+a.button,
+input.button,
+input[type="submit"] {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: var(--primary-font-thickness) solid transparent;
+  padding: var(--input-padding-y) var(--input-padding-x);
+  background: var(--faded-color);
+  color: var(--primary-text-color-color);
+}
+
+button.button-primary,
+a.button.button-primary,
+input.button.button-primary,
+input[type="submit"].button-primary {
+  background: var(--highlight-text-color);
+  color: var(--background-color);
+}
+
+button:not(:disabled):not(.disabled),
+a.button:not(:disabled):not(.disabled),
+input.button:not(:disabled):not(.disabled),
+input[type="submit"]:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+button:hover,
+a.button:hover,
+input.button:hover,
+input[type="submit"]:hover {
+  background: none;
+  border: var(--primary-font-thickness) dashed var(--faded-color);
+  color: var(--primary-text-color);
+}
+
+button.button-primary:hover,
+a.button.button-primary:hover,
+input.button.button-primary:hover,
+input[type="submit"].button-primary:hover {
+  background: none;
+  border: var(--primary-font-thickness) dashed var(--highlight-text-color);
+  color: var(--highlight-text-color);
+}
+
+:focus {
+  outline: var(--primary-font-thickness) dashed var(--highlight-text-color);
 }
 
 .separator {
@@ -221,6 +283,10 @@ a.no-link-animation {
   --cluster-space-x: var(--default-space);
   --cluster-space-y: var(--line-height-space);
   /* overflow: hidden; */
+}
+
+.cluster.cluster-stack-small {
+  --cluster-space-y: calc(var(--line-height-space) / 2);
 }
 
 .cluster > * {
@@ -369,43 +435,6 @@ a.no-link-animation {
 
 .content figure img {
   max-width: 100%;
-}
-
-button,
-a.button {
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: calc(var(--primary-font-thickness) * 1.5) solid transparent;
-  padding: .375rem .75rem .375rem .75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: .25rem;
-  background: var(--highlight-text-color);
-  color: var(--background-color);
-}
-
-button:not(:disabled):not(.disabled),
-a.button:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
-
-button.focus, button:focus,
-a.button.focus, a.button:focus {
-  outline: 0;
-  box-shadow: 0 0 0 var(--primary-font-thickness) var(--faded-color);
-}
-
-button:hover,
-a.button:hover {
-  background: none;
-  border: calc(var(--primary-font-thickness) * 1.5) dashed var(--highlight-text-color);
-  color: var(--highlight-text-color);
 }
 
 .simplebar-scrollbar:before {

@@ -12,7 +12,7 @@
           <?php endif ?>
           <div>
             <?php if ($page->url() != $fold->url() ): ?>
-              <a class="button" href="<?= $fold->url() ?>">Read fold →</a>
+              <a class="button button-primary" href="<?= $fold->url() ?>">Read fold →</a>
             <?php endif ?>
           </div>
         </div>
