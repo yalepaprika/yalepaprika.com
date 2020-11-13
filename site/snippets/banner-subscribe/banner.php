@@ -3,7 +3,7 @@
     <div class="stack stack-small" id="mc_embed_signup_scroll">
       <div class="cluster">
         <div class="_cluster">
-          <div class="banner-subscribe-description stack stack-small">
+          <div class="banner-subscribe-description stack stack-small stack-space-between">
             <h6>Subscribe</h6>
             <label class="box-block-small" for="mce-EMAIL">Sign up to receive new <em>Paprika!</em> issues by email.</label>
           </div>

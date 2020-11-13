@@ -12,7 +12,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: start;
+  align-items: stretch;
 }
 
 .home-folds-strip-fold-wrapper {
@@ -27,6 +27,7 @@
 
 .home-folds-strip-fold {
   position: relative;
+  height: 100%;
 }
 
 .home-folds-strip-fold a:after {

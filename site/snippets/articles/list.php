@@ -23,7 +23,7 @@
                 <div class="_cluster">
                   <h4><?= $article->formattedContributors() ?></h4>
                   <div class="articles-list-article-details">
-                    <?= $article->content()->get('content')->words() ?> words • <?= $article->templateName() ?>
+                    <?= $article->content()->get('content')->words() ?> words <span class="separator">·</span> <?= $article->templateName() ?>
                   </div>
                 </div>
               </div>

@@ -12,7 +12,7 @@ function init(): void {
     },
   );
 
-  // get home fold, scroll to end
+  // if it's at the beginning , scroll to end of home folds strip
 }
 
 // function unload(): void {

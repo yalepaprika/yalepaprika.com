@@ -1,7 +1,7 @@
 <div class="banner-website box-card stack stack-small">
   <div class="cluster">
     <div class="_cluster">
-      <div class="banner-website-description box-block-small stack stack-small">
+      <div class="banner-website-description box-block-small stack stack-small stack-space-between">
         <h6>Website</h6>
         <p>Visit our Summer 2020 sister platform.</p>
       </div>
