@@ -10,6 +10,7 @@
           <?php snippet('banner-subscribe/banner', []) ?>
         </div>
       </div>
+      <?php snippet('home/folds-strip', ['folds' => collection('folds')->limit(10)]) ?>
       <?php snippet('articles/list', ['articles' => collection('folds')->first()->children(), 'header' => 'Recent Articles']) ?>
     </main>
   </div>

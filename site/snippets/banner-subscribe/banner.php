@@ -5,7 +5,7 @@
         <div class="_cluster">
           <div class="banner-subscribe-description stack stack-small">
             <h6>Subscribe</h6>
-            <label class="box-block" for="mce-EMAIL">Sign up to receive new <em>Paprika!</em> issues by email.</label>
+            <label class="box-block-small" for="mce-EMAIL">Sign up to receive new <em>Paprika!</em> issues by email.</label>
           </div>
           <div class="banner-subscribe-icon">
             <?= file_get_contents("assets/icons/send.svg"); ?>

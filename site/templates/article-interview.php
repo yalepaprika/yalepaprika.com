@@ -2,7 +2,7 @@
 <div class="container stack">
   <div class="page stack">
     <?php snippet('page/menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
-    <main>
+    <main class="stack">
       <article class="stack">
         <?php snippet('page/title', ['title' => $page->title()]) ?>
         <?php snippet('page/intro', ['page' => $page]) ?>
