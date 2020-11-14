@@ -1,3 +1,8 @@
+.fold-toc-download svg {
+  height: 1em;
+  vertical-align: bottom;
+}
+
 .fold-toc-article-item {
   display: flex;
   justify-content: space-between;

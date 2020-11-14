@@ -370,7 +370,7 @@ input[type="submit"].button-primary:hover {
     width: calc((100% - 3 * var(--cluster-space-x)) / 4);
   }
 
-  .cluster.cluster-1-1-2-column > * > *:nth-child(2) {
+  .cluster.cluster-1-1-2-column > * > *:nth-child(3) {
     width: calc((100% - 3 * var(--cluster-space-x)) * 2 / 4);
   }
 

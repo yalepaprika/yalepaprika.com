@@ -31,12 +31,8 @@
                   </h4>
                 </div>
                 <div class="articles-list-article-details">
-                  <div>
-                    <?= $article->content()->get('content')->words() ?> words
-                  </div>
-                  <div>
-                    <?= $article->templateName() ?>
-                  </div>
+                  <div><?= $article->templateName() ?></div>
+                  <div><?= $article->content()->get('content')->words() ?> words</div>
                 </div>
               </div>
             </div>
