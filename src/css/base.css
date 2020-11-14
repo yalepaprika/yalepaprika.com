@@ -95,6 +95,11 @@ body {
   flex-direction: column;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 .container {
   flex: 1;
   height: 100%;
@@ -158,7 +163,12 @@ input {
   border: var(--primary-font-thickness) solid var(--faded-color);
 }
 
-a:not(.no-link-animation) {
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:not(.no-link-animation):not(h1 a) {
   color: var(--highlight-text-color);
   text-decoration: none;
   display: inline;
@@ -171,16 +181,17 @@ a:not(.no-link-animation) {
   transition: background-size var(--animation-duration) ease-in-out var(--animation-duration);
 }
 
-a:not(.no-link-animation):hover,
-a:not(.no-link-animation):focus {
+a:not(.no-link-animation):not(h1 a):hover,
+a:not(.no-link-animation):not(h1 a):focus {
   background-size: 100% 100%;
   transition-delay: 0s;
 }
 
-a.no-link-animation {
+h1 a:hover,
+a.no-link-animation:hover {
   color: var(--highlight-text-color);
-  text-decoration: none;
 }
+
 
 button,
 a.button,
@@ -432,6 +443,21 @@ input[type="submit"].button-primary:hover {
   }
 }
 
+.box-link {
+  position: relative;
+}
+
+.box-link-secondary-link {
+  position: relative;
+  z-index: 2;
+}
+
+.box-link-target-link:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
 
 .h100 {
   height: 100%;

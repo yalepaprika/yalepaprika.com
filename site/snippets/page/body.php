@@ -1,4 +1,4 @@
-<div class="page-body box-block box-block-ruled cluster cluster-switcher cluster-ruled cluster-3-column">
+<div id="page-body" class="page-body box-block box-block-ruled cluster cluster-switcher cluster-ruled cluster-3-column">
   <div class="_cluster">
     <div class="page-body-details box-block-small">
       <?php if (isset($details)): ?>

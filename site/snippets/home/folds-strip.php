@@ -1,4 +1,4 @@
-<div class="home-folds-strip">
+<div id="home-folds-strip" class="home-folds-strip">
   <div class="home-folds-strip-scrollable" data-simplebar>
     <div class="home-folds-strip-folds">
       <?php foreach ($folds->flip() as $fold): ?>
@@ -9,7 +9,7 @@
               <h5><?= $fold->title() ?></h5>
             </div>
             <a class="no-link-animation" href="<?= $fold->url() ?>">
-              <div class="home-folds-strip-image">
+              <div class="home-folds-strip-fold-image">
               </div>
             </a>
           </div>

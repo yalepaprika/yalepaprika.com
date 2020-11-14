@@ -6,7 +6,7 @@
     <div class="fold-cover-top cluster cluster-switcher">
       <div class="_cluster">
         <div class="fold-cover-title stack stack-small">
-          <a class="no-link-animation" href="<?= $fold->url() ?>"><h1><?= $fold->title() ?></h1></a>
+          <h1><a href="<?= $fold->url() ?>"><?= $fold->title() ?></a></h1>
           <h4>Volume <?= $fold->volume() ?> <span class="separator">·</span> Issue <?= sprintf('%02d', $fold->number()->value()) ?></h4>
         </div>
         <div class="fold-cover-info">

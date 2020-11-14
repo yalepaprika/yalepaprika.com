@@ -1,2 +1,2 @@
-<div class="fold-viewer box-card">
+<div id="fold-viewer" class="fold-viewer box-card">
 </div>

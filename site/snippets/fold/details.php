@@ -1,4 +1,4 @@
-<div class="fold-details box-card box-card-large-inset stack">
+<div id="fold-details" class="fold-details box-card box-card-large-inset stack">
   <div class="fold-details-main cluster cluster-stack">
     <div class="_cluster">
       <?php snippet('utilities/detail-list/value-x', ['title' => 'Publication Date', 'value' => $fold->formattedDate()]) ?>

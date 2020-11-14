@@ -1,4 +1,4 @@
-<div class="subscription-bundles box-block box-block-ruled box-block-tight cluster cluster-switcher">
+<div id="page-subscription-bundles" class="subscription-bundles box-block box-block-ruled box-block-tight cluster cluster-switcher">
     <div class="_cluster">
       <?php foreach ($subscriptions as $subscription): ?>
         <div class="subscription-bundle box-card box-card-inverted stack stack-ruled">

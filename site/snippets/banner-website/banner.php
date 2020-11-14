@@ -11,6 +11,6 @@
     </div>
   </div>
   <div>
-    <a class="button button-primary no-link-animation" href="https://www.paprika-rolling.com/" target="_blank"><em>Paprika?</em> Rolling ↗</a>
+    <a class="button button-primary" href="https://www.paprika-rolling.com/" target="_blank"><em>Paprika?</em> Rolling ↗</a>
   </div>
 </div>

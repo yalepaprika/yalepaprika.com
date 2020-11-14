@@ -19,6 +19,7 @@
   flex-shrink: 0;
   padding: 0 calc(var(--cluster-space-x));
   width: 20rem;
+  height: 100%;
 }
 
 .home-folds-strip-fold-wrapper:not(:first-child) {
@@ -28,6 +29,7 @@
 .home-folds-strip-fold {
   position: relative;
   height: 100%;
+  margin-bottom: calc(var(--cluster-space-x) / 4);
 }
 
 .home-folds-strip-fold a:after {
@@ -37,7 +39,7 @@
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-.home-folds-strip-image {
+.home-folds-strip-fold-image {
   position: relative;
   padding-bottom: 50%;
   overflow: hidden;

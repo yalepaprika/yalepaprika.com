@@ -7,7 +7,7 @@
       <div class="box-block box-block-ruled stack">
       <?php foreach(collection('contributors') as $contributor): ?>
         <article>
-          <a href="<?= $contributor->url() ?>"><h3><?= $contributor->title() ?></h3></a>
+          <h3><a href="<?= $contributor->url() ?>"><?= $contributor->title() ?></a></h3>
         </article>
       <?php endforeach ?>
       </div>

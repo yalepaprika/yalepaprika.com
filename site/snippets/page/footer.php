@@ -1,4 +1,4 @@
-<footer class="stack stack-small">
+<footer id="page-footer" class="stack stack-small">
   <div class="box-block box-card cluster cluster-stack cluster-1-1-1-1-column cluster-switcher">
     <div class="_cluster">
       <div class="box-block stack">

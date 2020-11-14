@@ -4,12 +4,13 @@
   align-items: baseline;
 }
 
-.articles-list-number {
+.articles-list-article-number {
   width: 3em;
   flex-shrink: 0;
 }
 
-.articles-list-article-info {
+.article-list-article-info,
+.articles-list-article-title {
   flex: 1;
 }
 

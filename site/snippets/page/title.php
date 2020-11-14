@@ -1,1 +1,1 @@
-<h1 class="page-title box-block"><?= $title ?></h1>
+<h1 id="page-title" class="page-title box-block"><?= $title ?></h1>

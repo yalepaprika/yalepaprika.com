@@ -11,7 +11,7 @@
     $i++;
   }
 ?>
-<div class="fold-toc box-block cluster cluster-stack cluster-1-1-1-1-column cluster-switcher">
+<div id="fold-toc" class="fold-toc box-block cluster cluster-stack cluster-1-1-1-1-column cluster-switcher">
   <div class="_cluster">
     <div class="fold-toc-title box-block box-block-md-bottom-ruled">
       <h2>Table of Contents</h2>
@@ -20,22 +20,22 @@
       <ul>
         <li>
           <h5>
-            <a href="">Editor's Statement</a>
+            <a href="#page-section-title">Editor's Statement</a>
           </h5>
         </li>
         <li>
           <h5>
-            <a href="">Fold Viewer</a>
+            <a href="#fold-viewer">Fold Viewer</a>
           </h5>
         </li>
         <li>
           <h5>
-            <a href="">Articles</a>
+            <a href="#articles-list">Articles</a>
           </h5>
         </li>
         <li>
           <h5>
-            <a href="">Information</a>
+            <a href="#fold-details">Information</a>
           </h5>
         </li>
       </ul>
@@ -53,7 +53,14 @@
                     <?= $article->title()->widont() ?>
                   </a>
                 </h5>
-                <h5><?= $article->formattedContributors() ?></h5>
+                <h5>
+                  <?php $k = 0; ?>
+                  <?php $count = $article->contributors()->toPages()->count(); ?>
+                  <?php foreach ($article->contributors()->toPages() as $contributor): ?>
+                    <a href="<?= $contributor->url() ?>" class="no-link-animation"><?= $contributor->title() ?></a><?= ($k !== $count - 1) ? ', ' : '' ?>
+                    <?php $k++; ?>
+                  <?php endforeach ?>
+                </h5>
               </div>
             </li>
             <?php $j++; ?>
