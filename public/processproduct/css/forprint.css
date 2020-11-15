@@ -1,0 +1,59 @@
+.textcontainer, .tag, .name {
+	font-size:12px;
+	line-height:15px;
+}
+
+.textcontainer {
+	left:50px;
+	width:383px;
+}
+
+.tagcontainer {
+	left:428px;
+}
+
+#door {
+	display:none;
+	left:451px;
+	top:75px;
+}
+
+h1 {
+	font-size:65px;
+	margin-top:5px;
+	margin-bottom:20px;
+}
+.intro {
+	margin-bottom:0;
+}
+
+.question{
+	margin:0;
+}
+
+.arc {
+	width:75px;
+	height:75px;
+}
+
+.hingel, .hingeb {
+	width:76px;
+	height:76px;
+}
+
+p > span {
+	border-bottom:2px black solid;
+}
+
+/*.menu {
+	display:block;
+}
+*/
+
+p.question > i {
+	font-style: normal;
+}
+
+.menulist {
+	height:inherit;
+}

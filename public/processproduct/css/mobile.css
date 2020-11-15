@@ -1,0 +1,121 @@
+/*mobile settings*/
+@media only screen 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+		/*.sidebar {
+			position:absolute;
+			top:0;
+			width:50vw;
+			height:30px;
+			display:flex;
+			flex-direction:row;
+			justify-content:center;
+			align-items:center;
+		}*/
+
+		.next {
+			position:absolute;
+			top:0;
+			right:0;
+			width:50vw;
+			height:30px;
+			display:flex;
+			flex-direction:row;
+			justify-content:center;
+			align-items:center;
+		}
+
+		.back {
+			position:absolute;
+			top:0;
+			left:0;
+			width:50vw;
+			height:30px;
+			display:flex;
+			flex-direction:row;
+			justify-content:center;
+			align-items:center;
+		}
+
+		#left {
+			-ms-transform: rotate(0deg); /* IE 9 */
+		    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+		    transform: rotate(0deg);
+/*			top:15px;*/
+/*			z-index:100000000;*/
+			top:-9px;
+			right:initial;
+		}
+
+		#right {
+			-ms-transform: rotate(0deg); /* IE 9 */
+		    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+		    transform: rotate(0deg);
+/*			top:15px;*/
+/*			z-index:100000000;*/
+			top:-9px;
+			right:initial;
+		}
+
+
+
+
+		#doorclick {
+		    right: 20px;
+		}
+
+		#door {
+			position: fixed;
+		    top: 47px;
+		    right: 120px;
+/*		    z-index:100;*/
+/*		    mix-blend-mode: initial;*/
+		}
+
+		.textcontainer {
+			position:absolute;
+			width:73vw;
+			left:4vw;
+			top:112px;
+		}
+
+		.textcontainer, .tag, .name {
+			font-size:12px;
+			line-height:15px;
+		}
+
+		.tagcontainer {
+			left:74vw;
+		}
+
+		h1 {
+			font-size:50px;
+		}
+
+		.menu {
+			width: 96vw;
+   		 	right: 2vw;
+		}
+
+		.menucontent {
+			display:block;
+			margin-left:47px;
+			margin-top:25px;
+		}
+
+		.menulist {
+			height:initial;
+			margin:initial;
+			margin-top:10px;
+		}
+
+		.b{
+			margin-top:15px;
+		}
+
+		.out {
+			border-width:2px;
+		}
+
+}

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paprika! - F*ck That</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./ress.css">
+  <script src="./headroom.min.js"></script>
+  <style type="text/css">
+    body {
+      font: 17px / 24px Georgia,serif;
+      text-rendering: optimizeLegibility;
+      font-variant-ligatures: common-ligatures;
+      font-feature-settings: "liga";
+      -moz-osx-font-smoothing: grayscale;
+      -moz-font-feature-settings: “liga” on;
+      color: #232323;
+    }
+
+    header .playlists {
+      max-width: 920px;
+      margin: auto;
+    }
+
+    section {
+      max-width: 720px;
+      margin: 0 auto;
+      margin-top: 86px;
+      padding: 10px 20px;
+    }
+
+    :target:before {
+      content: "";
+      display: block;
+      height: 86px; /* fixed header height*/
+      margin: -86px 0 0; /* negative fixed header height */
+    }
+
+    img {
+      max-width: 140%;
+      margin: 0 0 40px -20%;
+    }
+
+    img.side {
+      max-width: 50%;
+      padding: 0 0 24px 24px;
+      float: right;
+      margin: 0 -20% 0 0;
+    }
+
+    img.inline {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .sign-left {
+      position: relative;
+    }
+
+    .sign-mid {
+      position: relative;
+      left: 40%;
+    }
+
+    .sign-right {
+      position: relative;
+      left: 80%;
+    }
+
+    .sign-left img {
+      margin: 0;
+      position: absolute;
+    }
+
+    .sign-mid img {
+      margin: 0;
+      position: absolute;
+    }
+
+    .sign-right img {
+      margin: 0;
+      position: absolute;
+    }
+
+    .sign-left, .sign-mid, .sign-right {
+      opacity: .7;
+    }
+
+    @media screen and (max-width: 920px) {
+      header .playlists {
+        max-width: 450px;
+        margin: auto;
+      }
+
+      section {
+        margin-top: 172px;
+      }
+
+      :target:before {
+        content: "";
+        display: block;
+        height: 172px; /* fixed header height*/
+        margin: -172px 0 0; /* negative fixed header height */
+      }
+
+      img {
+        max-width: 100%;
+        margin-left: 0;
+      }
+
+      img.side {
+        max-width: 40%;
+        margin-right: 0;
+      }
+    }
+
+    h1 {
+      font-size: 25px;
+      line-height: 25px;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    h1 a {
+      text-decoration: none;
+      color: #232323;
+    }
+
+    h1 a:hover, h1 a:focus, h1 a:active {
+      text-decoration: none;
+      color: #777;
+    }
+
+    h2,h3,h4,h5,h6 {
+      font-size: 25px;
+      line-height: 36px;
+      font-weight: 400;
+      font-style: italic;
+      margin-left: 48px;
+      margin-bottom: 24px;
+    }
+
+    section ol {
+      font-size: .91em;
+    }
+
+    hr {
+      color: #777;
+      margin-bottom: 24px;
+    }
+
+    header {
+      background-color: #fff;
+    }
+
+    .headroom {
+      will-change: transform;
+      transition: transform 200ms linear;
+      position: fixed;
+      z-index: 10;
+      right: 0;
+      left: 0;
+      top: 0;
+    }
+
+    .headroom--pinned {
+        transform: translateY(0%);
+    }
+    .headroom--unpinned {
+        transform: translateY(-100%);
+    }
+
+    .small-caps {font-family: 'Charter SC', serif}
+
+    .pull-double{margin-left:-.38em}
+    .push-double{margin-right:.38em}
+
+    .pull-single{margin-left:-.15em}
+    .push-single{margin-right:.15em}
+
+    .pull-T, .pull-V, .pull-W, .pull-Y {margin-left: -0.07em}
+    .push-T, .push-V, .push-W, .push-Y {margin-right: 0.07em}
+
+    .pull-O, .pull-C, .pull-o, .pull-c {margin-left: -0.04em}
+    .push-O, .push-C, .push-o, .push-c {margin-right: 0.04em}
+
+    .pull-A {margin-left: -0.03em}
+    .push-A {margin-right: 0.03em}
+
+    li, p {
+      font-family: Georgia,serif;
+      position: relative;
+      margin: 24px 0;
+  }
+  blockquote {
+    padding: 0 0 0 48px;
+    color: #777;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="playlists">
+      <iframe src="https://embed.spotify.com/?uri=spotify:user:timoncovelli:playlist:0nle3UgmQ0gVyhvXFKgoRJ" width="450" height="80" frameborder="0" allowtransparency="true"></iframe>
+      <iframe src="https://embed.spotify.com/?uri=spotify:user:jcoleman1863:playlist:0sqX8eFoLGV5Ta0TaHun5t" width="450" height="80" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+  </header>
+  <section>
+    <img src="./banner01.jpg">
+    <img class="side" src="./img01.gif">
+    <h1 id="editors-statement"><a href="#editors-statement">F*ck Your Editors’ Statement</a></h1>
+    <h2>Dimitri Brand and James Coleman</h2>
+    <p>In the constant and luminous glow emanating from our President’s phone resides a terse and unsophisticated language. Translated into partisan clickbait headlines, the general public ﬁnds justiﬁcation to reafﬁrm its varied political stances as it devours editorialized content in passing. Trump, however, has not lowered the country’s standard of intelligible communication. Rather, he is the embodiment of an already shallow, ﬂippant, and cheap-shot-strewn dialogue emerging from our adolescent internet age.</p>
+    <div class="sign-left"><img src="./sign01.png"></div>
+    <p>It seems easy to distance ourselves from this language. We are, after all, thoughtful academics entrenched in our concrete library-ed bastille, endowed with the authorial discipline to thwart the continuous assault of cultural degradation. (Right?) But as the profession (and its academic counterpart) tries to become malleable in response to the rapidly changing markets and<span class="push-double"></span> <span class="pull-double">“</span>graciously” opens its hard-outer-shell to listen to the populous, it also gives part of its critical language away. This is not to disparage expanding the profession, but simply to ask, what are the values of contemporary critique and how are we maintaining the quality of the conversation?</p>
+    <p>If authority has migrated out of the architectural profession and towards experts with precise specialties, then we need to work collectively to be the friendly yet watchful moderator when needed, establishing context, calling out stray remarks, and maintaining the quality of dialogue. Let us take stock of critique, and consider its technique.</p>
+    <blockquote>
+    <p><span class="pull-double">“</span>The police say that there is nothing to see on a road, that there is nothing to do but move along. It asserts that the space of circulating is nothing other than the space of circulation.” – Ranciere in Ten Theses on Politics</p>
+    </blockquote>
+    <p><em>F*ck That</em>—and its more speciﬁc, less conditional form <em>F*ck (subject)</em>—is perhaps American English’s most terse form of dismissal, but for our purposes, it is also the embodiment of popularized dismissive communication in general. With its aggressive and deﬁant tone, <em>F*ck That</em> disallows any meaningful discussion. The expletive embodies an underlying disdain; it simultaneously forsakes the subject and its ideologues. It is a phrase intended to end discussion rather than start it—and more importantly—to avoid the responsibility of understanding or engaging the antithetical argument. <em>F*ck That</em> is convenient and smart-assed. It is the way we say<span class="push-double"></span> <span class="pull-double">“</span>move along, there is nothing to see here, nor is it worth our time to investigate.” Our content-driven culture (and profession) further obliges this convenience. With <em>F*ck That</em>, one can easily navigate the sheer volume of material, jumping from subject to subject, dismissing anything problematic and valorizing (or in academic terms: referencing) subjects with which we sympathize.</p>
+    <p>Conversely, within the walls of architecture and in response to the ubiquity of this dismissal, we too often talk in non-speciﬁc platitudes hoping to avoid any personal offense. Here the bastille reveals its Achilles heel. Our tight quarters and constant presence ensure political strategizing and anonymous backstabbing to avoid explicit disagreement and general day-to-day unpleasantness.</p>
+    <p>We may commend our civility, but make no mistake, this is the amiable (and more difﬁcult to ascertain) authority of the <em>F*ck That</em> police. Here, through its capitalist sibling<span class="push-double"></span> <span class="pull-double">“</span>the marketplace of ideas,” the diluted themes of pluralism tell us to<span class="push-double"></span> <span class="pull-double">“</span>move along.” It convinces us to keep circulating past one another, to not challenge others and in turn ourselves. It allows ideologies to exist comfortably contiguous without the respect of consideration. It is the silent surfer to the twitter twit.</p>
+    <p>To arrest circular arguments that fail to resonate, pin them down and force them to deﬁne themselves through inquiry, is more the duty of academic boards or government watchdog groups than it is the duty of students. It seems, however, that every profession today is as much salesman as expert, evidencing the fact that the inherent truth within professionalism has eroded in the public eye. Truth is found in argument: not in its producing a victor, but in the due diligence done by its debaters. Otherwise ameliorating contention within the discourse both conceals the profession’s weakness and concedes its effectiveness.</p>
+    <p>As the editors of this fold we argue that it is as powerful and valid to deﬁne oneself (particularly one’s stance on design) through what one is against as what one is for. After all, design is itself inherently a position. It is increasingly necessary, however, to establish an atmosphere of care and accountability for the critical and meaningful challenges we bring to diverse and competing areas of thought. In this <em>Paprika!</em> we aim to reorient the pithy dismissal of <em>F*ck That</em> into a mechanism by which we deﬁne ourselves as designers, as colleagues, and as students in the hope of fostering an understanding and disciplined position with those that disagree with us.</p>
+    <div class="sign-right"><img src="./sign02.png"></div>
+    <p>We set the following rules for our contributors:</p>
+    <p>A contribution to this <em>Paprika!</em> is not an authored attack against an individual or their work, but must rather specify an ideology or area of practice to which people may subscribe themselves.</p>
+    <p>Be aware, be honest, be self-critical, and be caring. Being controversial and being offensive are not the same thing.</p>
+    <p>We encourage that you engage others directly, not as personal criticism, but to provide a counterpart to your argument. An important point of this publication is that we must be responsible for what we say and accept criticisms of it.</p>
+    <p>We encourage that the selection of topics avoid generally accepted areas of criticism by the design community.  No contributions of<span class="push-double"></span> <span class="pull-double">“</span>F*ck Gender/Racial Inequity” or<span class="push-double"></span> <span class="pull-double">“</span>F*ck Abusive Labor Practices” or<span class="push-double"></span> <span class="pull-double">“</span>F*ck Pollution.” Avoid what you would consider a moral given.</p>
+    <p>And the Following rules for our readers:</p>
+    <p>Read each piece with an open mind and with the belief that the author has the best of intentions.</p>
+    <p>If you read anything that you want to respond to we encourage you to submit it to an upcoming <em>Paprika!</em> fold, preferably to this publishing cycle’s remaining issues.</p>
+
+    <hr>
+    <img src="./banner02.jpg">
+
+
+    <h1 id="union-carbide"><a href="#union-carbide">F*ck Union Carbide: Preservation through Petrochemicals</a></h1>
+    <h2>Jack Hanly</h2>
+    <div class="sign-mid"><img src="./sign05.png"></div>
+    <p>The Union Carbide Corporation, a large chemical and polymers company which pioneered catalytic conversion technologies for natural gas, built its Park Avenue headquarters in 1957 along what was fast becoming the country’s grand boulevard of corporate modernism. Since then, the building has changed hands between various ﬁnancial organizations, as its architectural distinction has grown. The current owners, JPMorganChase, now plan to demolish it, setting off the rounds of a familiar architectural debate. The striking particularities of the matter are as follows: at over 700-feet, it would be the largest purposefully destroyed building in history<sup><a href="#union-fn1" id="union-ref1">1</a></sup>; renovated to <span class="small-caps">LEED</span> Platinum standards some ﬁve years ago, it is far from obsolete; the ﬁrst target of the Midtown East rezoning scheme, it will set the stage for an onslaught of supertall development. The impetus for the Union Carbide’s destruction lies somewhere between this insatiable redevelopment drive and capitalism’s tendency towards historical erasure. New York has lost historic buildings before and will surely lose them again. But the signiﬁcance of this debate lies not only in formal aesthetic parameters or wasteful real estate machinations. The Union Carbide Building instead memorializes the petroleum cultures embedded in contemporary life, tracing the chemical origins of consumerism. It is a material indicator of petroleum-fuelled growth and henceforth, climate change.</p>
+    <img class="side" src="./img02.gif">
+    <p>Writers have made the case for preservation in other venues with varying degrees of admiration, but each has overlooked the building’s role in cementing the petrochemical foundations of the post-war era. Designed by Natalie de Blois and Gordon Bunshaft of <span class="small-caps">SOM</span>, the Union Carbide Building stands as the best in its class, the embodiment of corporate image-making, or an unoriginal carbon-copy, depending on whom you ask. Jeffrey Lieber has argued in the <em>New York Times</em> that it advanced a model of the architect as the reifying conduit to amorphous capital processes. For him, the building is signiﬁcant in that it celebrates machinic anonymity as opposed to the dexterity of its designer, thus mirroring the organizational ethos of the modern American corporation.<sup><a href="#union-fn2" id="union-ref2">2</a></sup> The current owners have then sought to replace one form of capital for another. But Lieber seems to suggest that the Union Carbide stands out only because it so desired to disappear: as one among many cathedrals to capital of the post-war era it is an artifact of triumphalism and transparency. Without denying the architecture’s embedded cultural logic, such a position does the rhetorical work of developer-naysayers for them. If it is simply a footnote to the larger history of modernism, not even its most distilled example, why bother preserving?</p>
+    <p>In the <em>Architect’s Newspaper</em> Matt Shaw has said that Union Carbide’s place amongst superior peers of corporate reiﬁcation negates its distinction.<sup><a href="#union-fn3" id="union-ref3">3</a></sup> Its neighbors include the Pepsi-Cola Building, Lever House, Seagrams, and MetLife (neé Pan Am) buildings — all surely<span class="push-double"></span> <span class="pull-double">“</span>worth” preserving.<sup><a href="#union-fn4" id="union-ref4">4</a></sup> The Union Carbide surpasses these stalwarts for the foundational properties of its program. Where Pepsi and Seagram sold the world its sugar addiction, and Pan Am made transnational tourism a middle-class hobby, Union Carbide constructed its chemical substrate. Despite the increasing dispersion of business activities across space and time, these corporations maintained a sharp distinction between managerial sites and the regions eyed for quasi-imperial extensibility. The Union Carbide corporation, and therefore the building itself, attempted to resolve this paradox by creating new markets where none existed and transforming the material basis of societies across the globe. Instead of directing history, they remade its theater anew. </p>
+    <p>Preservation here might mean engaging with the historical materiality of petrochemical resource economies, while destruction would further conceal its pervasiveness. Union Carbide produced the chemicals (derived from oil and gas) that constructed consumer cultures at large.  Ethylene, one of Union Carbide’s early innovations, cracked crude oil byproducts into utilizable formulas. These formulas provided the basis for polymerization processes integral to plastic production. Durable products such as consumer goods, fertilizers, industrial inputs, and synthetic lubricants depended upon the company’s operations. There was a time when such developments were considered the technological image of modernity. Therefore, Union Carbide is not only a stand-in for post-WWII corporate culture, but a unique spatio-temporal circulator of petroleum and its multi-faceted derivatives. Preserving the Union Carbide Building allows for a kind of industrial archaeology: the site from which they directed fossil fuel’s penetration into every mode of life. It is the quintessential expression of Anthropocenic developments, the catalyst for petroleum-goggled future visions, and the administrative core of chemical proliferation.</p>
+    <div class="sign-mid"><img src="./sign06.png"></div>
+    <p>Buildings change hands and markets take control at a relentless pace in New York. Each owner overlays his own image onto the parcel, but its original essence remains. Instead of looking at the skyline and seeing formalist outlines, corporate image-making, or air-rights capitalization, such a vision of the Union Carbide shifts our perspective so that we see oil, gas, and petrochemicals. Preservation, spurned by capital as ﬁnancial burden, stands against resilience, embraced for its promise of ﬁnancial risk reduction. Demolition dissembles the past, while the other asserts a conscientious visibility of (synthetic) conditions. To intervene on the building’s behalf is not to absolve Union Carbide of its documented malfeasance. It rather regards architecture as the source of compounding effects. What kind of city emerges out of the encounter between creeping shorelines and petrochemical operation facilities? How would a new building, presumably outﬁtted with the latest sustainable features, occlude an environmental engagement that the embodied history of the current building would draw us nearer towards? Preservation is not only about retaining the energy and materials of the structure, but recognizing the sites that produced our spiralling climate and plasticized oceans. Petrochemicals are serious. Forgetting them is too.</p>
+    <ol>
+      <li id="union-fn1">The Singer Building, replaced by <span class="small-caps">SOM</span><span class="push-single"></span><span class="pull-single">’</span>s ghoulish U.S. Steel Building, currently holds this title.<a href="#union-ref1" title="Jump back to footnote 1 in the text.">↩</a></li>
+      <li id="union-fn1">Jeffrey Lieber,<span class="push-double"></span> <span class="pull-double">“</span>What We Will Lose When the Union Carbide Building Falls,” <em>New York Times</em>, March 1, 2018.<a href="#union-ref1" title="Jump back to footnote 2 in the text.">↩</a></li>
+      <li id="union-fn1">Matt Shaw,<span class="push-double"></span> <span class="pull-double">“</span>Snooze Tower: The Union Carbide Building Should be torn down,” <em>Architect’s Newspaper</em>, March 6, 2018.<a href="#union-ref1" title="Jump back to footnote 3 in the text.">↩</a></li>
+      <li id="union-fn1">Meredith Clausen’s 2006 book <em>The Pan Am Building and the Shattering of the Modernist American Dream</em> memorably elicits that building’s development history. In it, she demonstrates the ﬂimsy aesthetic dressing by Walter Gropius and Pietro Belluschi over what was a maxed-out building footprint begrudgingly deferred towards Grand Central Terminal.<a href="#union-ref1" title="Jump back to footnote 4 in the text.">↩</a></li>
+    </ol>
+
+    <hr>
+    <img src="./banner03.jpg">
+
+    <h1 id="fluff"><a href="#fluff">F*ck Fluff</a></h1>
+    <h2>Azza Aboualam</h2>
+    <p>3:37 am: You have been staring at the InDesign ﬁle on your screen with groggy eyes and a coffee aftertaste in your mouth, scrambling to come up with the correct vocabulary and do justice to the main idea framing your argument. 3:42 am: The illusion of worth, intelligence, and sophistication is nagging you through a tiny voice in your head that will not shut up. 3:58 am: The plot is way too simple, not sophisticated enough; you need a new edge, a recrafted narrative, a re-formed ﬁction that is neither truth nor lie.<span class="push-double"></span> <span class="pull-double">“</span>A vague middle ground, that is the answer,” exclaims the voice. A middle ground that frames nothing and relates to everything. A middle ground that is an evasion of complicated creative production but also a direct reference to everything but architecture. A middle ground that is an evident ﬂaw in architectural pedagogy. This need to put on a show, to use lengthy sentences or big words in order to succeed, is a trend strongly driven by a need to validate our body of work through something outside of architecture. This tendency hinders and devalues what we do as architects.</p>
+    <div class="sign-left"><img src="./sign04.png"></div>
+    <p>Architecture has the ability, but most importantly, the power, to propose alternate ways of living, working, and socializing directly through design. This method of proposal does not require the vanilla frosting of made-up deep theoretical work. This false validation, by referencing inevident connections and deferring to non-existent rationalizations, dilutes what we do. The power of architecture’s directness is intrinsic to the profession; it is a plunge into a ﬁeld of contextual, political and social connections. Architecture should pride itself on taking a clear stance, a stance devoid of fabricated relationships, and one that relates directly to the production of space. We, as architects, shouldn’t condemn the profession to an overwhelming conglomeration of social forces or falsiﬁed philosophical attributes. Rather, it is important to maintain a dialectic between architectural imagination and physical embodiment. Understanding the concept of space and the meaning of its production does not require a reduction to a justiﬁcation foreign to the profession. The problem with most academic work today is the lack of directness and clarity as to what measures success.</p>
+    <img class="side" src="./img03.jpg">
+    <p>Architecture and academia should focus on concise ideas and conceptual frameworks, and on building direct formal relationships that are clearly tied to the body of work being discussed.  Architecture is known for its odd processes; you make something, you look at it, and <em>then</em> you think about it. Our time is mostly consumed in image production and often rationalization does not come in until it’s too late (if it comes in at all). As a result, one resolves this predicament by seeking external validation from unrelated precedents, examples of alien hypothetical relationships, and fabricated complex attributes. This methodology not only unduly gives weight to unconnected theoretical references but necessarily makes the project more susceptible to error. A simple mentioning of theoretical elements in passing does not justify the project in question and instead protects us from looking deeply at what we have done. Architecture is a practice, not a formula. By simultaneously diluting the value of its content and referring to realms that are clearly unconnected, the result is a hodgepodge of irrelevant attributes, a confusion of the work. Tapping into the complex relationships between desire, inﬂuence and power that architecture has to offer is far more valuable than sought after post-rationalization.</p>
+    <p>This power relationship between internal and external validation is based in a constant struggle to avoid our work being perceived as banal. This insistence on complexity results in a lack of measurable accountability and because of this the agreed goal that our project is striving towards is lost. The wordier the presenter and the more references thrown into the mix, the more intelligent they are; a metric that seems irrelevant, and more often than not, biased. Distinction is usually given to those who illustrate their projects with concepts that are twistedly irrelevant, foreign to Rudolph hall, and most importantly, amount to nothing more than ﬂuff.</p>
+    <p>These are the feelings of those of us who strive for directness and candor; those of us who edit and think twice before speaking; those of us who refer to succinct architectural concepts.</p>
+    <p>4:07am: The blue circle of death reappears; a sign to go home.</p>
+
+    <hr>
+    <img src="./banner01.jpg">
+
+    <h1 id="hallways"><a href="#hallways">F*ck Your Hallway</a></h1>
+    <h2>Nicolas Kemper</h2>
+    <p>The Loria Center is an utterly useful building. Rudolph Hall would never get on without it. The elevators are in Loria, the heating and cooling ducts are in Loria, the ﬁre escapes are in Loria, even the toilets are in Loria. That is right: you cannot so much as take a dump without going into Loria.</p>
+    <img class="inline" src="./loria.png">
+    <p>For all that work, Loria—Rudolph’s neighbor to the east—somehow manages not so much as to block the eastern view from Rudolph. It goes to great pains to be shorter than Rudolph Hall. Like a stooping servant, it disappears precisely along the sight lines from Rudolph Hall’s penthouse.</p>
+    <div class="sign-right"><img src="./sign07.png"></div>
+    <p>Rudolph Hall, opened in 1963, takes its name from its architect and client, then dean of the architecture school, Paul Rudolph. It is his masterpiece, and it houses the faculty, undergraduates, Masters, and PhDs of Yale’s architecture department. The Jeffrey Loria Center of Art, designed by Charles Gwathmey, <span class="small-caps">ARC</span> <span class="push-single"></span><span class="pull-single">’</span>62, and opened in 2008, houses the faculty and PhDs of the Art History Department, and hosts classes and lectures for the rest of the university.</p>
+    <p>Paul Rudolph anticipated his opus’s progeny from the beginning, leaving space and connection points for an envisioned college quad. Yet Rudolph’s proclivity for theatricality—the twenty-seven level changes, the never regular stairs, the cliff-like dropoffs, the almost complete lack of private space, the ceilings high and low—left Loria burdened, as it were, by a capricious grandparent. Exhausted, perhaps, by the abuse of its dependent, we can understand, though not forgive, Loria for in turn abusing its own family, that is, the art history department.</p>
+    <p>Loria pretends to be edgy, the cool parent. It jags at the bottom, swoops at the top, and sports a window that juts like a pierced lip over the entrance, à la Breuer’s Whitney Museum in New York.</p>
+    <img class="side" src="./img02.gif">
+    <p>This pep, however, evaporates on the interior, where the rooms and corridors are so identical that without signage it is impossible to know your ﬂoor.</p>
+    <p>The envelope takes its cues not from Breuer, but from a servile allegiance to technology, such as projectors. Art history, apparently, can only be taught with projectors, which in 2008 needed dark rooms to function. The technology of course improved: projectors work just ﬁne now in bright rooms. But almost all of the classrooms are stuck with tiny windows, and the two lecture halls are sealed vaults. Then there is sustainability: to earn its <span class="small-caps">LEED</span> gold certiﬁcation and deliver 22 degrees Celsius, Loria seals its inhabitants—and in fact those of Rudolph, too—in a climate controlled thermos with almost no operable windows. While ideas in sustainability have since shifted, emphasizing now thermal variety and maximizing contact with nature, the art history and architecture departments are still stuck in a thermos.</p>
+    <p>Loria’s plan, however, is the real crime: on each ﬂoor, a single hallway threads its way between narrow, shotgun like ofﬁces, seminars and lecture rooms. All of the rooms are absolutely discrete and without overlap. There is never a reason to be in a room unless you are using that room. Even the occasional internal window feels awkward. The parts never combine to make a whole larger than themselves. They never combine to make a whole even as large as their parts.</p>
+    <p>The main entrance—the elevator lobby—through which hundreds pass each day—is kept empty of furniture. Its natural inhabitant, the cafe, is literally cut away, a cramped nub shorn off to keep it out of the way. Loria’s plan is akin to that of a gated community, a suburban subdivision, each house keen on privacy and afraid of its neighbors. There are even cul-de-sacs on the upper ﬂoors. The only person whom everyone gets to meet—the only person who gets to spend time in a shared space—is the guard (<a href="/everyday-interviews/">Gloria, a truly wonderful soul</a>).</p>
+    <p>Certainly Loria’s architect, Gwathmey, meant no harm. He was only trying to give his clients what they wanted. The architecture department wanted the Rudolph Hall from the 60s restored, wanted their views to remain unimpeded, and wanted the toilets elsewhere. Gwathmey delivered, brilliantly.</p>
+    <div class="sign-mid"><img src="./sign03.png"></div>
+    <p>What did the art history department want? They probably had a list: ofﬁces, classrooms, <span class="small-caps">LEED</span> gold certiﬁcation, etc., and then—in a moment of conﬂict, seized by some dark spirit—insisted that each of these things should stand by itself. Like a genie fallen into the wrong hands, Gwathmey again delivered, composing a rabbit warren, a department best described as fragmented, balkanized, and silo-ed. He dutifully killed the best chance the art history department would ever have of gaining a building that could nurture community.</p>
+    <p>This dark spirit, nurtured no doubt by the nest it ordered, still stalks the hallways of Loria today: look no further than the one saving moment of Loria, the gigantic terrace with sweeping views of the city. The door is always kept locked.</p>
+    <p>Rudolph Hall’s plan, by contrast, features almost no hallways. All horizontal circulation happens through the open center, the pits, which then act as natural public squares. Every time anything happens in any part of the building, the energy compounds across the pit. Rudolph’s plan is a masterfully composed doughnut, the glowing soul of the architecture community cradled within. And Loria’s? A noose.</p>
+
+    <hr>
+    <img src="./banner02.jpg">
+
+    <h1 id="posturing"><a href="#posturing">F*ck Posturing</a></h1>
+    <h2>Patrick Doty</h2>
+    <p>Philosophy entails a genuine inquiry to better understand our world through the use of clear and rigorous reasoning. Even if there is no rational, objective solution at the end of this process—and there often is not—and even if a claim is approached indirectly in a more narrative manner, the underlying ideas should <em>not</em> be illegible, trivial, disingenuous, or dogmatic; they should be cogent and illuminating.</p>
+    <div class="sign-left"><img src="./sign06.png"></div>
+    <p>For these reasons, it has been frustrating to ﬁnd that these fundamental principles are so frequently absent from texts architects reference. The problem pertains not as much to formal logical fallacies—errors in the underlying form of an argument leading from premises to conclusion—as to informal fallacies. Endless streams of gibberish exist without deﬁnition or, circularly, in reference to other gibberish, rendering already-hollow arguments incoherent. Straw men and tilting at windmills—arguing against irrelevant or nonexistent issues—hide behind murky syntax and feedback loops driven by small, highly self-referential groups that lean on each other for legitimation. Elementary ideas blossom into the ostensibly insightful and complex through the use of buzzwords that are inﬂated, sensationalist, and science-ﬁctional. Clarity and rigor are discarded for obscurantism and posturing. Some of the ﬁgures alluded to have even gone on record admitting this, claiming that incomprehensibility makes a text seem more profound.</p>
+    <img class="side" src="./img01.gif">
+    <p>All of the ﬁgures alluded to in this critique fall under some subcategory of continental philosophy or its contemporary equivalent, which occupies a relatively recent, minority position in the world of philosophy and is generally marginalized, even ridiculed, by those adhering to the longstanding analytic tradition for largely the same reasons mentioned above. However, this is not intended as a general critique of continental philosophy; though my undergraduate major was biased toward an analytic approach, I have great respect for some in this tradition and am merely writing to issues I’ve seen repeatedly, in various settings, over the past few years. Moreover, I’m not an expert on any of these ﬁgures and am not out to make a verdict of some sort; readers should do their own close readings, examine texts outside of the settings in which they’re presented, and form their own opinions.</p>
+    <p>But, if the criticism is accurate, where does this leave us? While the issue is obviously not all-pervading, it is common and generally seems to go unrecognized. However, I am not necessarily advocating dropping these texts as references, and I certainly do not want to retroactively detract from meaningful work that has come out of them through transubstantiation. Rather, recognizing this issue as an issue demands a more extended investigation into why we have spent and continue to spend so much effort digging into texts that, intrinsically, often don’t merit the attention.</p>
+    <p>The reasons are unclear and likely multiple. Perhaps it’s because, in certain cases, philosophy offers a counterbalancing rigor when the architecture itself emerged from design methodologies perceived as comparatively arbitrary in their dismissal of traditional modes of architectural production. As Karsten Harries noted in a <em>Paprika!</em> interview last year, philosophy<span class="push-double"></span> <span class="pull-double">“</span>often seems to have furnished architects with little more than a strange kind of rhetorical ornament, meant to give a building an intellectual respectability that it would otherwise lack.”<sup><a href="#posturing-fn1" id="posturing-ref1">1</a></sup> Perhaps it’s because philosophy is often presented as intertwined with signiﬁcant architectural claims or with buildings we like and, unknowingly, we just accept the constituent components as part of the whole package. Perhaps it’s because we are a bit credulous in accepting things as legitimate that are fashionable or presented to us as infallible and relevant. It’s a great political move: reference something that evades critique because no one has any clue what’s going on and assumes you do. Perhaps it’s because we’re looking to pay a membership fee by associating ourselves with something endorsed by others. Perhaps it’s because what might appear as a scrap yard of unbridled subjectivity and self-indulgence is, in a different light, more of a cornucopia for us to draw upon. Perhaps it’s because we don’t feel qualiﬁed to criticize something outside our discipline, especially something that is often opaque and demands more time and energy than we have available. Perhaps it’s because this trend is both symptomatic of and offers a perceived escape from a globalized time when, with no clear authority ﬁgures or pedagogical standards, we are awash in a near inﬁnite sea of possibilities in which anything goes. Perhaps it’s because there is a latent futurism in our tendency toward the novel and the notion of progress, and the philosophy architects tend to cite likewise has an aura not just of the complex, but of the progressive, the egalitarian, and the radical; it’s a commodity that ﬁts the bill.</p>
+    <div class="sign-right"><img src="./sign08.png"></div>
+    <p>Regardless of what the answers might be, it’s important for us to be upfront about the merits of the texts themselves and upfront about the extrinsic factors leading us to use them. Inspiration can come in many forms, these posturing texts being one of them. But, if we keep using them, let’s get over whatever cognitive dissonance we might have and stop treating them as authoritative and rigorous, and be mindful to not allow their shortcomings to seep into our own work. Philosophy is, independently, an immensely rewarding pursuit. In deciding how it’s used in architecture, don’t forget that the <em>method</em> of philosophy—embracing complexity with rigor and clarity—can be just as productive as its content.</p>
+    <ol><li id="posturing-fn1">Harries, Karsten.<span class="push-double"></span> <span class="pull-double">“</span>Interview with Karsten Harries.” Edited by Patrick Doty, Patrick Kondziola, and Zachariah Michielli. <em>Paprika</em>, March 30, 2017, 2 (19) ed. <a href="#posturing-ref1" title="Jump back to footnote 1 in the text.">↩</a></li></ol>
+
+    <hr>
+    <img src="./banner03.jpg">
+
+    <h1 id="etc"><a href="#etc">F*ck <span class="small-caps">Etc</span>.</a></h1>
+    <h2>Christian Golden</h2>
+    <p>From the beginning of time, each era, epoch, century, and decade has been deﬁned by the birth of a corresponding movement or style. In architecture: there were the Egyptians, the Etruscans, the Greeks, the Goths, the Romans; the Neo-This’ and the Neo-That’s; the Art-This’ and the Art-That’s; all of which would be replaced by Modernism. And once that died, Post-modernism, followed by a whole slew of other –isms. Each unsatisﬁed with the prior. Each seeking to reinvent itself. Each seeking to become the new future projection of<span class="push-double"></span> <span class="pull-double">“</span>now.” In 1984, Andrea Branzi, founder of Archizoom, reﬂected on his concerns about architecture’s trajectory in <em>The Hot House: Italian New Wave Design</em>, claiming:</p>
+    <div class="sign-left"><img src="./sign09.png"></div>
+    <blockquote>
+    <p><span class="pull-double">“</span>[T]he architecture of the future would not emerge from an abstract act of design but from a different form of us. […] It had to work on a continuum of the present, refraining from making strategic projections into the future. […] Doing architecture became an activity of free expression, just as making love means not just producing children but communicating through sex.”<sup><a href="#etc-fn1" id="etc-ref1">1</a></sup></p>
+    </blockquote>
+    <p>Having since become too preoccupied with<span class="push-double"></span> <span class="pull-double">“</span>communicating through sex,” architecture has abandoned its<span class="push-double"></span> <span class="pull-double">“</span>continuum of the present,” which once ensured its staying grounded to reality. To be taken seriously, architecture must be abandoned in its current practice and be reduced to its essentials, returning to its continuum. This is not the avant-garde, nor is it the nostalgic, it is instead banality. The use of the word<span class="push-double"></span> <span class="pull-double">“</span>banal” here doesn’t link itself with the contemporary use relating to that of the trite, hackneyed, or clichéd, but with its origin regarding the commonplace and everyday.<sup><a href="#etc-fn2" id="etc-ref2">2</a></sup> The banal, separate from the generic and non-speciﬁc, is what surrounds us, and what surrounds us could be improved on. This is not a cry for heroic architecture, but rather a staid architecture—the Neo-Banal. This new common is generically speciﬁc and favors context over content, which the generic does not. That is to say, context, as opposed to content, would be the basic premise of the practice of architecture, which is to ensure the safety and well-being of the public. In doing so, the Neo-Banal acknowledges that architecture is a service and that through its service it ﬁnds its expression.</p>
+    <img class="side" src="./img03.jpg">
+    <p>The Neo-Banal already exist elsewhere in the world, most notably in Europe, where it is exempliﬁed in the work of <span class="small-caps">OFFICE</span>, Lacaton &amp; Vassal, and Bruther. Yet it is lacking an American chapter. Some might argue that <span class="small-caps">MOS</span> would fall into this category via their indifferent position in architecture (<em>their architecture is so easy, just look at the plans on their website!</em>), but this appearance of indifference is actually an aesthetics of laziness.<sup><a href="#etc-fn3" id="etc-ref3">3</a></sup> Similarly, Adrian Phiffer’s<span class="push-double"></span> <span class="pull-double">“</span>New-Generic,”<sup><a href="#etc-fn4" id="etc-ref4">4</a></sup> (which shares a name with something Michael Jakob argues as a light-handed approach and could ultimately ﬁt into some strand of minimalism<sup><a href="#etc-fn5" id="etc-ref5">5</a></sup>) does not ﬁt into this category, as his thought is only a re-hatched version of <span class="small-caps">OMA</span><span class="push-single"></span><span class="pull-single">’</span>s Dubai analysis<sup><a href="#etc-fn6" id="etc-ref6">6</a></sup> as a stylistic regime that fetishizes the boring and undesigned.<sup><a href="#etc-fn7" id="etc-ref7">7</a></sup></p>
+    <p>What the Neo-Banal seeks to accomplish is to raise the lowest common denominator of architecture. It is a more obtuse version of Kandisky’s triangle,<sup><a href="#etc-fn8" id="etc-ref8">8</a></sup> and argues that an act worth achieving is convincing the populace not only to clad their houses in vinyl, but to also consider another siding that adds economic, sustainable, and aesthetic value to the property.<sup><a href="#etc-fn9" id="etc-ref9">9</a></sup> Such an act might be the one thing needed to address architecture’s existential crisis, as described by Andrea Branzi:</p>
+    <blockquote><p>All the most vital aspects of modern culture run directly toward that void [(freeing mankind from architecture insomuch as it is a formal structure)], to regenerate themselves in another dimension, to free themselves of their disciplinary chains. When I look at a canvas by Mark Rothko, I see a picture dissolving into a single color. When I read Joyce’s <em>Ulysses</em>, I see writing disappearing into thought. When I listen to John Cage, I hear music dissipating into noise. All that is part of me. But architecture has never confronted the theme of managing its own death while still remaining alive …<sup><a href="#etc-fn10" id="etc-ref10">10</a></sup></p></blockquote>
+    <p>Sadly, architecture has dissolved into sculpture. If architecture were to melt into building, its death would also be its conception. Architecture would have held the mirror to itself, seeing that it is merely a roof, some walls, and a ﬂoor. Architecture need not radically reinvent itself through the creation of a new -ism each and every time it is dissatisﬁed with the prior-isms. The architecture of the Neo-Banal is what it needs to be, when it needs to be it.</p>
+    <ol>
+      <li id="etc-fn1"> Varnelis, Kazys.<span class="push-double"></span> <span class="pull-double">“</span>Programming After Program: Archizoom’s No-Stop City” Praxis 8 (2006): 82-91. <a href="http://Academia.com">Academia.com</a>. Web. 86-87<a href="#etc-ref1" title="Jump back to footnote 1 in the text.">↩</a></li>
+      <li id="etc-fn2"> <span class="pull-double">“</span>Origins and Etymology of Banal.” Merriam-Webster, Merriam-Webster, <a href="http://www.merriam-webster.com/dictionary/banal">www.merriam-webster.com/dictionary/banal</a>.<a href="#etc-ref2" title="Jump back to footnote 2 in the text.">↩</a></li>
+      <li id="etc-fn3"> In Indifference, Again, Meredith quantiﬁes the aesthetics of indifference as a general disinterest towards problem solving, conventional practice, or<span class="push-double"></span> <span class="pull-double">“</span>realism.” of Meredith, Michael.<span class="push-double"></span> <span class="pull-double">“</span>Indifference, Again.” Log&nbsp;, no. 39, Winter 2017, pp. 75–79.<a href="#etc-ref3" title="Jump back to footnote 3 in the text.">↩</a></li>
+      <li id="etc-fn4"> Option Studio taught at University of Toronto titled<span class="push-double"></span> <span class="pull-double">“</span>New Generics.”<a href="#etc-ref4" title="Jump back to footnote 4 in the text.">↩</a></li>
+      <li id="etc-fn5"> Jakob, Michael.<span class="push-double"></span> <span class="pull-double">“</span>Landscape Architecture and the<span class="push-single"></span> <span class="pull-single">‘</span>New Generic’”.” <span class="small-caps">GSD</span> Talks.<a href="#etc-ref5" title="Jump back to footnote 5 in the text.">↩</a></li>
+      <div class="sign-mid"><img src="./sign06.png"></div>
+      <li id="etc-fn6"> de Graaf, Reinier.<span class="push-double"></span> <span class="pull-double">“</span>Is Iconicity Good for Architecture?”, Noc Architectury, June 17, 2015 Slovak University of Technology, Faculty of Architecture, Bratislava, Slovakia.<a href="#etc-ref6" title="Jump back to footnote 6 in the text.">↩</a></li>
+      <li id="etc-fn7"> Architecture can be boring and even undesigned, but one must not fetishize the irony of the aesthetic. Architecture is not the next<span class="push-double"></span> <span class="pull-double">“</span>dad sneaker.”<a href="#etc-ref7" title="Jump back to footnote 7 in the text.">↩</a></li>
+      <li id="etc-fn8"> In short, Kandinsky described an acute triangle that was sluggishly moving through time. The artist was the the highest point but was being held back by the baseline, which was everyone else.  Kandinsky, Wassily, and M.Trad Sadler. Concerning the Spiritual in Art. Dover, 1977.<a href="#etc-ref8" title="Jump back to footnote 8 in the text.">↩</a></li>
+      <li id="etc-fn9"> Why is it that architects are left out of the process when it comes to<span class="push-double"></span> <span class="pull-double">“</span>cookie-cutter” developments? This becomes an argument for the architect as pseudo-developer which in turn could change the baseline understanding of taste and design as value.<a href="#etc-ref9" title="Jump back to footnote 9 in the text.">↩</a></li>
+      <li id="etc-fn10"> Varnelis, Kazys.<span class="push-double"></span> <span class="pull-double">“</span>Programming After Program: Archizoom’s No-Stop City” Praxis 8 (2006): 82-91. <a href="http://Academia.com">Academia.com</a>. Web. 89<a href="#etc-ref10" title="Jump back to footnote 10 in the text.">↩</a></li>
+    </ol>
+
+    <hr>
+    <img src="./banner01.jpg">
+
+    <h1 id="the-market"><a href="#the-market">F*ck The Market</a></h1>
+    <h2>Cathryn Garcia-Menocal</h2>
+    <div class="sign-right"><img src="./sign01.png"></div>
+    <p>In designing the Long Island parkways that led to Jones beach, Robert Moses famously and intentionally directed that these overpasses be low enough to prevent the safe passage of buses. This meant that the people relying on public transportation to enjoy the public spaces at Jones Beach, namely poor people and people of color, literally could not access these resources.</p>
+    <p>Much ado is made about the less obvious, abstract ways that architecture is powerful (i.e.<span class="push-double"></span> <span class="pull-double">“</span>form”). It is a discipline that concerns itself with, among other things, its own absence as a medium—perhaps the root cause of this industry-wide anxiety about obsolescence. In a discipline that represents an intersection of expertises, the argument for the relevance of architecture varies with whoever sets the terms of the argument. As beautiful as it may be to say architecture is the background of reality, this concession to innocuousness leaves architects feeble to the sweeping forces of the market.</p>
+    <p>In the April 2015 issue of the Yale Law Journal, in her essay<span class="push-double"></span> <span class="pull-double">“</span>Architectural Exclusion: Discrimination and Segregation Through Physical Design of the Built Environment,”</p>
+    <p>Sarah Schindler writes,<span class="push-double"></span> <span class="pull-double">“</span>[p]otential challengers, courts and lawmakers fail to recognize architecture as a form of regulation at all, viewing it instead as functional, innocuous and prepolitical. Even if decision makers and those who are excluded by architecture recognize architecture’s regulatory power, existing jurisprudence is insufﬁcient to address its harms.” In other words, we’ve gotten away with plenty of shit by being equivocating as f*ck.</p>
+    <img class="side" src="./img01.gif">
+    <p>A recent article in the Guardian <span class="push-double"></span><span class="pull-double">“</span>Neoliberalism: the idea that swallowed the world”<sup><a href="#market-fn1" id="market-ref1">1</a></sup> attempted to chronicle the growth of neoliberalism—a range of thought in politics characterized by a concession of authority to the market. It is the worldview that competition is the only legitimate organizing principle of human activity. May the best man win.</p>
+    <p>Neoliberalism is a way of reordering social reality and rethinking our status as individuals by treating<span class="push-double"></span> <span class="pull-double">“</span>The Market” as a sentient being. The way we learn about architecture, and indeed who gets to become an architect, mirrors this market-deﬁned social reality. Why do so many of our projects (even those posturing as a critique of neoliberal thought) look like the utopian ideal of the free market and refuse to engage in, or entertain, the dystopian reality of the present?</p>
+    <p>As architects—in the Academy, in Industry, however abstractly—we need to articulate our position on and relationship to this power. And in doing so, we will also need to accept that the design decisions we make are reﬂective of our privileges, powers, authorship—and all the trappings that accompany that relative position. If we are to believe that architecture engages with prosaic rituals and elevates our awareness of a larger, changing world, we must also unequivocally state our relationship to the powers that deﬁne that world.</p>
+    <div class="sign-mid"><img src="./sign03.png"></div>
+    <p>It is on us to work beyond the minimum standard of care, to believe that architecture is powerful, and to create the structural and cultural competency required to make it a benevolent power. The market certainly will not.</p>
+    <p>If not us, then who?</p>
+    <p>If not now, then when?</p>
+    <p><em>Cathryn Garcia-Menocal will be running a workshop on upending the power dynamics of the review structure at the upcoming student run conference<span class="push-double"></span> <span class="pull-double">“</span>Radicalizing the Architectural Discipline” taking place April 7th and 8th in Rudolph Hall.</em></p>
+
+    <ol>
+      <li id="market-fn1">Metcalf, Stephen.<span class="push-double"></span> <span class="pull-double">“</span>Neoliberalism: The Idea That Swallowed the World.” The Guardian. August 18, 2017. <a href="https://www.theguardian.com/news/2017/aug/18/neoliberalism-the-idea-that-changed-the-world">https://www.theguardian.com/news/2017/aug/18/neoliberalism-the-idea-that-changed-the-world</a>.<a href="#market-ref1" title="Jump back to footnote 1 in the text.">↩</a></li>
+    </ol>
+
+    <hr>
+    <img src="./banner02.jpg">
+    <img class="side" src="./img02.gif">
+    <h1 id="form-in-politics"><a href="#form-in-politics">Does Form Have a Place in Politics?</a></h1>
+    <p>Below you will ﬁnd excerpts from an open debate titled<span class="push-double"></span> <span class="pull-double">“</span>Does form have a place in politics?” which took place on Friday February 23rd. The debate was sponsored the <span class="small-caps">YSOA</span> student organization Equality In Design and moderated by alumnis Elisa Iturbe.</p>
+    <div class="sign-left"><img src="./sign04.png"></div>
+    <p>The next open debate will take place on Friday April 20th at 5pm in Rudolph Hall’s 4th ﬂoor pit. Topic <span class="small-caps">TBD</span>.</p>
+    <p><strong>Introductory remarks (Elisa Iturbe):</strong> The open debate is a very special format because you have to look someone in the eye and tell them what you believe, and why you believe it. This week I was inspired by the students who confronted Marco Rubio on live <span class="small-caps">TV</span> about gun control. They asked him to look them in the eye and tell them what he believed. And over the course of the debate, you could watch Marco Rubio shift his position as it became untenable to hold his position in a moment of real exchange. I think that in speaking our ideas to colleagues and friends we hold ourselves accountable and we hold each other accountable. Tonight could be a night of civil disagreement—which I see as a way of enacting our citizenship and a way of shaping our social agency.</p>
+    <p>The question is not,<span class="push-double"></span> <span class="pull-double">“</span>Is architecture political?” The question is,<span class="push-double"></span> <span class="pull-double">“</span>Does form have a role to play in a discussion of politics.” During this past symposium [Rebuilding Architecture] I heard in the conversations afterwards the emergence of two camps. One group of people was saying<span class="push-double"></span> <span class="pull-double">“</span>I really lament that there was no discussion of architectural form in this conversation,” while another group was saying,<span class="push-double"></span> <span class="pull-double">“</span>thank goodness that the conversation about form is out of the way. That conversation is from a past generation and now we can really get to the topic at hand, which is politics and whether architecture can now have some political agency.” In my mind, those two camps are debating a question of medium.</p>
+    <p><strong>Sam Zeif:</strong> I do think that at a certain scale, when projects or ideas about form are multiplied, form can become political. I’m thinking of Hope <span class="small-caps">VI</span> in the nineties, when federal affordable housing programs started to reﬂect the suburban New Urbanist image. That image is a commentary on the form that came before it. It is also a commentary on the people who inhabited those forms. Today, you may not see the problematic policy behind this image change. What you see is form. Certainly decisions like that, that have to do with instituting new imagery while masking policy decisions, can be extremely powerful.</p>
+    <p><strong>Margaret Marsh:</strong> Different people can read things in different ways, and space, which you can feel and move through, operates differently than a pastiche or facade.</p>
+    <p><strong>Meghan Royster:</strong> I think the question is more about how much political effect you want to have and how you can achieve that effect through architecture. It’s an issue of the scale of political change. A group of us taught at a middle school last semester and asked the kids to design a space for politics. We didn’t think much about whether architecture is political—we made the assumption that it is. The question for the students wasn’t if architecture is political, but at what scale a political action can be achieved.</p>
+    <p><strong>Ian Donaldson:</strong> In reference to our desire for a more speciﬁc conversation, I think we can identify two ways in which architecture is political: one is through representation, the evocative symbolism that we might commonly establish in a public building. Another way is to change a housing type that gets multiplied across the country and that falls into the category of shaping emergent behaviors or subjectivity.</p>
+    <p><strong>Aaron Tobey:</strong> I don’t like that division. Maybe it’s the history of the deconstructivist movement or modernist movement, where form and subjectivity—or a certain way of approaching the world—are so tied up together. This change in form is not just a symbol but an attempt to shift subjectivity, it may not be in this emergent sense your describing but it’s a goal.</p>
+    <p><strong>Seth Thompson:</strong> I’m still stuck on this idea that form can be conceived of as separate from everything else. Won’t an Alvar Aalto table always cost more than an Enzo Mari table? Different forms cost different amounts of money to make and that seems inherently problematic if we’re saying form is an arena in which we can operate outside of political constraints.</p>
+    <p><strong>Elisa Iturbe:</strong> Things become political as the context of society changes, but they can also cease to be political as things change again. Architecture occurs at an intersection of many things, one of which is time. There are many changing relationships in the city.</p>
+    <p>I want to bring up another thing that was coming up on this side of the room and which has been an undercurrent throughout the discussion: the idea that architecture is political in the moment that it becomes built. I’m wondering however if there is also a political dimension to architecture because architects have the possibility and capability to imagine something that isn’t there. Part of the way that power plays out in society is through replication. In fact, power can only happen when its dynamics are repeated. If an architect has the ability to project something unknown or unprecedented into a space, even if it’s just in a drawing, what are the political ramiﬁcations of that?  We should think that our capacity as political agents also comes from proposing something to a society that hasn’t imagined it yet.</p>
+    <p><strong>Nancy Chen:</strong> A point that keeps coming up for me is that form is extremely vulnerable to appropriation and to reclamation. In a way this means that form is very much engaged with the political because it lasts. The material or the labor might be a one-time thing, but the form lasts, which is why political powers appropriate architecture so often. I want to ask; What is the form that we can aspire to that would resist this vulnerability of being appropriated by certain political forces? What is a formal type that can exert our own maximum intention so our architecture can resist future corruption?</p>
+    <p><strong>Darryl Weimer:</strong> The Venice Biennale is the largest global stage for architecture and where the discipline can attempt to make a statement about what we think is relevant. I went to the biennale a couple of years ago and every friend I told outside of architecture was like<span class="push-double"></span> <span class="pull-double">“</span>what’s that.”  Even at its largest stage, architectural discourse has a very limited audience. Its an issue of accessibility.</p>
+
+    <hr>
+    <img src="./banner03.jpg">
+
+    <h1 id="form-political"><a href="#form-political">All Form is F*cking Political</a></h1>
+    <h2>Martin Man</h2>
+    <p>On the 23rd of February Equality in Design hosted a debate which posed the question:<span class="push-double"></span> <span class="pull-double">“</span>Does form have a place in a discussion of politics?” The debate, although providing a much needed public forum for students across years and programs to discuss an architectural issue, unfortunately suffered from an elision of terms and a muddling of questions. In this text I will attempt to review and elucidate four basic questions that were raised, then propose a possible way forward.</p>
+    <div class="sign-right"><img src="./sign05.png"></div>
+    <p>The question, in its original phrasing, was perhaps discussed the least. In short, the aπnswer is yes. That is, when examining the nature of relations between people in a society does the built environment within which they live/play/work/rest, etc. have bearing on the analysis? Certainly we can agree that it does: At its most rudimentary level, a wall physically separates two who may interact, and no wall does not impede interaction. At an urban scale we may analyse the impact of pavement width or building façades on the behaviour of pedestrians. At a macro scale, rural, suburban, and metropolitan forms materially coerce certain lifestyles and social relations.</p>
+    <p>A second question raised, which reverses the original question, boils down to,<span class="push-single"></span> <span class="pull-single">‘</span>Is architectural form political?’</p>
+    <p>The answer is also yes, given our current theoretical milieu. I guess that few would posit Platonic-esque forms which <em>a priori</em> possess universal and<span class="push-double"></span> <span class="pull-double">“</span>true” meanings transcendent of humans. More likely, we are in agreement that the symbolic associations/properties ascribed to architectural forms are a product of the collective imagination of groups of people—thus making it a political matter. For Claude Nicolas Ledoux, certain architectural forms<span class="push-double"></span> <span class="pull-double">“</span>suited” a waterworks, or a forester’s house. For us in the postmodern Zeitgeist, we tend to believe interpretations of forms are contestable, revisable, and ultimately unstable.</p>
+    <p>This question was also implied more sinisterly in the form of<span class="push-double"></span> <span class="pull-double">“</span>Is x form/building political?”</p>
+    <p>This is a deceiving question; it suggests that a building can be <em>non</em>-political, when all forms/buildings are always-already political. For example, it was suggested that the 1989 protest at Tiananmen Square made that space political. However, this neglects that the protest happened there because the site was political to begin with—it is ﬂanked by important Communist Chinese institutions. And the Communist Party chose to build it there as it was in front of the Forbidden Palace. And the Ming emperors built the palace there as it was politically expedient, and so on.</p>
+    <p>The third and fourth questions that arose during the debate are related, and stem from the mistaken use of the word<span class="push-double"></span> <span class="pull-double">“</span>political”’ as a stand-in to describe<span class="push-double"></span> <span class="pull-double">“</span>architecture designed by politically progressive architects who wish to manifest their politics in built form.” The terminological inaccuracy here obscures the fact that oppressive/violent buildings are clearly also always-already political, even if in a<span class="push-double"></span> <span class="pull-double">“</span>bad way.” Just as there is no<span class="push-double"></span> <span class="pull-double">“</span>politically neutral” building, simply because an architect intended their design to further an agenda does not make it<span class="push-double"></span> <span class="pull-double">“</span>more political” than one built without such conscious intentionality (whether positive or negative).</p>
+    <p>The ﬁrst of the pair:<span class="push-double"></span> <span class="pull-double">“</span>’Does a form retain the symbolic associations given to it by an architect?”</p>
+    <p>This question lay at the heart of frustrations that, no matter what ﬂowery descriptions an architect (or developer) attaches to a building, its interpretation by the public will always outstrip that original designation. No, forms don’t retain their narratives indeﬁnitely. But the agency architects do have to shape and inﬂuence the symbolic reception of their architecture, however easily these narratives might slip away, is nonetheless important.</p>
+    <img class="side" src="./img03.jpg">
+    <p>This power is evident, for example, when Albert Speer associated certain architectural forms with the Nazi Party through his design. Certainly, it is impossible to design monumentally in a Neo-Classical idiom in contemporary Germany without contending with that history. In a different context, Neo-Classical forms were instead allied with French (and then American) equality and liberty. Both interpretations reacted to traditional associations of Greek/Roman architecture to civic institutions, authority, power, importance, and monumentality.</p>
+    <p>This leads to,<span class="push-double"></span> <span class="pull-double">“</span>If one is committed to a progressive vision for society, does architectural form actually play any role to further the cause whatsoever? Is there, for example, a form that <em>is</em> <span class="push-single"></span><span class="pull-single">‘</span>affordable housing’?”</p>
+    <p>Yes, but no. An architect committed to progressive politics is in a position to propose certain new readings of forms, shaping/contributing to the social/political interpretation of their architecture. But just as we don’t buy Ledoux’s ideal city, there are no intrinsic <em>a priori</em> <span class="push-double"></span><span class="pull-double">“</span>democratic architectural forms” that one can build and rest easy in the fact that they will stay<span class="push-double"></span> <span class="pull-double">“</span>free.” Nor do the lip-services architects pay stick to their buildings over time.</p>
+    <p>It is true that what political agency architects currently have is very limited, if existent at all—at least, as the profession is currently delimited within the fragmented specialisations of late-capitalist society. Nonetheless we retain for now an agency within the conﬁnes of the profession to imagine and narrate the built (and unbuilt) world that remains potent, provided we know how to wield it.</p>
+    <p>Some may say this is wishy-washy and powerless, but we have been down the path to grand proclamations of progressive Radiant Cities. This ﬂuidity should be celebrated as liberatory. A world in which architects could dictate the interpretation of forms as<span class="push-double"></span> <span class="pull-double">“</span>democratic” would paradoxically be a totalitarian one.</p>
+    <hr>
+    <img src="./banner02.jpg">
+
+    <h1 id="otg"><a href="#otg">F*ck On the Ground: A crowd sourced edition.</a></h1>
+    <p>F*ck… <span class="small-caps">JJ</span> is leaving. (Thank you for your time and service to the school, you will be missed).</p>
+    <p>F*ck Waterless Urinals. Support Local 777.</p>
+    <div class="sign-left"><img src="./sign07.png"></div>
+    <p>F*ck our fundraiser (But actually please donate!)</p>
+    <p>Thanks for the f*cking pizza Wall Street Pizza.</p>
+    <p>F*ck, it’s tax season.</p>
+    <p>F*ck needing to demonstrate<span class="push-double"></span> <span class="pull-double">“</span>architectural convention” in our portfolio reviews. What if I <em>intentionally</em> designed my building so that all ﬂoors and walls are the same thickness?</p>
+    <p>F*ck the new spray booth hoods. They suck the same as before. (Get it?)</p>
+    <p>F*ck, my Papercut balance has been reset.</p>
+    <p>F*ck the Getty, and the color white.</p>
+    <p>F*ck my life. -Radhika</p>
+    <p>We’re graduating, f*ck it.</p>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() { 
+      var el = document.querySelector("header");
+      var headroom  = new Headroom(el);
+      headroom.init();
+    });
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-70076907-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

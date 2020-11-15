@@ -1,0 +1,202 @@
+body {
+	background-color:black;
+}
+
+
+h1 {
+	color:white;
+	cursor:pointer;
+/*	position:fixed;*/
+}
+
+.textcontainer {
+	color:white;
+/*	margin-top:200px;*/
+	margin-bottom:300px;
+}
+
+.sidebar {
+	background-color:white;
+}
+
+.arrow {
+	color:black;
+}
+
+#left {
+	color:black;
+}
+
+#right {
+	color:black;
+}
+
+
+
+/*ICON*/
+
+#door {
+	z-index:-9999;
+	mix-blend-mode: initial;
+}
+
+
+
+.hingel{
+    border-color:white;
+}
+
+.hingeb{
+    border-color:white;
+}
+
+.arc{
+	border-color:white;
+	background-color: black;
+}
+
+.arcmask{
+	background-color: black;
+	border-color:black;
+}
+
+.hingel_w{
+	position: fixed;
+	width: 100px;
+    height: 100px;
+    border-left: 7px solid white;
+    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+}
+
+.hingeb_w{
+	position: fixed;
+	width: 100px;
+    height: 100px;
+    border-bottom: 7px solid white;
+}
+
+.arc_w{
+	position: fixed;
+	width: 99px;
+	height: 99px;
+	border: solid 1px white;
+	border-radius: 0 100px 0 0;
+	border-bottom: transparent;
+	border-left: transparent;
+}
+
+.arcmask_w{
+	position: fixed;
+	width: 70px;
+	height: 60px;
+	border: solid 50px black;
+	border-radius: 0 100px 0 0;
+	border-bottom: transparent;
+	border-left: transparent;
+	transform-origin: bottom left;
+	-webkit-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+}
+
+
+
+
+/*ARC INVERT*/
+.invert {
+	border-color:black;
+	background-color: white;
+}
+
+.inverthinge {
+	border-color:black;
+}
+
+.invertarcmask {
+	border-color:white;
+	background-color: white;
+}
+
+
+.quote {
+	color:white;
+	border:5px solid white;
+	padding:20px;
+	cursor:pointer;
+}
+
+.quote.pool {
+	border-color:maroon;
+}
+
+.quote.hyde {
+	border-color:dimgray;
+}
+
+.quote.bernheimer {
+	border-color:DarkGreen;
+}
+
+.quote.lemar {
+	border-color:DarkSlateGray;
+}
+
+.quote.boyer {
+	border-color:saddlebrown;
+}
+
+.quote.frug {
+	border-color:darkblue;
+}
+
+.quote.pontillo {
+	border-color:indigo;
+}
+
+.quote.bernstein {
+	border-color:teal;
+}
+
+.quote.chakrabarti {
+	border-color:purple;
+}
+
+.quote.pool:hover {
+	background-color:maroon;
+}
+
+.quote.hyde:hover {
+	background-color:dimgray;
+}
+
+.quote.bernheimer:hover {
+	background-color:DarkGreen;
+}
+
+.quote.lemar:hover {
+	background-color:DarkSlateGray;
+}
+
+.quote.boyer:hover {
+	background-color:saddlebrown;
+}
+
+.quote.frug:hover {
+	background-color:darkblue;
+}
+
+.quote.pontillo:hover {
+	background-color:indigo;
+}
+
+.quote.bernstein:hover {
+	background-color:teal;
+}
+
+.quote.chakrabarti:hover {
+	background-color:purple;
+}
