@@ -28,6 +28,7 @@
   file: path={{ base_path }}/{{ git_sha.after | default(commit) }} state=touch
 
 - name: remove old clones to free up disk space
+  become: yes
   shell: |
     set -o pipefail
     # Find all 40-char-SHA-named child directories and for each directory, print
