@@ -8,7 +8,7 @@
       <?php snippet('fold/editors-statement') ?>
       <?php $details = snippet('fold/body-details', ['fold' => $page], true);
         snippet('page/body', ['page' => $page, 'details' => $details]) ?>
-      <?php snippet('fold/viewer', ['fold' => $page]) ?>
+      <!-- <?php snippet('fold/viewer', ['fold' => $page]) ?> -->
       <?php snippet('articles/list', ['articles' => $page->children()]) ?>
       <?php snippet('fold/details', ['fold' => $page]) ?>
       <?php snippet('fold/download', ['fold' => $page]) ?>
