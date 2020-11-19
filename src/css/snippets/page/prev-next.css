@@ -1,0 +1,5 @@
+@media (--md-viewport) {
+  .page-next {
+    text-align: right;
+  }
+}

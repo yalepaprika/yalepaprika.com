@@ -11,6 +11,8 @@ function init(): void {
         new SimpleBar(el);
     },
   );
+
+  // if it's at the beginning , scroll to end of home folds strip
 }
 
 // function unload(): void {

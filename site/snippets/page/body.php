@@ -1,11 +1,11 @@
-<div class="page-body box-block box-block-ruled cluster cluster-switcher cluster-ruled cluster-3-column">
+<div id="page-body" class="page-body box-block box-block-ruled cluster cluster-switcher cluster-ruled cluster-3-column">
   <div class="_cluster">
-    <?php if ($detailsIsSet = isset($details)): ?>
-      <div class="page-body-details">
+    <div class="page-body-details box-block-small">
+      <?php if (isset($details)): ?>
         <?= $details ?? '' ?>
-      </div>
-    <?php endif ?>
-    <div class="page-body-content <?= !$detailsIsSet ? 'page-body-content-spacer' : '' ?>">
+      <?php endif ?>
+    </div>
+    <div class="page-body-content">
       <div class="content stack stack-recursive">
         <?= $page->content()->get('content')->footnotes() ?>
       </div>

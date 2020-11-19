@@ -1,82 +1,48 @@
 .fold-cover {
-  height: calc(100vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
+  height: calc(75vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
   position: relative;
+}
+
+.fold-cover.fold-cover-fold-page {
+  height: calc(90vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
+}
+
+.fold-cover:not(.fold-cover-fold-page):hover {
+  box-shadow: 0 0 20px var(--background-color);
 }
 
 .fold-cover-main {
   height: 100%;
-  width: 100%;
 }
 
-.fold-cover-main.cluster > * {
-  flex-direction: column;
-  flex-wrap: unset;
+.fold-cover-top.cluster > * {
   justify-content: space-between;
-  align-items: stretch;
-  height: 100%;
-  margin: 0;
 }
 
-.fold-cover-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+.fold-cover-title {
+  flex: 1;
 }
 
-.fold-cover-details {
+.fold-cover.fold-cover-fold-page a.fold-cover-read-more {
   display: none;
-  width: 100%;
-  min-height: 0;
 }
 
-.fold-cover-publication-info {
+.fold-cover a.fold-cover-read-more:after {
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80%;
-  padding: var(--box-card-padding-x) var(--box-card-padding-y);
-}
-
-.fold-cover-publication-text {
-  color: var(--secondary-text-color);
+  z-index: 1;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
 
 @media (--md-viewport) {
-  .fold-cover.box-card {
-    /* make space for article-list scrollbar */
-    padding-right: calc(var(--box-card-padding-x) / 4);
-  }
-
-  .fold-cover-details {
-    display: unset;
-  }
-
-  .fold-cover-contributors-summary {
-    display: none;
-  }
-
-  .fold-cover-publication-info {
-    width: 33.33%;
+  .fold-cover-info {
+    text-align: right;
   }
 }
 
 @media (--lg-viewport) {
-  .fold-cover-main.cluster > * {
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: unset;
-  }
-
-  .fold-cover-main.cluster > * > * {
-    height: 100%;
-  }
-
-  .fold-cover-info {
-    flex: 1;
-  }
-
-  .fold-cover-details {
-    width: 40%;
+  .fold-cover-title {
+    max-width: 60%;
   }
 }
+

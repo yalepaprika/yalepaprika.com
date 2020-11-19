@@ -1,4 +1,4 @@
-<div class="subscription-bundles box-block box-block-ruled box-block-tight cluster cluster-switcher">
+<div id="page-subscription-bundles" class="subscription-bundles box-block box-block-ruled box-block-tight cluster cluster-switcher">
     <div class="_cluster">
       <?php foreach ($subscriptions as $subscription): ?>
         <div class="subscription-bundle box-card box-card-inverted stack stack-ruled">
@@ -14,7 +14,7 @@
               <div class="subscription-bundle-details cluster">
                 <div class="_cluster">
                   <div>
-                    <a class="button" href="<?= $subscription->button_link() ?>" target="_blank">Subscribe</a>
+                    <a class="button button-primary" href="<?= $subscription->button_link() ?>" target="_blank">Subscribe</a>
                   </div>
                   <div class="prices">
                     <h4>$<?= $subscription->total_cost() ?></h4>

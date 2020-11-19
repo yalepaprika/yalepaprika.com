@@ -1,0 +1,47 @@
+.home-folds-strip-scrollable {
+  border-left: var(--primary-font-thickness) solid var(--faded-color);
+  border-right: var(--primary-font-thickness) solid var(--faded-color);
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  --cluster-space-x: var(--default-space);
+}
+
+.home-folds-strip-folds {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.home-folds-strip-fold-wrapper {
+  flex-shrink: 0;
+  padding: 0 calc(var(--cluster-space-x));
+  width: 20rem;
+  height: 100%;
+}
+
+.home-folds-strip-fold-wrapper:not(:first-child) {
+  border-left: var(--primary-font-thickness) solid var(--faded-color);
+}
+
+.home-folds-strip-fold {
+  position: relative;
+  height: 100%;
+  margin-bottom: calc(var(--cluster-space-x) / 4);
+}
+
+.home-folds-strip-fold a:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.home-folds-strip-fold-image {
+  position: relative;
+  padding-bottom: 50%;
+  overflow: hidden;
+  background: var(--card-background-color);
+}

@@ -1,3 +1,7 @@
-.banner-website-preamble {
+.banner-website-description {
   flex: 1;
+}
+
+.banner-website-icon {
+  color: var(--secondary-text-color);
 }
