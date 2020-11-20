@@ -168,7 +168,7 @@ a {
   color: currentColor;
 }
 
-a:not(.no-link-animation):not(h1 a) {
+a:not(.no-link-animation) {
   color: var(--highlight-text-color);
   text-decoration: none;
   display: inline;
@@ -181,10 +181,16 @@ a:not(.no-link-animation):not(h1 a) {
   transition: background-size var(--animation-duration) ease-in-out var(--animation-duration);
 }
 
-a:not(.no-link-animation):not(h1 a):hover,
-a:not(.no-link-animation):not(h1 a):focus {
+a:not(.no-link-animation):hover,
+a:not(.no-link-animation):focus {
   background-size: 100% 100%;
   transition-delay: 0s;
+}
+
+h1 a {
+  color: currentColor;
+  background:none;
+  transition: unset;
 }
 
 h1 a:hover,
