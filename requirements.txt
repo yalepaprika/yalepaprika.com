@@ -1,2 +1,0 @@
-ansible==2.9.9
-ansible-lint==4.2.0
