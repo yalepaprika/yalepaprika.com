@@ -39,6 +39,7 @@ stats.html
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
+/site/accounts
 
 # Cache Files
 # ---------------
