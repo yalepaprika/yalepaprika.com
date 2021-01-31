@@ -29,7 +29,8 @@
     "sylvainjule/pagetable": "^1.0",
     "sylvainjule/footnotes": "^1.0",
     "omz13/kirby3-wellknown": "^0.2.1",
-    "bnomei/kirby3-fingerprint": "^2.3"
+    "bnomei/kirby3-fingerprint": "^2.3",
+    "thathoff/kirby-git-content": "^4.0"
   },
   "config": {
     "optimize-autoloader": true
