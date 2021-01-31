@@ -32,7 +32,7 @@ columns:
           contributors:
             type: pages
             query: site.find("contributors")
-      files:
+      uploads:
         type: files
         layout: cards
         size: medium

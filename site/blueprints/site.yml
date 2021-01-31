@@ -19,3 +19,10 @@ columns:
           - page-search
           - page-subscribe
       banners: sections/banners
+      meta:
+        type: fields
+        fields:
+          topics:
+            label: Article Topics
+            type: tags
+            accept: all

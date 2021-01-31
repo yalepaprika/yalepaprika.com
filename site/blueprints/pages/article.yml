@@ -32,7 +32,12 @@ columns:
           contributors:
             type: pages
             query: site.find("contributors")
-      files:
+          topics:
+            type: tags
+            accept: options
+            options: query
+            query: site.topics.split
+      uploads:
         type: files
         layout: cards
         size: medium

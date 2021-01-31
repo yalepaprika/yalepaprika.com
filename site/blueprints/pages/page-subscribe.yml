@@ -29,7 +29,7 @@ columns:
         uploads: file
   - width: 1/3
     sections:
-      files:
+      uploads:
         type: files
         layout: cards
         size: medium
