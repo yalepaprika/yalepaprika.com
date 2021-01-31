@@ -24,6 +24,7 @@ Icon
 !/public/assets/css/.gitkeep
 /kirby
 /vendor
+/content
 stats.html
 
 # Composer-managed plugins
