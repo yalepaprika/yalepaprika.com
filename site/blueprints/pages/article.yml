@@ -18,6 +18,10 @@ options:
 columns:
   - width: 2/3
     fields:
+      summary:
+        type: textarea
+        size: xsmall
+        buttons: false
       content:
         label: Text
         type: textarea
