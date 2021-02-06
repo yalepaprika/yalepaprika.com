@@ -4,8 +4,4 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "files.associations": {
-    "deploy/**/*.yml": "ansible"
-  },
-  "ansible.validation": false,
 }
