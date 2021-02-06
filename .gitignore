@@ -1,7 +1,6 @@
 # Secret files
 # ------------
 *.env
-.vault_pass
 
 # System files
 # ------------
@@ -10,10 +9,7 @@ Icon
 .DS_Store
 *.log
 
-# Ignore vagrant directory
-.vagrant/
-
-# Temporary files
+# Kirby files
 # ---------------
 
 /public/media/*
