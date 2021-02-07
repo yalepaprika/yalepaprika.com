@@ -5,9 +5,10 @@ function findArticleBySlug($slug, $code = 301) {
     $articles = $folds->grandChildren();
     foreach ($articles as $article) {
         if ($article->slug() == $slug) {
-            go($article->url(), $code);
+            return $article;
         }
     }
+    return null;
 }
 
 Kirby::plugin('yalepaprika/paprika-redirects', [
@@ -15,7 +16,11 @@ Kirby::plugin('yalepaprika/paprika-redirects', [
             [
                 'pattern' => 'articles/(:any)',
                 'action' => function ($any) {
-                    findArticleBySlug($any);
+                    $article = findArticleBySlug($any);
+                    if ($article) {
+                        go($article->url(), 301);
+                        return;
+                    }
                     $this->next();
                 }
             ],
@@ -40,7 +45,16 @@ Kirby::plugin('yalepaprika/paprika-redirects', [
             [
                 'pattern' => '(:any)',
                 'action' => function ($any) {
-                    findArticleBySlug($any);
+                    $page = page($any);
+                    if ($page) {
+                        $this->next();
+                        return;
+                    }
+                    $article = findArticleBySlug($any);
+                    if ($article) {
+                        go($article->url(), 301);
+                        return;
+                    }
                     $this->next();
                 }
             ],
