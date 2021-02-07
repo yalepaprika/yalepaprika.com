@@ -1,3 +1,4 @@
+<?php use Kirby\Http\Uri; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +19,6 @@
   <?php endif ?>
   <meta name="description" content="Paprika! is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art."/>
   <?= Bnomei\Fingerprint::css('/assets/css/main.css') ?>
-  <script async defer data-domain="yalepaprika.com" src="https://plausible.io/js/plausible.js"></script>
+  <script async defer data-domain="<?= (new Uri($site->url()))->domain() ?>" src="https://plausible.yalepaprika.com/js/index.js"></script>
 </head>
 <body>
