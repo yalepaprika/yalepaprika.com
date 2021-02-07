@@ -1,6 +1,6 @@
 <?php
 
-function findArticleBySlug($slug, $code = 301) {
+function findArticleBySlug($slug) {
     $folds = site()->find('folds');
     $articles = $folds->grandChildren();
     foreach ($articles as $article) {
