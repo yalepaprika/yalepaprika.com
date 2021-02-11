@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c6c589e8ee3d59a6748ca0a3665f90a",
+    "content-hash": "8c84f5380270a452783a3d4ba3513d8e",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -172,16 +172,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "3.5.1",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "551e2f427eaf18e471df1c304552ab3de35e37c6"
+                "reference": "317f494ee5166f36e32f9acf286f69786de30512"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/551e2f427eaf18e471df1c304552ab3de35e37c6",
-                "reference": "551e2f427eaf18e471df1c304552ab3de35e37c6",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/317f494ee5166f36e32f9acf286f69786de30512",
+                "reference": "317f494ee5166f36e32f9acf286f69786de30512",
                 "shasum": ""
             },
             "require": {
@@ -240,7 +240,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-01-19T11:05:44+00:00"
+            "time": "2021-02-11T10:38:27+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -799,26 +799,20 @@
         },
         {
             "name": "sylvainjule/pagetable",
-            "version": "1.0.8",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sylvainjule/kirby-pagetable.git",
-                "reference": "a47689e703d63a2e5f09038c9cc74747ef302ccb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sylvainjule/kirby-pagetable/zipball/a47689e703d63a2e5f09038c9cc74747ef302ccb",
-                "reference": "a47689e703d63a2e5f09038c9cc74747ef302ccb",
-                "shasum": ""
+                "url": "https://github.com/s3ththompson/kirby-pagetable",
+                "reference": "4e85ef981d03b9f21b469081f06e87c67a6b2314"
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
             },
+            "default-branch": true,
             "type": "kirby-plugin",
             "extra": {
                 "installer-name": "pagetable"
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -829,11 +823,7 @@
                 }
             ],
             "description": "Display subpages in a flexible table",
-            "support": {
-                "issues": "https://github.com/sylvainjule/kirby-pagetable/issues",
-                "source": "https://github.com/sylvainjule/kirby-pagetable/tree/1.0.8"
-            },
-            "time": "2021-01-25T17:16:10+00:00"
+            "time": "2021-02-11T15:11:31+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -969,7 +959,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "sylvainjule/pagetable": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

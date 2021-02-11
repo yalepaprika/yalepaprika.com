@@ -13,6 +13,10 @@ class FoldPage extends Page {
         return $text;
     }
 
+    public function sortable_date() {
+        return $this->publication_date()->toDate('Y-m-d', 'now');
+    }
+
     public function formattedDate() {
         return $this->publication_date()->toDate('F j, Y');
     }
