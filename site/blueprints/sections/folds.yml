@@ -4,7 +4,7 @@ parent: site.find("folds")
 template: fold
 limit: 10
 empty: No folds yet
-sortBy: publication_date desc
+sortBy: status desc publication_date desc
 columns:
   title:
     label: Title
