@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c84f5380270a452783a3d4ba3513d8e",
+    "content-hash": "c5075ed7bee1cd1a95ad73d02fd42c76",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -799,16 +799,15 @@
         },
         {
             "name": "sylvainjule/pagetable",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s3ththompson/kirby-pagetable",
-                "reference": "4e85ef981d03b9f21b469081f06e87c67a6b2314"
+                "reference": "ec29b797bbc6498f4c1f9426d7909b825455f646"
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
             },
-            "default-branch": true,
             "type": "kirby-plugin",
             "extra": {
                 "installer-name": "pagetable"
@@ -823,7 +822,7 @@
                 }
             ],
             "description": "Display subpages in a flexible table",
-            "time": "2021-02-11T15:11:31+00:00"
+            "time": "2021-02-11T19:00:03+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",

@@ -30,7 +30,7 @@
   "require": {
     "php": ">=7.1.0",
     "getkirby/cms": "^3.5",
-    "sylvainjule/pagetable": "dev-master",
+    "sylvainjule/pagetable": "dev-main",
     "sylvainjule/footnotes": "^1.0",
     "omz13/kirby3-wellknown": "^0.2.1",
     "bnomei/kirby3-fingerprint": "^2.3"
