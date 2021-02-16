@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbed50c189c17c98cc4dd97cadf373a7",
+    "content-hash": "7427905a1e89654b7458694194db9b47",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -55,6 +55,66 @@
                 "source": "https://github.com/bnomei/kirby3-fingerprint/tree/master"
             },
             "time": "2019-02-06T12:17:38+00:00"
+        },
+        {
+            "name": "bnomei/kirby3-robots-txt",
+            "version": "1.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bnomei/kirby3-robots-txt.git",
+                "reference": "0ef3374efc5abd6589498668cb0258fee45a918a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bnomei/kirby3-robots-txt/zipball/0ef3374efc5abd6589498668cb0258fee45a918a",
+                "reference": "0ef3374efc5abd6589498668cb0258fee45a918a",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "getkirby/cms": "^3.2",
+                "nunomaduro/phpinsights": "^1.8",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^8.3"
+            },
+            "suggest": {
+                "omz13/kirby3-xmlsitemap": "Adds a xml sitemap which will be automatically be included in the robots.txt"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": "tests/kirby"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bnomei\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Meilick",
+                    "email": "b@bnomei.com"
+                }
+            ],
+            "description": "Manage the robots.txt from the Kirby config file",
+            "keywords": [
+                "kirby3",
+                "kirby3-cms",
+                "kirby3-plugin",
+                "robots-exclusion-protocol",
+                "robots-txt"
+            ],
+            "support": {
+                "issues": "https://github.com/bnomei/kirby3-robots-txt/issues",
+                "source": "https://github.com/bnomei/kirby3-robots-txt/tree/master"
+            },
+            "time": "2020-02-26T13:21:56+00:00"
         },
         {
             "name": "claviska/simpleimage",
