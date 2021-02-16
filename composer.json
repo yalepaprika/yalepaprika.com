@@ -19,12 +19,16 @@
   },
   "repositories": [
     {
-        "type": "git",
-        "url": "https://github.com/thathoff/kirby-git-content"
+      "type": "git",
+      "url": "https://github.com/thathoff/kirby-git-content"
     },
     {
-        "type": "git",
-        "url": "https://github.com/s3ththompson/kirby-pagetable"
+      "type": "git",
+      "url": "https://github.com/s3ththompson/kirby-pagetable"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/ceesvanegmond/kirby3-xmlsitemap"
     }
   ],
   "require": {
@@ -32,7 +36,7 @@
     "getkirby/cms": "^3.5",
     "sylvainjule/pagetable": "dev-main",
     "sylvainjule/footnotes": "^1.0",
-    "omz13/kirby3-wellknown": "^0.2.1",
+    "omz13/kirby3-xmlsitemap": "dev-master",
     "bnomei/kirby3-fingerprint": "^2.3"
   },
   "config": {

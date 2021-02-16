@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5075ed7bee1cd1a95ad73d02fd42c76",
+    "content-hash": "bbed50c189c17c98cc4dd97cadf373a7",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -575,18 +575,12 @@
             "time": "2019-09-10T13:16:29+00:00"
         },
         {
-            "name": "omz13/kirby3-wellknown",
-            "version": "0.2.1",
+            "name": "omz13/kirby3-xmlsitemap",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/omz13/kirby3-wellknown.git",
-                "reference": "276b3a05cab1ca76e2710486c4d66682547f71d3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/omz13/kirby3-wellknown/zipball/276b3a05cab1ca76e2710486c4d66682547f71d3",
-                "reference": "276b3a05cab1ca76e2710486c4d66682547f71d3",
-                "shasum": ""
+                "url": "https://github.com/ceesvanegmond/kirby3-xmlsitemap",
+                "reference": "b3206dfa054527b374d898874970713c2efa2bc1"
             },
             "require": {
                 "getkirby/composer-installer": "^1.1",
@@ -599,19 +593,48 @@
                 "omz13/omz13-coding-standard": "dev-master",
                 "phpcompatibility/php-compatibility": "^8.2",
                 "phpmd/phpmd": "^2.6",
-                "phpstan/phpstan": "^0.10.3",
-                "phpstan/phpstan-strict-rules": "^0.10.1",
+                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan-strict-rules": "^0.11",
                 "roave/security-advisories": "dev-master"
             },
+            "default-branch": true,
             "type": "kirby-plugin",
             "autoload": {
                 "psr-4": {
                     "omz13\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "build": [
+                    "@sanity",
+                    "composer dumpautoload -o"
+                ],
+                "fix": [
+                    "./vendor/bin/phpcbf ./src/*",
+                    "./vendor/bin/phpcs -s ./src/*"
+                ],
+                "lint": [
+                    "./vendor/bin/parallel-lint ./src/*"
+                ],
+                "mess": [
+                    "./vendor/bin/phpmd ./src text codesize,controversial,design,unusedcode"
+                ],
+                "sanity": [
+                    "make tools",
+                    "@lint",
+                    "./vendor/bin/phpcs -n ./src/*",
+                    "@stan",
+                    "@mess"
+                ],
+                "stan": [
+                    "./vendor/bin/phpstan analyse --level 7 ./src"
+                ],
+                "style": [
+                    "./vendor/bin/phpcs ./src/*"
+                ]
+            },
             "license": [
-                "BSD-3-Clause"
+                "MIT"
             ],
             "authors": [
                 {
@@ -621,17 +644,13 @@
                     "role": "Developer"
                 }
             ],
-            "description": "kirby3 plugin to suport well-known files",
+            "description": "kirby3 plugin to generate an xml-based sitemap",
             "keywords": [
                 "kirby3",
                 "plugin",
-                "well-known"
+                "sitemap"
             ],
-            "support": {
-                "issues": "https://github.com/omz13/kirby3-wellknown/issues",
-                "source": "https://github.com/omz13/kirby3-wellknown/tree/0.2.1"
-            },
-            "time": "2019-04-15T12:18:06+00:00"
+            "time": "2020-07-20T14:11:05+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -826,16 +845,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.22.0",
+            "version": "v1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13"
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
-                "reference": "f377a3dd1fde44d37b9831d68dc8dea3ffd28e13",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
                 "shasum": ""
             },
             "require": {
@@ -886,7 +905,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
             },
             "funding": [
                 {
@@ -902,7 +921,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-01-22T09:19:47+00:00"
         },
         {
             "name": "true/punycode",
@@ -959,7 +978,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "sylvainjule/pagetable": 20
+        "sylvainjule/pagetable": 20,
+        "omz13/kirby3-xmlsitemap": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
