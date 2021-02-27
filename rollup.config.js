@@ -2,7 +2,6 @@ import jsx from 'acorn-jsx';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
 import babel from '@rollup/plugin-babel';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import { terser } from 'rollup-plugin-terser';
@@ -21,7 +20,7 @@ const dev = mode === 'development';
 // and the value is the source filename
 /*
 {
-  'templates/default': 'src/js/templates/default.ts'
+  'templates/default': 'src/js/templates/default.js'
 }
 */
 function generateInputMap(filenames, base) {
@@ -39,7 +38,7 @@ function generateInputMap(filenames, base) {
 // see the build:js:visualize npm script
 export default async ({ configVisualize }) => {
   return {
-    input: generateInputMap(await glob('src/js/**/*.{ts,tsx}'), 'src/js'),
+    input: generateInputMap(await glob('src/js/**/*.{js, jsx}'), 'src/js'),
     output: [
       {
         dir: 'public/assets/js/',
@@ -56,12 +55,6 @@ export default async ({ configVisualize }) => {
       }),
       resolve({
         browser: true,
-      }),
-      typescript({
-        module: 'CommonJS',
-        // still emit files even when there's an error in order to
-        // not break rollup watch
-        noEmitOnError: !dev,
       }),
       commonjs({ extensions: ['.js', '.ts', '.jsx', '.tsx'] }),
       babel({
