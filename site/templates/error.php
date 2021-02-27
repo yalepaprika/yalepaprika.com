@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<div class="container stack">
+<div id="swup" class="container stack">
   <div class="page stack">
     <?php snippet('page/menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
     <main>

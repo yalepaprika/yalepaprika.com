@@ -95,11 +95,6 @@ body {
   flex-direction: column;
 }
 
-html,
-body {
-  scroll-behavior: smooth;
-}
-
 .container {
   flex: 1;
   height: 100%;

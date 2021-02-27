@@ -17,10 +17,15 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@swup/preload-plugin": "^1.0.3",
+    "@swup/progress-plugin": "^1.0.0",
+    "@swup/scroll-plugin": "^1.0.6",
+    "@swup/slide-theme": "^1.0.5",
     "lazysizes": "^5.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "ress": "^2.0.4",
+    "swup": "^2.0.14"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
@@ -47,6 +52,6 @@
     "rollup": "^2.15.0",
     "rollup-plugin-sizes": "^1.0.2",
     "rollup-plugin-terser": "^6.1.0",
-    "rollup-plugin-visualizer": "^4.0.4",
+    "rollup-plugin-visualizer": "^4.0.4"
   }
 }

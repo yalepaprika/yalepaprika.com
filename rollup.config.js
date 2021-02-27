@@ -73,7 +73,7 @@ export default async ({ configVisualize }) => {
           open: true,
         }),
     ],
-    treeshake: { moduleSideEffects: false },
+    treeshake: { moduleSideEffects: true },
     watch: {
       clearScreen: false,
       exclude: ['node_modules/**'],
