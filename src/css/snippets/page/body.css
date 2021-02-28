@@ -7,6 +7,14 @@
   font-size: var(--detail-font-size);
 }
 
+.content ul {
+  list-style: disc inside;
+}
+
+.content ol {
+  list-style: decimal inside;
+}
+
 @media (--md-viewport) {
   .page-body.cluster > * > .page-body-details {
     width: calc((100% - 3 * var(--cluster-space-x)) / 4);
