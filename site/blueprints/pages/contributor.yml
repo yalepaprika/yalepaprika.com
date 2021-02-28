@@ -14,24 +14,69 @@ options:
   autoPublish: unlisted
 
 fields:
-  degree:
-    label: Degree or Title
-    help: (Yale Student) e.g. M.Arch I, M.Arch II, M.F.A., BA (Yale Faculty) e.g. Dean, Assistant Dean, Critic
-    type: text
+  degrees:
+    label: Degree
+    type: structure
+    fields:
+      degree:
+        type: select
+        options:
+          march1: M.Arch I
+          march2: M.Arch II
+          phd: PhD
+          med: MED
+          ba: BA
+          mfa: MFA
+          mba: MBA
+          mem: MEM
+          mfs: MFS
+          mesc: MESc
+          ma: MA
+          jd: JD
+          mph: MPH
+          md: MD
+          other: Other
+      other_degree:
+        label: Other Degree
+        type: text
+        when:
+          degree: other
+      year:
+        label: Graduation Year
+        type: number
+        step: 1
+        min: 1000
+      affiliation:
+        type: select
+        options:
+          yale: Yale University
+          other: Other
+      other_affiliation:
+        label: Other Affiliation
+        type: text
+        when:
+          affiliation: other
+  titles:
+    label: Title
+    type: structure
+    fields:
+      title:
+        type: text
+      affiliation:
+        type: select
+        options:
+          yale: Yale University
+          other: Other
+      other_affiliation:
+        label: Other Affiliation
+        type: text
+        when:
+          affiliation: other
+  contributor_type:
+    label: Type
+    type: radio
     width: 1/2
-  graduation_year:
-    label: Graduation Year
-    type: number
-    step: 1
-    min: 1000
-    width: 1/2
-  dual_degree:
-    label: Dual Degree
-    help: (Optional) Use only if student is pursuing a dual degree, e.g. M.B.A.
-    type: text
-    width: 1/2
-  organization:
-    type: toggle
-    text: Contributor is an organization?
-    help: Check if contributor is an organization rather than an individual person.
-    width: 1/2
+    default: individual
+    options:
+      individual: Individual
+      company: Company / Organization
