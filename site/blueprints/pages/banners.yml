@@ -1,13 +1,5 @@
 title: Banners
 
-status:
-  draft:
-    label: Draft
-    text: The page is in draft mode and only visible for logged in editors
-  unlisted:
-    label: Public
-    text: The page is visible to the public
-
 options:
   title: false
   duplicate: false

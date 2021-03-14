@@ -1,4 +1,4 @@
-title: Folds
+title: Leadership Teams
 
 options:
   title: false
@@ -8,4 +8,4 @@ options:
   delete: false
 
 sections:
-  folds: sections/folds
+  leadership_teams: sections/leadership-teams

@@ -6,6 +6,9 @@ columns:
       folds: sections/folds
   - width: 1/2
     sections:
+      leadership_teams: sections/leadership-teams
+  - width: 1/2
+    sections:
       contributors: sections/contributors
   - width: 1/2
     sections:

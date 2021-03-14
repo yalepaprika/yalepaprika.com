@@ -1,0 +1,5 @@
+headline: Leadership Teams
+type: pagetable
+parent: site.find("leadership-teams")
+template: leadership-team
+empty: No leadership teams yet
