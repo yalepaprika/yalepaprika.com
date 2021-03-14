@@ -1,5 +1,24 @@
 <?php
 class FoldPage extends Page {
+    public function children() {
+        $children = parent::children();
+        if ($this->website()->isEmpty()) {
+            return $children;
+        }
+        $embed = Page::factory([
+            'slug' => 'embed',
+            'parent' => $this,
+            'template' => 'embed',
+            'model' => 'embed',
+            'content' => [
+                'title' => 'Embed',
+                'website' => $this->website()
+            ]
+        ]);
+        $children->append($embed);
+        return $children;
+    }
+
     public function contributorsSummary() {
         $articles = $this->children();
         $contributors = [];

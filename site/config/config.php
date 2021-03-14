@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'routes' => require_once 'routes.php',
     'markdown' => [
         'extra' => true
     ],
