@@ -11,12 +11,18 @@ class FoldPage extends Page {
             'template' => 'embed',
             'model' => 'embed',
             'content' => [
-                'title' => 'Embed',
+                'title' => $this->title() . ' Microsite',
                 'website' => $this->website()
             ]
         ]);
         $children->append($embed);
         return $children;
+    }
+
+    public function embedPage() {
+        $children = $this->children();
+        $embed = $children->template('embed')->first();
+        return $embed;
     }
 
     public function contributorsSummary() {

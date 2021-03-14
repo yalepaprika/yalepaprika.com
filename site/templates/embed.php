@@ -4,8 +4,7 @@
     <?php snippet('page/menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
     <main>
       <article class="article-body stack">
-        <?php snippet('page/title', ['title' => $page->title()]) ?>
-        <?= $page->website() ?>
+        <?php snippet('embed/iframe', ['url' => $page->website()]) ?>
       </article>
     </main>
   </div>

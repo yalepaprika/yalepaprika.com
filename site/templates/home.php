@@ -6,7 +6,7 @@
       <?php snippet('fold/cover', ['fold' => collection('folds')->first()]) ?>
       <div class="cluster cluster-2-2-column cluster-stack cluster-stretch cluster-switcher">
         <div class="_cluster">
-          <?php snippet('banner-website/banner', []) ?>
+          <?php snippet('banner-website/banner', ['title' => '<em>Paprika?</em> Rolling', 'url' => 'https://www.paprika-rolling.com', 'description' => 'Visit our Summer 2020 sister platform.']) ?>
           <?php snippet('banner-subscribe/banner', []) ?>
         </div>
       </div>
