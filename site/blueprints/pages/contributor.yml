@@ -72,11 +72,20 @@ fields:
         type: text
         when:
           affiliation: other
-  contributor_type:
-    label: Type
+  alphabetize_as:
+    label: Alphabetize Name As
     type: radio
     width: 1/2
-    default: individual
-    options:
-      individual: Individual
-      company: Company / Organization
+    options: query
+    default: lastname
+    query:
+      fetch: page.alphabetizeOptions
+      text: "{{ arrayItem.toArray.text }}"
+      value: "{{ arrayItem.toArray.value }}"
+  other_alphabetize_as:
+    label: Custom Alphabetization
+    type: text
+    width: 1/2
+    when:
+      alphabetize_as: other
+
