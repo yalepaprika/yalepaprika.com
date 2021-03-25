@@ -1,0 +1,7 @@
+.banner-link-description {
+  flex: 1;
+}
+
+.banner-link-icon {
+  color: var(--secondary-text-color);
+}

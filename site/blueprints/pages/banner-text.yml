@@ -1,4 +1,4 @@
-title: Blank Banner
+title: Text Banner
 icon: star
 
 status:
@@ -9,10 +9,16 @@ status:
     label: Public
     text: The page is visible to the public
 
+options:
+  changeTemplate:
+    - banner-newsletter
+    - banner-link
+  autoPublish: listed
+
 columns:
   - width: 1/2
     fields:
-      content:
+      description:
         label: Text
         type: textarea
         size: huge
@@ -28,6 +34,6 @@ columns:
             type: radio
             columns: 2
             options:
-              - "Half"
-              - "Full"
-            default: Half
+              half: "Half"
+              full: "Full"
+            default: half

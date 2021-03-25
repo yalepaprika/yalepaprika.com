@@ -1,7 +1,7 @@
-.banner-website-description {
+.banner-text-description {
   flex: 1;
 }
 
-.banner-website-icon {
+.banner-text-icon {
   color: var(--secondary-text-color);
 }

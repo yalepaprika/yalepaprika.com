@@ -1,4 +1,4 @@
-title: Website Link Banner
+title: Link Banner
 icon: url
 
 status:
@@ -9,15 +9,26 @@ status:
     label: Public
     text: The page is visible to the public
 
+options:
+  changeTemplate:
+    - banner-newsletter
+    - banner-text
+  autoPublish: listed
+
 columns:
   - width: 1/2
     fields:
-      website:
-        label: Website Link
+      link:
+        label: Link
         type: url
-      description:
-        label: Website Description
+      text:
+        label: Link Text
         type: text
+      description:
+        label: Link Description
+        type: textarea
+        buttons: false
+        size: small
       external:
         type: toggle
         text: External Link?
@@ -33,6 +44,6 @@ columns:
             type: radio
             columns: 2
             options:
-              - "Half"
-              - "Full"
-            default: Half
+              half: "Half"
+              full: "Full"
+            default: half

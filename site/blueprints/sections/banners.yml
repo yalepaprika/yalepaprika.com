@@ -4,6 +4,6 @@ empty: No banners yet
 layout: list
 parent: site.find("banners")
 template:
-  - banner-blank
-  - banner-subscribe
-  - banner-website
+  - banner-text
+  - banner-newsletter
+  - banner-link
