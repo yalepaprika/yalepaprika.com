@@ -3,7 +3,7 @@
     <div class="_cluster">
       <div class="banner-link-description box-block-small stack stack-small stack-space-between">
         <h6>Link</h6>
-        <p><?= $banner->description() ?></p>
+        <p><?= $banner->description()->kirbytext() ?></p>
       </div>
       <div class="banner-subscribe-icon">
         <?= file_get_contents("assets/icons/link.svg"); ?>
