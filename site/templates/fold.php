@@ -4,14 +4,8 @@
     <?php snippet('page/menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
     <main class="stack">
       <?php snippet('fold/cover', ['fold' => $page]) ?>
-      <?php if (false): ?>
-        <?php snippet('banner-link/banner', [
-          'banner' => [
-            'title' => 'Visit Microsite',
-            'url' => $embed->url(),
-            'description' => 'Visit the online edition of <em>' . $page->title(). '</em>, a custom microsite designed for this issue.'
-          ]
-        ]) ?>
+      <?php if ($embed = $page->embedPage()): ?>
+        <?php snippet('banner-link/banner', ['banner' => $embed]) ?>
       <?php endif; ?>
       <?php snippet('fold/table-of-contents', ['fold' => $page, 'articles' => $page->children()->notTemplate('embed')]) ?>
       <?php snippet('fold/editors-statement') ?>
