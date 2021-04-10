@@ -25,6 +25,12 @@ return [
     }
   ],
   [
+      'pattern' => 'analytics',
+      'action' => function() {
+          go('https://plausible.io/share/yalepaprika.com?auth=I0PBkzd1ov7tTV_zgJUGc');
+      }
+  ],
+  [
     'pattern' => 'articles/(:any)',
     'action' => function ($any) {
         $article = findArticleBySlug($any);
