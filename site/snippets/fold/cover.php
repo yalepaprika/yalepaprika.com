@@ -1,7 +1,7 @@
 <div
   class="fold-cover fold-cover-<?= $fold->slug() ?> <?= ($page->url() == $fold->url() ) ? 'fold-cover-fold-page' : '' ?> box-card box-card-inverted lazyload"
   data-bg="/assets/images/<?= $fold->slug() ?>-background-new.jpg"
-  style="background-size: cover; background-position: left center;">
+  style="background-size: cover; background-position: <?= $fold->slug() == 'fashion' ? 'right' : 'left' ?> center;">
   <div class="fold-cover-main stack stack-space-between">
     <div class="fold-cover-top cluster cluster-switcher">
       <div class="_cluster">
