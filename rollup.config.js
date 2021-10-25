@@ -37,8 +37,9 @@ function generateInputMap(filenames, base) {
 // configVisualize is set by --configVisualize in the rollup cli.
 // see the build:js:visualize npm script
 export default async ({ configVisualize }) => {
+  const inputs = ['src/js/main.js'].concat(await glob('src/js/templates/**/*.{js, jsx}'));
   return {
-    input: generateInputMap(await glob('src/js/**/*.{js, jsx}'), 'src/js'),
+    input: generateInputMap(inputs, 'src/js'),
     output: [
       {
         dir: 'public/assets/js/',

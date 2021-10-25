@@ -1,3 +1,10 @@
 .fold-viewer {
-  height: calc(40vh);
+  height: calc(90vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
+  background: var(--card-background-color);
+}
+
+.fold-viewer canvas {
+  width: 100%;
+  height: 100%;
+  
 }

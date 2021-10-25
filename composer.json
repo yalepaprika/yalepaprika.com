@@ -24,10 +24,6 @@
     },
     {
       "type": "git",
-      "url": "https://github.com/s3ththompson/kirby-pagetable"
-    },
-    {
-      "type": "git",
       "url": "https://github.com/ceesvanegmond/kirby3-xmlsitemap"
     }
   ],
