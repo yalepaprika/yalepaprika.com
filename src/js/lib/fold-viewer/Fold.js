@@ -28,18 +28,6 @@ function Model({
   const { nodes, animations } = useGLTF('/assets/fold-viewer/newspaper.glb');
   const { Plane } = nodes;
 
-  const spring = useSpring({
-    to: {
-      progress,
-    },
-    config: {
-      mass: 1,
-      tension: 210,
-      friction: 50,
-      clamp: true,
-    },
-  });
-
   const frontMap = useLoader(THREE.TextureLoader, front);
   frontMap.encoding = THREE.sRGBEncoding;
   frontMap.flipY = false;
@@ -54,6 +42,18 @@ function Model({
     () => new FoldMaterial(frontMap, backMap, normalMap),
     [frontMap, backMap, normalMap],
   );
+
+  const spring = useSpring({
+    to: {
+      progress,
+    },
+    config: {
+      mass: 1,
+      tension: 210,
+      friction: 50,
+      clamp: true,
+    },
+  });
 
   const [mixer] = useState(() => new THREE.AnimationMixer(Plane));
   const action = useMemo(() => mixer.clipAction(animations[0], Plane), [

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import FoldGroup from './FoldGroup';
 
-export default function FoldViewer({front, back, double, ...props}) {
+export default function FoldViewer({ front, back, double, ...props }) {
   return (
     <group>
       <ambientLight intensity={0.8} />
@@ -11,11 +11,9 @@ export default function FoldViewer({front, back, double, ...props}) {
         castShadow
         shadow-bias={-0.0001}
       />
-      <FoldGroup
-        front={front}
-        back={back}
-        double={double}
-      />
+      <Suspense fallback={null}>
+        <FoldGroup front={front} back={back} double={double} />
+      </Suspense>
     </group>
   );
 }

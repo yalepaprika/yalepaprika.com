@@ -1,5 +1,5 @@
 import { useThree } from '@react-three/fiber';
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Fold from './Fold';
 
 export default function FoldGroup({ front, back, double, ...props }) {
@@ -7,6 +7,13 @@ export default function FoldGroup({ front, back, double, ...props }) {
   const [hovered, setHovered] = useState(false);
 
   const { domElement } = useThree((state) => state.gl);
+
+  useEffect(() => {
+    const loading = document.getElementById('fold-viewer-loading');
+    if (loading) {
+      loading.style.display = 'none';
+    }
+  }, []);
 
   useEffect(() => {
     domElement.style.cursor = hovered ? 'pointer' : 'auto';
@@ -27,27 +34,25 @@ export default function FoldGroup({ front, back, double, ...props }) {
   }
 
   return (
-    <Suspense fallback={null}>
-      <group
-        onClick={next}
-        onPointerOver={peek}
-        onPointerOut={unpeek}
-        onPointerMissed={next}
-      >
-        <Fold
-          position-x={double ? -0.5 : 0}
-          front={front}
-          back={back}
-          progress={progress}
-        />
-        <Fold
-          position-x={double ? 0.5 : -10}
-          rotation-z={Math.PI}
-          front={front}
-          back={back}
-          progress={progress}
-        />
-      </group>
-    </Suspense>
+    <group
+      onClick={next}
+      onPointerOver={peek}
+      onPointerOut={unpeek}
+      onPointerMissed={next}
+    >
+      <Fold
+        position-x={double ? -0.5 : 0}
+        front={front}
+        back={back}
+        progress={progress}
+      />
+      <Fold
+        position-x={double ? 0.5 : -10}
+        rotation-z={Math.PI}
+        front={front}
+        back={back}
+        progress={progress}
+      />
+    </group>
   );
 }
