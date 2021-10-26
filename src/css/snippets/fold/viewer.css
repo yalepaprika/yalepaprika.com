@@ -16,11 +16,15 @@
   z-index: -1;
 }
 
-#fold-viewer-loading svg {
-  animation: loading-rotate 2s linear infinite;
+.fold-viewer-container h6 {
+  text-align: center;
 }
 
-@keyframes loading-rotate {
+#fold-viewer-loading svg {
+  animation: fold-viewer-loading-rotate 2s linear infinite;
+}
+
+@keyframes fold-viewer-loading-rotate {
   100% {
     transform: rotate(360deg);
   }

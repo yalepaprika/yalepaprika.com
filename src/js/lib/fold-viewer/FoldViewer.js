@@ -6,7 +6,7 @@ export default function FoldViewer({ front, back, double, ...props }) {
     <group>
       <ambientLight intensity={0.8} />
       <directionalLight
-        color={'#FFEFE3'}
+        color={'#fff9f4'}
         position={[-3, 5, -4]}
         castShadow
         shadow-bias={-0.0001}
