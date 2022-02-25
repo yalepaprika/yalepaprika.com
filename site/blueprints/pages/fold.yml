@@ -116,6 +116,10 @@ columns:
         label: Archivists
         type: pages
         query: site.find("contributors")
+      producers:
+        label: Producers
+        type: pages
+        query: site.find("contributors")
       graphic_design_liaisons:
         label: Graphic Design Liaisons
         type: pages

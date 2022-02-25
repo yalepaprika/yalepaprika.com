@@ -12,8 +12,9 @@
       <?php snippet('utilities/detail-list/pages-x', ['title' => 'Graphic Designers', 'pages' => $fold->graphic_designers()->toPages()]) ?>
       <?php snippet('utilities/detail-list/pages-x', ['title' => 'Coordinating Editors', 'pages' => $fold->coordinating_editors()->toPages()]) ?>
       <?php snippet('utilities/detail-list/pages-x', ['title' => 'Publishers', 'pages' => $fold->publishers()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Web Editors', 'pages' => $fold->web_editors()->toPages()]) ?>
       <?php snippet('utilities/detail-list/pages-x', ['title' => 'Archivists', 'pages' => $fold->archivists()->toPages()]) ?>
+      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Producers', 'pages' => $fold->producers()->toPages()]) ?>
+      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Web Editors', 'pages' => $fold->web_editors()->toPages()]) ?>
     </div>
   </div>
 </div>

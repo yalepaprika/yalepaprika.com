@@ -9,7 +9,7 @@
 }
 
 .fold-details-numbers.cluster > * {
-  justify-content: space-between;
+  width: 100%;
 }
 
 .fold-details-numbers.cluster > * > * {
@@ -50,14 +50,7 @@
 }
 
 @media (--md-viewport) {
-  .fold-details-main.cluster > * {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-auto-flow: column;
-  }
-
   .fold-details-main.cluster > * > * {
-    width: unset;
+    width: calc(25%  - var(--cluster-space-x));
   }
 }
