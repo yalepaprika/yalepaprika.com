@@ -4,7 +4,7 @@ import FoldGroup from './FoldGroup';
 export default function FoldViewer({ front, back, double, ...props }) {
   return (
     <group>
-      <ambientLight intensity={0.8} />
+      <ambientLight intensity={0.4} />
       <directionalLight
         color={'#fff9f4'}
         position={[-3, 5, -4]}

@@ -74,10 +74,9 @@ function Model({
   }
 
   useFrame((state, delta) => {
-    const MAX_DARKNESS = 0.6;
-    const MIN_DARKNESS = 0.4;
+    const DARKNESS = 0.3;
     const MIN_BLEED = 0.1;
-    const MAX_BLEED = 0.2;
+    const MAX_BLEED = 0.4;
 
     const relativeProgress =
       mod(spring.progress.get(), SPREAD_CYCLE.length) / SPREAD_CYCLE.length;
@@ -85,7 +84,7 @@ function Model({
     mixer.setTime((relativeFrame * duration) / frames);
 
     const openness = 1 - 2 * Math.abs(relativeProgress - 0.5);
-    const darkness = MIN_DARKNESS;
+    const darkness = DARKNESS;
     const bleed = MIN_BLEED + Math.pow(openness, 2) * (MAX_BLEED - MIN_BLEED);
 
     material.darkness.value = darkness;
