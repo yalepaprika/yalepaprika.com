@@ -13,6 +13,7 @@
 
 .fold-cover-main {
   height: 100%;
+  position: relative;
 }
 
 .fold-cover-top.cluster > * {
@@ -32,6 +33,58 @@
   position: absolute;
   z-index: 1;
   top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.fold-cover-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fold-cover-background.fold-cover-background-left {
+  justify-content: flex-start;
+}
+
+.fold-cover-background.fold-cover-background-right {
+  justify-content: flex-end;
+}
+
+.fold-cover-background-hidden {
+  opacity: 0;
+}
+
+.fold-cover-background-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: url(/assets/fold-scene/4-entrance.jpg);
+  background-size: 100%;
+}
+
+.fold-cover-background.fold-cover-background-portrait .fold-cover-background-image {
+  width: auto;
+  height: 100%;
+}
+
+.fold-cover-background-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  mask-image: url(/assets/fold-scene/4-entrance-mask.png);
+  mask-size: 100%;
+}
+
+.fold-cover-background-canvas {
+  filter: contrast(1.05) brightness(0.95);
 }
 
 @media (--md-viewport) {

@@ -14,10 +14,15 @@
   justify-content: space-between;
   align-items: center;
   z-index: -1;
+  user-select: none;
 }
 
 .fold-viewer-container h6 {
   text-align: center;
+}
+
+.fold-viewer-canvas {
+  filter: contrast(1.05) brightness(0.95);
 }
 
 #fold-viewer-loading svg {

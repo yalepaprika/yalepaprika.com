@@ -202,9 +202,6 @@ input[type="submit"] {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   border: var(--primary-font-thickness) solid transparent;
   padding: var(--input-padding-y) var(--input-padding-x);

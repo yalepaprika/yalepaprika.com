@@ -47,4 +47,26 @@ class FoldPage extends Page {
     public function formattedDate() {
         return $this->publication_date()->toDate('F j, Y');
     }
+
+    public function canvasDataAttrs() {
+        $attrs = [];
+
+        if ($file = $this->files()->template('fold-front')->first()) {
+            $attrs['data-front'] = $file->thumb([
+            'width'   => 1024,
+            'height'  => 1024,
+            'quality' => 80
+            ])->url();
+        }
+
+        if ($file = $this->files()->template('fold-back')->first()) {
+            $attrs['data-back'] = $file->thumb([
+            'width'   => 1024,
+            'height'  => 1024,
+            'quality' => 80
+            ])->url();
+        }
+
+        return $attrs;
+    }
 }
