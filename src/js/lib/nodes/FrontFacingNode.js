@@ -1,4 +1,4 @@
-import { TempNode } from 'three/examples/jsm/nodes/core/TempNode.js';
+import { TempNode } from 'three/examples/jsm/nodes/Nodes';
 
 class FrontFacingNode extends TempNode {
 

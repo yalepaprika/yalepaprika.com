@@ -39,6 +39,7 @@ function generateInputMap(filenames, base) {
 export default async ({ configVisualize }) => {
   const inputs = ['src/js/main.js'].concat(await glob('src/js/templates/**/*.{js, jsx}'));
   return {
+    preserveEntrySignatures: false,
     input: generateInputMap(inputs, 'src/js'),
     output: [
       {
@@ -51,8 +52,11 @@ export default async ({ configVisualize }) => {
     acornInjectPlugins: [jsx()],
     plugins: [
       replace({
-        'process.browser': true,
-        'process.env.NODE_ENV': JSON.stringify(mode),
+        preventAssignment: true,
+        values: {
+          'process.browser': true,
+          'process.env.NODE_ENV': JSON.stringify(mode),
+        }, 
       }),
       resolve({
         browser: true,
@@ -78,6 +82,27 @@ export default async ({ configVisualize }) => {
     watch: {
       clearScreen: false,
       exclude: ['node_modules/**'],
+    },
+    // https://github.com/rollup/rollup/issues/1089#issuecomment-635564942
+    onwarn: (warning, rollupWarn) => {
+      const ignoredWarnings = [
+        {
+          ignoredCode: 'CIRCULAR_DEPENDENCY',
+          ignoredPath: 'node_modules/chevrotain/',
+        },
+        {
+          ignoredCode: 'EVAL',
+          ignoredPath: 'node_modules/@chevrotain/utils/lib/src/',
+        }
+      ];
+
+      // only show warning when code and path don't match
+      // anything in above list of ignored warnings
+      if (!ignoredWarnings.some(({ ignoredCode, ignoredPath }) => (
+        warning.code === ignoredCode && (!warning.importer || warning.importer.includes(path.normalize(ignoredPath)))))
+      ) {
+        rollupWarn(warning)
+      }
     },
   };
 };

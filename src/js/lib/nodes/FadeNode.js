@@ -1,7 +1,7 @@
 import {
-    TempNode,
-    OperatorNode,
-    FloatNode
+  TempNode,
+  OperatorNode,
+  FloatNode,
 } from 'three/examples/jsm/nodes/Nodes';
 
 export default class FadeNode extends TempNode {

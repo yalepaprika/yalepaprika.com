@@ -1,8 +1,8 @@
 import {
-    TempNode,
-    OperatorNode,
-    UVNode,
-    Vector2Node
+  TempNode,
+  OperatorNode,
+  UVNode,
+  Vector2Node,
 } from 'three/examples/jsm/nodes/Nodes';
 
 export default class UVFlipXNode extends TempNode {

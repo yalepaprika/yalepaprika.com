@@ -24,13 +24,9 @@ const { enableAutoPageviews } = plausible;
 enableAutoPageviews();
 
 async function init() {
-  const { load, unload } = await import('./lib/fold-viewer');
-  swup.on('willReplaceContent', function () {
-    unload();
-  });
-  swup.on('contentReplaced', function () {
-    load();
-  });
+  const { load, unload } = await import('./components');
+  swup.on('willReplaceContent', unload);
+  swup.on('contentReplaced', load);
   load();
 }
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import * as THREE from 'three';
+import { TextureLoader, sRGBEncoding, AnimationMixer } from 'three';
 import { useFrame, useLoader } from '@react-three/fiber';
-import { useGLTF } from '@react-three/drei';
-import { useSpring } from 'react-spring';
+import { useGLTF } from '@react-three/drei/core/useGLTF';
+import { useSpring } from '@react-spring/core';
 
-import FoldMaterial from './materials/FoldMaterial';
+import FoldMaterial from '../../lib/materials/FoldMaterial';
 
 const SPREADS = {
   FULL: 'FULL',
@@ -28,16 +28,13 @@ function Model({
   const { nodes, animations } = useGLTF('/assets/fold-viewer/newspaper.glb');
   const { Plane } = nodes;
 
-  const frontMap = useLoader(THREE.TextureLoader, front);
-  frontMap.encoding = THREE.sRGBEncoding;
+  const frontMap = useLoader(TextureLoader, front);
+  frontMap.encoding = sRGBEncoding;
   frontMap.flipY = false;
-  const backMap = useLoader(THREE.TextureLoader, back);
-  backMap.encoding = THREE.sRGBEncoding;
+  const backMap = useLoader(TextureLoader, back);
+  backMap.encoding = sRGBEncoding;
   backMap.flipY = false;
-  const normalMap = useLoader(
-    THREE.TextureLoader,
-    '/assets/fold-viewer/normal.jpg',
-  );
+  const normalMap = useLoader(TextureLoader, '/assets/fold-viewer/normal.jpg');
   const material = useMemo(
     () => new FoldMaterial(frontMap, backMap, normalMap),
     [frontMap, backMap, normalMap],
@@ -55,7 +52,7 @@ function Model({
     },
   });
 
-  const [mixer] = useState(() => new THREE.AnimationMixer(Plane));
+  const [mixer] = useState(() => new AnimationMixer(Plane));
   const action = useMemo(() => mixer.clipAction(animations[0], Plane), [
     Plane,
     animations,

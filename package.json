@@ -26,9 +26,10 @@
     "lazysizes": "^5.3.1",
     "plausible-tracker": "^0.3.1",
     "react": "^17.0.2",
-    "react-spring": "^9.3.0",
+    "@react-spring/core": "^9.3.0",
     "ress": "^3.0.0",
-    "swup": "^2.0.14"
+    "swup": "^2.0.14",
+    "three": "^0.133.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.13",
