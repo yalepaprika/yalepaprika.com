@@ -23,14 +23,14 @@ export default function Model({
   backMap.flipY = false;
   const normalMap = useLoader(TextureLoader, '/assets/fold-viewer/normal.jpg');
   const material = useMemo(
-    () => new FoldMaterial(frontMap, backMap, normalMap),
-    [frontMap, backMap, normalMap],
+    () => {
+      const material = new FoldMaterial(frontMap, backMap, normalMap);
+      material.brightness.value = brightness;
+      material.bleed.value = bleed;
+      return material;
+    },
+    [frontMap, backMap, normalMap, brightness, bleed],
   );
-
-
-  material.brightness.value = brightness;
-  material.bleed.value = bleed;
-
 
   scene.traverse((child) => {
     if (child.name == 'Newspaper') {
