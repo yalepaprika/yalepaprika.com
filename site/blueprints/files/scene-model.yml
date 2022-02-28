@@ -1,0 +1,8 @@
+title: Scene Model
+
+accept:
+  mime:
+    - model/gltf-binary
+    - model/gltf+json
+    - application/octet-stream
+  maxsize: 20000000

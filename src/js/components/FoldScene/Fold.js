@@ -7,10 +7,13 @@ import FoldMaterial from '../../lib/materials/FoldMaterial';
 export default function Model({
   front = '/assets/fold-viewer/blank.png',
   back = '/assets/fold-viewer/blank.png',
+  model,
+  brightness = 0.75,
+  bleed = 0.25,
   onLoad,
   ...props
 }) {
-  const { scene, cameras } = useGLTF('/assets/fold-scene/4-entrance.glb');
+  const { scene, cameras } = useGLTF(model);
 
   const frontMap = useLoader(TextureLoader, front);
   frontMap.encoding = sRGBEncoding;
@@ -24,12 +27,9 @@ export default function Model({
     [frontMap, backMap, normalMap],
   );
 
-  const DARKNESS = 0.3;
-  const MIN_BLEED = 0.1;
-  const MAX_BLEED = 0.4;
 
-  material.darkness.value = DARKNESS;
-  material.bleed.value = (MIN_BLEED + MAX_BLEED) / 2;
+  material.brightness.value = brightness;
+  material.bleed.value = bleed;
 
 
   scene.traverse((child) => {

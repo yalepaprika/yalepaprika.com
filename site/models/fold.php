@@ -48,7 +48,7 @@ class FoldPage extends Page {
         return $this->publication_date()->toDate('F j, Y');
     }
 
-    public function canvasDataAttrs() {
+    public function dataAttrs() {
         $attrs = [];
 
         if ($file = $this->files()->template('fold-front')->first()) {
@@ -68,5 +68,12 @@ class FoldPage extends Page {
         }
 
         return $attrs;
+    }
+
+    public function scene() {
+        $folds = $this->kirby()->collection('folds');
+        $scenes = $this->kirby()->collection('scenes');
+        $index = $folds->count() - $this->indexOf($folds);
+        return $scenes->nth($index % $scenes->count());
     }
 }

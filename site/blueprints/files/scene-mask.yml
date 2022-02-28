@@ -1,0 +1,5 @@
+title: Scene Mask
+
+accept:
+  mime: image/png
+  maxsize: 20000000

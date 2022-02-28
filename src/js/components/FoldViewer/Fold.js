@@ -71,7 +71,7 @@ function Model({
   }
 
   useFrame((state, delta) => {
-    const DARKNESS = 0.3;
+    const BRIGHTNESS = 0.7;
     const MIN_BLEED = 0.1;
     const MAX_BLEED = 0.4;
 
@@ -81,10 +81,9 @@ function Model({
     mixer.setTime((relativeFrame * duration) / frames);
 
     const openness = 1 - 2 * Math.abs(relativeProgress - 0.5);
-    const darkness = DARKNESS;
     const bleed = MIN_BLEED + Math.pow(openness, 2) * (MAX_BLEED - MIN_BLEED);
 
-    material.darkness.value = darkness;
+    material.brightness.value = BRIGHTNESS;
     material.bleed.value = bleed;
   });
 

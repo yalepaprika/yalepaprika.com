@@ -26,3 +26,4 @@ columns:
             label: Article Topics
             type: tags
             accept: all
+      scenes: sections/scenes

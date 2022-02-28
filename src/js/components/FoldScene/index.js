@@ -18,19 +18,31 @@ function handleResize() {
     }
 
     const canvas = background.querySelector('.fold-cover-background-canvas');
-    const front = canvas.dataset.front
-      ? canvas.dataset.front
-      : '/assets/fold-viewer/blank.png';
-    const back = canvas.dataset.back
-      ? canvas.dataset.back
-      : '/assets/fold-viewer/blank.png';
+    const model = canvas.dataset.model;
+    if (!model) return;
 
-    render(<FoldScene front={front} back={back} onLoad={handleLoad} />, canvas, {
-      events,
-      shadows: true,
-      flat: true,
-      dpr: window.devicePixelRatio,
-    });
+    const front = canvas.dataset.front ?? '/assets/fold-viewer/blank.png';
+    const back = canvas.dataset.back ?? '/assets/fold-viewer/blank.png';
+    const brightness = parseFloat(canvas.dataset.brightness) ?? 0.75;
+    const bleed = parseFloat(canvas.dataset.bleed) ?? 0.25;
+
+    render(
+      <FoldScene
+        front={front}
+        back={back}
+        model={model}
+        brightness={brightness}
+        bleed={bleed}
+        onLoad={handleLoad}
+      />,
+      canvas,
+      {
+        events,
+        shadows: true,
+        flat: true,
+        dpr: window.devicePixelRatio,
+      }
+    );
   }
 }
 

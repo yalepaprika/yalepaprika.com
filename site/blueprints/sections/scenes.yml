@@ -1,0 +1,7 @@
+headline: Scenes
+type: pages
+empty: No scenes yet
+layout: list
+parent: site.find("scenes")
+template: scene
+image: page.images.findBy("template", "scene-background")

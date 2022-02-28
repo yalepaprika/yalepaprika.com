@@ -1,8 +1,21 @@
 <div class="fold-cover <?= ($page->url() == $fold->url() ) ? 'fold-cover-fold-page' : '' ?> box-card box-card-inverted">
-  <div class="fold-cover-background fold-cover-background-hidden">
-    <div class="fold-cover-background-image">
-      <div class="fold-cover-background-mask">
-        <canvas class="fold-cover-background-canvas" <?= Html::attr($fold->canvasDataAttrs()) ?>></canvas>
+  <div
+    class="fold-cover-background fold-cover-background-hidden"
+    style="<?= $fold->scene()->backgroundStyle() ?>"
+  >
+    <div
+      class="fold-cover-background-image"
+      style="<?= $fold->scene()->backgroundImageStyle() ?>"
+    >
+      <div
+        class="fold-cover-background-mask"
+        style="<?= $fold->scene()->backgroundMaskStyle() ?>"
+      >
+        <canvas
+          class="fold-cover-background-canvas"
+          <?= Html::attr($fold->dataAttrs()) ?>
+          <?= Html::attr($fold->scene()->dataAttrs()) ?>
+        ></canvas>
       </div>
     </div>
   </div>

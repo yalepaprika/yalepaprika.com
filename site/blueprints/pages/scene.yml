@@ -1,0 +1,71 @@
+title: Scene
+icon: video
+
+status:
+  draft:
+    label: Draft
+    text: The page is in draft mode and only visible for logged in editors
+  listed:
+    label: Public
+    text: The page is visible to the public
+
+options:
+  autoPublish: listed
+
+columns:
+  - width: 1/2
+    sections:
+      background:
+        type: files
+        layout: cards
+        size: medium
+        template: scene-background
+        empty: No image yet
+        max: 1
+        help: The background image should be a 2048x2048 RGB image (.png / .jpg).
+      mask:
+        type: files
+        layout: cards
+        size: medium
+        template: scene-mask
+        empty: No image yet
+        max: 1
+        help: The mask should be a 2048x2048 RGBA image (.png) where the alpha channel is used as the mask channel. 
+      model:
+        type: files
+        template: scene-model
+        empty: No model yet
+        max: 1
+        help: The model file should be a GLTF binary (.glb) with a camera, light, and mesh named 'Newspaper'.
+  - width: 1/2
+    fields:
+      vertical:
+        label: Vertical Alignment
+        type: select
+        options:
+          top: Top
+          center: Center
+          bottom: Bottom
+        default: center
+      horizontal:
+        label: Hortizontal Alignment
+        type: select
+        options:
+          left: Left
+          center: Center
+          right: Right
+        default: center
+      bleed:
+        label: Newspaper Material Bleed
+        type: range
+        step: .05
+        min: 0
+        max: 1
+        default: 0.25
+      brightness:
+        label: Newspaper Material Brightness
+        type: range
+        step: .05
+        min: 0
+        max: 1
+        default: 0.75

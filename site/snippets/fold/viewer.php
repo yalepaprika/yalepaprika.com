@@ -6,5 +6,8 @@
     </h6>
     <h6>25in × 22.75in <span class="separator">·</span> Offset print on newsprint</h6>
   </div>
-  <canvas id="fold-viewer-canvas" <?= Html::attr($fold->canvasDataAttrs()) ?>></canvas>
+  <canvas
+    id="fold-viewer-canvas"
+    <?= Html::attr($fold->dataAttrs()) ?>
+  ></canvas>
 </div>

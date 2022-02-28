@@ -64,8 +64,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  background: url(/assets/fold-scene/4-entrance.jpg);
-  background-size: 100%;
 }
 
 .fold-cover-background.fold-cover-background-portrait .fold-cover-background-image {
@@ -79,8 +77,6 @@
   bottom: 0;
   right: 0;
   left: 0;
-  mask-image: url(/assets/fold-scene/4-entrance-mask.png);
-  mask-size: 100%;
 }
 
 .fold-cover-background-canvas {

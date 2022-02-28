@@ -22,7 +22,7 @@ class FoldMaterial extends MeshStandardNodeMaterial {
       this.morphNormals = true;
       this.morphTargets = true;
       this.bleed = new FloatNode(0.0);
-      this.darkness = new FloatNode(0.4);
+      this.brightness = new FloatNode(0.6);
 
       const backMapNode = new TextureNode(backMap, new UVFlipXNode());
       const normalMapNode = new TextureNode(normalMap);
@@ -43,22 +43,17 @@ class FoldMaterial extends MeshStandardNodeMaterial {
 
       const frontFacingNode = new FrontFacingNode();
 
-      const { EQUAL } = CondNode;
       const frontBackNode = new CondNode(
         frontFacingNode,
         new BoolNode(true),
-        EQUAL,
+        CondNode.EQUAL,
         frontNode,
         backNode,
       );
 
       const linearColor = new OperatorNode(
         frontBackNode,
-        new OperatorNode(
-          new FloatNode(1.0),
-          this.darkness,
-          OperatorNode.SUB,
-        ),
+        this.brightness,
         OperatorNode.MUL,
       );
 
