@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7427905a1e89654b7458694194db9b47",
+    "content-hash": "0b9dbe77ac23844c343dbe1ebfe7cddc",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -58,30 +58,29 @@
         },
         {
             "name": "bnomei/kirby3-robots-txt",
-            "version": "1.4.8",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bnomei/kirby3-robots-txt.git",
-                "reference": "78cd050e3ea5d9c793fa63d61dea2f342ef1b425"
+                "reference": "375ca49b428df3e22ec4756610032552329d19c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-robots-txt/zipball/78cd050e3ea5d9c793fa63d61dea2f342ef1b425",
-                "reference": "78cd050e3ea5d9c793fa63d61dea2f342ef1b425",
+                "url": "https://api.github.com/repos/bnomei/kirby3-robots-txt/zipball/375ca49b428df3e22ec4756610032552329d19c9",
+                "reference": "375ca49b428df3e22ec4756610032552329d19c9",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1",
-                "php": ">=7.2.0"
+                "php": ">=7.3.0"
             },
             "require-dev": {
-                "getkirby/cms": "^3.2",
-                "nunomaduro/phpinsights": "^1.8",
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^8.3"
+                "getkirby/cms": "^3.5",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpunit/phpunit": "^9.5"
             },
             "suggest": {
-                "omz13/kirby3-xmlsitemap": "Adds a xml sitemap which will be automatically be included in the robots.txt"
+                "bnomei/kirby3-feeds": "Adds a xml sitemap which will be automatically be included in the robots.txt"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -112,28 +111,40 @@
             ],
             "support": {
                 "issues": "https://github.com/bnomei/kirby3-robots-txt/issues",
-                "source": "https://github.com/bnomei/kirby3-robots-txt/tree/v1.4.8"
+                "source": "https://github.com/bnomei/kirby3-robots-txt/tree/v1.5.0"
             },
             "funding": [
                 {
+                    "url": "https://buymeacoff.ee/bnomei",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://paypal.me/bnomei",
+                    "type": "custom"
+                },
+                {
                     "url": "https://github.com/bnomei",
                     "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/bnomei",
+                    "type": "patreon"
                 }
             ],
-            "time": "2021-02-22T18:08:17+00:00"
+            "time": "2021-08-06T13:21:27+00:00"
         },
         {
             "name": "claviska/simpleimage",
-            "version": "3.5.1",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/claviska/SimpleImage.git",
-                "reference": "ab2ab8a4672738ab77b39b00922ee4e79aeadb11"
+                "reference": "21b6f4bf4ef1927158b3e29bd0c2d99c6681c750"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/claviska/SimpleImage/zipball/ab2ab8a4672738ab77b39b00922ee4e79aeadb11",
-                "reference": "ab2ab8a4672738ab77b39b00922ee4e79aeadb11",
+                "url": "https://api.github.com/repos/claviska/SimpleImage/zipball/21b6f4bf4ef1927158b3e29bd0c2d99c6681c750",
+                "reference": "21b6f4bf4ef1927158b3e29bd0c2d99c6681c750",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +172,7 @@
             "description": "A PHP class that makes working with images as simple as possible.",
             "support": {
                 "issues": "https://github.com/claviska/SimpleImage/issues",
-                "source": "https://github.com/claviska/SimpleImage/tree/3.5.1"
+                "source": "https://github.com/claviska/SimpleImage/tree/3.6.3"
             },
             "funding": [
                 {
@@ -169,20 +180,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-30T20:47:26+00:00"
+            "time": "2021-04-20T12:18:18+00:00"
         },
         {
             "name": "filp/whoops",
-            "version": "2.9.1",
+            "version": "2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "307fb34a5ab697461ec4c9db865b20ff2fd40771"
+                "reference": "c13c0be93cff50f88bbd70827d993026821914dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/307fb34a5ab697461ec4c9db865b20ff2fd40771",
-                "reference": "307fb34a5ab697461ec4c9db865b20ff2fd40771",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c13c0be93cff50f88bbd70827d993026821914dd",
+                "reference": "c13c0be93cff50f88bbd70827d993026821914dd",
                 "shasum": ""
             },
             "require": {
@@ -232,48 +243,54 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.9.1"
+                "source": "https://github.com/filp/whoops/tree/2.12.1"
             },
-            "time": "2020-11-01T12:00:00+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/denis-sokolov",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-04-25T12:00:00+00:00"
         },
         {
             "name": "getkirby/cms",
-            "version": "3.5.3.1",
+            "version": "3.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "38afb2d650f3764d23d732b23ae8f04ab9ffba69"
+                "reference": "25fc5c6b330442e6433c99befc688f3698c5d1fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/38afb2d650f3764d23d732b23ae8f04ab9ffba69",
-                "reference": "38afb2d650f3764d23d732b23ae8f04ab9ffba69",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/25fc5c6b330442e6433c99befc688f3698c5d1fc",
+                "reference": "25fc5c6b330442e6433c99befc688f3698c5d1fc",
                 "shasum": ""
             },
             "require": {
-                "claviska/simpleimage": "3.5.1",
+                "claviska/simpleimage": "3.6.3",
                 "ext-ctype": "*",
                 "ext-mbstring": "*",
-                "filp/whoops": "2.9.1",
+                "filp/whoops": "2.12.1",
                 "getkirby/composer-installer": "^1.2.0",
                 "laminas/laminas-escaper": "2.7.0",
                 "michelf/php-smartypants": "1.8.1",
                 "mustangostang/spyc": "0.6.3",
                 "php": ">=7.3.0 <8.1.0",
-                "phpmailer/phpmailer": "6.2.0",
+                "phpmailer/phpmailer": "6.5.0",
                 "true/punycode": "2.1.1"
             },
             "type": "kirby-cms",
             "autoload": {
+                "files": [
+                    "config/setup.php",
+                    "config/helpers.php"
+                ],
                 "psr-4": {
                     "Kirby\\": "src/"
                 },
                 "classmap": [
                     "dependencies/"
-                ],
-                "files": [
-                    "config/setup.php",
-                    "config/helpers.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -306,7 +323,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-02-24T16:10:44+00:00"
+            "time": "2021-11-16T09:37:11+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -420,26 +437,26 @@
         },
         {
             "name": "laminas/laminas-zendframework-bridge",
-            "version": "1.2.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-zendframework-bridge.git",
-                "reference": "6cccbddfcfc742eb02158d6137ca5687d92cee32"
+                "reference": "7f049390b756d34ba5940a8fb47634fbb51f79ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/6cccbddfcfc742eb02158d6137ca5687d92cee32",
-                "reference": "6cccbddfcfc742eb02158d6137ca5687d92cee32",
+                "url": "https://api.github.com/repos/laminas/laminas-zendframework-bridge/zipball/7f049390b756d34ba5940a8fb47634fbb51f79ab",
+                "reference": "7f049390b756d34ba5940a8fb47634fbb51f79ab",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.3 || ^8.0"
+                "php": ">=7.4, <8.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.1 || ^9.3",
-                "psalm/plugin-phpunit": "^0.15.1",
-                "squizlabs/php_codesniffer": "^3.5",
-                "vimeo/psalm": "^4.6"
+                "phpunit/phpunit": "^9.5.14",
+                "psalm/plugin-phpunit": "^0.15.2",
+                "squizlabs/php_codesniffer": "^3.6.2",
+                "vimeo/psalm": "^4.21.0"
             },
             "type": "library",
             "extra": {
@@ -478,7 +495,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-02-25T21:54:58+00:00"
+            "time": "2022-02-22T22:17:01+00:00"
         },
         {
             "name": "league/color-extractor",
@@ -722,16 +739,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.2.0",
+            "version": "v6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "e38888a75c070304ca5514197d4847a59a5c853f"
+                "reference": "a5b5c43e50b7fba655f793ad27303cd74c57363c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/e38888a75c070304ca5514197d4847a59a5c853f",
-                "reference": "e38888a75c070304ca5514197d4847a59a5c853f",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a5b5c43e50b7fba655f793ad27303cd74c57363c",
+                "reference": "a5b5c43e50b7fba655f793ad27303cd74c57363c",
                 "shasum": ""
             },
             "require": {
@@ -749,7 +766,7 @@
                 "yoast/phpunit-polyfills": "^0.2.0"
             },
             "suggest": {
-                "ext-mbstring": "Needed to send email in multibyte encoding charset",
+                "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
                 "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
                 "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
                 "psr/log": "For optional PSR-3 debug logging",
@@ -786,7 +803,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.2.0"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.5.0"
             },
             "funding": [
                 {
@@ -794,20 +811,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-25T15:24:57+00:00"
+            "time": "2021-06-16T14:33:43+00:00"
         },
         {
             "name": "psr/log",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
-                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
             "require": {
@@ -831,7 +848,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -842,9 +859,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.3"
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
-            "time": "2020-03-23T09:12:05+00:00"
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "sylvainjule/footnotes",
@@ -886,11 +903,17 @@
         },
         {
             "name": "sylvainjule/pagetable",
-            "version": "dev-main",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/s3ththompson/kirby-pagetable",
-                "reference": "ec29b797bbc6498f4c1f9426d7909b825455f646"
+                "url": "https://github.com/sylvainjule/kirby-pagetable.git",
+                "reference": "ea23cb5326bf881119ad69498d12d6dc0fc5958d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sylvainjule/kirby-pagetable/zipball/ea23cb5326bf881119ad69498d12d6dc0fc5958d",
+                "reference": "ea23cb5326bf881119ad69498d12d6dc0fc5958d",
+                "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.1"
@@ -899,6 +922,7 @@
             "extra": {
                 "installer-name": "pagetable"
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -909,24 +933,31 @@
                 }
             ],
             "description": "Display subpages in a flexible table",
-            "time": "2021-02-11T19:00:03+00:00"
+            "support": {
+                "issues": "https://github.com/sylvainjule/kirby-pagetable/issues",
+                "source": "https://github.com/sylvainjule/kirby-pagetable/tree/1.0.9"
+            },
+            "time": "2021-03-10T14:24:38+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.22.1",
+            "version": "v1.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
+                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
-                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0abb51d2f102e00a4eefcf46ba7fec406d245825",
+                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -934,7 +965,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.22-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -942,12 +973,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -973,7 +1004,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.24.0"
             },
             "funding": [
                 {
@@ -989,7 +1020,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-22T09:19:47+00:00"
+            "time": "2021-11-30T18:21:41+00:00"
         },
         {
             "name": "true/punycode",
@@ -1046,7 +1077,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "sylvainjule/pagetable": 20,
         "omz13/kirby3-xmlsitemap": 20
     },
     "prefer-stable": false,

@@ -29,9 +29,9 @@
   ],
   "require": {
     "php": ">=7.1.0",
-    "getkirby/cms": "^3.5",
-    "sylvainjule/pagetable": "dev-main",
-    "sylvainjule/footnotes": "^1.0",
+    "getkirby/cms": "~3.5.8",
+    "sylvainjule/pagetable": "~1.0.9",
+    "sylvainjule/footnotes": "^1.0.3",
     "omz13/kirby3-xmlsitemap": "dev-master",
     "bnomei/kirby3-fingerprint": "^2.3",
     "bnomei/kirby3-robots-txt": "^1.4"

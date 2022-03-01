@@ -9,7 +9,6 @@
 
 namespace Packer;
 
-mb_internal_encoding("UTF-8");
 function _void() {
   return null;
 }
@@ -2519,12 +2518,6 @@ class Ex extends \Exception {
       return "'" . $str . "'";
     }
   }
-}
-if (function_exists('set_error_handler')) {
-  set_error_handler(array('Packer\Ex', 'handleError'));
-}
-if (function_exists('set_exception_handler')) {
-  set_exception_handler(array('Packer\Ex', 'handleException'));
 }
 class Buffer extends ObjectClass {
   public $raw = '';
