@@ -1,5 +1,4 @@
 import 'lazysizes';
-import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 import Swup from 'swup';
 import SwupScrollPlugin from '@swup/scroll-plugin';
 import SwupPreloadPlugin from '@swup/preload-plugin';

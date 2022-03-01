@@ -13,8 +13,8 @@
       >
         <canvas
           class="fold-cover-background-canvas"
-          <?= Html::attr($fold->dataAttrs()) ?>
-          <?= Html::attr($fold->scene()->dataAttrs()) ?>
+          <?= Html::attr($fold->renderDataAttrs()) ?>
+          <?= Html::attr($fold->scene()->renderDataAttrs()) ?>
         ></canvas>
       </div>
     </div>

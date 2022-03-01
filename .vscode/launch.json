@@ -12,13 +12,10 @@
       "webRoot": "${workspaceFolder}/src"
     },
     {
-      "name": "Debug PHP",
-      "type": "php",
-      "port": 9000,
-      "request": "launch",
-      "pathMappings": {
-        "/var/www/vagrant": "${workspaceFolder}" // xdebug does not handle symlinks, so the file path can't be /var/www/current
-      }
-    }
+        "name": "Listen for XDebug",
+        "type": "php",
+        "request": "launch",
+        "port": 9003
+    },
   ]
 }

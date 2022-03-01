@@ -39,7 +39,7 @@ function generateInputMap(filenames, base) {
 export default async ({ configVisualize }) => {
   const inputs = ['src/js/main.js'].concat(await glob('src/js/templates/**/*.{js, jsx}'));
   return {
-    preserveEntrySignatures: false,
+    preserveEntrySignatures: 'strict',
     input: generateInputMap(inputs, 'src/js'),
     output: [
       {

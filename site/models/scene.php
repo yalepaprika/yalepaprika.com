@@ -74,7 +74,7 @@ class ScenePage extends Page {
         return $style;
     }
 
-    public function dataAttrs() {
+    public function renderDataAttrs() {
         $attrs = [];
 
         if ($file = $this->backgroundModel()) {

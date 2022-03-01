@@ -1,5 +1,13 @@
 <?php
+
 class FoldPage extends Page {
+
+    public function __construct($parent) {
+        parent::__construct($parent);
+        // QUARTER, HALF, or FULL
+        $this->randomSpreadIndex = rand(0, 2);
+    }
+
     public function children() {
         $children = parent::children();
         if ($this->website()->isEmpty()) {
@@ -48,7 +56,57 @@ class FoldPage extends Page {
         return $this->publication_date()->toDate('F j, Y');
     }
 
-    public function dataAttrs() {
+    public function getLayoutItem($layout, $folds) {
+        $index = $this->indexOf($folds);
+        return [
+            'width' => $layout['slotSizes'][$index * 2],
+            'height' => $layout['slotSizes'][$index * 2 + 1],
+            'left' => $layout['slots'][$index * 2],
+            'top' => $layout['slots'][$index * 2 + 1]
+        ];
+    }
+
+    public function gridItemStyle($layout) {
+        $style = '';
+
+        $style .= 'width: ' . $layout['width'] . 'vw; ';
+        $style .= 'height: ' . $layout['height'] . 'vw; ';
+        $style .= 'left: ' . $layout['left'] . 'vw; ';
+        $style .= 'top: ' . $layout['top'] . 'vw; ';
+
+
+        switch ($this->randomSpreadIndex) {
+            case 0:
+                $style .= 'padding: 3.75%; ';
+                break;
+            case 1:
+                $style .= 'padding: 3.75%; ';
+                break;
+            default:
+                $style .= 'padding: 7.5%; ';
+        }
+
+        return $style;
+    }
+
+    public function gridItemAspectRatioStyle() {
+        $style = '';
+
+        switch ($this->randomSpreadIndex) {
+            case 0:
+                $style .= 'aspect-ratio: 1 / 1; ';
+                break;
+            case 1:
+                $style .= 'aspect-ratio: 1 / 2; ';
+                break;
+            default:
+                $style .= 'aspect-ratio: 1 / 1; ';
+        }
+
+        return $style;
+    }
+
+    public function renderDataAttrs() {
         $attrs = [];
 
         if ($file = $this->files()->template('fold-front')->first()) {

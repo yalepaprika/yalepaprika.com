@@ -8,6 +8,6 @@
   </div>
   <canvas
     id="fold-viewer-canvas"
-    <?= Html::attr($fold->dataAttrs()) ?>
+    <?= Html::attr($fold->renderDataAttrs()) ?>
   ></canvas>
 </div>
