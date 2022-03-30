@@ -1,36 +1,3 @@
-.fold-viewer {
-  height: calc(90vh - 2 * var(--body-padding-y) - var(--primary-line-height) - var(--stack-space));
-  background: var(--card-background-color);
-  position: relative;
-}
-
-.fold-viewer-container {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: none !important;
-  justify-content: space-between;
-  align-items: center;
-  z-index: -1;
-  user-select: none;
-}
-
-.fold-viewer-container h6 {
-  text-align: center;
-}
-
-.fold-viewer-canvas {
-  filter: contrast(1.05) brightness(0.95);
-}
-
-#fold-viewer-loading svg {
-  animation: fold-viewer-loading-rotate 2s linear infinite;
-}
-
-@keyframes fold-viewer-loading-rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+.fold-viewer__content {
+  height: 90vh;
 }

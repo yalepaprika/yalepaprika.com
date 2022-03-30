@@ -1,3 +1,6 @@
 <div id="fold-editors-statement">
-  <?php snippet('page/section-title', ['section_title' => 'Editor\'s Statement']) ?>
+  <?php snippet('utilities/heading', [
+      'title' => 'Editor\'s Statement'
+    ]) ?>
+    <?php snippet('page/body', ['page' => $page]) ?>
 </div>

@@ -75,8 +75,8 @@ class FoldPage extends Page {
     }
 
     public function scene() {
-        $folds = $this->kirby()->collection('folds');
-        $scenes = $this->kirby()->collection('scenes');
+        $folds = $this->kirby()->collection('folds/list');
+        $scenes = $this->kirby()->collection('renderings/scenes');
         $index = $folds->count() - $this->indexOf($folds);
         return $scenes->nth($index % $scenes->count());
     }

@@ -17,4 +17,4 @@ options:
   delete: false
 
 sections:
-  scenes: sections/scenes
+  scenes: sections/renderings/scenes

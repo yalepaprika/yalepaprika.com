@@ -1,0 +1,9 @@
+title: Renderings
+
+columns:
+  - width: 1/2
+    sections:
+      scenes: sections/renderings/scenes
+  - width: 1/2
+    sections:
+      previews: sections/renderings/previews

@@ -29,7 +29,7 @@ stats.html
 /site/plugins/*
 !/site/plugins/auto-publish
 !/site/plugins/pages-sorted-titles
-!/site/plugins/packer
+!/site/plugins/helpers
 
 
 # -------------SECURITY-------------

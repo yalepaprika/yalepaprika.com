@@ -1,53 +1,15 @@
-footer {
-  font-size: var(--detail-font-size);
+.page-footer {
+  height: var()
 }
 
-.footer-about address {
-  color: var(--secondary-text-color);
-}
-
-.footer-logo {
-  font-size: var(--big-font-size);
-  font-weight: 800;
-  font-style: italic;
-  line-height: 0.9;
-}
-
-footer input.email {
-  flex: 1;
-}
-
-.footer-furniture {
-  font-size: var(--tiny-font-size);
-  font-weight: 500;
-  color: var(--secondary-text-color);
-}
-
-.footer-furniture.cluster > * {
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-furniture.cluster > * > .dots {
-  flex: 1;
-}
-
-.circles {
-  width: calc(var(--tiny-font-size) * 2);
-  height: calc(var(--tiny-font-size));
+.page-footer__circles {
+  width: calc(var(--detail-font-size) * 2);
+  height: calc(var(--detail-font-size));
   background: url('/assets/images/circles.svg');
   background-repeat: no-repeat;
 }
 
-.dots {
-  height: var(--tiny-font-size);
+.page-footer__dots {
+  height: var(--detail-font-size);
   background: url('/assets/images/dots.svg');
-}
-
-.footer-connect {
-  color: var(--secondary-text-color);
-}
-
-.footer-connect-icons a {
-  color: var(--secondary-text-color);
 }

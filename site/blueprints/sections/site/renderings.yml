@@ -1,0 +1,8 @@
+headline: Renderings
+type: pages
+parent: site
+info: "{{ page.description }}"
+layout: list
+size: medium
+sortable: false
+template: renderings

@@ -5,4 +5,8 @@ return [
     'panel' => [
         'install' => true
     ],
+    'thumbs' => [
+        'driver' => 'im',
+        'bin' => '/opt/homebrew/bin/convert'
+    ]
 ];

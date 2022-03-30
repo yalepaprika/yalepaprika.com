@@ -1,0 +1,25 @@
+title: Preview
+icon: video
+
+status:
+  draft:
+    label: Draft
+    text: The page is in draft mode and only visible for logged in editors
+  listed:
+    label: Public
+    text: The page is visible to the public
+
+options:
+  autoPublish: listed
+
+columns:
+  - width: 1/2
+    sections:
+      map:
+        type: files
+        layout: cards
+        size: medium
+        template: preview-map
+        empty: No image yet
+        max: 1
+        help: The map image should be a 32-bit RGBA image (.tiff), where RG = displacement map, B = diffuse color, and A = matte.

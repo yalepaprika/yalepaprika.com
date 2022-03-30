@@ -1,0 +1,4 @@
+.font--inverted .page-nav .rule-double-outer,
+.font--inverted .page-nav .rule-double-inner {
+  border-color: var(--color-white);
+}

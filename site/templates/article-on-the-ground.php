@@ -1,16 +1,14 @@
 <?php snippet('header') ?>
-<div id="swup" class="container stack">
-  <div class="page stack">
-    <?php snippet('page/menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
-    <main class="stack">
-      <article class="stack">
+<div id="swup">
+  <div class="page">
+    <?php snippet('page/nav', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
+    <main class="rule rule--paprika">
+      <article>
         <?php snippet('page/title', ['title' => $page->title()]) ?>
-        <?php snippet('page/intro', ['page' => $page]) ?>
-        <?php $details = snippet('article/body-details', ['article' => $page], true);
-          snippet('page/body', ['page' => $page, 'details' => $details]) ?>
+        <?php snippet('article/details', ['article' => $page]) ?>
+        <?php snippet('page/body', ['page' => $page]) ?>
       </article>
-      <?php snippet('fold/details', ['fold' => $page->parent()]) ?>
-      <?php snippet('page/prev-next', ['prev' => $page->prev(), 'next' => $page->next()]) ?>
+      <?php snippet('fold/viewer-summary', ['fold' => $page->parent()]) ?>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

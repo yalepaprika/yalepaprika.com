@@ -1,0 +1,6 @@
+headline: Previews
+type: pages
+empty: No previews yet
+layout: list
+parent: site.find("renderings/previews")
+template: preview

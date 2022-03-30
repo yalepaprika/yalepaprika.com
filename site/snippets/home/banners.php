@@ -7,7 +7,7 @@ foreach ($banners as $banner) {
   if ($banner->banner_width() == 'half') {
     if ($prevHalf) {
       $rows[] = [
-        'container' => 'half',
+        'container-xxxl' => 'half',
         'contents' => [ $prevHalf, $banner ]
       ];
       $prevHalf = null;
@@ -16,7 +16,7 @@ foreach ($banners as $banner) {
     }
   } else {
     $rows[] = [
-      'container' => 'full',
+      'container-xxxl' => 'full',
       'contents' => [ $banner ]
     ];
   }
@@ -24,7 +24,7 @@ foreach ($banners as $banner) {
 
 if ($prevHalf) {
   $rows[] = [
-    'container' => 'half',
+    'container-xxxl' => 'half',
     'contents' => [ $prevHalf ]
   ];
 }
@@ -32,7 +32,7 @@ if ($prevHalf) {
 ?>
 
 <?php foreach ($rows as $row): ?>
-  <?php if ($row['container'] == 'half'): ?>
+  <?php if ($row['container-xxxl'] == 'half'): ?>
     <div class="cluster cluster-2-2-column cluster-stack cluster-stretch cluster-switcher">
       <div class="_cluster">
         <?php foreach ($row['contents'] as $banner): ?>

@@ -1,0 +1,11 @@
+.article-list-item > .row {
+  min-height: calc(var(--body-font-size) * 84/22);
+}
+
+.article-list-item:hover {
+  background: var(--color-gray-100);
+}
+
+.article-list-item__contributors li:not(:last-child)::after {
+  content: ', ';
+}

@@ -1,32 +1,57 @@
-.page-body.cluster > * {
-  align-items: start;
+.page-body a {
+  color: var(--color-paprika);
 }
 
-.content #footnotes {
-  color: var(--secondary-text-color);
-  font-size: var(--detail-font-size);
+.page-body a:hover {
+  text-decoration: underline;
 }
 
-.content ul {
-  list-style: disc inside;
+.page-body ul,
+.page-body ol {
+  list-style: auto;
+  list-style-type: decimal;
+  margin-left: 3ch;
 }
 
-.content ol {
-  list-style: decimal inside;
+.page-body li {
+  padding-left: var(--space-20);
 }
 
-@media (--md-viewport) {
-  .page-body.cluster > * > .page-body-details {
-    width: calc((100% - 3 * var(--cluster-space-x)) / 4);
-  }
-
-  .page-body.cluster > * > .page-body-content {
-    width: calc((100% - 3 * var(--cluster-space-x)) * 2.5 / 4);
-  }
+.page-body p,
+.page-body ul,
+.page-body ol {
+  margin-bottom: var(--body-line-height-em);
 }
 
-@media (--lg-viewport) {
-  .page-body.cluster > * > .page-body-content {
-    width: calc((100% - 3 * var(--cluster-space-x)) / 2);
-  }
+.page-body figure {
+  margin-left: var(--space-80);
+  max-width: 50%;
+  margin-bottom: var(--space-80);
+}
+
+.page-body img {
+  max-width: 100%;
+}
+
+.page-body .footnote {
+  font-weight: 500;
+}
+
+.page-body .footnotes-container {
+  margin-top: var(--space-80);
+  border-top: var(--line-width) solid var(--color-gray-200);
+  padding-top: var(--space-10);
+  color: var(--color-gray-500);
+}
+
+.page-body .footnotes-list {
+  margin-left: var(--space-40);
+}
+
+.page-body .footnotes-container li {
+  margin-bottom: calc(var(--detail-line-height-em) / 2);
+}
+
+.page-body .footnotereverse {
+  display: none;
 }

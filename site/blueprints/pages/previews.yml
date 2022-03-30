@@ -1,0 +1,20 @@
+title: Previews
+icon: video
+
+status:
+  draft:
+    label: Draft
+    text: The page is in draft mode and only visible for logged in editors
+  listed:
+    label: Public
+    text: The page is visible to the public
+
+options:
+  title: false
+  duplicate: false
+  status: false
+  url: false
+  delete: false
+
+sections:
+  previews: sections/renderings/previews

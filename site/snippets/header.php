@@ -19,4 +19,4 @@
   <meta name="description" content="Paprika! is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art."/>
   <?= Bnomei\Fingerprint::css('/assets/css/main.css') ?>
 </head>
-<body>
+<body class="background-white">

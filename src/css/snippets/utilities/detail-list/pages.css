@@ -1,0 +1,3 @@
+.detail-list li.d-inline:not(:last-child)::after {
+  content: ', ';
+}

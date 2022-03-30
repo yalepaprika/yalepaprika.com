@@ -1,16 +1,12 @@
 <?php snippet('header') ?>
-<div id="swup" class="container stack">
-  <div class="page stack">
-    <?php snippet('page/menu', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
-    <main class="stack">
+<div id="swup">
+  <div class="page">
+    <?php snippet('page/nav', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
+    <main class="rule rule--paprika">
       <?php snippet('page/title', ['title' => $page->title()]) ?>
-      <div class="box-block box-block-ruled stack">
-      <?php foreach(collection('contributors') as $contributor): ?>
-        <article>
-          <h3><a href="<?= $contributor->url() ?>"><?= $contributor->title() ?></a></h3>
-        </article>
+      <?php foreach(collection('contributors/by-letter') as $letter => $contributors): ?>
+        <?php snippet('contributors/list', ['title' => strtoupper($letter), 'contributors' => $contributors]) ?>
       <?php endforeach ?>
-      </div>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

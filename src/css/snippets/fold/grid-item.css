@@ -1,8 +1,0 @@
-.fold-grid-item {
-  display: block;
-  position: absolute;
-}
-
-.fold-grid-item-content-fold {
-  background: var(--color-paprika);
-}

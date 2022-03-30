@@ -1,0 +1,11 @@
+.font--inverted .page-menu a:hover {
+  color: var(--color-black);
+}
+
+.page-menu__home::before {
+  content: '■ ';
+}
+
+.page-menu li:not(.page-menu__home):not(:last-child)::after {
+  content: ', ';
+}

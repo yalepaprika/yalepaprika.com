@@ -1,6 +1,6 @@
 <?php
 
-require '../kirby/bootstrap.php';
+require __DIR__ . '/../kirby/bootstrap.php';
 
 $kirby = new Kirby([
     'roots' => [

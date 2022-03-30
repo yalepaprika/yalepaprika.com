@@ -1,0 +1,5 @@
+title: Preview Unified Map
+
+accept:
+  mime: image/tiff
+  maxsize: 100000000

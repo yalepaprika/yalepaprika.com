@@ -1,12 +1,7 @@
-<div id="page-body" class="page-body box-block box-block-ruled cluster cluster-switcher cluster-ruled cluster-3-column">
-  <div class="_cluster">
-    <div class="page-body-details box-block-small">
-      <?php if (isset($details)): ?>
-        <?= $details ?? '' ?>
-      <?php endif ?>
-    </div>
-    <div class="page-body-content">
-      <div class="content stack stack-recursive">
+<div id="page-body" class="page-body rule space-after-80">
+  <div class="container-xxxl">
+    <div class="row">
+      <div class="page-body__content col-12 col-md-9">
         <?= $page->content()->get('content')->footnotes() ?>
       </div>
     </div>
