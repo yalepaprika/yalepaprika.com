@@ -2,18 +2,11 @@ import { useThree } from '@react-three/fiber';
 import React, { useState, useEffect } from 'react';
 import Fold from './Fold';
 
-export default function FoldGroup({ front, back, double, ...props }) {
+export default function FoldGroup({ front, back, double, onLoad, ...props }) {
   const [progress, setProgress] = useState(2);
   const [hovered, setHovered] = useState(false);
 
   const { domElement } = useThree((state) => state.gl);
-
-  useEffect(() => {
-    const loading = document.getElementById('fold-viewer-loading');
-    if (loading) {
-      loading.style.display = 'none';
-    }
-  }, []);
 
   useEffect(() => {
     domElement.style.cursor = hovered ? 'pointer' : 'auto';
@@ -45,6 +38,7 @@ export default function FoldGroup({ front, back, double, ...props }) {
         front={front}
         back={back}
         progress={progress}
+        onLoad={onLoad}
       />
       <Fold
         position-x={double ? 0.5 : -10}

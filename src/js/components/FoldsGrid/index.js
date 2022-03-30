@@ -1,41 +1,71 @@
+import { unmountComponentAtNode } from '@react-three/fiber';
 import InfiniteScroll from 'infinite-scroll';
+import { parseBody } from './infinite';
 import { layout } from './layout';
+import { render } from './render';
 
-let infinite = null;
+export let infinite = null;
+
+function handleUpdate() {
+  const canvas = document.querySelector('#folds-list-canvas__canvas');
+  if (!canvas) return;
+
+  const elements = Array.from(
+    document.querySelectorAll('.fold-list-item__content'),
+  );
+  const elementProps = elements.map((element) => {
+    const key = element.dataset.slug ?? '';
+    const front = element.dataset.front ?? '/assets/fold-viewer/blank.png';
+    const back = element.dataset.back ?? '/assets/fold-viewer/blank.png';
+
+    return {
+      key,
+      front,
+      back,
+      spread: 1,
+    };
+  });
+  render(canvas, elements, elementProps);
+}
 
 export const load = () => {
-  const element = document.querySelector('#folds-grid');
-  if (!element) return;
+  // const element = document.querySelector('#folds-grid');
+  // if (!element) return;
 
-  layout();
+  // layout();
 
-  infinite = new InfiniteScroll(element, {
-    path: '#folds-pagination-next',
-    history: false,
-    debug: true,
-    hideNav: '#folds-pagination',
-  });
+  // infinite = new InfiniteScroll(element, {
+  //   path: '#folds-pagination-next',
+  //   history: false,
+  //   hideNav: '#folds-pagination',
+  // });
 
-  infinite.on('load', (body, path) => {
-    let { responseBody, domParseResponse } = infinite.options;
-    let isDocument = responseBody == 'text' && domParseResponse;
-    if (!isDocument) return;
-    let items = body.querySelectorAll('.fold-grid-item');
-    if (!items || !items.length) {
-      infinite.lastPageReached(body, path);
-      return;
-    }
-    var fragment = document.createDocumentFragment();
-    for (var i = 0; i < items.length; i++) {
-      fragment.appendChild(items[i]); // Note that this does NOT go to the DOM
-    }
+  // infinite.on('load', (body, path) => {
+  //   const fragment = parseBody(
+  //     body,
+  //     path,
+  //     infinite.options,
+  //     infinite.lastPageReacher,
+  //   );
+  //   element.appendChild(fragment);
+  //   layout();
+  //   handleUpdate();
+  // });
 
-    element.appendChild(fragment);
-    layout();
-  });
+  const canvas = document.querySelector('#folds-list-canvas__canvas');
+  if (!canvas) return;
 
+  window.addEventListener('resize', handleUpdate);
+  window.dispatchEvent(new Event('resize'));
 };
 
 export const unload = () => {
   if (infinite) infinite.destroy();
+
+  window.removeEventListener('resize', handleUpdate);
+
+  const canvas = document.querySelector('#folds-list-canvas__canvas');
+  if (!canvas) return;
+
+  unmountComponentAtNode(canvas);
 };

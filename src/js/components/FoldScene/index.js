@@ -1,9 +1,7 @@
-import React from 'react';
-import FoldScene from './FoldScene';
-import { render, events, useFrame } from '@react-three/fiber';
 import { unmountComponentAtNode } from '@react-three/fiber';
+import { render } from './render';
 
-function handleResize() {
+function handleUpdate() {
   const backgrounds = document.querySelectorAll('.fold-cover-background');
   
   for (let background of backgrounds) {
@@ -26,23 +24,7 @@ function handleResize() {
     const brightness = parseFloat(canvas.dataset.brightness) ?? 0.75;
     const bleed = parseFloat(canvas.dataset.bleed) ?? 0.25;
 
-    render(
-      <FoldScene
-        front={front}
-        back={back}
-        model={model}
-        brightness={brightness}
-        bleed={bleed}
-        onLoad={handleLoad}
-      />,
-      canvas,
-      {
-        events,
-        shadows: true,
-        flat: true,
-        dpr: window.devicePixelRatio,
-      }
-    );
+    render(canvas, front, back, model, brightness, bleed, handleLoad);
   }
 }
 
@@ -50,7 +32,7 @@ export const load = () => {
   const backgrounds = document.querySelectorAll('.fold-cover-background');
   if (!backgrounds.length) return;
 
-  window.addEventListener('resize', handleResize);
+  window.addEventListener('resize', handleUpdate);
   window.dispatchEvent(new Event('resize'));
 };
 
@@ -58,7 +40,7 @@ export const unload = () => {
   const backgrounds = document.querySelectorAll('.fold-cover-background');
   if (!backgrounds.length) return;
 
-  window.removeEventListener('resize', handleResize);
+  window.removeEventListener('resize', handleUpdate);
 
   for (let background of backgrounds) {
     const canvas = background.querySelector('.fold-cover-background-canvas');

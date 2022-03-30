@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { TextureLoader, sRGBEncoding, AnimationMixer } from 'three';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame, useGraph, useLoader } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei/core/useGLTF';
 import { useSpring } from '@react-spring/core';
 
@@ -23,18 +23,23 @@ function Model({
   progress,
   front = '/assets/fold-viewer/blank.png',
   back = '/assets/fold-viewer/blank.png',
+  onLoad,
   ...props
 }) {
-  const { nodes, animations } = useGLTF('/assets/fold-viewer/newspaper.glb');
+  const { scene, animations } = useGLTF('/assets/fold-viewer/newspaper.glb');
+  const frontMap = useLoader(TextureLoader, front);
+  const backMap = useLoader(TextureLoader, back);
+  const normalMap = useLoader(TextureLoader, '/assets/fold-viewer/normal.jpg');
+
+  const clone = useMemo(() => scene.clone(), [scene]);
+  const { nodes } = useGraph(clone);
   const { Plane } = nodes;
 
-  const frontMap = useLoader(TextureLoader, front);
   frontMap.encoding = sRGBEncoding;
   frontMap.flipY = false;
-  const backMap = useLoader(TextureLoader, back);
   backMap.encoding = sRGBEncoding;
   backMap.flipY = false;
-  const normalMap = useLoader(TextureLoader, '/assets/fold-viewer/normal.jpg');
+
   const material = useMemo(
     () => new FoldMaterial(frontMap, backMap, normalMap),
     [frontMap, backMap, normalMap],
@@ -87,12 +92,15 @@ function Model({
     material.bleed.value = bleed;
   });
 
+  useEffect(() => {
+    if (typeof onLoad === 'function') onLoad();
+  }, []);
+
   return (
     <group {...props} dispose={null}>
       <mesh
         rotation-z={Math.PI}
         geometry={Plane.geometry}
-        material={material}
         morphTargetDictionary={Plane.morphTargetDictionary}
         morphTargetInfluences={Plane.morphTargetInfluences}
         castShadow

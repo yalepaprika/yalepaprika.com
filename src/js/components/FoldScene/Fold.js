@@ -33,7 +33,7 @@ export default function Model({
   );
 
   scene.traverse((child) => {
-    if (child.name == 'Newspaper') {
+    if (child.name === 'Newspaper') {
       child.material = material;
     }
 
@@ -42,7 +42,7 @@ export default function Model({
       child.receiveShadow = true;
     }
 
-    if (child.type == 'DirectionalLight') {
+    if (child.type === 'DirectionalLight') {
       child.castShadow = true;
       child.shadow.bias = -0.0001;
     }
