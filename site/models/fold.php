@@ -74,6 +74,37 @@ class FoldPage extends Page {
         return $attrs;
     }
 
+    public function preview() {
+        $front = $this->files()->template('fold-front')->first();
+        $back = $this->files()->template('fold-back')->first();
+        $map = collection('renderings/previews')->first()->files()->template('preview-map')->first();
+        if (is_null($front) || is_null($back) || is_null($map)) return null;
+        $args = $back->url() . ' ';
+        $args .= '-resize 888x1750\! ';
+        $args .= '\( -clone 0,1 -append \) ';
+        $args .= '\( -clone 1,0 -append -flop \) ';
+        $args .= '-delete 0,1 ';
+        $args .= $map->url() . ' ';
+        $args .= '\( -clone 0,2 -alpha set -compose Distort -composite \) ';
+        $args .= '\( -clone 1,2 -alpha set -compose Distort -composite \) ';
+        $args .= '-delete 0,1 ';
+        $args .= '\( -clone 1,2 -compose blend  -define compose:args=10 -composite \) ';
+        $args .= '-delete 1,2 ';
+        $args .= '\( -clone 0   -channel B -separate +channel \) ';
+        $args .= '\( -clone 1,2 -compose Multiply -composite \) ';
+        $args .= '-delete 1,2 ';
+        $args .= '\( -clone 1,0 -compose DstIn -composite \) ';
+        $args .= '-delete 0,1 ';
+        $thumb = $front->thumb([
+            'args' => $args,
+            'argsName' => 'preview-back-' . $back->modified() . '-map-' . $map->modified() . '-v1',
+            'width' => 888,
+            'height' => 3500,
+            'format' => 'png'
+        ]);
+        return $thumb;
+    }
+
     public function scene() {
         $folds = $this->kirby()->collection('folds/list');
         $scenes = $this->kirby()->collection('renderings/scenes');

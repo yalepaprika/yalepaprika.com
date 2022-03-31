@@ -36,7 +36,9 @@
     "bnomei/kirby3-fingerprint": "^2.3",
     "bnomei/kirby3-robots-txt": "^1.4",
     "doctrine/inflector": "^2.0",
-    "theiconic/name-parser": "^1.2"
+    "theiconic/name-parser": "^1.2",
+    "texnixe/k3-filesdisplay-section": "dev-master",
+    "bnomei/kirby3-janitor": "^2.13"
   },
   "config": {
     "optimize-autoloader": true

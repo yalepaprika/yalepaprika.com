@@ -69,6 +69,20 @@ columns:
         template: fold-back
         empty: No image yet
         max: 1
+      fold_preview:
+        headline: Preview
+        type: filesdisplay
+        query: page.files.template("fold-preview")
+        layout: cards
+        size: medium
+      rendering_triggers:
+        type: fields
+        fields:
+          rerender_preview_trigger:
+            label: Rerender Preview
+            type: janitor
+            progress: Rendering...
+            job: renderPreview
   - width: 1/1
     fields:
       line_b:

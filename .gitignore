@@ -18,6 +18,7 @@ Icon
 !/public/assets/js/.gitkeep
 /public/assets/css/*
 !/public/assets/css/.gitkeep
+/public/janitor*
 /kirby
 /vendor
 /content
@@ -30,7 +31,7 @@ stats.html
 !/site/plugins/auto-publish
 !/site/plugins/pages-sorted-titles
 !/site/plugins/helpers
-
+!/site/plugins/renderer
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

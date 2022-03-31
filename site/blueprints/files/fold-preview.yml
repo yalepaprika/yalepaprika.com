@@ -1,0 +1,5 @@
+title: Fold Preview
+
+accept:
+  mime: image/*
+  maxsize: 20000000

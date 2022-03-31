@@ -1,5 +1,7 @@
 <?php
 
+use YalePaprika\PreviewRenderer;
+
 return [
     'routes' => require_once 'routes.php',
     'markdown' => [
@@ -13,5 +15,8 @@ return [
         'folds',
         'contributor',
         'contributors'
+    ],
+    'bnomei.janitor.jobs-extends' => [
+        'yalepaprika.renderer.jobs'
     ]
 ];
