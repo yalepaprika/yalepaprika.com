@@ -1,0 +1,3 @@
+.fold-editors-statement__contributors li:not(:last-child)::after {
+  content: ', ';
+}

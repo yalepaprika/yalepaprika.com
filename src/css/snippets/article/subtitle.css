@@ -1,0 +1,3 @@
+.article-subtitle__contributors li:not(:last-child)::after {
+  content: ', ';
+}

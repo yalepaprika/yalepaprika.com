@@ -19,10 +19,12 @@
       </div>
     </div>
   </div>
-  <?php if ($embed = $page->embedPage()): ?>
-    <?php snippet('fold/link-block-embed', ['embed' => $embed]) ?>
-  <?php endif; ?>
-  <?php if ($pdf = $fold->files()->template('fold-pdf')->first()): ?>
-    <?php snippet('fold/link-block-pdf', ['pdf' => $pdf]) ?>
-  <?php endif ?>
+  <div aria-hidden="true">
+    <?php if ($embed = $page->embedPage()): ?>
+      <?php snippet('fold/link-block-embed', ['embed' => $embed]) ?>
+    <?php endif; ?>
+    <?php if ($pdf = $fold->files()->template('fold-pdf')->first()): ?>
+      <?php snippet('fold/link-block-pdf', ['pdf' => $pdf]) ?>
+    <?php endif ?>
+  </div>
 </div>

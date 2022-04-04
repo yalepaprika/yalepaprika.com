@@ -72,21 +72,6 @@
   }
 }
 
-/* @custom-media --dynamic-text-cutoff (min-width: 1143px);
-@custom-media --md-viewport (min-width: 700px);
-@custom-media --lg-viewport (min-width: 1000px);
-
-
-@media (--dynamic-text-cutoff) {
-  :root {
-  }
-}
-
-@media (--md-viewport) {
-  :root {
-  }
-} */
-
 .container-xxxl {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -122,6 +107,18 @@ main {
   height: calc(var(--body-font-size) * 10/22);
 }
 
+#swup main {
+  transition: opacity 0.4s;
+  opacity: 1;
+}
+
+html.is-animating #swup main {
+  opacity: 0;
+}
+
+html.is-animating.is-leaving #swup main {
+  opacity: 1;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-size: unset;

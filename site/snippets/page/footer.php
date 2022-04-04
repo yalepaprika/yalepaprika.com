@@ -13,3 +13,4 @@
     </div>
   </div>
 </footer>
+<?php snippet('utilities/admin-edit') ?>

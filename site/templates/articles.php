@@ -4,9 +4,14 @@
     <?php snippet('page/nav', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
     <main>
       <?php snippet('page/title', ['title' => $page->title()]) ?>
-      <?php foreach(collection('articles/by-fold') as $articles): ?>
-        <?php snippet('articles/list', ['title' => $articles->first()->parent()->title(), 'articles' => $articles]) ?>
-      <?php endforeach ?>
+      <div id="pagination">
+        <?php foreach($groups as $id => $articles): ?>
+          <div class="pagination-item">
+            <?php snippet('articles/list', ['title' => $site->find($id)->title(), 'articles' => $articles]) ?>
+          </div>
+        <?php endforeach ?>
+      </div>
+      <?php snippet('page/more', ['model' => 'Article', 'pagination' => $pagination]) ?>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

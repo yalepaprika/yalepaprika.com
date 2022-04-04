@@ -1,5 +1,5 @@
 <div id="page-prev-next" class="page-prev-next container-xxxl space-after-40">
-  <h2 class="sr-only">Related Folds</h2>
+  <h2 class="sr-only">Related <?= pluralize($model, 2) ?></h2>
   <div class="row align-items-stretch">
     <?php if ($prev): ?>
       <div class="page-prev-next__prev col col-sm-3 h-100">
