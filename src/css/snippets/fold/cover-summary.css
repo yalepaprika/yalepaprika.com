@@ -1,3 +1,11 @@
 .fold-cover-summary {
   height: 65vh;  
 }
+
+.fold-cover-summary.card a:hover {
+  color: inherit;
+}
+
+.fold-cover-summary__block {
+  width: var(--space-40);
+}

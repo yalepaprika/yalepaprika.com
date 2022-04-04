@@ -1,58 +1,49 @@
-<div id="page-prev-next" class="page-prev-next box-block box-block-ruled cluster cluster-stack cluster-2-2-column cluster-switcher">
-  <div class="_cluster">
-    <div class="page-prev box-block-md-bottom-ruled">
-      <?php if ($prev): ?>
-        <div class="stack stack-small">
+<div id="page-prev-next" class="page-prev-next container-xxxl space-after-40">
+  <h2 class="sr-only">Related Folds</h2>
+  <div class="row align-items-stretch">
+    <?php if ($prev): ?>
+      <div class="page-prev-next__prev col col-sm-3 h-100">
+        <div class="rule card">
           <div>
-            <h4>Previous</h4>
-            <h2>
-              <a class="page-prev-link" href="<?= $prev->url() ?>">
-                <?= $prev->title() ?>
+            <h3 class="font--secondary">Previous</h3>
+            <div>
+              <a href="<?= $prev->url() ?>" class="card-target">
+                <?= removeorphans($prev->title(), 5) ?>
               </a>
-            </h2>
+            </div>
           </div>
-          <?php if ($prev->template() == 'fold'): ?>
-            <div>
-              <h6>Volume <?= $prev->volume() ?> <span class="separator">·</span> Issue <?= sprintf('%02d', $prev->number()->value()) ?></h6>
-              <h6><?= $prev->formattedDate() ?></h6>
-            </div>
-          <?php endif ?>
-          <?php if ($prev->template() == 'article' || $prev->template() == 'article-interview' || $prev->template() == 'article-on-the-ground'): ?>
-            <div>
-              <h6><?= $prev->formattedContributors() ?></h6>
-              <h6><?= $prev->templateName() ?></h6>
-              <h6><?= $prev->content()->get('content')->words() ?> words</h6>
-            </div>
-          <?php endif ?>
+          <div class="font--secondary">
+            <?php if ($prev->template() == 'fold'): ?>
+              <?php snippet('fold/subtitle', ['fold' => $prev]) ?>
+            <?php endif ?>
+            <?php if ($prev->template() == 'article' || $prev->template() == 'article-interview' || $prev->template() == 'article-on-the-ground'): ?>
+              <?php snippet('article/subtitle', ['article' => $prev]) ?>
+            <?php endif ?>
+          </div>
         </div>
-      <?php endif ?>
-    </div>
-    <div class="page-next">
-      <?php if ($next): ?>
-        <div class="stack stack-small">
+      </div>
+    <?php endif ?>
+    <?php if ($next): ?>
+      <div class="page-prev-next__next col">
+        <div class="rule card h-100">
           <div>
-            <h4>Next</h4>
-            <h2>
-              <a class="page-next-link" href="<?= $next->url() ?>">
-                <?= $next->title() ?>
+            <h3 class="font--secondary">Next</h3>
+            <div>
+              <a href="<?= $next->url() ?>" class="card-target">
+                <?= removeorphans($next->title(), 5) ?>
               </a>
-            </h2>
+            </div>
           </div>
-          <?php if ($next->template() == 'fold'): ?>
-            <div>
-              <h6>Volume <?= $next->volume() ?> <span class="separator">·</span> Issue <?= sprintf('%02d', $next->number()->value()) ?></h6>
-              <h6><?= $next->formattedDate() ?></h6>
-            </div>
-          <?php endif ?>
-          <?php if ($next->template() == 'article' || $next->template() == 'article-interview' || $next->template() == 'article-on-the-ground'): ?>
-            <div>
-              <h6><?= $next->formattedContributors() ?></h6>
-              <h6><?= $next->templateName() ?></h6>
-              <h6><?= $next->content()->get('content')->words() ?> words</h6>
-            </div>
-          <?php endif ?>
+          <div class="font--secondary">
+            <?php if ($next->template() == 'fold'): ?>
+              <?php snippet('fold/subtitle', ['fold' => $next]) ?>
+            <?php endif ?>
+            <?php if ($next->template() == 'article' || $next->template() == 'article-interview' || $next->template() == 'article-on-the-ground'): ?>
+              <?php snippet('article/subtitle', ['article' => $next]) ?>
+            <?php endif ?>
+          </div>
         </div>
-      <?php endif ?>
-    </div>
+      </div>
+    <?php endif ?>
   </div>
 </div>

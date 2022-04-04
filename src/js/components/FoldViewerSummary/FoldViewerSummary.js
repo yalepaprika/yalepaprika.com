@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import FoldController from './FoldController';
 
-export default function FoldViewer({ front, back, double, onLoad, ...props }) {
+export default function FoldViewerSummary({ front, back, onLoad, ...props }) {
   return (
     <group>
       <ambientLight intensity={0.4} />
@@ -15,7 +15,6 @@ export default function FoldViewer({ front, back, double, onLoad, ...props }) {
         <FoldController
           front={front}
           back={back}
-          double={double}
           onLoad={onLoad}
         />
       </Suspense>

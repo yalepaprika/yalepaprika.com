@@ -1,3 +1,17 @@
-.fold-viewer__content {
-  height: 90vh;
+.fold-viewer {
+  user-select: none;
+}
+
+.fold-viewer__background {
+  height: 26rem;
+  margin-top: calc(var(--space-40) * -1);
+  position: relative;
+}
+
+.fold-viewer__canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

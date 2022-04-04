@@ -2,14 +2,14 @@ import { unmountComponentAtNode } from '@react-three/fiber';
 import { render } from './render';
 
 function handleLoad() {
-  const loading = document.getElementById('fold-viewer__loading');
+  const loading = document.getElementById('fold-viewer-summary__loading');
   if (loading) {
     loading.style.display = 'none';
   }
 }
 
 function handleUpdate() {
-  const canvas = document.getElementById('fold-viewer__canvas');
+  const canvas = document.getElementById('fold-viewer-summary__canvas');
   if (!canvas) return;
 
   const front = canvas.dataset.front
@@ -19,13 +19,11 @@ function handleUpdate() {
     ? canvas.dataset.back
     : '/assets/fold-viewer/blank.png';
 
-  const double = window.matchMedia('(min-width: 66rem)').matches;
-  render(canvas, front, back, double, handleLoad);
+  render(canvas, front, back, handleLoad);
 }
 
-
 export const load = () => {
-  const canvas = document.getElementById('fold-viewer__canvas');
+  const canvas = document.getElementById('fold-viewer-summary__canvas');
   if (!canvas) return;
 
   window.addEventListener('resize', handleUpdate);
@@ -33,7 +31,7 @@ export const load = () => {
 };
 
 export const unload = () => {
-  const canvas = document.getElementById('fold-viewer__canvas');
+  const canvas = document.getElementById('fold-viewer-summary__canvas');
   if (!canvas) return;
 
   window.removeEventListener('resize', handleUpdate);

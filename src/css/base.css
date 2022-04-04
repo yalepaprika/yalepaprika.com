@@ -18,6 +18,12 @@
   --heading-line-height: calc(36/32);
   --heading-line-height-em: calc(36/32 * 1em);
 
+  --nav-font-weight: 800;
+  --nav-font-style: normal;
+  --nav-font-size: calc(var(--body-font-size) * 20/22);
+  --nav-line-height: calc(16/20);
+  --nav-line-height-em: calc(16/20 * 1em);
+
   --detail-font-weight: 400;
   --detail-font-style: normal;
   --detail-font-size: calc(var(--body-font-size) * 16/22);
@@ -133,6 +139,14 @@ h1, h2, h3, h4, h5, h6 {
   font-style: var(--heading-font-style);
   font-size: var(--heading-font-size);
   line-height: var(--heading-line-height);
+}
+
+.font-nav {
+  font-weight: var(--nav-font-weight);
+  font-style: var(--nav-font-style);
+  font-size: var(--nav-font-size);
+  line-height: var(--nav-line-height);
+  text-transform: uppercase;
 }
 
 .font-detail {
@@ -313,16 +327,6 @@ input[type="submit"] {
   padding-top: var(--space-10);
 }
 
-.rule-double-outer {
-  border-top: var(--line-width) solid var(--color-gray-200);
-  padding-top: calc(var(--line-width) * 2);
-}
-
-.rule-double-inner {
-  border-top: var(--line-width) solid var(--color-gray-200);
-  padding-top: var(--space-10);
-}
-
 .rule--paprika {
   border-color: var(--color-paprika);
 }
@@ -352,7 +356,11 @@ input[type="submit"] {
   position: relative;
 }
 
-.card a.card-target:hover {
+.card.card--highlight:hover {
+  background: var(--color-gray-100);
+}
+
+.card.card--highlight a.card-target:hover {
   color: inherit;
 }
 

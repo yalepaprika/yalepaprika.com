@@ -37,7 +37,7 @@ class PreviewRenderer {
         $command[] = option('yalepaprika.renderer.bin');
         $command[] = $front->root();
         $command[] = $back->root();
-        $command[] = '-colorspace sRGB -type truecolor';
+        $command[] = '-colorspace RGB';
         $command[] = '-resize 888x1750\!';
         $command[] = '\( -clone 0,1 -append \)';
         $command[] = '\( -clone 1,0 -append -flop \)';
@@ -46,14 +46,14 @@ class PreviewRenderer {
         $command[] = '\( -clone 0,2 -alpha set -compose Distort -composite \)';
         $command[] = '\( -clone 1,2 -alpha set -compose Distort -composite \)';
         $command[] = '-delete 0,1';
-        $command[] = '\( -clone 1,2 -compose blend  -define compose:args=10 -composite \)';
+        $command[] = '\( -clone 1,2 -colorspace sRGB -gamma 0.7 -compose blend  -define compose:args=10 -composite \)';
         $command[] = '-delete 1,2';
         $command[] = '\( -clone 0   -channel B -separate +channel \)';
         $command[] = '\( -clone 1,2 -compose Multiply -composite \)';
         $command[] = '-delete 1,2';
         $command[] = '\( -clone 1,0 -compose DstIn -composite \)';
         $command[] = '-delete 0,1';
-        $command[] = '-strip';
+        $command[] = '-colorspace sRGB  -sharpen 0x1 -strip';
         $command[] = sprintf('-limit thread 1 "%s"', $output->root());
         
         $command = implode(' ', array_filter($command));

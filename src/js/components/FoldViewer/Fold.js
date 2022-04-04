@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { TextureLoader, sRGBEncoding, AnimationMixer } from 'three';
 import { useFrame, useGraph, useLoader } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei/core/useGLTF';
-import { useSpring } from '@react-spring/core';
+import { useSpring } from '@react-spring/three';
 
 import FoldMaterial from '../../lib/materials/FoldMaterial';
 
@@ -101,6 +101,7 @@ function Model({
       <mesh
         rotation-z={Math.PI}
         geometry={Plane.geometry}
+        material={material}
         morphTargetDictionary={Plane.morphTargetDictionary}
         morphTargetInfluences={Plane.morphTargetInfluences}
         castShadow

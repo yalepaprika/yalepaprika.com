@@ -2,7 +2,7 @@
 <div id="swup">
   <div class="page">
     <?php snippet('page/nav', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
-    <main class="rule rule--paprika">
+    <main>
       <article>
         <?php snippet('embed/iframe', ['url' => $page->website()]) ?>
       </article>

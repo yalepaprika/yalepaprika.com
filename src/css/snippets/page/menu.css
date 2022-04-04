@@ -1,11 +1,26 @@
-.font--inverted .page-menu a:hover {
+.page-menu {
+  min-width: 100%;
+  padding-top: calc(var(--body-font-size) * 1/22);
+  padding-bottom: calc(var(--body-font-size) * 3/22);
+}
+
+.page-nav .page-menu {
+  background: var(--color-paprika);
+}
+
+.page-menu a:hover {
+  color: var(--color-paprika);
+}
+
+.page-nav .page-menu a:hover {
   color: var(--color-black);
 }
 
-.page-menu__home::before {
-  content: '■ ';
+.font--inverted .page-menu {
+  background: var(--color-white);
+  color: var(--color-paprika);
 }
 
-.page-menu li:not(.page-menu__home):not(:last-child)::after {
-  content: ', ';
+.page-menu li {
+  margin-left: var(--space-20);
 }

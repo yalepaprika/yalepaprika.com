@@ -1,0 +1,1 @@
+<?php snippet('page/link-block', ['title' => 'Download PDF', 'href' => $pdf->mediaUrl(), 'subtitle' => $pdf->niceSize()]) ?>

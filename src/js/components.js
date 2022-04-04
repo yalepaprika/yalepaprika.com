@@ -1,15 +1,12 @@
 import * as FoldViewer from './components/FoldViewer';
-import * as FoldScene from './components/FoldScene';
-import * as FoldsGrid from './components/FoldsGrid';
+import * as FoldViewerSummary from './components/FoldViewerSummary';
 
 export const load = () => {
   FoldViewer.load();
-  FoldScene.load();
-  FoldsGrid.load();
+  FoldViewerSummary.load();
 }
 
 export const unload = () => {
   FoldViewer.unload();
-  FoldScene.unload();
-  FoldsGrid.unload();
+  FoldViewerSummary.load();
 };

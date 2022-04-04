@@ -1,0 +1,24 @@
+.fold-viewer-summary {
+  user-select: none;
+}
+
+.fold-viewer-summary__background {
+  height: 16rem;
+  margin-top: calc(var(--space-80) * -1);
+  position: relative;
+}
+
+.fold-viewer-summary__canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .fold-viewer-summary__background {
+      margin-top: calc(var(--space-100) * -1);
+      margin-bottom: var(--space-40);
+  }
+}

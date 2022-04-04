@@ -2,7 +2,7 @@ import { useThree } from '@react-three/fiber';
 import React, { useState, useEffect } from 'react';
 import Fold from './Fold';
 
-export default function FoldGroup({ front, back, double, onLoad, ...props }) {
+export default function FoldController({ front, back, double, onLoad, ...props }) {
   const [progress, setProgress] = useState(2);
   const [hovered, setHovered] = useState(false);
 

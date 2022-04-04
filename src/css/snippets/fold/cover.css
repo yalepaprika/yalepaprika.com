@@ -1,3 +1,7 @@
-.fold-cover {
+.fold-cover__container {
   height: 100vh;
+}
+
+.fold-cover__block {
+  width: var(--space-40);
 }
