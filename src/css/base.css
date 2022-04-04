@@ -111,7 +111,17 @@ body {
   -ms-word-break: break-all;
   word-break: break-word;
   min-height: 100%;
+  position: relative;
 }
+
+main {
+  padding-top: calc(var(--body-font-size) * 40/22);
+}
+
+.swup-progress-bar {
+  height: calc(var(--body-font-size) * 10/22);
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-size: unset;
@@ -295,6 +305,10 @@ a {
 
 a:hover {
   color: var(--color-paprika);
+}
+
+button, select {
+  text-transform: unset;
 }
 
 button,

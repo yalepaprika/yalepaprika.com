@@ -1,4 +1,30 @@
-.font--inverted .page-nav .rule-double-outer,
-.font--inverted .page-nav .rule-double-inner {
-  border-color: var(--color-white);
+.page-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  border-bottom: var(--line-width) solid var(--color-white);
+}
+
+.font--inverted .page-nav {
+  background: var(--color-white);
+}
+
+.page-nav__controls {
+  margin-right: var(--space-20);
+  order: 1;
+}
+
+.page-nav__toggle {
+  padding-top: calc(var(--body-font-size) * 1/22);
+  padding-bottom: calc(var(--body-font-size) * 3/22);
+}
+
+.page-nav__toggle:hover {
+  color: var(--color-black);
+}
+
+.font--inverted .page-nav__controls {
+  color: var(--color-paprika);
 }

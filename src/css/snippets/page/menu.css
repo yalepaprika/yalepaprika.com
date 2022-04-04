@@ -1,11 +1,13 @@
-.page-menu {
-  min-width: 100%;
-  padding-top: calc(var(--body-font-size) * 1/22);
-  padding-bottom: calc(var(--body-font-size) * 3/22);
-}
-
 .page-nav .page-menu {
   background: var(--color-paprika);
+}
+
+.page-nav .page-menu li:not(.page-menu__home) {
+  display: none;
+}
+
+.page-nav.page-nav--expanded .page-menu li:not(.page-menu__home) {
+  display: inherit;
 }
 
 .page-menu a:hover {
@@ -23,4 +25,12 @@
 
 .page-menu li {
   margin-left: var(--space-20);
+  padding-top: calc(var(--body-font-size) * 1/22);
+  padding-bottom: calc(var(--body-font-size) * 3/22);
+}
+
+@media (min-width: 576px) {
+  .page-menu {
+    min-width: 100%;
+  }
 }
