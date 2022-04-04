@@ -3,19 +3,19 @@
 class ContributorPage extends Page {
 
   public function sortName() {
-    $fullname = $this->title();
+    $name = $this->title();
 
-    if ($this->contributor_type()->value() == 'company') {
-      return $fullname;
+    if ($this->contributor_type()->value() !== 'company') {
+      $parser = new TheIconic\NameParser\Parser();
+      $parsedName = $parser->parse($this->title());
+      if ($parsedName->getLastname()) {
+        $name = $parsedName->getLastname();
+      }
     }
 
-    $parser = new TheIconic\NameParser\Parser();
-    $name = $parser->parse($this->title());
-    if ($name->getLastname()) {
-      return $name->getLastname();
-    }
+    $name = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $name);
 
-    return $fullname;
+    return $name;
   }
 
   public function formatDegree($degree) {

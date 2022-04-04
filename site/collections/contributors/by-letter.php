@@ -1,13 +1,13 @@
 <?php
 
 return function ($site) {
-  return $site->find('contributors')->children()->sortBy(function ($contributor) {
-    return $contributor->sortName();
-  }, 'asc')->group(function ($contributor) {
-    $normalized = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $contributor->sortName());
-    $first_letter = substr($normalized, 0, 1);
-    if (preg_match("/^[a-zA-Z]$/", $first_letter)) {
-      return strtoupper($first_letter);
+  return $site->find('contributors')->children()->map(function ($contributor) {
+    $contributor->sortFirstLetter = substr($contributor->sortName(), 0, 1);
+    $contributor->sortIsAlphabetical = preg_match("/^[a-zA-Z]$/", $contributor->sortFirstLetter);
+    return $contributor;
+  })->sortBy('sortIsAlphabetical', 'desc', 'sortName', 'asc')->group(function ($contributor) {
+    if ($contributor->sortIsAlphabetical) {
+      return strtoupper($contributor->sortFirstLetter);
     } else {
       return '#';
     }
