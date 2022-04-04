@@ -16,6 +16,15 @@
   left: 0;
 }
 
+.fold-viewer-summary__loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 1.5rem;
+}
+
 @media (min-width: 768px) {
   .fold-viewer-summary__background {
       margin-top: calc(var(--space-100) * -1);

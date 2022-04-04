@@ -11,8 +11,8 @@
             <?php snippet('folds/list', ['title' => $title , 'folds' => $folds]) ?>
           </div>
           <?php endforeach ?>
-        <?php snippet('page/more', ['model' => 'Fold', 'pagination' => $pagination]) ?>
       </div>
+      <?php snippet('page/pagination', ['model' => 'Fold', 'pagination' => $pagination]) ?>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

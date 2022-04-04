@@ -429,3 +429,33 @@ input[type="submit"] {
 .w-100 {
   width: 100%;
 }
+
+@keyframes bounce-pulse {
+  0% {
+    transform: translateY(0.1875em);
+  }
+  30% {
+    transform: translateY(-0.25em);
+  }
+  50% {
+    transform: translateY(0.1875em);
+  }
+}
+
+.loading-bounce {
+    display: inline-block;
+    line-height: 0;
+}
+
+.loading-bounce > div {
+    animation-duration: inherit;
+    animation-iteration-count: infinite;
+    animation-name: bounce-pulse;
+    animation-timing-function: ease-in-out;
+    background-color: currentColor;
+    border-radius: 100%;
+    display: inline-block;
+    height: 0.5em;
+    transform: translateY(0.1875em);
+    width: 0.5em;
+}

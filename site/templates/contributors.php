@@ -11,7 +11,7 @@
           </div>
         <?php endforeach ?>
       </div>
-      <?php snippet('page/more', ['model' => 'Contributor', 'pagination' => $pagination]) ?>
+      <?php snippet('page/pagination', ['model' => 'Contributor', 'pagination' => $pagination]) ?>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

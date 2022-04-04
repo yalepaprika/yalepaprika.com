@@ -12,6 +12,15 @@
             class="fold-viewer-summary__canvas"
             <?= Html::attr($fold->renderDataAttrs()) ?>
           ></canvas>
+          <div id="fold-viewer-summary__loading" class="fold-viewer-summary__loading">
+            <div class="w-100 h-100 font--secondary d-flex justify-content-center align-items-center">
+              <div class="loading-bounce" style="animation-duration: 0.8s;">
+                <div style="animation-delay: -0.3s;"></div>
+                <div style="animation-delay: -0.2s;"></div>
+                <div style="animation-delay: -0.1s;"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="fold-viewer-summary__details col-12 col-md-6">

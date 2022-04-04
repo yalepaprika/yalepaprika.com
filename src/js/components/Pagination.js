@@ -17,9 +17,11 @@ export const load = () => {
   };
 
   infinite = new InfiniteScroll(element, {
-    path: '#page-more__next-link',
+    path: '#page-pagination__next-link',
     append: '.pagination-item',
-    hideNav: '#page-more',
+    hideNav: '#page-pagination__controls',
+    status: '#page-pagination__status',
+    debug: true,
   });
 };
 
