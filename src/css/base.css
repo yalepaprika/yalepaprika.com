@@ -104,7 +104,7 @@ main {
 }
 
 .swup-progress-bar {
-  height: calc(var(--body-font-size) * 10/22);
+  height: calc(var(--body-font-size) * 5/22);
 }
 
 #swup main {
@@ -315,17 +315,17 @@ input[type="submit"] {
   display: inline-block;
   text-align: center;
   white-space: nowrap;
-  vertical-align: middle;
+  vertical-align: initial;
   user-select: none;
 }
 
 .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
 

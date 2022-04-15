@@ -3,15 +3,20 @@
   aspect-ratio: 888 / 1750;
   overflow: hidden;
   max-width: calc(1600px / 4 * 0.65); /* 65% of column width */
+  transition: transform 0.4s;
+}
+
+.fold-list-item:hover .fold-list-item__preview {
+  transform: scale(1.05);
+  transition: transform 0.2s;
 }
 
 .fold-list-item__preview img {
   position: absolute;
   width: 100%;
-  transition: transform 0s 0.05s;
+  transform: translateY(-50%);
 }
 
 .fold-list-item:hover .fold-list-item__preview img {
-  transform: translateY(-50%);
-  transition: transform 0s 0s;
+  transform: translateY(0%);
 }

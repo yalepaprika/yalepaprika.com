@@ -1,9 +1,10 @@
+import { $ } from '../lib/utils'
 import InfiniteScroll from 'infinite-scroll';
 
 let infinite = null;
 
 export const load = () => {
-  const element = document.querySelector('#pagination');
+  const element = $('#pagination');
   if (!element) return;
 
   InfiniteScroll.prototype.setHistory = function (title, path) {
