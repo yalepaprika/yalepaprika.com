@@ -38,10 +38,13 @@ columns:
         label: Publication Date
         type: date
         width: 1/2
-      bulletin:
-        type: toggle
-        text: Issue is a bulletin?
-        width: 1/2
+      format:
+        label: Issue Format
+        type: radio
+        options:
+          broadsheet: Broadsheet
+          other: Other/None
+        default: broadsheet
       website:
         label: Custom Website
         type: url

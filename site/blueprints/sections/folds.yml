@@ -16,9 +16,9 @@ columns:
   number:
     label: Number
     text: '{{ page.number }}'
-  bulletin:
-    label: Bulletin
-    text: '{{ page.bulletin }}'
+  format:
+    label: Format
+    text: '{{ page.format }}'
   date:
     label: Date
     type: date

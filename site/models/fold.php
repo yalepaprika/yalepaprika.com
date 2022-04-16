@@ -29,6 +29,13 @@ class FoldPage extends Page {
         return $embed;
     }
 
+    public function isBroadsheet() {
+        $hasImages = !!$this->files()->template('fold-front')->first()
+            && !!$this->files()->template('fold-back')->first();
+        $format = $this->format();
+        return $hasImages && $format == 'broadsheet';
+    }
+
     public function contributorsSummary() {
         $articles = $this->children();
         $contributors = [];
@@ -53,22 +60,27 @@ class FoldPage extends Page {
     public function renderDataAttrs() {
         $attrs = [];
 
+        $attrs['data-aspect-ratio'] = 1;
+
         if ($file = $this->files()->template('fold-front')->first()) {
             $attrs['data-front'] = $file->thumb([
-            'width'   => 512,
-            'height'  => 512,
-            'quality' => 80
+                'width'   => 512,
+                'height'  => 512,
+                'quality' => 80
             ])->url();
+            $attrs['data-aspect-ratio'] = $file->ratio();
         }
 
         if ($file = $this->files()->template('fold-back')->first()) {
             $attrs['data-back'] = $file->thumb([
-            'width'   => 512,
-            'height'  => 512,
-            'quality' => 80
+                'width'   => 512,
+                'height'  => 512,
+                'quality' => 80
             ])->url();
+            $attrs['data-aspect-ratio'] = $file->ratio();
         }
 
+        $attrs['data-fallback'] = $this->isBroadsheet() ? 'false' : 'true';
         $attrs['data-slug'] = $this->slug();
 
         return $attrs;

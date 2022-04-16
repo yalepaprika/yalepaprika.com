@@ -1,10 +1,14 @@
 import React, { Suspense } from 'react';
-import FoldController from './FoldController';
+import BroadsheetController from './BroadsheetController';
+import FallbackController from './FallbackController';
 
-export default function FoldViewer({ front, back, double, onLoad, ...props }) {
+export default function FoldViewer({ aspectRatio, front, back, fallback, double, onLoad, ...props }) {
+
+  const Controller = fallback ? FallbackController : BroadsheetController;
+
   return (
     <group>
-      <ambientLight intensity={0.4} />
+      <ambientLight intensity={0.3} />
       <directionalLight
         color={'#fff9f4'}
         position={[-3, 5, -4]}
@@ -12,7 +16,8 @@ export default function FoldViewer({ front, back, double, onLoad, ...props }) {
         shadow-bias={-0.0001}
       />
       <Suspense fallback={null}>
-        <FoldController
+        <Controller
+          aspectRatio={aspectRatio}
           front={front}
           back={back}
           double={double}

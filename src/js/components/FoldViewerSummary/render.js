@@ -3,15 +3,21 @@ import React from 'react';
 import FoldViewerSummary from './FoldViewerSummary';
 import { render as renderRTF } from '@react-three/fiber';
 
-export function render(canvas, front, back, onLoad) {
+export function render(canvas, aspectRatio, front, back, fallback, onLoad) {
   renderRTF(
-    <FoldViewerSummary front={front} back={back} onLoad={onLoad} />,
+    <FoldViewerSummary
+      aspectRatio={aspectRatio}
+      front={front}
+      back={back}
+      fallback={fallback}
+      onLoad={onLoad}
+    />,
     canvas,
     {
       events,
       shadows: true,
       camera: {
-        fov: 18,
+        fov: fallback ? 30 : 18,
         position: [0, 1.6, 0],
         'rotation-x': -Math.PI / 2,
       },

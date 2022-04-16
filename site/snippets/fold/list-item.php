@@ -4,11 +4,13 @@
       <div>
         <?php snippet('fold/header', ['fold' => $fold]) ?>
       </div>
-      <div class="fold-list-item__preview space-before-20">
-        <?php if ($preview = $fold->files()->template('fold-preview')->first()): ?>
-          <img src="<?= $preview->url() ?>" />
-        <?php endif ?>
-      </div>
+      <?php if ($fold->isBroadsheet()): ?>
+        <div class="fold-list-item__preview space-before-20">
+          <?php if ($preview = $fold->files()->template('fold-preview')->first()): ?>
+            <img src="<?= $preview->url() ?>" />
+          <?php endif ?>
+        </div>
+      <?php endif ?>
     </div>
   </div>
 </div>

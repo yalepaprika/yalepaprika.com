@@ -3,9 +3,16 @@ import React from 'react';
 import FoldViewer from './FoldViewer';
 import { render as renderRTF } from '@react-three/fiber';
 
-export function render(canvas, front, back, double, onLoad) {
+export function render(canvas, aspectRatio, front, back, fallback, double, onLoad) {
   renderRTF(
-    <FoldViewer front={front} back={back} double={double} onLoad={onLoad} />,
+    <FoldViewer
+      aspectRatio={aspectRatio}
+      front={front}
+      back={back}
+      fallback={fallback}
+      double={double}
+      onLoad={onLoad}
+    />,
     canvas,
     {
       events,

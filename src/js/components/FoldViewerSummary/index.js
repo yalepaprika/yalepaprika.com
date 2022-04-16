@@ -14,14 +14,16 @@ function handleUpdate() {
   const canvas = $('#fold-viewer-summary__canvas');
   if (!canvas) return;
 
+  const aspectRatio = parseFloat(canvas.dataset.aspectRatio);
   const front = canvas.dataset.front
     ? canvas.dataset.front
     : '/assets/fold-viewer/blank.png';
   const back = canvas.dataset.back
     ? canvas.dataset.back
     : '/assets/fold-viewer/blank.png';
+  const fallback = canvas.dataset.fallback === 'true';
 
-  render(canvas, front, back, handleLoad);
+  render(canvas, aspectRatio, front, back, fallback, handleLoad);
 }
 
 export const load = () => {
