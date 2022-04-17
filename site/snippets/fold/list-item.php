@@ -15,7 +15,7 @@
           <?php if ($front = $fold->files()->template('fold-front')->first()): ?>
             <div
               class="fold-list-item__preview fold-list-item__preview--fallback <?= $front->ratio() > 1 ? "fold-list-item__preview--rotate" : "" ?>"
-              style="--aspect-ratio: calc(<?= $front->width() ?> / <?= $front->height() ?>);"
+              style="--aspect-ratio: calc(<?= $front->width() ?> / <?= $front->height() ?>); <?= $front->ratio() > 1 ? "aspect-ratio: " . $front->height() . " / " . $front->width() . ";" : "" ?>"
             >
               <img src="<?= $front->url() ?>" />
             </div>
