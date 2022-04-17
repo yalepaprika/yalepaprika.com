@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "343741a3949802e539dba71fbf475008",
+    "content-hash": "a200afffdb1309eb6844a02444b3eda8",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -460,6 +460,41 @@
                 }
             ],
             "time": "2022-01-07T12:00:00+00:00"
+        },
+        {
+            "name": "floriankarsten/kirby-plausible",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/floriankarsten/kirby-plausible.git",
+                "reference": "be2017d4cb5895c9fe800ed4e89a0f23b3cd4ebc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/floriankarsten/kirby-plausible/zipball/be2017d4cb5895c9fe800ed4e89a0f23b3cd4ebc",
+                "reference": "be2017d4cb5895c9fe800ed4e89a0f23b3cd4ebc",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/cms": "^3.6.0-alpha.1",
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Karsten",
+                    "email": "code@floriankarsten.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/floriankarsten/kirby-plausible/issues",
+                "source": "https://github.com/floriankarsten/kirby-plausible/tree/0.1.4"
+            },
+            "time": "2021-11-04T16:56:15+00:00"
         },
         {
             "name": "getkirby/cms",

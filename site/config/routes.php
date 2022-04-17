@@ -27,7 +27,7 @@ return [
   [
       'pattern' => 'analytics',
       'action' => function() {
-          go('https://plausible.io/share/yalepaprika.com?auth=I0PBkzd1ov7tTV_zgJUGc');
+          go('https://plausible.io/share/yalepaprika.com?auth=FeBGavbz3TpDEW79_RGqD');
       }
   ],
   [

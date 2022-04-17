@@ -38,7 +38,8 @@
     "doctrine/inflector": "^2.0",
     "theiconic/name-parser": "^1.2",
     "texnixe/k3-filesdisplay-section": "dev-master",
-    "bnomei/kirby3-janitor": "^2.13"
+    "bnomei/kirby3-janitor": "^2.13",
+    "floriankarsten/kirby-plausible": "^0.1.4"
   },
   "config": {
     "optimize-autoloader": true

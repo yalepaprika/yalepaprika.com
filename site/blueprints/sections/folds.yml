@@ -5,6 +5,7 @@ template: fold
 limit: 10
 empty: No folds yet
 sortBy: sortable_date desc
+image: page.images.findBy("template", "fold-front")
 columns:
   title:
     label: Title
