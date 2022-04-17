@@ -22,5 +22,8 @@ return [
     'floriankarsten.plausible' => [
         'domain' => 'yalepaprika.com',
         'sharedLink' => 'https://plausible.io/share/yalepaprika.com?auth=FeBGavbz3TpDEW79_RGqD'
+    ],
+    'thumbs' => [
+        'driver' => 'im'
     ]
 ];
