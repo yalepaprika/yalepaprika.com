@@ -1,22 +1,41 @@
-.fold-list-item__preview {
-  position: relative;
-  aspect-ratio: 888 / 1750;
-  overflow: hidden;
-  max-width: calc(1600px / 4 * 0.65); /* 65% of column width */
+.fold-list-item__container {
   transition: transform 0.4s;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.2));
 }
 
-.fold-list-item:hover .fold-list-item__preview {
+.fold-list-item:hover .fold-list-item__container {
   transform: scale(1.05);
   transition: transform 0.2s;
+}
+
+.fold-list-item__preview {
+  position: relative;
+  overflow: hidden;
+  max-width: calc(1600px / 4 * 0.65); /* 65% of column width */
+}
+
+.fold-list-item__preview--broadsheet {
+  aspect-ratio: 888 / 1750;
+}
+
+.fold-list-item__preview--fallback {
+  aspect-ratio: var(--aspect-ratio) / 1;
+}
+
+.fold-list-item__preview--rotate {
+  transform-origin: top right;
+  transform: rotate(90deg) translateX(calc(100% * var(--aspect-ratio))) scale(calc(100% * var(--aspect-ratio)))
 }
 
 .fold-list-item__preview img {
   position: absolute;
   width: 100%;
+}
+
+.fold-list-item__preview--broadsheet img {
   transform: translateY(-50%);
 }
 
-.fold-list-item:hover .fold-list-item__preview img {
+.fold-list-item:hover .fold-list-item__preview--broadsheet img {
   transform: translateY(0%);
 }
