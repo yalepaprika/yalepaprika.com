@@ -16,7 +16,7 @@
       <?php snippet('fold/editors-statement', ['fold' => $page]) ?>
       <?php snippet('articles/list', ['articles' => $page->children()->notTemplate('embed')]) ?>
       <?php snippet('fold/viewer', ['fold' => $page]) ?>
-      <?php snippet('page/prev-next', ['model' => 'Fold', 'prev' => $page->next(collection('folds/list')), 'next' => $page->prev(collection('folds/list'))]) ?>
+      <?php snippet('page/prev-next', ['model' => 'Fold', 'prev' => $page->prev(collection('folds/list')), 'next' => $page->next(collection('folds/list'))]) ?>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

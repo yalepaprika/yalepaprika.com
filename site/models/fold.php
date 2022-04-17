@@ -57,6 +57,10 @@ class FoldPage extends Page {
         return $this->publication_date()->toDate('F j, Y');
     }
 
+    public function formattedDateShort() {
+        return $this->publication_date()->toDate('M j, Y');
+    }
+
     public function renderDataAttrs() {
         $attrs = [];
 

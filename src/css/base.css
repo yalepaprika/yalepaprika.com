@@ -2,15 +2,15 @@
   --body-font-family: "Söhne", -apple-system, BlinkMacSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --body-font-weight: 400;
   --body-font-style: normal;
-  --body-font-size: 22px;
+  --body-font-size: 16px;
   --body-line-height: 1.2;
   --body-line-height-em: 1.2em;
 
   --title-font-weight: 800;
   --title-font-style: italic;
-  --title-font-size: calc(var(--body-font-size) * 80/22);
-  --title-line-height: calc(80/80);
-  --title-line-height-em: calc(80/80 * 1em);
+  --title-font-size: calc(var(--body-font-size) * 60/22);
+  --title-line-height: calc(72/80);
+  --title-line-height-em: calc(72/80 * 1em);
 
   --heading-font-weight: 400;
   --heading-font-style: normal;
@@ -66,6 +66,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  padding-top: calc(var(--body-font-size) * 60/22);
+}
+
+@media (min-width: 576px) {
+  :root {
+    --body-font-size: 22px;
+    --title-font-size: calc(var(--body-font-size) * 80/22);
+  }
+
+  main {
+    padding-top: calc(var(--body-font-size) * 40/22);
+  }
+}
+
 @supports (color: color(display-p3 1 1 1)) {
   :root {
     --color-paprika: color(display-p3 0.996 0.340 0.128);
@@ -97,10 +112,6 @@ body {
   word-break: break-word;
   min-height: 100%;
   position: relative;
-}
-
-main {
-  padding-top: calc(var(--body-font-size) * 40/22);
 }
 
 .swup-progress-bar {

@@ -50,8 +50,7 @@
 @media (max-width: 576px) {
   .page-nav {
     font-size: calc(var(--body-font-size) * var(--page-nav-scale-factor));
-    margin-top: 0;
-    margin-bottom: 0;
+    --page-nav-scale-factor: calc(40/22);
   }
 
   .page-nav__menu li,

@@ -52,8 +52,8 @@
   margin-bottom: calc(var(--detail-line-height-em) / 2);
 }
 
-.page-body .footnotereverse {
-  display: none;
+.page-body .footnotes-container a {
+  color: inherit;
 }
 
 .fade-enter,

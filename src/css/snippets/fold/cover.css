@@ -3,9 +3,15 @@
 }
 
 .fold-cover__content {
-  padding-top: calc(var(--body-font-size) * 40/22);
+  padding-top: calc(var(--body-font-size) * 60/22);
 }
 
 .fold-cover__block {
   width: var(--space-40);
+}
+
+@media (min-width: 576px) {
+  .fold-cover__content {
+    padding-top: calc(var(--body-font-size) * 40/22);
+  }
 }
