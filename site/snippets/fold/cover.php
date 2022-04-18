@@ -1,4 +1,8 @@
-<div id="fold-cover" class="fold-cover space-after-20">
+<div
+  id="fold-cover"
+  class="fold-cover space-after-20 <?= $fold->slug() === "rendering-fiction" ? "fold-cover--has-background" : "" ?>"
+  style="--background-url: url('<?= (new Asset('/assets/images/' . $fold->slug() . '-background-new.jpg'))->url() ?>');"
+>
   <div class="fold-cover__container font--inverted background-paprika space-inside-after-20 d-flex flex-column">
     <?php snippet('page/nav', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>
     <div class="fold-cover__content d-flex flex-column justify-content-between container-xxxl flex-grow-1" aria-hidden="true">

@@ -1,5 +1,11 @@
 .fold-cover-summary {
-  height: 65vh;  
+  height: 65vh;
+}
+
+.fold-cover-summary--has-background {
+  background: var(--background-url);
+  background-size: cover;
+  background-position: left center;
 }
 
 .fold-cover-summary.card a:hover {

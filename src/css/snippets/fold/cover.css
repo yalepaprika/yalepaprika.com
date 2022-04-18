@@ -2,6 +2,12 @@
   height: 100vh;
 }
 
+.fold-cover--has-background .fold-cover__container {
+  background: var(--background-url);
+  background-size: cover;
+  background-position: left center;
+}
+
 .fold-cover__content {
   padding-top: calc(var(--body-font-size) * 60/22);
 }

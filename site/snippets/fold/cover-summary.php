@@ -1,4 +1,8 @@
-<div id="fold-cover-summary" class="fold-cover-summary container-xxxl card font--inverted background-paprika space-inside-after-20 space-after-20">
+<div
+  id="fold-cover-summary"
+  class="fold-cover-summary container-xxxl card font--inverted background-paprika space-inside-after-20 space-after-20 <?= $fold->slug() === "rendering-fiction" ? "fold-cover-summary--has-background" : "" ?>"
+  style="--background-url: url('<?= (new Asset('/assets/images/' . $fold->slug() . '-background-new.jpg'))->url() ?>');"
+>
   <div class="d-flex flex-column justify-content-between h-100">
     <h1 class="font-title" aria-hidden="true">
       <a href="<?= $fold->url() ?>" class="card-target"><?= $fold->title() ?></a>
