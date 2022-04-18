@@ -13,10 +13,9 @@
               'title' => 'Fold Editor',
               'folds' => $folds_as_fold_editor,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Fold Editor', $fold->fold_editors()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Fold Editor',
                     'pages' => $fold->fold_editors()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }
@@ -25,10 +24,9 @@
               'title' => 'Graphic Designer',
               'folds' => $folds_as_graphic_designer,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Graphic Designer', $fold->graphic_designers()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Graphic Designer',
                     'pages' => $fold->graphic_designers()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }
@@ -37,10 +35,9 @@
               'title' => 'Coordinating Editor',
               'folds' => $folds_as_coordinating_editor,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Coordinating Editors', $fold->coordinating_editors()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Coordinating Editors',
                     'pages' => $fold->coordinating_editors()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }
@@ -49,10 +46,9 @@
               'title' => 'Publisher',
               'folds' => $folds_as_publisher,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Publisher', $fold->publishers()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Publisher',
                     'pages' => $fold->publishers()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }
@@ -61,10 +57,9 @@
               'title' => 'Archivist',
               'folds' => $folds_as_archivist,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Archivist', $fold->archivists()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Archivist',
                     'pages' => $fold->archivists()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }
@@ -73,10 +68,9 @@
               'title' => 'Producer',
               'folds' => $folds_as_producer,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Producer', $fold->producers()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Producer',
                     'pages' => $fold->producers()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }
@@ -85,10 +79,9 @@
               'title' => 'Graphic Design Liaison',
               'folds' => $folds_as_graphic_design_liaison,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Graphic Design Liason', $fold->graphic_design_liaisons()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Graphic Design Liason',
                     'pages' => $fold->graphic_design_liaisons()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }
@@ -97,10 +90,9 @@
               'title' => 'Web Editor',
               'folds' => $folds_as_web_editor,
               'card_children' => function ($fold) {
-                  return snippet('utilities/detail-list/pages', [
-                    'title' => pluralize('Web Editor', $fold->web_editors()->toPages()->count()),
+                  return snippet('page/role', [
+                    'title' => 'Web Editor',
                     'pages' => $fold->web_editors()->toPages(),
-                    'show_title' => false,
                     'inline' => 'true'
                   ], true);
                 }

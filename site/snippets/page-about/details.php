@@ -1,14 +1,39 @@
-<div id="page-about-details" class="about-details box-card box-card-large-inset stack">
-  <div class="about-details-main cluster cluster-stack">
-    <div class="_cluster">
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Coordinating Editors', 'pages' => $about->coordinating_editors()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Graphic Designer Liasons', 'pages' => $about->graphic_design_liaisons()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Publishers', 'pages' => $about->publishers()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Archivists', 'pages' => $about->archivists()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Producers', 'pages' => $about->producers()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Web Editors', 'pages' => $about->web_editors()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => 'Website Design & Development', 'pages' => $about->website_design_development()->toPages()]) ?>
-      <?php snippet('utilities/detail-list/pages-x', ['title' => '3D Modeling & Rendering', 'pages' => $about->website_3d_rendering()->toPages()]) ?>
+<div class="page-about-details font--inverted background-black space-after-20">
+  <div class="container-xxxl">
+    <h3 class="sr-only">About Page Details</h3>
+    <div class="page-about-details__details row row-cols-2 row-cols-md-4 space-inside-before-40">
+      <?php snippet('page/role', [
+        'title' => 'Coordinating Editor',
+        'pages' => $about->coordinating_editors()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
+        'title' => 'Graphic Design Liason',
+        'pages' => $about->graphic_design_liason()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
+        'title' => 'Publisher',
+        'pages' => $about->publishers()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
+        'title' => 'Archivist',
+        'pages' => $about->archivists()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
+        'title' => 'Producer',
+        'pages' => $about->producers()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
+        'title' => 'Web Editor',
+        'pages' => $about->web_editors()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
+        'title' => 'Website Design & Development',
+        'pages' => $about->website_design_development()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
+        'title' => 'Website 3D Rendering',
+        'pages' => $about->website_3d_rendering()->toPages()
+      ]) ?>
     </div>
   </div>
 </div>
