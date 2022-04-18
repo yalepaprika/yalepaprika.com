@@ -1,9 +1,9 @@
-<div id="page-prev-next" class="page-prev-next container-xxxl space-after-40">
+<div id="page-prev-next" class="page-prev-next container-xxxl space-after-20">
   <h2 class="sr-only">Related <?= pluralize($model, 2) ?></h2>
   <div class="row align-items-stretch">
     <?php if ($prev): ?>
-      <div class="page-prev-next__prev col col-sm-3 h-100">
-        <div class="rule card">
+      <div class="page-prev-next__prev col col-sm-3">
+        <div class="rule card card--highlight space-inside-after-40 h-100">
           <div>
             <h3 class="font--secondary">Previous</h3>
             <div>
@@ -25,7 +25,7 @@
     <?php endif ?>
     <?php if ($next): ?>
       <div class="page-prev-next__next col">
-        <div class="rule card h-100">
+        <div class="rule card card--highlight space-inside-after-40 h-100">
           <div>
             <h3 class="font--secondary">Next</h3>
             <div>

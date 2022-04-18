@@ -25,5 +25,6 @@ return [
     ],
     'thumbs' => [
         'driver' => 'im'
-    ]
+    ],
+    'sylvainjule.footnotes.back'  => '&#8617;&#xFE0E;'
 ];

@@ -7,7 +7,7 @@
       <div id="pagination">
         <?php foreach($groups as $id => $articles): ?>
           <div class="pagination-item">
-            <?php snippet('articles/list', ['title' => $site->find($id)->title(), 'articles' => $articles]) ?>
+            <?php snippet('articles/cards', ['title' => $site->find($id)->title(), 'articles' => $articles]) ?>
           </div>
         <?php endforeach ?>
       </div>

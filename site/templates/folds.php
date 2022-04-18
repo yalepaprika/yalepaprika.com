@@ -8,7 +8,7 @@
         <?php foreach($groups as $folds): ?>
           <?php $title = 'Volume ' . ($folds->first()->volume()->isEmpty() ? '??' : $folds->first()->volume()); ?>
           <div class="pagination-item">
-            <?php snippet('folds/list', ['title' => $title , 'folds' => $folds]) ?>
+            <?php snippet('folds/cards', ['title' => $title , 'folds' => $folds]) ?>
           </div>
           <?php endforeach ?>
       </div>

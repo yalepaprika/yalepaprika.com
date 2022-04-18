@@ -4,10 +4,15 @@
       'title' => $title ?? 'Articles',
       'subtitle' => quantify('Article', $articles->count())
     ]) ?>
-    <?php foreach ($articles as $article): ?>
-      <?php snippet('article/list-item', [
-        'article' => $article
-      ]) ?>
-    <?php endforeach ?>
+    <div class="space-after-20">
+      <?php foreach ($articles as $article): ?>
+        <?php snippet('article/list-item', [
+          'article' => $article
+        ]) ?>
+      <?php endforeach ?>
+    </div>
+    <?php if (isset($children)): ?>
+      <?= $children ?>
+    <?php endif ?>
   </div>
 <?php endif ?>

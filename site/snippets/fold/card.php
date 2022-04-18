@@ -1,13 +1,13 @@
-<div class="fold-list-item col space-inside-after-40">
+<div class="fold-card col space-inside-after-40">
   <div class="rule card h-100">
     <div class="h-100 d-flex flex-column">
-      <div>
+      <div class="fold-card__header">
         <?php snippet('fold/header', ['fold' => $fold]) ?>
       </div>
-      <div class="fold-list-item__container space-before-20 space-after-20 <?= $fold->isBroadsheet() ? "" : "space-inside-before-10" ?>">
+      <div class="fold-card__container space-before-20 space-after-20 <?= $fold->isBroadsheet() ? "" : "space-inside-before-10" ?>">
         <?php if ($fold->isBroadsheet()): ?>
           <?php if ($preview = $fold->files()->template('fold-preview')->first()): ?>
-            <div class="fold-list-item__preview fold-list-item__preview--broadsheet">
+            <div class="fold-card__preview fold-card__preview--broadsheet">
               <picture>
                 <source srcset="<?= $preview->thumb(['width' => 360, 'format' => 'avif', 'quality' => 70])->url() ?>" type="image/avif">
                 <source srcset="<?= $preview->thumb(['width' => 360, 'format' => 'webp', 'quality' => 80])->url() ?>" type="image/webp">
@@ -18,7 +18,7 @@
         <?php else: ?>
           <?php if ($front = $fold->files()->template('fold-front')->first()): ?>
             <div
-              class="fold-list-item__preview fold-list-item__preview--fallback <?= $front->ratio() > 1 ? "fold-list-item__preview--rotate" : "" ?>"
+              class="fold-card__preview fold-card__preview--fallback <?= $front->ratio() > 1 ? "fold-card__preview--rotate" : "" ?>"
               style="--aspect-ratio: <?= $front->ratio() ?>; <?= $front->ratio() > 1 ? "aspect-ratio: " . $front->ratio() . " / 1;" : "" ?>"
             >
               <?php $dimension = $front->ratio() > 1 ? 'height' : 'width'; ?>
