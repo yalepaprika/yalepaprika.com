@@ -1,5 +1,5 @@
-<div class="fold-card col space-inside-after-40">
-  <div class="rule card h-100">
+<div class="fold-card col">
+  <div class="rule card card--highlight h-100">
     <div class="h-100 d-flex flex-column">
       <div class="fold-card__header">
         <?php snippet('fold/header', ['fold' => $fold]) ?>
