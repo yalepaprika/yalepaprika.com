@@ -17,6 +17,7 @@
       <?php snippet('articles/list', ['articles' => $page->children()->notTemplate('embed')]) ?>
       <?php snippet('fold/viewer', ['fold' => $page]) ?>
       <?php snippet('page/prev-next', ['model' => 'Fold', 'prev' => $page->prev(collection('folds/list')), 'next' => $page->next(collection('folds/list'))]) ?>
+      <?php snippet('fold/more', ['fold' => $page]) ?>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

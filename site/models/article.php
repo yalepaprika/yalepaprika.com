@@ -2,7 +2,7 @@
 
 class ArticlePage extends Page {
 
-    public function related() {
+    public function moreByContributors() {
         $contributors = $this->contributors()->toPages();
 
         if ($contributors->isEmpty()) {

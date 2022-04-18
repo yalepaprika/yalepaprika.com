@@ -10,7 +10,7 @@
       </article>
       <?php snippet('fold/viewer-summary', ['fold' => $page->parent()]) ?>
       <?php snippet('page/prev-next', ['model' => 'Article', 'prev' => $page->prev(), 'next' => $page->next()]) ?>
-      <?php snippet('articles/cards', ['articles' => $page->related(), 'title' => 'Related Articles']) ?>
+      <?php snippet('article/more', ['article' => $page]) ?>
     </main>
   </div>
   <?php snippet('page/footer', ['home' => $site, 'menu' => collection('menu'), 'submenu' => collection('submenu')]) ?>

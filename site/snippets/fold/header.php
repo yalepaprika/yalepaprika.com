@@ -6,4 +6,7 @@
 </<?= $element ?>>
 <div class="font--secondary">
   <?php snippet('fold/subtitle', ['fold' => $fold]) ?>
+  <?php if (isset($children)): ?>
+    <?= $children ?>
+  <?php endif ?>
 </div>

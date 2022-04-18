@@ -3,9 +3,9 @@
     <div class="container-xxxl">
       <h2>Editor's Statement</h2>
       <div class="font--secondary">
-        <?php if ($fold->coordinating_editors()->toPages()->isNotEmpty()): ?>
+        <?php if ($fold->fold_editors()->toPages()->isNotEmpty()): ?>
           <ul class="fold-editors-statement__contributors">
-            <?php foreach ($fold->coordinating_editors()->toPages() as $contributor): ?>
+            <?php foreach ($fold->fold_editors()->toPages() as $contributor): ?>
               <li class="d-inline"><a href="<?= $contributor->url() ?>"><?= $contributor->title() ?></a></li>
             <?php endforeach ?>
           </ul>

@@ -26,6 +26,10 @@
       <div class="fold-viewer-summary__details col-12 col-md-6">
         <div class="row row-cols-2">
           <?php snippet('fold/role', [
+            'title' => 'Fold Editor',
+            'pages' => $fold->fold_editors()->toPages()
+          ]) ?>
+          <?php snippet('fold/role', [
             'title' => 'Graphic Designer',
             'pages' => $fold->graphic_designers()->toPages()
           ]) ?>

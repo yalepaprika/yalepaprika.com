@@ -30,6 +30,10 @@
     <h3 class="sr-only">Fold Details</h3>
     <div class="fold-viewer__details row row-cols-2 row-cols-md-4">
       <?php snippet('fold/role', [
+        'title' => 'Fold Editor',
+        'pages' => $fold->fold_editors()->toPages()
+      ]) ?>
+      <?php snippet('fold/role', [
         'title' => 'Graphic Designer',
         'pages' => $fold->graphic_designers()->toPages()
       ]) ?>

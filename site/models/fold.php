@@ -23,6 +23,52 @@ class FoldPage extends Page {
         return $children;
     }
 
+    public function moreByFoldEditors() {
+        $fold_editors = $this->fold_editors()->toPages();
+
+        if ($fold_editors->isEmpty()) {
+            return new Pages();
+        }
+
+        $folds = kirby()->site()->find('folds')->children()->filter(function($fold) use ($fold_editors) {
+            if ($this->id() === $fold->id()) {
+                return false;
+            }
+            $match = false;
+            foreach($fold_editors as $fold_editor) {
+                if ($fold->fold_editors()->toPages()->has($fold_editor)) {
+                    $match = true;
+                }
+            }
+            return $match;
+        })->sortBy('volume', 'desc', 'publication_date', 'desc');
+
+        return $folds;
+    }
+
+    public function moreByGraphicDesigners() {
+        $graphic_designers = $this->graphic_designers()->toPages();
+
+        if ($graphic_designers->isEmpty()) {
+            return new Pages();
+        }
+
+        $folds = kirby()->site()->find('folds')->children()->filter(function($fold) use ($graphic_designers) {
+            if ($this->id() === $fold->id()) {
+                return false;
+            }
+            $match = false;
+            foreach($graphic_designers as $graphic_designer) {
+                if ($fold->graphic_designers()->toPages()->has($graphic_designer)) {
+                    $match = true;
+                }
+            }
+            return $match;
+        })->sortBy('volume', 'desc', 'publication_date', 'desc');
+
+        return $folds;
+    }
+
     public function embedPage() {
         $children = $this->children();
         $embed = $children->template('embed')->first();
