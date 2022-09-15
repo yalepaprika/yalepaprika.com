@@ -3,7 +3,7 @@
     <div class="page-nav__controls font--inverted d-sm-none">
       <button id="page-nav__toggle" aria-expanded="false" aria-controls="menu" class="page-nav__toggle">Menu</button>
     </div>
-    <div class="page-nav__menu font--inverted d-sm-inline-flex overflow-hidden">
+    <div class="page-nav__menu background-paprika font--inverted d-sm-inline-flex">
       <ul class="flex-shrink-0">
         <li class="d-sm-inline-block page-nav__home"><a <?php e($home->isOpen(), 'aria-current ') ?> href="<?= $home->url() ?>"><em><?= $home->title()->html() ?></em></a></li>
         <?php foreach ($menu as $item): ?>
@@ -13,7 +13,7 @@
           <li class="d-sm-inline-block"><a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
         <?php endforeach ?>
       </ul>
-      <ul class="d-none d-sm-inline-block flex-shrink-0" aria-hidde="true">
+      <ul class="d-none d-sm-inline-block flex-shrink-0" aria-hidden="true">
         <li class="d-sm-inline-block page-nav__home"><a <?php e($home->isOpen(), 'aria-current ') ?> href="<?= $home->url() ?>"><em><?= $home->title()->html() ?></em></a></li>
         <?php foreach ($menu as $item): ?>
           <li class="d-sm-inline-block"><a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
@@ -22,7 +22,7 @@
           <li class="d-sm-inline-block"><a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
         <?php endforeach ?>
       </ul>
-      <ul class="d-none d-sm-inline-block flex-shrink-0" aria-hidde="true">
+      <ul class="d-none d-sm-inline-block flex-shrink-0" aria-hidden="true">
         <li class="d-sm-inline-block page-nav__home"><a <?php e($home->isOpen(), 'aria-current ') ?> href="<?= $home->url() ?>"><em><?= $home->title()->html() ?></em></a></li>
         <?php foreach ($menu as $item): ?>
           <li class="d-sm-inline-block"><a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
@@ -31,7 +31,7 @@
           <li class="d-sm-inline-block"><a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
         <?php endforeach ?>
       </ul>
-      <ul class="d-none d-sm-inline-block flex-shrink-0" aria-hidde="true">
+      <ul class="d-none d-sm-inline-block flex-shrink-0" aria-hidden="true">
         <li class="d-sm-inline-block page-nav__home"><a <?php e($home->isOpen(), 'aria-current ') ?> href="<?= $home->url() ?>"><em><?= $home->title()->html() ?></em></a></li>
         <?php foreach ($menu as $item): ?>
           <li class="d-sm-inline-block"><a <?php e($item->isOpen(), 'aria-current ') ?> href="<?= $item->url() ?>"><?= $item->title()->html() ?></a></li>
