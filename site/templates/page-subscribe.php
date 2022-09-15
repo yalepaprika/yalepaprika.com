@@ -5,6 +5,7 @@
     <main>
       <article>
         <?php snippet('page/title', ['title' => $page->title()]) ?>
+        <?php snippet('page-subscribe/subscription-viewer', ['subscriptions' => $page->subscriptions()->toStructure()]) ?>
         <?php snippet('page/body', ['page' => $page]) ?>
       </article>
     </main>

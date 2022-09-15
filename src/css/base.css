@@ -315,6 +315,10 @@ a:hover {
   color: var(--color-paprika);
 }
 
+button.button-primary, .button.button-primary {
+  color: var(--color-paprika);
+}
+
 button, select {
   text-transform: unset;
 }
