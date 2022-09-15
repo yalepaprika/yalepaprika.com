@@ -1,6 +1,6 @@
 <div class="article-list-item card card--highlight font-heading">
   <div class="container-xxxl">
-    <div class="row rule space-inside-after-20">
+    <div class="row rule space-inside-after-40">
       <?php snippet('article/header', ['article' => $article]) ?>
     </div>
   </div>

@@ -378,8 +378,16 @@ input[type="submit"] {
   position: relative;
 }
 
-.card.card--highlight:hover {
+.card.card--highlight:hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: var(--color-gray-100);
+  margin-top: calc(var(--space-20) * -0.5);
+  margin-bottom: calc(var(--space-20) * 0.5);
+  margin-left: calc(var(--space-20) * -0.5);
+  margin-right: calc(var(--space-20) * -0.5);
 }
 
 .card.card--highlight a.card-target:hover {
