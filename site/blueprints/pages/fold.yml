@@ -86,6 +86,7 @@ columns:
             type: janitor
             progress: Rendering...
             job: renderPreview
+            data : '{{ page.id }}'
   - width: 1/1
     fields:
       line_b:

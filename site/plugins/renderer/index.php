@@ -19,6 +19,10 @@ Kirby::plugin('yalepaprika/renderer', [
     'bin' => 'convert',
     'jobs' => [
         'renderPreview' => function (Kirby\Cms\Page $page = null, string $data = null) {
+            if ($page === null) {
+                $page = site()->index(true)->findByID($data);
+            }
+
             kirby()->impersonate();
             $renderer = new PreviewRenderer($page);
             $renderer->render();
