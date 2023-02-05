@@ -41,6 +41,7 @@
     "floriankarsten/kirby-plausible": "^0.1.4"
   },
   "config": {
-    "optimize-autoloader": true
+    "optimize-autoloader": true,
+    "discard-changes": true
   }
 }
