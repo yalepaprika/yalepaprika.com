@@ -63,3 +63,18 @@ columns:
             step: .01
             min: 0
             before: $
+  - width: 1/1
+    fields:
+      line2:
+        type: line
+      support:
+        label: Support
+        type: structure
+        fields:
+          title:
+            type: text
+          description:
+            type: text
+          button_link:
+            label: Button Link
+            type: url

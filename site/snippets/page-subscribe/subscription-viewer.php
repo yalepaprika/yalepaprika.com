@@ -1,10 +1,9 @@
-<div id="subscription-viewer" class="subscription-viewer font--inverted background-black space-inside-before-20 space-after-20">
-  <h2 class="sr-only">Subscription Viewer</h2>
+<div id="subscription-viewer" class="subscription-viewer font--inverted background-black space-inside-before-20">
   <div class="container-xxxl">
     <div class="row">
       <div class="subscription-viewer__content col-12 col-md-3">
         <div class="space-after-40">
-          <div>Subscription Tiers</div>
+          <h2>Subscription Tiers</h2>
         </div>
       </div>
       <div class="subscription-viewer__details col-12 col-md-9">
