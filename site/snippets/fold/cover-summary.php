@@ -1,6 +1,6 @@
 <div
   id="fold-cover-summary"
-  class="fold-cover-summary container-xxxl card font--inverted background-paprika space-inside-after-20 space-after-20 <?= $fold->slug() === "rendering-fiction" ||  $fold->slug() === "transient-nostalgia" || $fold->slug() === "transient-intimacy" || $fold->slug() === "transient-solidarity" || $fold->slug() === "figments" || $fold->slug() === "fables" ? "fold-cover-summary--has-background" : "" ?>"
+  class="fold-cover-summary container-xxxl card font--inverted background-paprika space-inside-after-20 space-after-20 <?= $fold->slug() === "rendering-fiction" ||  $fold->slug() === "transient-nostalgia" || $fold->slug() === "transient-intimacy" || $fold->slug() === "transient-solidarity" || $fold->slug() === "figments" || $fold->slug() === "fables" || $fold->slug() === "farewells" ? "fold-cover-summary--has-background" : "" ?>"
   style="--background-url: url('<?= (new Asset('assets/images/' . $fold->slug() . '-background-new.jpg'))->url() ?>');"
 >
   <div class="d-flex flex-column justify-content-between h-100">
