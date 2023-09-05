@@ -1,4 +1,7 @@
-<?php use Kirby\Http\Uri; ?>
+<?php use Kirby\Http\Uri;
+use Kirby\Toolkit\Str;
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +19,7 @@
   <?php else: ?>
     <title><?= $page->title() . ' | ' . $site->title() ?></title>
   <?php endif; ?>
-  <meta name="description" content="Paprika! is the often-weekly broadsheet published by the students of the Yale School of Architecture and Yale School of Art."/>
+  <meta name="description" content="<?= preg_replace('/\R+/', " ", Str::unhtml($site->description()->kt())); ?>"/>
   <?= Bnomei\Fingerprint::css('/assets/css/main.css') ?>
 </head>
 <body class="background-white">

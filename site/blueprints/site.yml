@@ -26,4 +26,6 @@ columns:
             label: Article Topics
             type: tags
             accept: all
+          description:
+            type: textarea
       renderings: sections/site/renderings
