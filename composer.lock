@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a23dc7d894e5de26b335a85bb72f025",
+    "content-hash": "57b65d3c624744c5195c98ee791579d2",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -172,6 +172,98 @@
                 }
             ],
             "time": "2022-04-14T18:24:35+00:00"
+        },
+        {
+            "name": "bnomei/kirby3-redirects",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bnomei/kirby3-redirects.git",
+                "reference": "a455de962ccf20a3f391843ad2496090c73b29d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bnomei/kirby3-redirects/zipball/a455de962ccf20a3f391843ad2496090c73b29d7",
+                "reference": "a455de962ccf20a3f391843ad2496090c73b29d7",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "getkirby/cms": "^3.5",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "bnomei/kirby3-csv": "Adds functions to import and export data from structures (like the redirect table)",
+                "bnomei/kirby3-feed": "Add xml-rss and/or json feed",
+                "bnomei/kirby3-robots-txt": "Automatic robots.txt. Detects xmlsitemap.",
+                "bnomei/kirby3-security-headers": "CPS headers to make the the web a saver place. Sensible defaults with zero configuration.",
+                "distantnative/retour-for-kirby": "Better choice than bnomei\\kirby3-redirects if you are porting a Kirby 2 website.",
+                "omz13/kirby3-xmlsitemap": "Adds a xml sitemap"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": "tests/kirby"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bnomei\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Meilick",
+                    "email": "b@bnomei.com"
+                }
+            ],
+            "description": "Setup performant HTTP Status Code Redirects from within the Kirby Panel",
+            "homepage": "https://github.com/bnomei/kirby3-redirects",
+            "keywords": [
+                "301",
+                "302",
+                "307",
+                "308",
+                "header",
+                "kirby3",
+                "kirby3-cms",
+                "kirby3-plugin",
+                "performance",
+                "placeholder",
+                "redirect",
+                "redirects",
+                "regex",
+                "status-codes"
+            ],
+            "support": {
+                "issues": "https://github.com/bnomei/kirby3-redirects/issues",
+                "source": "https://github.com/bnomei/kirby3-redirects/tree/v1.12.0"
+            },
+            "funding": [
+                {
+                    "url": "https://buymeacoff.ee/bnomei",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://paypal.me/bnomei",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/bnomei",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/bnomei",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2023-09-18T10:21:20+00:00"
         },
         {
             "name": "claviska/simpleimage",
@@ -1683,5 +1775,5 @@
         "php": ">=8.0.0 <8.2.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.6.0"
 }

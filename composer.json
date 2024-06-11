@@ -38,10 +38,14 @@
     "theiconic/name-parser": "^1.2",
     "texnixe/k3-filesdisplay-section": "dev-master",
     "bnomei/kirby3-janitor": "^2.13",
-    "floriankarsten/kirby-plausible": "^0.1.4"
+    "floriankarsten/kirby-plausible": "^0.1.4",
+    "bnomei/kirby3-redirects": "^1.5"
   },
   "config": {
     "optimize-autoloader": true,
-    "discard-changes": true
+    "discard-changes": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
   }
 }

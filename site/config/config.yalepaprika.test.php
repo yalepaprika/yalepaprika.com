@@ -2,6 +2,7 @@
 
 return [
     'debug' => true,
+    "cache" => false,
     'panel' => [
         'install' => true
     ],

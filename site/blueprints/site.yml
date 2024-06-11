@@ -28,4 +28,29 @@ columns:
             accept: all
           description:
             type: textarea
+          # vendored on 1/5/22 by @s3ththompson
+          # allowing only temporary redirect option, changing names
+          # https://github.com/bnomei/kirby3-redirects/blob/master/blueprints/sections/redirects3xx.yml
+          redirects:
+            type: structure
+            translate: false
+            fields:
+              fromuri:
+                label: "From Path"
+                help: "A relative path, e.g. /rsvp"
+                type: text
+                required: true
+                before: yalepaprika.com
+              touri:
+                label: "To URL"
+                help: "An internal or external URL, e.g. https://google.com"
+                type: text
+                required: true
+              code:
+                label: "Status Code"
+                default: "_302"
+                type: select
+                required: true
+                options:
+                  "_302": "302: Found"
       renderings: sections/site/renderings

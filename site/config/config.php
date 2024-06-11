@@ -8,6 +8,7 @@ return [
         'extra' => true
     ],
     'smartypants' => true,
+    'bnomei.redirects.querystring' => false,
     'bnomei.robots-txt.sitemap' => '/sitemap.xml',
     'omz13.xmlsitemap.disableImages' => true,
     'omz13.xmlsitemap.includeUnlistedWhenTemplateIs' => [
