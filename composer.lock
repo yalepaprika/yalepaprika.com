@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57b65d3c624744c5195c98ee791579d2",
+    "content-hash": "e55485b57ab3ebf1d763cf1319680f1a",
     "packages": [
         {
             "name": "bnomei/kirby3-fingerprint",
@@ -175,16 +175,16 @@
         },
         {
             "name": "bnomei/kirby3-redirects",
-            "version": "1.12.0",
+            "version": "1.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bnomei/kirby3-redirects.git",
-                "reference": "a455de962ccf20a3f391843ad2496090c73b29d7"
+                "reference": "94f19b180085c689f4f94ea6f119183d6cce2340"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bnomei/kirby3-redirects/zipball/a455de962ccf20a3f391843ad2496090c73b29d7",
-                "reference": "a455de962ccf20a3f391843ad2496090c73b29d7",
+                "url": "https://api.github.com/repos/bnomei/kirby3-redirects/zipball/94f19b180085c689f4f94ea6f119183d6cce2340",
+                "reference": "94f19b180085c689f4f94ea6f119183d6cce2340",
                 "shasum": ""
             },
             "require": {
@@ -243,7 +243,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bnomei/kirby3-redirects/issues",
-                "source": "https://github.com/bnomei/kirby3-redirects/tree/v1.12.0"
+                "source": "https://github.com/bnomei/kirby3-redirects/tree/v1.11.0"
             },
             "funding": [
                 {
@@ -263,7 +263,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2023-09-18T10:21:20+00:00"
+            "time": "2023-07-17T12:58:18+00:00"
         },
         {
             "name": "claviska/simpleimage",

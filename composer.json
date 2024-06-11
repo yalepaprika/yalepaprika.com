@@ -39,7 +39,7 @@
     "texnixe/k3-filesdisplay-section": "dev-master",
     "bnomei/kirby3-janitor": "^2.13",
     "floriankarsten/kirby-plausible": "^0.1.4",
-    "bnomei/kirby3-redirects": "^1.5"
+    "bnomei/kirby3-redirects": "1.11.0"
   },
   "config": {
     "optimize-autoloader": true,
