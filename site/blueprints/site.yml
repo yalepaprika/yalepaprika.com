@@ -40,7 +40,7 @@ columns:
                 help: "A relative path, e.g. /rsvp"
                 type: text
                 required: true
-                before: yalepaprika.com
+                before: paprikamagazine.com
               touri:
                 label: "To URL"
                 help: "An internal or external URL, e.g. https://google.com"

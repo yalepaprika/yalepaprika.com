@@ -21,8 +21,8 @@ return [
         'yalepaprika.renderer.jobs'
     ],
     'floriankarsten.plausible' => [
-        'domain' => 'yalepaprika.com',
-        'sharedLink' => 'https://plausible.io/share/yalepaprika.com?auth=FeBGavbz3TpDEW79_RGqD'
+        'domain' => 'paprikamagazine.com',
+        'sharedLink' => 'https://plausible.io/share/paprikamagazine.com?auth=FeBGavbz3TpDEW79_RGqD'
     ],
     'thumbs' => [
         'driver' => 'im'

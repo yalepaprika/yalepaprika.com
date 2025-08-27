@@ -16,7 +16,7 @@ const swup = new Swup({
 });
 
 const plausible = Plausible({
-  domain: 'yalepaprika.com',
+  domain: 'paprikamagazine.com',
 });
 const { enableAutoPageviews } = plausible;
 
