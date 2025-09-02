@@ -42,6 +42,10 @@ columns:
         label: Archivists
         type: pages
         query: site.find("contributors")
+      board_of_directors:
+        label: Board of Directors
+        type: pages
+        query: site.find("contributors")
       producers:
         label: Producers
         type: pages

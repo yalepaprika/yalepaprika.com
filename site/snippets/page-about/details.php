@@ -19,6 +19,10 @@
         'pages' => $about->archivists()->toPages()
       ]) ?>
       <?php snippet('page/role', [
+        'title' => 'Board of Directors',
+        'pages' => $about->board_of_directors()->toPages()
+      ]) ?>
+      <?php snippet('page/role', [
         'title' => 'Producer',
         'pages' => $about->producers()->toPages()
       ]) ?>
