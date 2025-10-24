@@ -1,6 +1,6 @@
 <div
   id="fold-cover"
-  class="fold-cover space-after-20 <?= $fold->slug() === "rendering-fiction" ||  $fold->slug() === "transient-nostalgia" || $fold->slug() === "transient-intimacy" || $fold->slug() === "transient-solidarity" || $fold->slug() === "figments" || $fold->slug() === "fables" || $fold->slug() === "farewells" || $fold->slug() === "mimesis"  || $fold->slug() === "direct-message"  || $fold->slug() === "sonic-resonance" || $fold->slug() === "you-re-fired" || $fold->slug() === "group-chat" ? "fold-cover--has-background" : "" ?>"
+  class="fold-cover space-after-20 <?= $fold->slug() === "rendering-fiction" ||  $fold->slug() === "transient-nostalgia" || $fold->slug() === "transient-intimacy" || $fold->slug() === "transient-solidarity" || $fold->slug() === "figments" || $fold->slug() === "fables" || $fold->slug() === "farewells" || $fold->slug() === "mimesis"  || $fold->slug() === "direct-message"  || $fold->slug() === "sonic-resonance" || $fold->slug() === "you-re-fired" || $fold->slug() === "group-chat"  || $fold->slug() === "a-tale-of-two-cities" ? "fold-cover--has-background" : "" ?>"
   style="--background-url: url('<?= (new Asset('assets/images/' . $fold->slug() . '-background-new.jpg'))->url() ?>');"
 >
   <div class="fold-cover__container font--inverted background-paprika space-inside-after-20 d-flex flex-column">
